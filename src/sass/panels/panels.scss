@@ -1,0 +1,14 @@
+.panel{
+	height: 100vh;
+	position: absolute;
+	width: 100vw;
+  border: 1px solid black;	
+	background: red;
+  z-index: -100;
+  opacity: 0;
+
+  &--activate{
+    z-index: 10;
+    opacity: 1;
+  }
+}

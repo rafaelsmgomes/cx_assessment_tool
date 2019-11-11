@@ -1,0 +1,39 @@
+.checkbox{
+	&__group{
+		height: 53px;
+		display: flex;
+    align-items: center;
+	}
+	&__input{
+		display: none;
+	}
+	&__label{
+		display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    width: max-content;
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+	}	
+
+	&__button{
+		border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+		.checkbox__input:checked ~ .checkbox__label &{
+			background-color: #a25a36;
+    	border: 2px solid #a25a36;
+		}    
+	}
+	&__form{
+		height: 500px;
+		display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	}
+}

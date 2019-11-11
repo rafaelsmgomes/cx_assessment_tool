@@ -1,0 +1,42 @@
+.vertfc{
+	&__container{
+		width: 100%;
+		height: 300px;
+	}
+	&__form{
+		height: 100%;
+		width: 100%;
+
+		display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	}
+
+	&__input{
+		display: none;
+	}
+	&__group{
+		position: relative;
+	}
+	&__button{
+		border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+		.vertfc__input:checked ~ .vertfc__label &{
+			background-color: #a25a36;
+    	border: 2px solid #a25a36;
+		}       
+	}	
+	&__label{
+		display: flex;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+	}
+}

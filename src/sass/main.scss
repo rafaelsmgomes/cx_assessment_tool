@@ -1,0 +1,107 @@
+// // v 2.1.1
+// @import 'abstracts/functions';
+@import 'abstracts/mixins';	
+// @import 'abstracts/variables';
+
+// @import 'base/animations';
+// @import 'base/base';
+@import 'base/typography';
+
+// @import 'components/arrows';
+// @import 'components/eloqua';
+// @import 'components/clouds';
+@import 'components/cta';
+@import 'components/btns';
+@import 'components/checkboxes';
+@import 'components/dials';
+// @import 'components/detailed';
+// @import 'components/detscroll';
+// @import 'components/header';
+// @import 'components/landing';
+@import 'components/likerts';
+@import 'components/sliders';
+@import 'components/vertfcs';
+// @import 'components/lines';
+// @import 'components/mobile-nav';
+// @import 'components/paginations';
+// @import 'components/preload';
+// @import 'components/results';
+// @import 'components/scroller';
+// @import 'components/selections';
+// @import 'components/icon';
+
+
+@import 'layout/bodyContent';
+@import 'layout/footer';
+@import 'layout/header';
+// @import 'layout/results';
+
+// @import 'pages/body';
+@import 'panels/panels';
+
+// @import 'vendors/bpopup';
+// @import 'vendors/video';
+
+// @import 'base/utilities';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+  outline: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0; 
+  font: inherit;
+  vertical-align: baseline;
+}
+svg{
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow:hidden;
+  font-size: 125%; //20px    
+  box-sizing: border-box; 
+  // transform: scale(0.1) translateY(215rem);
+    // transform: scale(.05) translateY(100rem);	
+	//TEST
+  // transform: scale(.05);
+}
+
+  //TEST
+.panel--0{
+  z-index: 1000;
+}
+
+
+.pathfinder{
+	//TEST
+  // transition: transform 1.5s;
+  // transform: translateY(400vw);
+  // transform: translateX(-400vw);
+}
+

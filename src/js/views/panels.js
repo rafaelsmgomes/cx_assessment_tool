@@ -18,7 +18,7 @@ export const panels = [
 				Do you have a basic integration with your CRM system?
 			</div>
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>
-			${comp.createDial(['weak','strong','strong',])}
+			${comp.createLikert(['weak','strong','strong',])}
 		</div>
 		<div class="footer">
 			<div class="btn__progress btn__progress--1" data-id='1'></div>		

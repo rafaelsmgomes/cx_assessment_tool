@@ -24,7 +24,6 @@
   line-height: 1.32;
   letter-spacing: normal;
   color: #fff;
-  height: 3.25rem;
   margin-top: 0.80rem; }
 
 .cta__wrapper {
@@ -97,7 +96,7 @@
   position: relative;
   width: 810px;
   height: 405.00px;
-  margin-top: 16px; }
+  margin-top: 81px; }
 
 .dial-tracker__wrapper {
   position: absolute;
@@ -195,11 +194,10 @@
   display: none; }
 
 .likert__container {
-  width: 26.50rem;
-  height: 20.00rem;
+  width: 530px;
+  height: 400px;
   position: relative;
-  z-index: 2;
-  margin-top: 2.35rem; }
+  z-index: 2; }
 
 .likert__form {
   width: 100%;

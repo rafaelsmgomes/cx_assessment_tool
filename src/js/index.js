@@ -26,21 +26,21 @@ state.white = '#fff';
 
 /*** Dial Ctrl ***/ 
 
-	$(".dial-tracker").cprDial({
-		'thickness': .12,
-		'height': '200%',
-		'bgColor': '#56504b',
-		'fgColor': state.white,
-		'state': state,		
-	});
+	// $(".dial-tracker").cprDial({
+	// 	'thickness': .12,
+	// 	'height': '200%',
+	// 	'bgColor': '#56504b',
+	// 	'fgColor': state.white,
+	// 	'state': state,		
+	// });
 
 /*** Likert Ctrl ***/ 
 
-	// $('.likert__form').cprLikert({
-	// 	'vertical': false,
-	// 	'state': state,
-	// 	'size': .10,
-	// });
+	$('.likert__form').cprLikert({
+		'vertical': false,
+		'state': state,
+		'size': .10,
+	});
 
 /*** Checkbox Ctrl ***/ 
 

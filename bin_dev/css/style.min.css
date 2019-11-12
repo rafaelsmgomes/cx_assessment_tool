@@ -11,7 +11,8 @@
   line-height: 1.25;
   letter-spacing: normal;
   color: #fcfbfa;
-  margin-top: 1.05rem; }
+  margin-top: 1.05rem;
+  height: 6.00rem; }
   .main__title--1 {
     width: 43.25rem; }
 
@@ -23,6 +24,7 @@
   line-height: 1.32;
   letter-spacing: normal;
   color: #fff;
+  height: 3.25rem;
   margin-top: 0.80rem; }
 
 .cta__wrapper {
@@ -30,17 +32,31 @@
   height: 10rem;
   border: 2px solid #56504b;
   position: absolute;
-  left: 65vw;
+  left: 54vw;
   padding: 0.80rem 0 0.80rem 0.80rem;
   /* top: 100%; */
-  transform: translate(0%, 0%); }
+  transform: translate(0%, 0%);
+  bottom: 0; }
+
+.cta__txt {
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #cad9de;
+  left: 52vw; }
+  .cta__txt--1 {
+    width: 15.25rem; }
 
 .btn__progress {
   cursor: pointer;
   position: relative;
   background: #000;
   width: 500px;
-  height: 250px; }
+  height: 250px;
+  display: none; }
 
 .checkbox__group {
   height: 53px;
@@ -80,7 +96,8 @@
 .dial-group {
   position: relative;
   width: 810px;
-  height: 405.00px; }
+  height: 405.00px;
+  margin-top: 16px; }
 
 .dial-tracker__wrapper {
   position: absolute;
@@ -178,7 +195,7 @@
   display: none; }
 
 .likert__container {
-  width: 800px;
+  width: 530px;
   height: 400px;
   position: relative;
   z-index: 2; }

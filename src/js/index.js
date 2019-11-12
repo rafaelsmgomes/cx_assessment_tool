@@ -36,34 +36,34 @@ state.white = '#fff';
 
 /*** Likert Ctrl ***/ 
 
-	$('.likert__form').cprLikert({
-		'vertical': false,
-		'state': state,
-		'size': .10,
-	});
+	// $('.likert__form').cprLikert({
+	// 	'vertical': false,
+	// 	'state': state,
+	// 	'size': .10,
+	// });
 
 /*** Checkbox Ctrl ***/ 
 
-	$('.checkbox__form').cprCheckbox({
-		'vertical': false,
-		'state': state,
-		'size': .15,
-	});
+	// $('.checkbox__form').cprCheckbox({
+	// 	'vertical': false,
+	// 	'state': state,
+	// 	'size': .15,
+	// });
 
 /*** Vertfc Ctrl ***/ 
 
-	$('.vertfc__form').cprVertfc({
-		'state': state,
-		'size': .10,
-	});
+	// $('.vertfc__form').cprVertfc({
+	// 	'state': state,
+	// 	'size': .10,
+	// });
 
 /*** Slider Ctrl ***/ 
 	
-	$('.slider__form').cprSlider({
-		'state': state,
-		// 'size': .1,
-		'sideIcons': false,
-	});
+	// $('.slider__form').cprSlider({
+	// 	'state': state,
+	// 	// 'size': .1,
+	// 	'sideIcons': false,
+	// });
 
 window.statete  = state;
 

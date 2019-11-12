@@ -4,9 +4,24 @@
     height: 10rem;
     border: 2px solid #56504b;
     position: absolute;
-    left: 65vw;
+    left: 54vw;
     padding: 0.80rem 0 0.80rem 0.80rem;
     /* top: 100%; */
     transform: translate(0%, 0%);
+    bottom: 0;
 	}
+    &__txt{        
+    // font-family: Univers, Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.31;
+        letter-spacing: normal;
+        color: #cad9de;
+        left: 52vw;
+        &--1{
+            width: 15.25rem;
+        }
+    }
 }

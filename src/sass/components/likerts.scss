@@ -3,7 +3,8 @@
 		display: none;
 	}
 	&__container{
-    width: 26.50rem;
+    width: 50%;
+    // width: auto;
     height: 20.00rem;
 		position: relative;
 		z-index: 2;
@@ -11,6 +12,8 @@
 	}
 	&__form{
 		width: 100%;
+		width: auto;
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -38,6 +41,10 @@
 			width: 100%;
 			z-index: -1;
 		}
+	}
+	&__group{
+		// flex: 0 0 10%;
+		flex: 0 0 53px;
 	}
 	
 }

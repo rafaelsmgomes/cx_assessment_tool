@@ -1,3 +1,14 @@
 .header{
-	@include layoutOrientation;
+	&__container{
+		position: fixed;
+		background-color: green;
+	  z-index: 10;  
+	  height: 2.95rem;  
+	  display: flex;
+	  padding-top: 0.95rem;
+	  transition-property: opacity;
+	  transition-duration: .1s;	
+		@include layoutOrientation;
+	}
 }
+

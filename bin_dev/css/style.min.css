@@ -59,7 +59,7 @@
   display: none; }
 
 .checkbox__group {
-  height: 53px;
+  flex: 0 0 74px;
   display: flex;
   align-items: center; }
 
@@ -88,7 +88,7 @@
     border: 2px solid #a25a36; }
 
 .checkbox__form {
-  height: 500px;
+  height: 16rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
@@ -195,7 +195,7 @@
   display: none; }
 
 .likert__container {
-  width: 26.50rem;
+  width: 50%;
   height: 20.00rem;
   position: relative;
   z-index: 2;
@@ -203,6 +203,8 @@
 
 .likert__form {
   width: 100%;
+  width: auto;
+  position: relative;
   display: flex;
   justify-content: space-between; }
 
@@ -227,9 +229,12 @@
     width: 100%;
     z-index: -1; }
 
+.likert__group {
+  flex: 0 0 53px; }
+
 .slider__container {
   width: 40.90rem;
-  height: 1000px;
+  height: 20rem;
   position: relative; }
 
 .slider__form {
@@ -348,7 +353,8 @@
   display: none; }
 
 .vertfc__group {
-  position: relative; }
+  position: relative;
+  flex: 0 0 1.50rem; }
 
 .vertfc__button {
   border: 2px solid #fff;
@@ -387,7 +393,15 @@
   left: 0;
   right: 0; }
 
-.header {
+.header__container {
+  position: fixed;
+  background-color: green;
+  z-index: 10;
+  height: 2.95rem;
+  display: flex;
+  padding-top: 0.95rem;
+  transition-property: opacity;
+  transition-duration: .1s;
   width: 70rem;
   margin: 0 auto;
   left: 0;

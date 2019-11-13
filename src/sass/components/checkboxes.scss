@@ -1,6 +1,6 @@
 .checkbox{
 	&__group{
-		height: 53px;
+		flex: 0 0 74px;
 		display: flex;
     align-items: center;
 	}
@@ -31,7 +31,7 @@
 		}    
 	}
 	&__form{
-		height: 500px;
+		height: 16rem;
 		display: flex;
     flex-direction: column;
     justify-content: space-between;

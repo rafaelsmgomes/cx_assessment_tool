@@ -58,13 +58,13 @@ state.white = '#fff';
 
 /*** Slider Ctrl ***/ 
 	
-	$('.slider__form').cprSlider({
-		'state': state,
-		'size': .1,
-		'sideIcons': false,
-	});
+	// $('.slider__form').cprSlider({
+	// 	'state': state,
+	// 	'size': .1,
+	// 	'sideIcons': false,
+	// });
 
-window.statete  = state;
+window.statete  = state.vertfcs[0];
 
 
 $('.btn__progress--0').click();

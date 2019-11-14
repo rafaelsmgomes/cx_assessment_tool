@@ -64,8 +64,8 @@ export const createDial = (textArr) => {
 }
 
 export const createLikert = (textArr) => {
-    const addTo = 100/(textArr.length-1);
-    let startPoint = 0;
+    const addTo = 75/(textArr.length-1);
+    let startPoint = 25;
     let htmltext = '';
     var likert = new Likert(textArr); 
     state.likerts.push(likert);
@@ -130,7 +130,7 @@ export const createCheckbox = (textArr) => {
 }
 
 export const createVertfc = (textArr) => {
-    const addTo = 100/(textArr.length-1);
+    const addTo = 75/(textArr.length-1);
     let startPoint = 100;  
     let htmltext = '';
     const vertfc = new Vertfc(textArr);

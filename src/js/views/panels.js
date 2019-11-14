@@ -19,20 +19,18 @@ export const panels = [
 			</div>
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>
 			${comp.createVertfc([
-				'hello',
-				'bye',
+				'first',
+				'second',
+				'third',			
+				'forth',
 			])}
-		</div>
-		<div class="footer">
-			<div class="btn__progress btn__progress--1" data-id='1'></div>		
+
+			<div class="btn__progress btn__progress--1" data-id='1'></div>
 		</div>
 	</div>`,
 	`<div class="panel panel--2">	
 		<div class="body__content">
 
-		</div>
-		<div class="footer">										
-			<div class="btn__progress btn__progress--2" data-id='2'></div>
 		</div>
 	</div>`,			
 ];

@@ -1,9 +1,9 @@
 export default class Checkbox {
     constructor(textArr) {       
-    	this.val = 0;
+    	this.val = 25;
     	this.textArr = textArr;
     	this.chosenArr = new Set();
-        this.pointVal = this.retrievePointVal()*100;
+        this.pointVal = this.retrievePointVal()*75;
     }
 
     addAns(answers){
@@ -25,6 +25,6 @@ export default class Checkbox {
     }
 
     assignValue(qLen,v){
-        this.val = Math.round(100*(1/qLen)*(v/100));
+        this.val = Math.round(100*(1/qLen)*(v/100))+25;
     }
 }

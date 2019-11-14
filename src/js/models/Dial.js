@@ -5,6 +5,6 @@ export default class Dial {
     }
 
     assignValue(qLen,v){
-    	this.val = Math.round(100*(1/qLen)*(v/180));
+    	this.val = Math.round(100*(v/180));    	
     }    
 }

@@ -1,10 +1,9 @@
 .dial{
   &-group{  
-    position: relative;
-    //THIS NEEDS TO BE RESPONSIVE
+    position: relative;    
     width: 810px;
     height: 405.00px;
-    //
+    margin-top: 16px;
   }
   &-tracker__wrapper{
     position: absolute;

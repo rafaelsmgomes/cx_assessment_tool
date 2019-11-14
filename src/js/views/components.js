@@ -64,8 +64,8 @@ export const createDial = (textArr) => {
 }
 
 export const createLikert = (textArr) => {
-    const addTo = 100/(textArr.length-1);
-    let startPoint = 0;
+    const addTo = 75/(textArr.length-1);
+    let startPoint = 25;
     let htmltext = '';
     var likert = new Likert(textArr); 
     state.likerts.push(likert);
@@ -130,7 +130,7 @@ export const createCheckbox = (textArr) => {
 }
 
 export const createVertfc = (textArr) => {
-    const addTo = 100/(textArr.length-1);
+    const addTo = 75/(textArr.length-1);
     let startPoint = 100;  
     let htmltext = '';
     const vertfc = new Vertfc(textArr);
@@ -172,7 +172,6 @@ export const createSlider = (sliderArr) => {
     state.sliders.push(slider);
     const id = state.sliders.length - 1;
     const sliderGroup = state.sliders[id];
-    console.log(sliderGroup);
 
     for(let j = 0; j < sliderNum; j++){
         htmltext += 
@@ -187,7 +186,7 @@ export const createSlider = (sliderArr) => {
                 <div class="slider__description slider__description--1">${sliderGroup.minSet[j]}</div>
                 <div class="slider__description slider__description--2">${sliderGroup.maxSet[j]}</div>
             </div>
-            <input type="range" min="1" max="100" value="5" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
+            <input type="range" min="25" max="100" value="27" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
         </div>
         `;
         counter++;

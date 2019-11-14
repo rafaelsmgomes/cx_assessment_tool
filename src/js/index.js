@@ -26,46 +26,45 @@ state.white = '#fff';
 
 /*** Dial Ctrl ***/ 
 
-	$(".dial-tracker").cprDial({
-		'thickness': .12,
-		'height': '200%',
-		'bgColor': '#56504b',
-		'fgColor': state.white,
-		'state': state,		
-	});
+	// $(".dial-tracker").cprDial({
+	// 	'thickness': .12,
+	// 	'height': '200%',
+	// 	'bgColor': '#56504b',
+	// 	'fgColor': state.white,
+	// 	'state': state,		
+	// });
 
 /*** Likert Ctrl ***/ 
 
-	$('.likert__form').cprLikert({
-		'vertical': false,
-		'state': state,
-		'size': .10,
-	});
+	// $('.likert__form').cprLikert({
+	// 	'vertical': false,
+	// 	'state': state,
+	// });
 
 /*** Checkbox Ctrl ***/ 
 
-	$('.checkbox__form').cprCheckbox({
-		'vertical': false,
-		'state': state,
-		'size': .15,
-	});
+	// $('.checkbox__form').cprCheckbox({
+	// 	'vertical': false,
+	// 	'state': state,
+	// 	'size': .15,
+	// });
 
 /*** Vertfc Ctrl ***/ 
 
-	$('.vertfc__form').cprVertfc({
-		'state': state,
-		'size': .10,
-	});
+	// $('.vertfc__form').cprVertfc({
+	// 	'state': state,
+	// 	'size': .10,
+	// });
 
 /*** Slider Ctrl ***/ 
 	
 	$('.slider__form').cprSlider({
 		'state': state,
-		// 'size': .1,
+		'size': .1,
 		'sideIcons': false,
 	});
 
-window.statete  = state;
+window.statete  = state.sliders[0];
 
 
 $('.btn__progress--0').click();

@@ -1,10 +1,25 @@
-.btn__progress{
-  cursor: pointer;
-  position: relative;
-  background: #000;
-  width: 500px;
-  height: 250px;
-  // width: 100%;
-  // height: 100%;
+.btn{
+	&__progress{
+	  cursor: pointer;
+	  position: relative;
+	  background: #000;
+	  width: 500px;
+	  height: 250px;
+	  // width: 100%;
+	  display: none;
+	  // height: 100%;
+	}
+	&__regress{
+		width: 2.00rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: solid 0.1rem #ae562c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282623;
+    cursor: pointer;
+    transition: all .1s;
+	}
 }
 

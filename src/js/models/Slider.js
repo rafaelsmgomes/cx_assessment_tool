@@ -19,14 +19,14 @@ export default class Slider {
 		}
 	}
 
-  assignValue(qLen){
+  assignValue(){
   	let sumofVal = 0;
 
   	for(let val of this.indVal){
   		sumofVal += val;
   	}
 
-  	// this.val = sumofVal/this.maxSet.length;
-  	this.val = Math.round(100*(1/qLen)*(sumofVal/this.maxSet.length/100));
+  	this.val = sumofVal/this.maxSet.length;
+  	// this.val = Math.round(sumofVal)
   }    	
 }

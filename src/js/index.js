@@ -51,20 +51,20 @@ state.white = '#fff';
 
 /*** Vertfc Ctrl ***/ 
 
-	$('.vertfc__form').cprVertfc({
-		'state': state,
-		'size': .10,
-	});
+	// $('.vertfc__form').cprVertfc({
+	// 	'state': state,
+	// 	'size': .10,
+	// });
 
 /*** Slider Ctrl ***/ 
 	
-	// $('.slider__form').cprSlider({
-	// 	'state': state,
-	// 	'size': .1,
-	// 	'sideIcons': false,
-	// });
+	$('.slider__form').cprSlider({
+		'state': state,
+		'size': .1,
+		'sideIcons': false,
+	});
 
-window.statete  = state.vertfcs[0];
+window.statete  = state.sliders[0];
 
 
 $('.btn__progress--0').click();

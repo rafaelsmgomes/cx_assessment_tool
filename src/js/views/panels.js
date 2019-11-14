@@ -18,13 +18,23 @@ export const panels = [
 				Do you have a basic integration with your CRM system?
 			</div>
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>
-			${comp.createVertfc([
-				'first',
-				'second',
-				'third',			
-				'forth',
+			${comp.createSlider([
+				{
+					'question':'How',
+					'max':100,
+					'min':0,
+				},
+				{
+					'question':'When',
+					'max':'yes',
+					'min':'no',
+				},
+				{
+					'question':'Who',
+					'max':'100%',
+					'min':'0%',
+				},
 			])}
-
 			<div class="btn__progress btn__progress--1" data-id='1'></div>
 		</div>
 	</div>`,

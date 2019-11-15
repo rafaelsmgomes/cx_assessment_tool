@@ -207,3 +207,8 @@ export const createSlider = (sliderArr) => {
         }
     } 
 }
+
+
+// export const createSlider = (obj){
+//     obj.arr = ;
+// }

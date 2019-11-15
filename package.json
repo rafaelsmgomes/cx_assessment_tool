@@ -43,6 +43,7 @@
     "jquery": "^3.4.1",
     "jquery-knob": "^1.2.11",
     "lottie-web": "^5.5.5",
+    "mysql": "^2.17.1",
     "path": "^0.12.7",
     "rangeslider.js": "^2.3.3",
     "raw-loader": "^3.0.0"

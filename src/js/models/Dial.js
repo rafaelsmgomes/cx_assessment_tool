@@ -1,7 +1,9 @@
 export default class Dial {
-    constructor(textArr) {       
+    constructor(attr) {         
     	this.val = 0;
-    	this.textArr = textArr;
+    	this.textArr = attr.textArr;
+    	this.group = attr.group; //Group its on
+    	this.count = attr.count; //Whether it counts or not;
     }
 
     assignValue(qLen,v){

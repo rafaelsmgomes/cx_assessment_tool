@@ -1,7 +1,9 @@
 export default class Slider {
 	
-	constructor(sliderGroup){
-		this.sliderGroup = sliderGroup;
+	constructor(attr){
+		this.group = attr.group;
+    this.count = attr.count;
+		this.sliderGroup = attr.sliderArr;
 		this.questionSet = [];
 		this.minSet = [];
 		this.maxSet = [];

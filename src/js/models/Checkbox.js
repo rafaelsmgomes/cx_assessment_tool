@@ -1,9 +1,11 @@
 export default class Checkbox {
-    constructor(textArr) {       
+    constructor(attr) {       
     	this.val = 25;
-    	this.textArr = textArr;
+        this.group = attr.group;
+        this.count = attr.count;
+    	this.textArr = attr.textArr;
     	this.chosenArr = new Set();
-        this.pointVal = this.retrievePointVal()*75;
+        this.pointVal = this.retrievePointVal()*75;        
     }
 
     addAns(answers){

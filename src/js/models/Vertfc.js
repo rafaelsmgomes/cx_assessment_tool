@@ -1,7 +1,9 @@
 export default class Vertfc {
-    constructor(textArr) {       
+    constructor(attr) {   
+      this.group = attr.group;
+      this.count = attr.count;  
     	this.val = 25;
-    	this.textArr = textArr;
+    	this.textArr = attr.textArr;
     }
 
     assignValue(qLen,v){

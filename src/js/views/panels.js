@@ -18,6 +18,27 @@ export const panels = [
 				Do you have a basic integration with your CRM system?
 			</div>
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createSlider({
+				'group': 0,
+				'count': true,
+				'sliderArr': [
+					{
+						'question':'How',
+						'max':100,
+						'min':0,
+					},
+					{
+						'question':'When',
+						'max':'yes',
+						'min':'no',
+					},
+					{
+						'question':'Who',
+						'max':'100%',
+						'min':'0%',
+					},
+				],
+			})}
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1'></div>
 	</div>`,
@@ -69,6 +90,8 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--9" data-id='9'></div>
 	</div>`,
+
+
 	`<div class="panel panel--10">	
 		<div class="body__content">
 
@@ -86,7 +109,188 @@ export const panels = [
 
 		</div>
 		<div class="btn__progress btn__progress--12" data-id='12'></div>
+	</div>`,
+	`<div class="panel panel--13">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--13" data-id='13'></div>
+	</div>`,
+	`<div class="panel panel--14">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--14" data-id='14'></div>
+	</div>`,
+	`<div class="panel panel--15">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--15" data-id='15'></div>
+	</div>`,
+	`<div class="panel panel--16">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--16" data-id='16'></div>
+	</div>`,
+	`<div class="panel panel--17">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--17" data-id='17'></div>
 	</div>`,					
+	`<div class="panel panel--18">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--18" data-id='18'></div>
+	</div>`,
+	`<div class="panel panel--19">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--19" data-id='19'></div>
+	</div>`,
+
+
+	`<div class="panel panel--20">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--20" data-id='20'></div>
+	</div>`,
+	`<div class="panel panel--21">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--21" data-id='21'></div>
+	</div>`,
+	`<div class="panel panel--22">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--22" data-id='22'></div>
+	</div>`,
+	`<div class="panel panel--23">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--23" data-id='23'></div>
+	</div>`,
+	`<div class="panel panel--24">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--24" data-id='24'></div>
+	</div>`,
+	`<div class="panel panel--25">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--25" data-id='25'></div>
+	</div>`,
+	`<div class="panel panel--26">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--26" data-id='26'></div>
+	</div>`,
+	`<div class="panel panel--27">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--27" data-id='27'></div>
+	</div>`,
+	`<div class="panel panel--28">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--28" data-id='28'></div>
+	</div>`,
+	`<div class="panel panel--29">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--29" data-id='29'></div>
+	</div>`,
+	`<div class="panel panel--30">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--30" data-id='30'></div>
+	</div>`,
+	`<div class="panel panel--31">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--31" data-id='31'></div>
+	</div>`,
+	`<div class="panel panel--32">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--32" data-id='32'></div>
+	</div>`,
+
+
+	`<div class="panel panel--33">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--33" data-id='33'></div>
+	</div>`,
+	`<div class="panel panel--34">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--34" data-id='34'></div>
+	</div>`,
+	`<div class="panel panel--35">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--35" data-id='35'></div>
+	</div>`,
+	`<div class="panel panel--36">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--36" data-id='36'></div>
+	</div>`,
+	`<div class="panel panel--37">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--37" data-id='37'></div>
+	</div>`,
+	`<div class="panel panel--38">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--38" data-id='38'></div>
+	</div>`,
+	`<div class="panel panel--39">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--39" data-id='39'></div>
+	</div>`,
+	`<div class="panel panel--40">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--40" data-id='40'></div>
+	</div>`,
+
+
+	`<div class="panel panel--41">	
+		<div class="body__content">
+
+		</div>
+		<div class="btn__progress btn__progress--40" data-id='40'></div>
+	</div>`,
+
 ];
 
 
@@ -116,3 +320,21 @@ export const panels = [
 // 		'min':'0%',
 // 	},
 // ])}
+
+// [
+// 	{
+// 		'question':'How',
+// 		'max':100,
+// 		'min':0,
+// 	},
+// 	{
+// 		'question':'When',
+// 		'max':'yes',
+// 		'min':'no',
+// 	},
+// 	{
+// 		'question':'Who',
+// 		'max':'100%',
+// 		'min':'0%',
+// 	},
+// ]

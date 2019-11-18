@@ -7,13 +7,15 @@ import Vertfc from '.././models/Vertfc';
 import {state} from '.././state';
  
 
-export const createDial = (textArr) => {
+export const createDial = (attr) => {
+
+    const textArr = attr.textArr;
 
     let text0 ='';
     let text1 ='';
     let text2 ='';
 
-    var dial = new Dial(textArr);
+    var dial = new Dial(attr);
 
     state.dials.push(dial);
 
@@ -63,11 +65,15 @@ export const createDial = (textArr) => {
     `;  
 }
 
-export const createLikert = (textArr) => {
+
+export const createLikert = (attr) => {
+    const textArr = attr.textArr;     
+
     const addTo = 75/(textArr.length-1);
     let startPoint = 25;
     let htmltext = '';
-    var likert = new Likert(textArr); 
+    var likert = new Likert(attr); 
+
     state.likerts.push(likert);
     const id = state.likerts.length-1;
 
@@ -99,8 +105,10 @@ export const createLikert = (textArr) => {
     `;  
 }
 
-export const createCheckbox = (textArr) => {
-    var checkbox = new Checkbox(textArr); 
+export const createCheckbox = (attr) => {
+    const textArr = attr.textArr;
+
+    var checkbox = new Checkbox(attr); 
     state.checkboxes.push(checkbox);
     const id = state.checkboxes.length-1;
 
@@ -129,11 +137,13 @@ export const createCheckbox = (textArr) => {
     `
 }
 
-export const createVertfc = (textArr) => {
+export const createVertfc = (attr) => {
+    const textArr = attr.textArr;
+
     const addTo = 75/(textArr.length-1);
     let startPoint = 100;  
     let htmltext = '';
-    const vertfc = new Vertfc(textArr);
+    const vertfc = new Vertfc(attr);
     state.vertfcs.push(vertfc);
     const id = state.vertfcs.length-1;
 
@@ -162,13 +172,15 @@ export const createVertfc = (textArr) => {
     `;    
 }
 
-export const createSlider = (sliderArr) => {
+export const createSlider = (attr) => {
+
+    const sliderArr = attr.sliderArr; 
 
     const sliderNum = sliderArr.length;
 
     let htmltext = '';
     let counter = 1;
-    var slider = new Slider(sliderArr);
+    var slider = new Slider(attr);
     state.sliders.push(slider);
     const id = state.sliders.length - 1;
     const sliderGroup = state.sliders[id];
@@ -208,7 +220,48 @@ export const createSlider = (sliderArr) => {
     } 
 }
 
+// export const createSlider = (sliderArr) => {
+    
+//     const sliderNum = sliderArr.length;
 
-// export const createSlider = (obj){
-//     obj.arr = ;
+//     let htmltext = '';
+//     let counter = 1;
+//     var slider = new Slider(sliderArr);
+//     state.sliders.push(slider);
+//     const id = state.sliders.length - 1;
+//     const sliderGroup = state.sliders[id];
+
+//     for(let j = 0; j < sliderNum; j++){
+//         htmltext += 
+//         `
+//         <div class="slider__content${addActiveClass(j)}">
+//             <div class="slider__header">                                        
+//                 <div class="slider__title">${sliderGroup.questionSet[j]}</div>
+//                 <div class="slider__step">${counter}/${sliderNum}</div>
+//                 <div class="slider__down"></div>
+//             </div>
+//             <div class="slider__mid">
+//                 <div class="slider__description slider__description--1">${sliderGroup.minSet[j]}</div>
+//                 <div class="slider__description slider__description--2">${sliderGroup.maxSet[j]}</div>
+//             </div>
+//             <input type="range" min="25" max="100" value="27" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
+//         </div>
+//         `;
+//         counter++;
+//     }
+//     return `
+//         <div class="slider__container slider__container--${id}">
+//             <form action="#" class='slider__form slider__form--${id}' data-id='${id}'>
+//                 ${htmltext}
+//             </form>
+//         </div>
+//     `;    
+
+//     function addActiveClass(i){
+//         if(i === 0){
+//             return ' slider__content--active';
+//         }else{
+//             return'';
+//         }
+//     } 
 // }

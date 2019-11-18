@@ -58,11 +58,11 @@ state.white = '#fff';
 
 /*** Slider Ctrl ***/ 
 	
-	// $('.slider__form').cprSlider({
-	// 	'state': state,
-	// 	'size': .1,
-	// 	'sideIcons': false,
-	// });
+	$('.slider__form').cprSlider({
+		'state': state,
+		'size': .1,
+		'sideIcons': false,
+	});
 
 window.statete  = state.sliders[0];
 

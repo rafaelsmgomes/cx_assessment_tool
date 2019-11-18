@@ -3,6 +3,7 @@ export default class Checkbox {
     	this.val = 25;
         this.group = attr.group;
         this.count = attr.count;
+        this.question = attr.question;
     	this.textArr = attr.textArr;
     	this.chosenArr = new Set();
         this.pointVal = this.retrievePointVal()*75;        

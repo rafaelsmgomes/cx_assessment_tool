@@ -1,6 +1,8 @@
 export default class Slider {
 	
 	constructor(attr){
+		this.question = attr.question;
+		this.id = attr.id;
 		this.group = attr.group;
     this.count = attr.count;
 		this.sliderGroup = attr.sliderArr;

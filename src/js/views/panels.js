@@ -19,6 +19,8 @@ export const panels = [
 			</div>
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createSlider({
+				'id': 0,
+				'question': 'Do you have a basic integration with your CRM system?',
 				'group': 0,
 				'count': true,
 				'sliderArr': [

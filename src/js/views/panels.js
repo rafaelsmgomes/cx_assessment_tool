@@ -6,11 +6,6 @@ export const panels = [
 	</div>`,
 	`<div class="panel panel--1">		
 		<div class="body__content">
-			<div class="cta__wrapper cta__wrapper--1">
-				<div class="cta__txt cta__txt--1">
-					asjfpaj
-				</div>
-			</div>
 			<div class="main__subheader main__subheader--1">
 				Transactional Marketing
 			</div>
@@ -127,8 +122,8 @@ export const panels = [
 	`<div class="panel panel--15">	
 		<div class="body__content">
 
-		</div>
-		<div class="btn__progress btn__progress--15" data-id='15'></div>
+	 	</div>
+	 	<div class="btn__progress btn__progress--15" data-id='15'></div>
 	</div>`,
 	`<div class="panel panel--16">	
 		<div class="body__content">
@@ -305,38 +300,26 @@ export const panels = [
 ***/
 
 
-// ${comp.createSlider([
-// 	{
-// 		'question':'How',
-// 		'max':100,
-// 		'min':0,
-// 	},
-// 	{
-// 		'question':'When',
-// 		'max':'yes',
-// 		'min':'no',
-// 	},
-// 	{
-// 		'question':'Who',
-// 		'max':'100%',
-// 		'min':'0%',
-// 	},
-// ])}
-
-// [
-// 	{
-// 		'question':'How',
-// 		'max':100,
-// 		'min':0,
-// 	},
-// 	{
-// 		'question':'When',
-// 		'max':'yes',
-// 		'min':'no',
-// 	},
-// 	{
-// 		'question':'Who',
-// 		'max':'100%',
-// 		'min':'0%',
-// 	},
-// ]
+// ${comp.createSlider({
+// 	'id': 0,
+// 	'question': 'Do you have a basic integration with your CRM system?',
+// 	'group': 0,
+// 	'count': true,
+// 	'sliderArr': [
+// 		{
+// 			'question':'How',
+// 			'max':100,
+// 			'min':0,
+// 		},
+// 		{
+// 			'question':'When',
+// 			'max':'yes',
+// 			'min':'no',
+// 		},
+// 		{
+// 			'question':'Who',
+// 			'max':'100%',
+// 			'min':'0%',
+// 		},
+// 	],
+// })}

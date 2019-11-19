@@ -4,4 +4,6 @@
   top: calc(100vh - 1.75rem);
   transform: translateY(-50%);	
 	@include layoutOrientation;
+	height: 2rem;
+		 
 }

@@ -3,6 +3,11 @@ const express = require('express'),
 
 const app = express();
 
+import querie from './schemas/schema_variables';
+
+
+
+
 const con = mysql.createConnection({
     host: "72.10.48.193",
     user: "root",
@@ -10,7 +15,7 @@ const con = mysql.createConnection({
     database: "test_1"
 });
 
-con.query('CREATE TABLE question_schema ( question_id INT )', (err, results, fields) => {
+con.query(querie, (err, results, fields) => {
     if(err) throw err;
     console.log(results);
 });

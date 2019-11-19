@@ -3,7 +3,7 @@
 @import 'abstracts/mixins';	
 // @import 'abstracts/variables';
 
-// @import 'base/animations';
+@import 'base/animations';
 // @import 'base/base';
 @import 'base/typography';
 
@@ -21,7 +21,7 @@
 @import 'components/likerts';
 @import 'components/sliders';
 @import 'components/vertfcs';
-// @import 'components/lines';
+@import 'components/lines';
 // @import 'components/mobile-nav';
 // @import 'components/paginations';
 // @import 'components/preload';
@@ -50,6 +50,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid hotpink;
 }
 
 *:focus{
@@ -100,6 +101,7 @@ html {
 
 .pathfinder{
 	//TEST
+  transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
   // transform: translateY(400vw);
   // transform: translateX(-400vw);

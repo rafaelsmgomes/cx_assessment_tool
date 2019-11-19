@@ -1,0 +1,19 @@
+.line{
+	
+	stroke: #ae562c;
+  stroke-width: 100;
+  stroke-dasharray: 4;
+  stroke-dashoffset: 8;
+  animation: stroke 0.2s linear infinite;
+	
+	&__wrapper{
+		height: 5.00rem;
+		// display: none;
+    width: 70rem;
+    position: absolute;
+    z-index: -100;
+    overflow: visible;
+    left: 50%;
+    transform: translateX(-50%);
+	}
+}

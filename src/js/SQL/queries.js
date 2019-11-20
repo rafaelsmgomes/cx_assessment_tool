@@ -20,3 +20,4 @@ schema.questionSchema = `CREATE TABLE question_schema (
     capability VARCHAR(255)
 )`
 
+

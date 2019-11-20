@@ -12,11 +12,11 @@ const con = mysql.createConnection({
     database: "test_1"
 });
 
-con.query( sql.userSchema , (err, results, fields) => {
+con.query( sql.questionSchema , (err, results, fields) => {
     if(err) throw err;
     console.log(results);
 });
 
-console.log(sql.userSchema);
+console.log(sql.questionSchema);
 
 con.end();

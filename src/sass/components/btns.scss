@@ -1,13 +1,17 @@
 .btn{
 	&__progress{
-	  cursor: pointer;
-	  position: relative;
-	  background: #000;
-	  width: 500px;
-	  height: 250px;
-	  // width: 100%;
-	  // display: none;
-	  // height: 100%;
+	  // cursor: pointer;
+	  // position: relative;
+	  // background: #000;
+	  // width: 500px;
+	  // height: 250px;
+	  // // width: 100%;
+	  // // display: none;
+	  // // height: 100%;
+		display: none;
+		&--1{
+			display: flex;
+		}
 	}
 	&__regress{
 		width: 2.00rem;

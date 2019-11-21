@@ -2,8 +2,16 @@ import * as comp from './components';
 
 export const panels = [
 	`<div class="panel panel--0">
-		<h1>0</h1>
-		<div class="btn__progress btn__progress--0" data-id='0' data-line='0'></div>
+		<div class="body__content">
+			<div class="landing__texture"></div>
+			<div class="landing__container btn__progress btn__progress--0" data-id='0' data-line='0'>
+				<h1 class="landing__title">Are you Cloud&nbsp;Confident?</h1>
+				<h2 class="landing__subtitle">Is your business ahead of the curve, or do you need to catch up?</h2>
+				<div class="landing__txt landing__txt--1">Let's find out</div>
+				<div class="landing__img landing__img--1">
+				</div>
+			</div>
+		</div>
 	</div>`,
 	`<div class="panel panel--1">		
 		<div class="body__content">

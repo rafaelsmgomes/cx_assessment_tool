@@ -3,10 +3,9 @@
     flex: 0 0 5.20rem;
     height: 1.60rem;
     align-self: flex-end;
-    // background-image: url(../assets/images/desktop/logo-white.svg);
+    background-image: url(../assets/images/desktop/logo-white.svg);
     margin-right: auto;
     z-index: 1000;
-    background-color: blue;
     &:hover{
     	cursor: pointer;
     }		
@@ -14,14 +13,17 @@
 	&__copyright{
 		display: flex;
     align-items: center;
-    // margin-right: -2rem;
+    margin-right: 1.25rem;
 		font-size: 0.8rem;
-		
+		color: $color-white-1;
 		& > a {
 	    text-decoration: none;
 	    margin-top: 0.25rem;
 	    margin-right: 0.40rem;
 	    margin-left: 0.40rem;
+			color: $color-white-1;
+			font-family: $font-reg;
+	    // font-family: Univers, Arial, Helvetica, sans-serif;
 		}
 	}	
 	&__wrapper{
@@ -95,11 +97,11 @@
 			width: 2.00rem;
 			height: 2.00rem;
 			border-radius: 50.00rem;
-			border: solid 0.1rem black;
+			border: solid 0.1rem $color-orange-1;
 			transition: all .2s;
 			right: -.1rem;
 			z-index: 5;
-			background-color: black;
+			background-color: $color-brown-1;
 			overflow: hidden;
 			padding-left: .75rem;
 			&-1,
@@ -138,13 +140,17 @@
 			}
 		}
 	}	
+	&__bar{
+		font-size: 1.4rem;
+    // transform: translateY(9%);
+	}
 }
 
 .grow{
 	&--text{
 		font-size: 0.80rem;
-		// font-family: ;
-		color: #fff;
+		font-family: $font-reg;
+		color: $color-white-1;
 		transition: opacity 0s;
 		opacity: 0;
 

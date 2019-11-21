@@ -10,6 +10,21 @@
     stroke-dasharray: 0;
     stroke: blue; } }
 
+@font-face {
+  font-family: "Univers";
+  src: url("../fonts/OracleSans_Rg.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "UniversLite";
+  src: url("../fonts/OracleSans_Lt.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "UniversB";
+  src: url("../fonts/OracleSans_SBd.ttf");
+  font-weight: normal; }
+
 .main__subheader--1 {
   color: #fff;
   font-size: 1.50rem;
@@ -63,11 +78,9 @@
     width: 15.25rem; }
 
 .btn__progress {
-  cursor: pointer;
-  position: relative;
-  background: #000;
-  width: 500px;
-  height: 250px; }
+  display: none; }
+  .btn__progress--1 {
+    display: flex; }
 
 .btn__regress {
   width: 2.00rem;
@@ -218,21 +231,25 @@
   flex: 0 0 5.20rem;
   height: 1.60rem;
   align-self: flex-end;
+  background-image: url(../assets/images/desktop/logo-white.svg);
   margin-right: auto;
-  z-index: 1000;
-  background-color: blue; }
+  z-index: 1000; }
   .header__logo:hover {
     cursor: pointer; }
 
 .header__copyright {
   display: flex;
   align-items: center;
-  font-size: 0.8rem; }
+  margin-right: 1.25rem;
+  font-size: 0.8rem;
+  color: #fcfbfa; }
   .header__copyright > a {
     text-decoration: none;
     margin-top: 0.25rem;
     margin-right: 0.40rem;
-    margin-left: 0.40rem; }
+    margin-left: 0.40rem;
+    color: #fcfbfa;
+    font-family: Univers, Arial, Helvetica, sans-serif; }
 
 .header__wrapper {
   display: flex;
@@ -279,11 +296,11 @@
     width: 2.00rem;
     height: 2.00rem;
     border-radius: 50.00rem;
-    border: solid 0.1rem black;
+    border: solid 0.1rem #ae562c;
     transition: all .2s;
     right: -.1rem;
     z-index: 5;
-    background-color: black;
+    background-color: #282623;
     overflow: hidden;
     padding-left: .75rem; }
     .header__rectangle--grow-1, .header__rectangle--grow-3 {
@@ -306,9 +323,13 @@
     .header__rectangle--3:hover .header__rectangle--grow {
       width: 5.2rem; }
 
+.header__bar {
+  font-size: 1.4rem; }
+
 .grow--text {
   font-size: 0.80rem;
-  color: #fff;
+  font-family: Univers, Arial, Helvetica, sans-serif;
+  color: #fcfbfa;
   transition: opacity 0s;
   opacity: 0; }
   .header__rectangle:hover .grow--text {
@@ -321,6 +342,81 @@
     .header__rectangle:hover .grow--text > b {
       transition: opacity .3s;
       opacity: 1; }
+
+.landing__container {
+  margin: 0 auto;
+  margin-top: 5.70rem;
+  width: 32.90rem;
+  height: 32.90rem;
+  border: solid 2px #282623;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all .5s;
+  background-color: #282623; }
+
+.landing__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fcfbfa;
+  transition-delay: .5s;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  margin-top: 42%;
+  padding: 0 2%; }
+
+.landing__subtitle {
+  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  width: 23.35rem;
+  padding: 0 0.50rem;
+  color: #fcfbfa;
+  transition-delay: 1s;
+  transition-property: opacity;
+  transition-duration: .5s; }
+
+.landing__txt {
+  color: #fcfbfa; }
+  .landing__txt--1 {
+    width: 11.95rem;
+    height: 1.50rem;
+    font-size: 1.25rem;
+    font-family: UniversB, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    margin-top: 27.25%; }
+
+.landing__texture {
+  background-image: url(../assets/images/desktop/group.png);
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  margin-top: 5.7rem;
+  right: 0;
+  z-index: -1;
+  transform: translateX(-4%);
+  width: 47.34rem;
+  height: 40.05rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 0; }
 
 .likert__input {
   display: none; }
@@ -510,7 +606,7 @@
 
 .line {
   stroke: #ae562c;
-  stroke-width: 100;
+  stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
@@ -553,7 +649,6 @@
 
 .header__container {
   position: fixed;
-  background-color: green;
   z-index: 10000;
   height: 2.95rem;
   display: flex;

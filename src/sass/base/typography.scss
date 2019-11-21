@@ -1,3 +1,20 @@
+@font-face { 
+  font-family: "Univers";
+  src: url("../fonts/OracleSans_Rg.ttf");
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: "UniversLite";
+  src: url("../fonts/OracleSans_Lt.ttf");
+  font-weight: normal; 
+}
+@font-face {
+  font-family: "UniversB";
+  src: url("../fonts/OracleSans_SBd.ttf");
+  font-weight: normal; 
+}
+
 .main{
 	&__subheader{
 		&--1{

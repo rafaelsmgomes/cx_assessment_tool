@@ -1,8 +1,8 @@
 -- USER SCHEMA
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
     created_at TIMESTAMP DEFAULT NOW(),
-    name VARCHAR(255),
+    user_name VARCHAR(255) UNIQUE,
     size INT,
     industry INT,
     number_employees INT,
@@ -11,7 +11,7 @@ CREATE TABLE users (
 
 -- QUESTION SCHEMA
 CREATE TABLE questions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
     question TEXT,
     q_type VARCHAR(20),
     q_weight DECIMAL(3,3),
@@ -23,21 +23,21 @@ CREATE TABLE questions (
 
 -- ANSWER SCHEMA
 CREATE TABLE answers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    question_id INT,
+    user_id INTEGER NOT NULL, -- test this NOT NULL
+    question_id INTEGER NOT NULL,
     ans_value INT,
     ans_text TEXT,
 
     FOREIGN KEY(user_id) REFERENCES users(id),
-    FOREIGN KEY(question_id) REFERENCES questions(id)
+    FOREIGN KEY(question_id) REFERENCES questions(id),
+
+    PRIMARY KEY (user_id, question_id)
 );
 
 -- RESULTS SCHEMA
 CREATE TABLE results (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    ans_id INT,
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    user_id INTEGER,
     broadcast_results INT,
     responsive_results INT,
     relationship_results INT,
@@ -48,8 +48,7 @@ CREATE TABLE results (
     recommendation_beyond TEXT,
     created_at TIMESTAMP DEFAULT NOW(),
 
-    FOREIGN KEY(user_id) REFERENCES users(id),
-    FOREIGN KEY(ans_id) REFERENCES answers(id)
+    FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
 

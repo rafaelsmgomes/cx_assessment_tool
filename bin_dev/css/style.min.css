@@ -513,7 +513,14 @@
   stroke-width: 100;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
-  animation: stroke 0.2s linear infinite; }
+  animation: stroke 0.2s linear infinite;
+  opacity: 0; }
+  .line.activate {
+    animation: fadewhite .5s linear;
+    stroke: #cad9de;
+    stroke-dasharray: 0; }
+  .line.show {
+    opacity: 1; }
   .line__wrapper {
     height: 5.00rem;
     width: 70rem;
@@ -610,7 +617,7 @@ html {
   overflow: hidden;
   font-size: 125%;
   box-sizing: border-box;
-  transform: scale(0.1) translateY(215rem); }
+  background-image: url(../assets/images/1x/dark-pattern.jpg); }
 
 .panel--0 {
   z-index: 1000; }

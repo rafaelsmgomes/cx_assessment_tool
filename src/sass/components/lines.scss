@@ -1,11 +1,21 @@
 .line{
 	
 	stroke: #ae562c;
-  stroke-width: 100;
+  stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
-	
+	opacity: 0;
+
+  &.activate{
+    animation: fadewhite .5s linear;
+    stroke: #cad9de;
+    stroke-dasharray: 0;
+  }
+  &.show{
+    opacity: 1;
+  }
+
 	&__wrapper{
 		height: 5.00rem;
 		// display: none;

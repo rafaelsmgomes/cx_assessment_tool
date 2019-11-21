@@ -11,9 +11,9 @@ import {panels} from './views/panels';
 import {state} from './state';
 
 const question_length = panels.length-2;
-
 state.qLen = question_length;
 state.white = '#fff';
+
 
 /*** App path Ctrl ***/ 
 
@@ -23,6 +23,8 @@ state.white = '#fff';
 		'spacing': 400,
 		// 'delay': 1,
 	});
+
+
 
 /*** Dial Ctrl ***/ 
 

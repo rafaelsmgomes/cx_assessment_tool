@@ -11,6 +11,7 @@ export default class Slider {
 		this.maxSet = [];
 		this.indVal = [];
 		this.val = 0;
+    this.id = null;		
 
 		this.sortAll();
 	}

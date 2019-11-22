@@ -6,6 +6,7 @@ export default class Vertfc {
       this.count = attr.count;  
     	this.val = 25;
     	this.textArr = attr.textArr;
+      this.id = null;      
     }
 
     assignValue(qLen,v){

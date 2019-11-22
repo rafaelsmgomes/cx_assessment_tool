@@ -18,6 +18,17 @@ export const createDial2 = (attr) => {
 
     state.dials.push(dial);
 
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    dial.id = attrID;
+
     const id = state.dials.length-1; 
 
     if(textArr.length === 3){
@@ -76,6 +87,17 @@ export const createDial1 = (attr) => {
 
     state.dials.push(dial);
 
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    dial.id = attrID;
+
     const id = state.dials.length-1; 
 
     if(textArr.length === 3){
@@ -132,6 +154,18 @@ export const createLikert = (attr) => {
     var likert = new Likert(attr); 
 
     state.likerts.push(likert);
+
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    likert.id = attrID;
+
     const id = state.likerts.length-1;
 
     for (let j = 0; j < textArr.length; j++) {
@@ -169,6 +203,17 @@ export const createCheckbox = (attr) => {
     state.checkboxes.push(checkbox);
     const id = state.checkboxes.length-1;
 
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    checkbox.id = attrID;
+
     let htmltext = '';
 
     for(let j = 0; j < textArr.length; j++){
@@ -202,6 +247,18 @@ export const createVertfc = (attr) => {
     let htmltext = '';
     const vertfc = new Vertfc(attr);
     state.vertfcs.push(vertfc);
+
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    vertfc.id = attrID;
+
     const id = state.vertfcs.length-1;
 
     for (let j = 0; j < textArr.length; j++) {
@@ -239,6 +296,18 @@ export const createSlider = (attr) => {
     let counter = 1;
     var slider = new Slider(attr);
     state.sliders.push(slider);
+
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    slider.id = attrID;
+
     const id = state.sliders.length - 1;
     const sliderGroup = state.sliders[id];
 

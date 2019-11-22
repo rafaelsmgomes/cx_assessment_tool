@@ -50,25 +50,25 @@ $(document).ready(function(){
 
 	/*** Likert Ctrl ***/ 
 
-		// $('.likert__form').cprLikert({
-		// 	'vertical': false,
-		// 	'state': state,
-		// });
+		$('.likert__form').cprLikert({
+			'vertical': false,
+			'state': state,
+		});
 
 	/*** Checkbox Ctrl ***/ 
 
-		// $('.checkbox__form').cprCheckbox({
-		// 	'vertical': false,
-		// 	'state': state,
-		// 	'size': .15,
-		// });
+		$('.checkbox__form').cprCheckbox({
+			'vertical': false,
+			'state': state,
+			'size': .15,
+		});
 
 	/*** Vertfc Ctrl ***/ 
 
-		// $('.vertfc__form').cprVertfc({
-		// 	'state': state,
-		// 	'size': .10,
-		// });
+		$('.vertfc__form').cprVertfc({
+			'state': state,
+			'size': .10,
+		});
 
 	/*** Slider Ctrl ***/ 
 		
@@ -80,5 +80,6 @@ $(document).ready(function(){
 
 	/*** Custom CSS on Btn Progress ***/
 
-		
+
+	// $('.btn__progress--6').click();
 });

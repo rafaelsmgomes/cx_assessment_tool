@@ -12,6 +12,22 @@
 		&--1{
 			display: flex;
 		}
+		&--6{
+			width: auto;
+	    height: 1.80rem;
+	    border: 1px solid $color-white-1;
+	    margin-top: 1.10rem;
+	    display: flex;
+	    justify-content: space-between;
+	    cursor: pointer;
+	    align-items: center;
+	    padding: 0.20rem 0.45rem;
+	    text-decoration: none;
+	    background: transparent;
+	    font-size: 0.7em;
+	    color: $color-white-1;
+	    font-family: $font-b;
+		}
 	}
 	&__regress{
 		width: 2.00rem;

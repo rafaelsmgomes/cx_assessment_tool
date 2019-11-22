@@ -16,10 +16,10 @@ export const panels = [
 	`<div class="panel panel--1">		
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Transactional Marketing
+				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you have a basic integration with your CRM system?
+				What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial2({
@@ -33,50 +33,146 @@ export const panels = [
 	</div>`,
 	`<div class="panel panel--2">	
 		<div class="body__content">
-			<h1>3</h1>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Does your company use email, campaign and form templates to save time?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createLikert({				
+				'question':'Does your company use email, campaign and form templates to save time?',
+				'textArr': ['Never', 'Sometimes', 'Yes, regularly'],
+				'group': 'broadcast',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--2" data-id='2' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--3">	
 		<div class="body__content">
-			<h1>4</h1>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Are the emails you send primarily targeted or batch and blast style  communications?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Are the emails you send primarily targeted or batch and blast style  communications?',
+				'textArr': ['Targeted', 'Batch and blast'],
+				'group': 'broadcast',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--3" data-id='3' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--4">	
 		<div class="body__content">
-			<h1>5</h1>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How would you rate your use of email and your website as marketing channels?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'How would you rate your use of email and your website as marketing channels?',
+				'textArr': ['None', 'Some', 'Alot'],
+				'group': 'broadcast',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--4" data-id='4' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--5">	
 		<div class="body__content">
-			<h1>6</h1>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Is your email/ marketing automation platform currently integrated with your CRM application?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Is your email/ marketing automation platform currently integrated with your CRM application?',
+				'textArr': ['Yes', 'No'],
+				'group': 'broadcast',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--5" data-id='5' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--6">	
 		<div class="body__content">
-			<h1>7</h1>
-		</div>
-		<div class="btn__progress btn__progress--6" data-id='6' data-line='2'></div>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What metrics do you track to show success in your marketing programs?
+			</div>			
+			<div class="main__direction">Click all that apply:</div>			
+			${comp.createCheckbox({				
+				'question':'What metrics do you track to show success in your marketing programs?',
+				'textArr': ['email opens', 'click-throughs', 'downloads', 'form completions', 'subscribes/unsubscribes', 'web or landing page traffic', 'event participation'],
+				'group': 'broadcast',
+				'count': false,
+			})}	
+			<button class='btn__progress btn__progress--6' data-id='6' data-line='2'>Next</button>
+		</div>		
 	</div>`,
 	`<div class="panel panel--7">	
 		<div class="body__content">
-			<h1>8</h1>
-		</div>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How many marketers are on your team?
+			</div>			
+			<div class="main__direction">Click all that apply:</div>			
+			${comp.createLikert({				
+				'question':'How many marketers are on your team?',
+				'textArr': ['1-2','3-5','5-10','10+'],
+				'group': 'broadcast',
+				'count': false,
+			})}
+		</div>		
 		<div class="btn__progress btn__progress--7" data-id='7' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--8">	
 		<div class="body__content">
-			<h1>9</h1>
-		</div>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What do you focus your marketing on?
+			</div>			
+			<div class="main__direction">Click all that apply:</div>			
+			${comp.createLikert({				
+				'question':'What do you focus your marketing on?',
+				'textArr': ['Large considered purchases','In the moment purchases','Brand awareness'],
+				'group': 'broadcast',
+				'count': false,
+			})}
+		</div>	
 		<div class="btn__progress btn__progress--8" data-id='8' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--9">	
 		<div class="body__content">
-			<h1>10</h1>
-		</div>
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What is your current unsubscribe rate?
+			</div>			
+			<div class="main__direction">Click all that apply:</div>			
+			${comp.createLikert({				
+				'question':'What is your current unsubscribe rate?',
+				'textArr': ['Less than 0.2%','Greater than 0.5%',"We don't track unsubscribe rates"],
+				'group': 'broadcast',
+				'count': false,
+			})}	
+		</div>		
 		<div class="btn__progress btn__progress--9" data-id='9' data-line='1'></div>
 	</div>`,
 
@@ -338,3 +434,16 @@ export const panels = [
 			// 		},
 			// 	],
 			// })}
+
+			// TEMPLATE FOR PANEL--0
+
+		// <div class="body__content">
+		// 	<div class="landing__texture"></div>
+		// 	<div class="landing__container btn__progress btn__progress--0" data-id='0' data-line='0'>
+		// 		<h1 class="landing__title">Are you Cloud&nbsp;Confident?</h1>
+		// 		<h2 class="landing__subtitle">Is your business ahead of the curve, or do you need to catch up?</h2>
+		// 		<div class="landing__txt landing__txt--1">Let's find out</div>
+		// 		<div class="landing__img landing__img--1">
+		// 		</div>
+		// 	</div>
+		// </div>

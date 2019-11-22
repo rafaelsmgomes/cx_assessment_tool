@@ -5,9 +5,66 @@ import Slider from '.././models/Slider';
 import Vertfc from '.././models/Vertfc';
 
 import {state} from '.././state';
- 
 
-export const createDial = (attr) => {
+export const createDial2 = (attr) => {    
+
+    const textArr = attr.textArr;
+
+    let text0 ='';
+    let text1 ='';
+    let text2 ='';
+
+    var dial = new Dial(attr);
+
+    state.dials.push(dial);
+
+    const id = state.dials.length-1; 
+
+    if(textArr.length === 3){
+        text0 = textArr[0];
+        text1 = textArr[1];
+        text2 = textArr[2];        
+    }else{
+        text0 = textArr[0];        
+        text2 = textArr[1];  
+    }
+
+    return `
+        <div class="dial-group dial-group--${id}" data-id='${id}'>
+            <div class="dial-tracker__wrapper">
+                <input type="text" value="2" class="dial-tracker2 dial-tracker2--${id}" data-id='${id}' data-context=false>
+            </div>
+            <div class="dial-clock__wrapper">
+                <div class="dial__crown"></div>
+                <div class="dial__hand"></div>
+
+                <div class="dial__context">
+                    <div class="dial__context-section dial__context-section--1">
+                        <div class="dial__line dial__line--1"></div>
+                        <div class="dial__text dial__text--1c">${text1}</div>                                
+                    </div>
+                    <div class="dial__context-section dial__context-section--2">
+                        <div class="dial__context--wrapper dial__context--wrapper--1">
+                            <div class="dial__line dial__line--0"></div>
+                            <div class="dial__text dial__text--0c">${text0}</div>                                     
+                        </div>
+                        <div class="dial__context--wrapper dial__context--wrapper--2 dial__context--wrapper">
+                            <div class="dial__text dial__text--2c">${text2}</div>                   
+                            <div class="dial__line dial__line--2"></div>
+                        </div>
+                    </div>
+                    <div class="dial__context-section dial__context-section--3">
+                        <div class="dial__text dial__text--4">
+                            TEST
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    `;  
+} 
+
+export const createDial1 = (attr) => {    
 
     const textArr = attr.textArr;
 

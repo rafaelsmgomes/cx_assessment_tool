@@ -70,6 +70,14 @@
         transform: translateX(-50%);
         top: 108%;
         visibility: hidden;        
+        font-family: $font-reg;
+        font-size: 0.95em;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.32;
+        letter-spacing: normal;
+        color: $color-white-1;        
       }
       &--show{
         visibility: visible;
@@ -106,6 +114,15 @@
     }    
   }  
   &__text{
+    font-family: $font-reg;
+    font-size: 0.95em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    color: $color-white-1;
+
     &--0c{
       margin-left: 7%;
       transform: translateY(18%);

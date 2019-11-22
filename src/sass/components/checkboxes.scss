@@ -1,8 +1,11 @@
 .checkbox{
 	&__group{
-		flex: 0 0 74px;
+		flex: 0 0 2.65rem;
 		display: flex;
     align-items: center;
+    &:not(:first-of-type) {
+		    margin-top: 15px;
+		}
 	}
 	&__input{
 		display: none;
@@ -26,8 +29,8 @@
     align-items: center;
     justify-content: center;
 		.checkbox__input:checked ~ .checkbox__label &{
-			background-color: #a25a36;
-    	border: 2px solid #a25a36;
+			background-color: $color-orange-2;
+    	border: 2px solid $color-orange-2;
 		}    
 	}
 	&__form{
@@ -35,5 +38,33 @@
 		display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .panel--6 & {
+    	height: 23rem;
+    }
+	}
+
+	&__checkmark{
+		background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
+    width: 1.55rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1.15rem;
+		display: none;
+
+    .checkbox__input:checked ~ .checkbox__label &{
+    	display: block;
+    }
+	}
+	&__text{
+		padding-left: 1.10rem;
+    font-family: $font-reg;
+    font-size: 1.15rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    color: #fff;
 	}
 }

@@ -25,12 +25,12 @@
     align-items: center;
     justify-content: center;
     height: 150%;
-    background-color: green;
+    background-color: $color-brown-1;
     box-sizing: content-box;
 
     .likert__input:checked ~ .likert__label &{
-    	background-color: orange;
-	    border: 2px solid orange;
+    	background-color: $color-orange-2;
+	    border: 2px solid $color-orange-2;
     }
 	}
 	&__line{
@@ -42,9 +42,41 @@
 			z-index: -1;
 		}
 	}
+	&__label{
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+	}
 	&__group{
 		// flex: 0 0 10%;
 		flex: 0 0 53px;
 	}
-	
+	&__text{
+		position: absolute;
+		text-align: center;
+		margin-top: 2.65rem;
+		padding-top: 1.55rem;
+		font-family: $font-reg;
+    font-size: 1.15rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    width: 7.75rem;
+    text-align: center;
+    color: $color-white-1;
+	}
+	&__checkmark{
+		background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
+    width: 1.55rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+ 		display: none;
+    height: 1.15rem;
+		.likert__input:checked ~ .likert__label &{
+			display: block;
+		}
+	}
 }

@@ -1,25 +1,49 @@
 .btn{
 	&__progress{
-	  cursor: pointer;
-	  position: relative;
-	  background: #000;
-	  width: 500px;
-	  height: 250px;
-	  // width: 100%;
-	  // display: none;
-	  // height: 100%;
+	  // cursor: pointer;
+	  // position: relative;
+	  // background: #000;
+	  // width: 500px;
+	  // height: 250px;
+	  // // width: 100%;
+	  // // display: none;
+	  // // height: 100%;
+		display: none;
+		&--1{
+			display: flex;
+		}
+		&--6{
+			width: auto;
+	    height: 1.80rem;
+	    border: 1px solid $color-white-1;
+	    margin-top: 1.10rem;
+	    display: flex;
+	    justify-content: space-between;
+	    cursor: pointer;
+	    align-items: center;
+	    padding: 0.20rem 0.45rem;
+	    text-decoration: none;
+	    background: transparent;
+	    font-size: 0.7em;
+	    color: $color-white-1;
+	    font-family: $font-b;
+		}
 	}
 	&__regress{
 		width: 2.00rem;
     height: 2rem;
     border-radius: 1rem;
     border: solid 0.1rem #ae562c;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #282623;
     cursor: pointer;
     transition: all .1s;
+		display: none;
+		
+		&.show{
+			display: flex;
+		}
 	}
 }
 

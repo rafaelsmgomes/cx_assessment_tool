@@ -32,13 +32,15 @@
   font-weight: normal; }
 
 .main__subheader--1 {
-  color: #fff;
+  color: #fcfbfa;
   font-size: 1.50rem;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   margin-top: 0.75rem;
   display: block; }
 
 .main__title {
   font-size: 2.4rem;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -56,8 +58,9 @@
   font-stretch: normal;
   line-height: 1.32;
   letter-spacing: normal;
-  color: #fff;
+  color: #fcfbfa;
   height: 3.25rem;
+  font-family: Univers, Arial, Helvetica, sans-serif;
   margin-top: 0.80rem; }
 
 .cta__wrapper {
@@ -93,12 +96,14 @@
   height: 2rem;
   border-radius: 1rem;
   border: solid 0.1rem #ae562c;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #282623;
   cursor: pointer;
-  transition: all .1s; }
+  transition: all .1s;
+  display: none; }
+  .btn__regress.show {
+    display: flex; }
 
 .checkbox__group {
   flex: 0 0 74px;
@@ -197,7 +202,15 @@
       left: 50%;
       transform: translateX(-50%);
       top: 108%;
-      visibility: hidden; }
+      visibility: hidden;
+      font-family: Univers, Arial, Helvetica, sans-serif;
+      font-size: 0.95em;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.32;
+      letter-spacing: normal;
+      color: #fcfbfa; }
     .dial__context-section--show {
       visibility: visible; }
     .dial__context-section--hide {
@@ -222,16 +235,23 @@
   .dial__line--2 {
     transform: rotate(-112.5deg); }
 
-.dial__text--0c {
-  margin-left: 7%;
-  transform: translateY(18%); }
-
-.dial__text--1c {
-  margin-top: 3px; }
-
-.dial__text--2c {
-  margin-right: 7%;
-  transform: translateY(18%); }
+.dial__text {
+  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.32;
+  letter-spacing: normal;
+  color: #fcfbfa; }
+  .dial__text--0c {
+    margin-left: 7%;
+    transform: translateY(18%); }
+  .dial__text--1c {
+    margin-top: 3px; }
+  .dial__text--2c {
+    margin-right: 7%;
+    transform: translateY(18%); }
 
 .header__logo {
   flex: 0 0 5.20rem;

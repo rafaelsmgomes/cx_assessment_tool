@@ -22,9 +22,9 @@ export const panels = [
 				Do you have a basic integration with your CRM system?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
-			${comp.createDial({
+			${comp.createDial2({
 				'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
-				'textArr': ['hello', 'bye'],
+				'textArr': ['0%', '100%'],
 				'group': 'broadcast',
 				'count': true,
 			})}

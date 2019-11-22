@@ -18,12 +18,16 @@
     height: 2rem;
     border-radius: 1rem;
     border: solid 0.1rem #ae562c;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #282623;
     cursor: pointer;
     transition: all .1s;
+		display: none;
+		
+		&.show{
+			display: flex;
+		}
 	}
 }
 

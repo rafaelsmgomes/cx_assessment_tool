@@ -17,11 +17,8 @@ state.qLen = question_length;
 state.brown2 = variables.brown2;
 state.white = variables.white1;
 
-console.log(variables.white1);
-
 $(document).ready(function(){
-	/*** App path Ctrl ***/ 
-		
+	/*** App path Ctrl ***/ 		
 		$('.pathfinder').build({
 			'panels': panels,
 			'timing': 1500,
@@ -37,8 +34,18 @@ $(document).ready(function(){
 			'height': '200%',
 			'bgColor': state.brown2,
 			'fgColor': state.white,
-			'state': state,		
+			'state': state,
+			'percShow': false,		
 		});
+
+		$(".dial-tracker2").cprDial({
+			'thickness': .12,
+			'height': '200%',
+			'bgColor': state.brown2,
+			'fgColor': state.white,
+			'state': state,		
+			'percShow': true,
+		});		
 
 
 	/*** Likert Ctrl ***/ 
@@ -71,4 +78,7 @@ $(document).ready(function(){
 		// 	'sideIcons': false,
 		// });
 
+	/*** Custom CSS on Btn Progress ***/
+
+		
 });

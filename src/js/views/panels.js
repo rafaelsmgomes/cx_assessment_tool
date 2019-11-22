@@ -179,61 +179,180 @@ export const panels = [
 
 	`<div class="panel panel--10">	
 		<div class="body__content">
-			<h1>11</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Are you coordinating across multiple channels in your marketing campaigns?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Are you coordinating across multiple channels in your marketing campaigns?',
+				'textArr': ['No', 'Sometimes', 'Always'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--10" data-id='10' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--11">	
-		<div class="body__content">	
-			<h1>12</h1>
+		<div class="body__content">
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What level of automation exists in your programs/campaigns?			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'What level of automation exists in your programs/campaigns?',
+				'textArr': ['None, we deploy manually', 'A few', 'Almost all'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--11" data-id='11' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--12">	
 		<div class="body__content">
-			<h1>13</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you listen to contact behavior in order to direct them into a more specific campaign?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Do you listen to contact behavior in order to direct them into a more specific campaign?',
+				'textArr': ['Yes','No'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--12" data-id='12' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--13">	
 		<div class="body__content">
-			<h1>14</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How personalized is your marketing content across your marketing channels?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>
+			${comp.createLikert({				
+				'question':'How personalized is your marketing content across your marketing channels?',
+				'textArr': ['Same content for everyone',"Minimal, such as 'first name' or 'company'",'Highly personalized based on behavior'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--13" data-id='13' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--14">	
 		<div class="body__content">
-			<h1>15</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you perform lead scoring to identify high value buyers?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Do you perform lead scoring to identify high value buyers?',
+				'textArr': ['Never',"Sometimes",'Always'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--14" data-id='14' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--15">	
 		<div class="body__content">
-			<h1>16</h1>
-	 	</div>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Does your marketing automation platform score leads based on behavioral activities and profile data?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createLikert({				
+				'question':'Does your marketing automation platform score leads based on behavioral activities and profile data?',
+				'textArr': ['Only behavioral activities',"Only profile data",'Both behavioral activities and profile data',"We don't use lead scoring to qualify leads"],
+				'group': 'responsive',
+				'count': true,
+			})}
+		</div>
 	 	<div class="btn__progress btn__progress--15" data-id='15' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--16">	
 		<div class="body__content">
-			<h1>17</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What level of segmentation drives your campaigns?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createLikert({				
+				'question':'What level of segmentation drives your campaigns?',
+				'textArr': ['wide audience or&nbsp;list',"basic customer persona defined segments",'advanced segments based on profile and behavioral data',"1:1 real-time microsegments"],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--16" data-id='16' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--17">	
 		<div class="body__content">
-			<h1>18</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you currently incorporate behavioral re-targeting in your marketing campaigns?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Do you currently incorporate behavioral re-targeting in your marketing campaigns?',
+				'textArr': ['never',"sometimes",'always'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--17" data-id='17' data-line='1'></div>
 	</div>`,					
 	`<div class="panel panel--18">	
 		<div class="body__content">
-			<h1>19</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you perform any A/B email testing or optimization?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Do you perform any A/B email testing or optimization?',
+				'textArr': ['Yes',"No"],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--18" data-id='18' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--19">	
 		<div class="body__content">
-			<h1>20</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you currently use testing and optimization tools on your landing pages and website?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createLikert({				
+				'question':'Do you currently use testing and optimization tools on your landing pages and website?',
+				'textArr': ['No',"Yes, but only for A/B testing",'Yes, we use A/B, multivariate testing and optimization tools regularly'],
+				'group': 'responsive',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--19" data-id='19' data-line='3'></div>
 	</div>`,

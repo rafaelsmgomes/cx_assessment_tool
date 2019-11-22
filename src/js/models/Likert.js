@@ -6,6 +6,7 @@ export default class Likert {
     	this.textArr = attr.textArr;
     	this.group = attr.group;
     	this.count = attr.count;
+        this.id = null;        
     }
 
     assignValue(qLen,v){

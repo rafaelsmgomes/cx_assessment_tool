@@ -82,4 +82,5 @@ $(document).ready(function(){
 
 
 	// $('.btn__progress--6').click();
+	window.statete = state;
 });

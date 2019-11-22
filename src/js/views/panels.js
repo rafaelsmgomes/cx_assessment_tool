@@ -20,8 +20,14 @@ export const panels = [
 			</div>
 			<div class="main__title main__title--1">
 				Do you have a basic integration with your CRM system?
-			</div>
+			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial({
+				'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+				'textArr': ['hello', 'bye'],
+				'group': 'broadcast',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
 	</div>`,

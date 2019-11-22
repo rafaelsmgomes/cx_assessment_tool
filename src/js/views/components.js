@@ -7,7 +7,7 @@ import Vertfc from '.././models/Vertfc';
 import {state} from '.././state';
  
 
-export const createDial = (attr) => {
+export const createDial = (attr) => {    
 
     const textArr = attr.textArr;
 

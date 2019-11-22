@@ -1,3 +1,9 @@
+:export {
+  white1: #fcfbfa;
+  orange1: #ae562c;
+  brown1: #282623;
+  brown2: #56504b; }
+
 @keyframes stroke {
   to {
     stroke-dashoffset: 0; } }

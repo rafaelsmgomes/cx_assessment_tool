@@ -83,4 +83,3 @@ $(document).ready(function(){
 
 	// $('.btn__progress--6').click();
 });
-

@@ -3,6 +3,7 @@
 ------------------------------------------------------------------------------------
 
 INSERT INTO questions (
+    id,
     question, 
     q_type, 
     q_weight, 
@@ -13,6 +14,7 @@ INSERT INTO questions (
 ) 
 VALUES 
     (
+        0,
         "What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?", 
         "Slider", 
         .2, 
@@ -22,6 +24,7 @@ VALUES
         "Marketing Automation"
     ),
     (
+        1,
         "Does your company use email, campaign and form templates to save time?
             A. Yes, regularly
             B. Sometimes
@@ -34,6 +37,7 @@ VALUES
         "Templates"
     ),
     (
+        2,
         "Are the emails you send primarily targeted or batch and blast style  communications? 
             A. Targeted
             B. Batch and blast", 
@@ -45,6 +49,7 @@ VALUES
         "Batch and Blast"
     ),
     (
+        3,
         "How would you rate your use of email and your website as marketing channels?", 
         "Dial", 
         .2, 
@@ -54,6 +59,7 @@ VALUES
         "Basic Channels (E-mail and Web)"
     ),
     (
+        4,
         "Is your email/ marketing automation platform currently integrated with your CRM application?
             A. No
             B. Yes", 
@@ -65,6 +71,7 @@ VALUES
         "CRM Integration"
     ),
     (
+        5,
         "What metrics do you track to show success in your marketing programs? 
             Click all that apply: 
             email opens 
@@ -82,6 +89,7 @@ VALUES
         "no score - Informational Only"
     ),
     (
+        6,
         "How many marketers are on your team?
             a. 1-2
             b. 3-5
@@ -95,6 +103,7 @@ VALUES
         "no score - Informational Only"
     ),
     (
+        7,
         "What do you focus your marketing on?
             a. Large considered purchases
             b. In the moment purchases 
@@ -107,6 +116,7 @@ VALUES
         "no score - Informational Only"
     ),
     (
+        8,
         "What is your current unsubscribe rate?
             a. Less than 0.2%
             b. Greater than 0.5%
@@ -119,6 +129,7 @@ VALUES
         "no score - Informational Only"
     ),
     (
+        9,
         "Are you coordinating across multiple channels in your marketing campaigns?
             a. No
             b. Sometimes 
@@ -131,6 +142,7 @@ VALUES
         "Multichannel marketing"
     ),
     (
+        10,
         "What level of automation exists in your programs/campaigns?
             a. None, we deploy manually
             b. A few
@@ -143,6 +155,7 @@ VALUES
         "Campaign Automation"
     ),
     (
+        11,
         "Do you listen to contact behavior in order to direct them into a more specific campaign?
             a. Yes
             b. No", 
@@ -154,6 +167,7 @@ VALUES
         "Adaptive Campaign Nurturing"
     ),
     (
+        12,
         "How personalized is your marketing content across your marketing channels?
             a. Same content for everyone
             b. Minimal, such as 'first name' or 'company'
@@ -166,6 +180,7 @@ VALUES
         "Personalization"
     ),
     (
+        13,
         "Do you perform lead scoring to identify high value buyers?
             a. Never
             b. Sometimes
@@ -178,6 +193,7 @@ VALUES
         "Basic Lead Scoring"
     ),
     (
+        14,
         "Does your marketing automation platform score leads based on behavioral activities and profile data?
             a. Only behavioral activities
             b. Only profile data
@@ -191,6 +207,7 @@ VALUES
         "Adaptive Lead Scoring"
     ),
     (
+        15,
         "What level of segmentation drives your campaigns?
             a. wide audience or list 
             b. basic customer persona defined segments
@@ -204,6 +221,7 @@ VALUES
         "Segmentation"
     ),
     (
+        16,
         "Do you currently incorporate behavioral re-targeting in your marketing campaigns?
             a. never
             b. sometimes
@@ -216,6 +234,7 @@ VALUES
         "Behavioral retargeting"
     ),
     (
+        17,
         "Do you perform any A/B email testing or optimization?  
             a. yes
             b. no", 
@@ -227,6 +246,7 @@ VALUES
         "A/B Email testing"
     ),
     (
+        18,
         "Do you currently use testing and optimization tools on your landing pages and website? 
             a. No
             b. Yes, but only for A/B testing
@@ -239,6 +259,7 @@ VALUES
         "Testing and Optimization for Landing Pages and Websites"
     ),
     (
+        19,
         "How advanced are your targeting and segmentation processes?
             a. We haven't had the opportunity to advance in this area
             b. We create a number of filters and audiences based on profile and behavioral attributes
@@ -252,6 +273,7 @@ VALUES
         "Advanced Segmentation"
     ),
     (
+        20,
         "Do you use any form of data science to derive segments?
             A. No
             b. We use look-a-like modeling to find prospects
@@ -264,6 +286,7 @@ VALUES
         "Account signals and scoring"
     ),
     (
+        21,
         "Do you orchestrate your campaigns across all digital channels including email, mobile, SMS, display ads, web, and social to create a connected experience?
             a. yes
             b. no", 
@@ -275,6 +298,7 @@ VALUES
         "Cross-channel orchestration"
     ),
     (
+        22,
         "Do you deliver a personalized account experience across channels for contacts within that organization?
             a. Never
             b. Sometimes
@@ -287,6 +311,7 @@ VALUES
         "Account personalization"
     ),
     (
+        23,
         "Do you have an account-based marketing (ABM) program? 
             a. No.
             b. Just started one
@@ -299,6 +324,7 @@ VALUES
         "Account based marketing"
     ),
     (
+        24,
         "Do you use a predictive vendor for populating predictive lead scores in your ABM program (e.g., Demandbase, Mintigo, 6thSense)?
             a. yes
             b. no
@@ -311,6 +337,7 @@ VALUES
         "Predictive lead scoring"
     ),
     (
+        25,
         "Do you leverage Intelligence to optimize any part of your marketing campaigns? 
             a. Yes
             b. no",
@@ -322,6 +349,7 @@ VALUES
         "Intelligence/ Machine Learning"
     ),
     (
+        26,
         "What kinds of AI do you use in your marketing program? Check all that apply: 
             Send time optimization
             Offer recommendations
@@ -337,6 +365,7 @@ VALUES
         "Intelligent Recommendations"
     ),
     (
+        27,
         "Do you send emails to buyers optimized based on when they are most likely open?
             a. yes
             b. no
@@ -349,6 +378,7 @@ VALUES
         "Send time optimization"
     ),
     (
+        28,
         "Do you provide real-time online personalization for customers or prospects based on their (interests) behavior on your website?
             a. Yes
             b. Only basic
@@ -361,6 +391,7 @@ VALUES
         "Real-time personalization"
     ),
     (
+        29,
         "How do you standardize data and improve data quality in your marketing database?
             a. we have no data-standardization in place
             b. we have defined standards, but don't always apply them
@@ -374,6 +405,7 @@ VALUES
         "Real-time data quality"
     ),
     (
+        30,
         "How do you measure your marketing efforts?
             A. Generate basic reports
             b. Some consistent means of measuring campaigns with some deep analysis in specific areas
@@ -386,6 +418,7 @@ VALUES
         "Marketing measurement"
     ),
     (
+        31,
         "How integrated is your marketing data?
             a. All of our marketing data is siloed
             b. We have integrated some customer data, but using and manipulating it  is a manual process.
@@ -399,6 +432,7 @@ VALUES
         "Marketing data integrations"
     ),
     (
+        32,
         "Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?
             a. We connect our marketing and sales data 
             b. We connect our marketing and service data 
@@ -412,6 +446,7 @@ VALUES
         "Unified Customer Profile"
     ),
     (
+        33,
         "Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?
             A. No, we only use marketing data for personalization
             B. Yes",
@@ -423,6 +458,7 @@ VALUES
         "Advanced personalization"
     ),
     (
+        34,
         "Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?
             a. No
             B. Yes, but it's a separate team who runs the commerce program
@@ -435,6 +471,7 @@ VALUES
         "B2B Commerce"
     ),
     (
+        35,
         "Do you run marketing programs targeted specifically to your loyalty program members?
             a. No
             B. Yes, but it's a separate team who runs the loyalty program
@@ -447,6 +484,7 @@ VALUES
         "Customer Loyalty"
     ),
     (
+        36,
         "Do you have an automated way to stop or pause marketing promotions to specific customers when they are experiencing important service issues with your organization?
             a. No, unfortunately, we have no insight into service issues
             c. We have some insight, but it's not reliable
@@ -459,6 +497,7 @@ VALUES
         "Service Aware Marketing"
     ),
     (
+        37,
         "Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?
             a. yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended offers
             b. no, our service reps are strictly focused on service and not empowered to do any cross-sell or upsell
@@ -471,6 +510,7 @@ VALUES
         "Empowered service"
     ),
     (
+        38,
         "Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?
             a. No, there is no data shared between sales and service
             b. Yes, sales reps have access to any service interactions and concerns
@@ -483,6 +523,7 @@ VALUES
         "Service aware sales"
     ),
     (
+        39,
         "Do you track, measure and analyze customer lifetime value? 
             a. No, we don't do this.
             b. Yes, we view reports to diagnose what happened in the past.

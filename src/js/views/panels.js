@@ -30,7 +30,6 @@ export const panels = [
 			})}
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
-		<button class="btn-api">Generate API</button>
 	</div>`,
 	`<div class="panel panel--2">	
 		<div class="body__content">

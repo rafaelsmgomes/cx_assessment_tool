@@ -11,7 +11,7 @@ CREATE TABLE users (
 
 -- QUESTION SCHEMA
 CREATE TABLE questions (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     question TEXT,
     q_type VARCHAR(20),
     q_weight DECIMAL(3,3),

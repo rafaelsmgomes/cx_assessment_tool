@@ -1,59 +1,5 @@
--- USER SCHEMA
-CREATE TABLE users (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    created_at TIMESTAMP DEFAULT NOW(),
-    user_name VARCHAR(255) UNIQUE,
-    size INT,
-    industry INT,
-    number_employees INT,
-    country VARCHAR(255)
-);
-
--- QUESTION SCHEMA
-CREATE TABLE questions (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    question TEXT,
-    q_type VARCHAR(20),
-    q_weight DECIMAL(3,3),
-    recommendation_low TEXT,
-    recommendation_high TEXT,
-    marketing_type VARCHAR(40),
-    capability VARCHAR(255)
-);
-
--- ANSWER SCHEMA
-CREATE TABLE answers (
-    user_id INTEGER NOT NULL, -- test this NOT NULL
-    question_id INTEGER NOT NULL,
-    ans_value INT,
-    ans_text TEXT,
-
-    FOREIGN KEY(user_id) REFERENCES users(id),
-    FOREIGN KEY(question_id) REFERENCES questions(id),
-
-    PRIMARY KEY (user_id, question_id)
-);
-
--- RESULTS SCHEMA
-CREATE TABLE results (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    user_id INTEGER,
-    broadcast_results INT,
-    responsive_results INT,
-    relationship_results INT,
-    beyond_results INT,
-    recommendation_broadcast TEXT,
-    recommendation_responsive TEXT,
-    recommendation_relationship TEXT,
-    recommendation_beyond TEXT,
-    created_at TIMESTAMP DEFAULT NOW(),
-
-    FOREIGN KEY(user_id) REFERENCES users(id)
-);
-
-
 ------------------------------------------------------------------------------------
--- INSERT VALUES 
+-- QUESTIONS DATA
 ------------------------------------------------------------------------------------
 
 INSERT INTO questions (
@@ -93,7 +39,7 @@ VALUES
             B. Batch and blast", 
         "Checkbox", 
         .2, 
-        "Batch-and-Blast: A \"batch-and-blast\" approach is a natural place to start as you learn  the new system. After all, you have to learn how to walk before you can run. And for key communications and customer updates, \"batch-and-blast\" is a good option before you take advantage of more complex, time-intensive segmentation efforts.",
+        "Batch-and-Blast: A \"batch-and-blast\" approach is a natural place to start as you learn the new system. After all, you have to learn how to walk before you can run. And for key communications and customer updates, \"batch-and-blast\" is a good option before you take advantage of more complex, time-intensive segmentation efforts.",
         "You've impemented \"batch-and-blast\" to handle customer and company wide announcements. Now it's time to consider personalization.", 
         "Broadcast",
         "Batch and Blast"
@@ -434,7 +380,7 @@ VALUES
             c. Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)",
         NULL, 
         .769, 
-        "Marketing Measurement: There's no \"one size fits all" approach. Marketers need to understand their marketing dollar spend, social media's impact, volume of qualified leads coming in and their source, etc. Marketers also must look from acquisition to sale to get the true measure and impact of marketing programs on revenue.",
+        "Marketing Measurement: There's no \"one size fits all\" approach. Marketers need to understand their marketing dollar spend, social media's impact, volume of qualified leads coming in and their source, etc. Marketers also must look from acquisition to sale to get the true measure and impact of marketing programs on revenue.",
         "Congratulations! With marketing measurement in place, you've got your finger on your marketing spend, the impact of social media, and the number of qualified leads coming in and their source. ", 
         "Relationship",
         "Marketing measurement"
@@ -549,6 +495,3 @@ VALUES
         "Beyond",
         "Measure Customer Lifetime Value"
     );
-
-
-

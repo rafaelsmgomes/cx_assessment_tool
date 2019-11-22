@@ -16,6 +16,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
+		<button class="btn-api">Generate API</button>
 	</div>`,
 	`<div class="panel panel--2">	
 		<div class="body__content">

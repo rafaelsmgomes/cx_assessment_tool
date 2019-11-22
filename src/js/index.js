@@ -76,3 +76,5 @@ window.statete  = state.sliders[0];
 
 // 	console.log(sendThis);
 // })
+
+$('.btn-api').click(function(){ })

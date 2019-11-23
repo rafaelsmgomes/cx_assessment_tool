@@ -360,79 +360,235 @@ export const panels = [
 
 	`<div class="panel panel--20">	
 		<div class="body__content">
-			<h1>21</h1>
+			<div class="main__subheader main__subheader--1">
+				Relationship Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How advanced are your targeting and segmentation processes?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'How advanced are your targeting and segmentation processes?',
+				'textArr': ["We haven't had the opportunity to advance in this area", "We create a number of filters and audiences based on profile and behavioral attributes", "We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We have highly specific audience filters that target buyers in real time based on changing profile and behavior dataC2	"],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--20" data-id='20' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--21">	
 		<div class="body__content">
-			<h1>22</h1>
+			<div class="main__subheader main__subheader--1">
+				Relationship Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you use any form of data science to derive segments?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createLikert({				
+				'question':'Do you use any form of data science to derive segments?',
+				'textArr': ["No", "We use look-a-like modeling to find prospects", "We use advanced filters, account scores and signals to identify the best prospects"],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--21" data-id='21' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--22">	
 		<div class="body__content">
-			<h1>23</h1>
+			<div class="main__subheader main__subheader--1">
+				Relationship Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you orchestrate your campaigns across all digital channels including email, mobile, SMS, display ads, web, and social to create a connected experience?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Do you orchestrate your campaigns across all digital channels including email, mobile, SMS, display ads, web, and social to create a connected experience?',
+				'textArr': ['Yes', 'No'],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--22" data-id='22' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--23">	
 		<div class="body__content">
-			<h1>24</h1>
+			<div class="main__subheader main__subheader--1">
+				Relationship Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you deliver a personalized account experience across channels for contacts within that organization?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Do you deliver a personalized account experience across channels for contacts within that organization?',
+				'textArr': ['Never', 'Sometimes','Yes! Always!'],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--23" data-id='23' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--24">	
 		<div class="body__content">
-			<h1>25</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you have an account-based marketing (ABM)&nbsp;program?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Do you have an account-based marketing (ABM) program?',
+				'textArr': ['No', "Just started one","Yes, it's great"],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--24" data-id='24' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--25">	
 		<div class="body__content">
-			<h1>26</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you use a predictive vendor for populating predictive lead scores in your ABM program (e.g., Demandbase, Mintigo, 6thSense)?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Do you use a predictive vendor for populating predictive lead scores in your ABM program (e.g., Demandbase, Mintigo, 6thSense)?',
+				'textArr': ['No', "Not Applicable","Yes"],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--25" data-id='25' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--26">	
 		<div class="body__content">
-			<h1>27</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you leverage Intelligence to optimize any part of your marketing campaigns?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Do you leverage Intelligence to optimize any part of your marketing campaigns?',
+				'textArr': ['Yes','No'],
+				'group': 'Relationship',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--26" data-id='26' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--27">	
 		<div class="body__content">
-			<h1>28</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What kinds of AI do you use in your marketing program? Check all that apply:
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createCheckbox({				
+				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
+				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other','We do not currently use AI features'],
+				'group': 'Relationship',
+				'count': true,
+			})}
+			<button class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</button>			
 		</div>
-		<div class="btn__progress btn__progress--27" data-id='27' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--28">	
 		<div class="body__content">
-			<h1>29</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you send emails to buyers optimized based on when they are most likely open?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
+				'textArr': ['Yes', 'No', "I don't know",],
+				'group': 'Relationship',
+				'count': true,
+			})}			
 		</div>
 		<div class="btn__progress btn__progress--28" data-id='28' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--29">	
 		<div class="body__content">
-			<h1>30</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you provide real-time online personalization for customers or prospects based on their (interests) behavior on your website?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createDial1({				
+				'question':'Do you provide real-time online personalization for customers or prospects based on their (interests) behavior on your website?',
+				'textArr': ['No', 'Only Basic', "Yes"],
+				'group': 'Relationship',
+				'count': true,
+			})}			
 		</div>
 		<div class="btn__progress btn__progress--29" data-id='29' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--30">	
 		<div class="body__content">
-			<h1>31</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How do you standardize data and improve data quality in your marketing database?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'How do you standardize data and improve data quality in your marketing database?',
+				'textArr': ['We have a process in place that supports data quality and standards in real time', 'We use a 3rd party solution to clean and append data', "We have defined standards, but don't always apply them",'We have no data-standardization in place'],
+				'group': 'Relationship',
+				'count': true,
+			})}			
 		</div>
 		<div class="btn__progress btn__progress--30" data-id='30' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--31">	
 		<div class="body__content">
-			<h1>32</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How do you measure your marketing efforts?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'How do you measure your marketing efforts?',
+				'textArr': ['Generate basic reports', 'Some consistent means of measuring campaigns with some deep analysis in specific areas', "Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)"],
+				'group': 'Relationship',
+				'count': true,
+			})}			
 		</div>
 		<div class="btn__progress btn__progress--31" data-id='31' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--32">	
 		<div class="body__content">
-			<h1>33</h1>
+			<div class="main__subheader main__subheader--1">
+				Responsive Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How integrated is your marketing data?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({				
+				'question':'How integrated is your marketing data?',
+				'textArr': ['All of our marketing data is siloed', 'We have integrated some customer data, but using and manipulating it  is a manual process', "We have a unified customer database that automates some essential online and offline data",'We have integrated all online and offline data as well as known profiles from 3rd party data'],
+				'group': 'Relationship',
+				'count': true,
+			})}			
 		</div>
 		<div class="btn__progress btn__progress--32" data-id='32' data-line='4'></div>
 	</div>`,
@@ -440,49 +596,145 @@ export const panels = [
 
 	`<div class="panel panel--33">	
 		<div class="body__content">
-			<h1>34</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?',
+				'textArr': ['Yes! We have connections for all three','We connect our marketing and sales data', 'We connect our marketing and service data','No, we are not able to connect the data between any of these systems'],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--33" data-id='33' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--34">	
 		<div class="body__content">
-			<h1>35</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?',
+				'textArr': ['Yes','No, we only use marketing data for personalization'],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--34" data-id='34' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--35">	
 		<div class="body__content">
-			<h1>36</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?',
+				'textArr': ['Yes, our commerce site has been integrated into our overall marketing strategy',"Yes, but it's a separate team who runs the commerce program",'No'],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--35" data-id='35' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--36">	
 		<div class="body__content">
-			<h1>37</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you run marketing programs targeted specifically to your loyalty program members?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do you run marketing programs targeted specifically to your loyalty program members?',
+				'textArr': ['Yes, loyalty has been integrated into our overall marketing strategy',"Yes, but it's a separate team who runs the loyalty program",'No'],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
 	</div>`,
 	`<div class="panel panel--37">	
 		<div class="body__content">
-			<h1>38</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you have an automated way to stop or pause marketing promotions to specific customers when they are experiencing important service issues with your&nbsp;organization?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do you have an automated way to stop or pause marketing promotions to specific customers when they are experiencing important service issues with your organization?',
+				'textArr': ['Yes, we have an amazing line of communication and data sharing between marketing and service',"We have some insight, but it's not reliable",'No, unfortunately, we have no insight into service issues'],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--37" data-id='37' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--38">	
 		<div class="body__content">
-			<h1>39</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?',
+				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or upsell","I don't know"],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--38" data-id='38' data-line='2'></div>
 	</div>`,
 	`<div class="panel panel--39">	
 		<div class="body__content">
-			<h1>40</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?',
+				'textArr': ["Yes, sales reps have access to any service interactions and concerns","No, there is no data shared between sales and service","I don't know"],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--39" data-id='39' data-line='3'></div>
 	</div>`,
 	`<div class="panel panel--40">	
 		<div class="body__content">
-			<h1>41</h1>
+			<div class="main__subheader main__subheader--1">
+				Beyond Marketing
+			</div>
+			<div class="main__title main__title--1">
+				Do you track, measure and analyze customer lifetime&nbsp;value?
+			</div>			
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			${comp.createVertfc({
+				'question':'Do you track, measure and analyze customer lifetime value?',
+				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
+				'group': 'Beyond',
+				'count': true,
+			})}
 		</div>
 		<div class="btn__progress btn__progress--40" data-id='40' data-line='5'></div>
 	</div>`,

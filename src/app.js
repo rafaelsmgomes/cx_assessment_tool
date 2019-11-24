@@ -1,4 +1,4 @@
-const sql = require('./SQL/queries');
+const sql = require('./js/SQL/queries');
 
 const express = require('express'),
       mysql   = require('mysql');
@@ -12,11 +12,13 @@ const con = mysql.createConnection({
     database: "test_1"
 });
 
-con.query( sql.questionSchema , (err, results, fields) => {
-    if(err) throw err;
-    console.log(results);
-});
+// con.query( sql.questionSchema , (err, results, fields) => {
+//     if(err) throw err;
+//     console.log(results);
+// });
 
 console.log(sql.questionSchema);
 
 con.end();
+
+

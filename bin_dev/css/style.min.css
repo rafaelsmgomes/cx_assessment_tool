@@ -2,7 +2,8 @@
   white1: #fcfbfa;
   orange1: #ae562c;
   brown1: #282623;
-  brown2: #56504b; }
+  brown2: #56504b;
+  timing1: 1500; }
 
 @keyframes stroke {
   to {
@@ -11,10 +12,18 @@
 @keyframes fadewhite {
   0% {
     stroke-dasharray: 4;
-    stroke: #939699; }
+    stroke: #ae562c; }
   100% {
     stroke-dasharray: 0;
-    stroke: blue; } }
+    stroke: #fcfbfa; } }
+
+@keyframes fadeorange {
+  0% {
+    stroke-dasharray: 4;
+    stroke: #fcfbfa; }
+  100% {
+    stroke-dasharray: 0;
+    stroke: #ae562c; } }
 
 @font-face {
   font-family: "Univers";
@@ -114,10 +123,15 @@
   align-items: center;
   background-color: #282623;
   cursor: pointer;
-  transition: all .1s;
-  display: none; }
+  transition: opacity 300ms;
+  pointer-events: none;
+  opacity: 0; }
   .btn__regress.show {
+    pointer-events: auto;
+    opacity: 1;
     display: flex; }
+  .btn__regress.rotate--1 {
+    transform: rotate(180deg); }
 
 .checkbox__group {
   flex: 0 0 2.65rem;
@@ -382,8 +396,8 @@
     .header__rectangle--1:hover .header__rectangle--grow {
       width: 5.7rem; }
     .header__rectangle--2:hover .header__rectangle--grow {
-      width: 14rem;
-      height: 12rem; }
+      width: 16rem;
+      height: 13rem; }
     .header__rectangle--3:hover .header__rectangle--grow {
       width: 5.2rem; }
 
@@ -733,8 +747,17 @@
   opacity: 0; }
   .line.activate {
     animation: fadewhite .5s linear;
-    stroke: #cad9de;
+    stroke: #fcfbfa;
     stroke-dasharray: 0; }
+  .line.deactivate {
+    animation: fadeorange .5s linear;
+    stroke: #ae562c;
+    stroke-dasharray: 4;
+    stroke-width: 2;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 8;
+    animation: stroke 0.2s linear infinite;
+    opacity: 0; }
   .line.show {
     opacity: 1; }
   .line__wrapper {
@@ -784,7 +807,6 @@
   height: 100vh;
   position: absolute;
   width: 100vw;
-  border: 1px solid black;
   z-index: -100;
   opacity: 0; }
   .panel--activate {
@@ -796,8 +818,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  outline: 1px solid hotpink; }
+  box-sizing: border-box; }
 
 *:focus {
   outline: none; }

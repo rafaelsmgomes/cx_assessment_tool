@@ -13,6 +13,7 @@ import {state} from './state';
 import variables from './../sass/abstracts/variables.scss';
 
 const question_length = panels.length-2;
+const timing = variables.timing1;
 state.qLen = question_length;
 state.brown2 = variables.brown2;
 state.white = variables.white1;
@@ -21,7 +22,7 @@ $(document).ready(function(){
 	/*** App path Ctrl ***/ 		
 		$('.pathfinder').build({
 			'panels': panels,
-			'timing': 1500,
+			'timing': timing,
 			'spacing': 400,
 			// 'delay': 1,
 		});
@@ -72,11 +73,11 @@ $(document).ready(function(){
 
 	/*** Slider Ctrl ***/ 
 		
-		// $('.slider__form').cprSlider({
-		// 	'state': state,
-		// 	'size': .1,
-		// 	'sideIcons': false,
-		// });
+		$('.slider__form').cprSlider({
+			'state': state,
+			'size': .1,
+			'sideIcons': false,
+		});
 
 	/*** Custom CSS on Btn Progress ***/
 

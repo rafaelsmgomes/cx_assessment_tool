@@ -34,16 +34,22 @@
 		width: 2.00rem;
     height: 2rem;
     border-radius: 1rem;
-    border: solid 0.1rem #ae562c;
+    border: solid 0.1rem $color-orange-1;
     justify-content: center;
     align-items: center;
     background-color: #282623;
     cursor: pointer;
-    transition: all .1s;
-		display: none;
-		
+    transition: opacity $timing-2;
+		pointer-events: none;
+		opacity: 0;
+
 		&.show{
+			pointer-events: auto;
+			opacity: 1;
 			display: flex;
+		}
+		&.rotate--1{
+			transform: rotate(180deg);  //after 1
 		}
 	}
 }

@@ -5,7 +5,7 @@ export const panels = [
 		<div class="body__content">
 			<div class="landing__texture"></div>
 			<div class="landing__container btn__progress btn__progress--0" data-id='0' data-line='0'>
-				<h1 class="landing__title">Are you Cloud&nbsp;Confident?</h1>
+				<h1 class="landing__title">B2B Marketing Maturity</h1>
 				<h2 class="landing__subtitle">Is your business ahead of the curve, or do you need to catch up?</h2>
 				<div class="landing__txt landing__txt--1">Let's find out</div>
 				<div class="landing__img landing__img--1">
@@ -21,13 +21,13 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?
 			</div>			
-			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
-			${comp.createDial2({
-				'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
-				'textArr': ['0%', '100%'],
-				'group': 'broadcast',
-				'count': true,
-			})}
+			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>						
+				${comp.createDial2({
+					'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+					'textArr': ['0%', '100%'],
+					'group': 'broadcast',
+					'count': true,
+				})}			
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
 	</div>`,
@@ -78,7 +78,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'How would you rate your use of email and your website as marketing channels?',
-				'textArr': ['None', 'Some', 'Alot'],
+				'textArr': ['None', 'Some', 'A lot'],
 				'group': 'broadcast',
 				'count': true,
 			})}
@@ -114,7 +114,7 @@ export const panels = [
 			<div class="main__direction">Click all that apply:</div>			
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
-				'textArr': ['email opens', 'click-throughs', 'downloads', 'form completions', 'subscribes/unsubscribes', 'web or landing page traffic', 'event participation'],
+				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -295,7 +295,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createLikert({				
 				'question':'What level of segmentation drives your campaigns?',
-				'textArr': ['wide audience or&nbsp;list',"basic customer persona defined segments",'advanced segments based on profile and behavioral data',"1:1 real-time microsegments"],
+				'textArr': ['Wide audience or&nbsp;list',"Basic customer persona defined segments",'Advanced segments based on profile and behavioral data',"1:1 real-time microsegments"],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -313,7 +313,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'Do you currently incorporate behavioral re-targeting in your marketing campaigns?',
-				'textArr': ['never',"sometimes",'always'],
+				'textArr': ['Never',"Sometimes",'Always'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -369,7 +369,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createVertfc({				
 				'question':'How advanced are your targeting and segmentation processes?',
-				'textArr': ["We haven't had the opportunity to advance in this area", "We create a number of filters and audiences based on profile and behavioral attributes", "We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We have highly specific audience filters that target buyers in real time based on changing profile and behavior dataC2	"],
+				'textArr': ["We haven't had the opportunity to advance in this area", "We create a number of filters and audiences based on profile and behavioral attributes", "We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We have highly specific audience filters that target buyers in real time based on changing profile and behavior data"],
 				'group': 'Relationship',
 				'count': true,
 			})}
@@ -423,7 +423,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'Do you deliver a personalized account experience across channels for contacts within that organization?',
-				'textArr': ['Never', 'Sometimes','Yes! Always!'],
+				'textArr': ['Never', 'Sometimes','Always'],
 				'group': 'Relationship',
 				'count': true,
 			})}
@@ -495,7 +495,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createCheckbox({				
 				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
-				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other','We do not currently use AI features'],
+				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
 				'group': 'Relationship',
 				'count': true,
 			})}
@@ -695,7 +695,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createVertfc({
 				'question':'Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?',
-				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or upsell","I don't know"],
+				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or upsell"],
 				'group': 'Beyond',
 				'count': true,
 			})}
@@ -713,7 +713,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createVertfc({
 				'question':'Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?',
-				'textArr': ["Yes, sales reps have access to any service interactions and concerns","No, there is no data shared between sales and service","I don't know"],
+				'textArr': ["Yes, sales reps have access to any service interactions and concerns","No, there is no data shared between sales and service"],
 				'group': 'Beyond',
 				'count': true,
 			})}
@@ -818,3 +818,11 @@ export const panels = [
 		// 		</div>
 		// 	</div>
 		// </div>
+
+
+		// ${comp.createDial2({
+		// 		'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+		// 		'textArr': ['0%', '100%'],
+		// 		'group': 'broadcast',
+		// 		'count': true,
+		// 	})}

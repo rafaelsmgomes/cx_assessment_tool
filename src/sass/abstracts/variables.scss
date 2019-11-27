@@ -12,9 +12,15 @@ $color-orange-2: #a25a36;
 $color-brown-1: #282623;
 $color-brown-2: #56504b;
 
+// TIMING
+$timing-1: 1500;
+$timing-2: 300ms;
+
 :export {
   white1: $color-white-1;
   orange1: $color-orange-1;
   brown1: $color-brown-1;	
 	brown2: $color-brown-2;
+	
+	timing1: $timing-1;
 }

@@ -14,15 +14,15 @@
 		display: flex;
     align-items: center;
     height: 100%;
-    width: 100%;
-    width: max-content;
+    // width: 100%;
+    // width: max-content;
     cursor: pointer;
     position: relative;
-    flex: 1;
+    // flex: 1;
 	}	
 
 	&__button{
-		border: 2px solid #fff;
+		border: 2px solid $color-white-1;
     border-radius: 50%;
     display: flex;
     height: 2.65rem;
@@ -58,13 +58,14 @@
 	}
 	&__text{
 		padding-left: 1.10rem;
-    font-family: $font-reg;
-    font-size: 1.15rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.3;
-    letter-spacing: normal;
-    color: #fff;
+        white-space: nowrap;
+        font-family: $font-reg;
+        font-size: 1.15rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: normal;
+        color: $color-white-1;
 	}
 }

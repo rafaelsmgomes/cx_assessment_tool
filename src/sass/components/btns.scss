@@ -17,7 +17,6 @@
 			width: auto;
 	    height: 1.80rem;
 	    border: 1px solid $color-white-1;
-	    margin-top: 1.10rem;
 	    display: flex;
 	    justify-content: space-between;
 	    cursor: pointer;
@@ -28,6 +27,11 @@
 	    font-size: 0.7em;
 	    color: $color-white-1;
 	    font-family: $font-b;
+
+			bottom: 0;
+	    margin-top: 0;
+	    position: absolute;
+	    left: 50%;	    
 		}
 	}
 	&__regress{

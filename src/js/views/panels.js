@@ -21,13 +21,19 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?
 			</div>			
-			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>						
-				${comp.createDial2({
-					'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
-					'textArr': ['0%', '100%'],
-					'group': 'broadcast',
-					'count': true,
-				})}			
+			<div class="main__direction">Adjust the slider below to most closely align with your company.</div>					
+			${comp.createSlider({
+				'question': 'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+				'group': 'broadcast',
+				'count': true,
+				'sliderArr': [
+					{
+						'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+						'max':'100%',
+						'min':'0%',
+					},
+				],
+			})}
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
 	</div>`,
@@ -819,10 +825,9 @@ export const panels = [
 		// 	</div>
 		// </div>
 
-
-		// ${comp.createDial2({
-		// 		'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
-		// 		'textArr': ['0%', '100%'],
-		// 		'group': 'broadcast',
-		// 		'count': true,
-		// 	})}
+						// ${comp.createDial2({
+				// 	'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+				// 	'textArr': ['0%', '100%'],
+				// 	'group': 'broadcast',
+				// 	'count': true,
+				// })}			

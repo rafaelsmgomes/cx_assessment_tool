@@ -4,7 +4,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT NOW(),
     user_name VARCHAR(255) UNIQUE,
     size INT,
-    industry INT,
+    industry VARCHAR(100),
     number_employees INT,
     country VARCHAR(255)
 );

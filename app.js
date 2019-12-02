@@ -1,7 +1,8 @@
-const express = require("express"),
-mysql         = require("mysql"),
-path          = require("path"),
-ejs           = require("ejs");
+const express     = require("express"),
+    bodyParser    = require("body-parser")
+    mysql         = require("mysql"),
+    path          = require("path"),
+    ejs           = require("ejs");
 
 const app = express();
 
@@ -13,6 +14,7 @@ const sql = require('./src/js/database/queries');
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/bin_dev`));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', path.join(__dirname, 'bin_dev')); 
 app.engine('html', require('ejs').renderFile);
@@ -27,13 +29,21 @@ const conn = mysql.createConnection({
 
 app.get('/', (req, res) => {
     // var sqlCode = `SELECT * FROM questions`;
-    conn.query("SELECT * FROM `questions`", (err, results) => {
-        if(err) throw err;
-        console.log(results);
-
-    });
+    // conn.query("SELECT * FROM `questions`", (err, results) => {
+    //     if(err) throw err;
+    //     console.log(results);
+    // });
     res.render('homepage');
-    conn.end();
+    // conn.end();
+});
+
+app.post('/pdf', (req,res) => {
+    console.log("----------------------------------------")
+    console.log("----------------------------------------")
+    console.log(req);
+    console.log("----------------------------------------")
+    console.log(res);
+    // console.log(body);
 });
 
 app.get('/pdf', (req,res) => {

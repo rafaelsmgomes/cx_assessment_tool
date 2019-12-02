@@ -100,7 +100,10 @@ export const panels = [
 				'group': 'broadcast',
 				'count': true,
 			})}
-		</div>
+			</div>
+		<form action="/" method="POST">
+			<input type=submit>
+		</form>
 		<div class="btn__progress btn__progress--5" data-id='5' data-line='1'></div>
 	</div>`,
 	`<div class="panel panel--6">	

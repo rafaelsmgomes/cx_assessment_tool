@@ -1,12 +1,16 @@
-const schema = module.exports = {};
+const sql = module.exports = {};
 
-schema.dropAllSchemas = `
-    SET FOREIGN_KEY_CHECKS = 0
-    DROP TABLE users, questions, answers, results
-    SET FOREIGN_KEY_CHECKS = 1
-`;
+// schema.dropAllSchemas = `
+//     SET FOREIGN_KEY_CHECKS = 0
+//     DROP TABLE users, questions, answers, results
+//     SET FOREIGN_KEY_CHECKS = 1
+// `;
 
-schema.userSchema = `CREATE TABLE users (
+/**
+ * Schemas
+ */
+
+sql.userSchema = `CREATE TABLE users (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     created_at TIMESTAMP DEFAULT NOW(),
     user_name VARCHAR(255) UNIQUE,
@@ -16,7 +20,7 @@ schema.userSchema = `CREATE TABLE users (
     country VARCHAR(255)
 )`;
 
-schema.questionSchema = `CREATE TABLE questions (
+sql.questionSchema = `CREATE TABLE questions (
     id INTEGER PRIMARY KEY,
     question TEXT,
     q_type VARCHAR(20),
@@ -27,7 +31,7 @@ schema.questionSchema = `CREATE TABLE questions (
     capability VARCHAR(255)
 )`
 
-schema.answersSchema = `CREATE TABLE answers (
+sql.answersSchema = `CREATE TABLE answers (
     user_id INTEGER NOT NULL, -- test this NOT NULL
     question_id INTEGER NOT NULL,
     ans_value INT,
@@ -37,9 +41,9 @@ schema.answersSchema = `CREATE TABLE answers (
     FOREIGN KEY(question_id) REFERENCES questions(id),
 
     PRIMARY KEY (user_id, question_id)
-)`
+);`
 
-schema.resultsSchema = `CREATE TABLE results (
+sql.resultsSchema = `CREATE TABLE results (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     user_id INTEGER,
     broadcast_results INT,
@@ -53,7 +57,21 @@ schema.resultsSchema = `CREATE TABLE results (
     created_at TIMESTAMP DEFAULT NOW(),
 
     FOREIGN KEY(user_id) REFERENCES users(id)
+);`
+
+
+/**
+ * Insert Data
+ */
+
+sql.insertAnswer = `INSERT INTO answers(
+    user_id,
+    question_id,
+    ans_value,
+    ans_text
+) VALUES (
+    ?,
+    ?,
+    ?,
+    ?
 )`
-// schema.createAllSchemas = `${schema.userSchema}; ${schema.questionSchema}; ${schema.answersSchema}; ${schema.resultsSchema}`;
-
-

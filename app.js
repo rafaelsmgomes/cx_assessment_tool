@@ -7,6 +7,7 @@ const express     = require("express"),
 const app = express();
 
 const fs      = require("fs");
+let userID = [];
 
 
 
@@ -30,18 +31,29 @@ const conn = mysql.createConnection({
 
 // console.log(state);
 
+
 app.get('/', (req, res) => {
-    // var sqlCode = `SELECT * FROM questions`;
-    // conn.query("SELECT * FROM `questions`", (err, results) => {
-    //     if(err) throw err;
-    //     console.log(results);
-    // });
     res.render('homepage');
-    // conn.end();
+    let userArrID = []
+    conn.query(`SELECT id FROM users`, (err, results) => {
+        for(i = 0; i < results.length; i++){
+            userArrID.push(results[i].id);
+        };
+        console.log(userArrID);
+    });    
+    conn.end();
 });
 
 app.post('/api', (req,res) => {
-    console.log(req.body);
+    console.log("----------------------------------------")
+    console.log("----------------------------------------")
+    const data = req.body;
+    // console.log(data);
+    conn.query(sql.insertAnswer, [1,1,64,'[Something, Something]'], (err, results) => {
+        if(err) throw err;
+        console.log(results)
+    });
+    conn.end();
     res.end();
 });
 
@@ -85,7 +97,6 @@ app.get('/pdf', (req,res) => {
 //         if(err) throw err;
 //         console.log(results);
 // });
-
 
 
 

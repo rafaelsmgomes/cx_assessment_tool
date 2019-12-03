@@ -11,6 +11,7 @@ const fs      = require("fs");
 
 
 const sql = require('./src/js/database/queries');
+// const state = require('./src/js/state');
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/bin_dev`));
@@ -27,6 +28,8 @@ const conn = mysql.createConnection({
     database: "test_1"
 });
 
+// console.log(state);
+
 app.get('/', (req, res) => {
     // var sqlCode = `SELECT * FROM questions`;
     // conn.query("SELECT * FROM `questions`", (err, results) => {
@@ -37,19 +40,27 @@ app.get('/', (req, res) => {
     // conn.end();
 });
 
-app.post('/pdf', (req,res) => {
-    console.log("----------------------------------------")
-    console.log("----------------------------------------")
-    console.log(req);
-    console.log("----------------------------------------")
-    console.log(res);
-    // console.log(body);
+app.post('/api', (req,res) => {
+    console.log(req.body);
+    res.end();
 });
+
+// app.post('/pdf', (req,res) => {
+//     console.log("----------------------------------------")
+//     console.log("----------------------------------------")
+//     // console.log(req);
+//     console.log("----------------------------------------")
+//     // console.log(res);
+//     res.json(res);
+//     // console.log(body);
+//     res.redirect('pdf')
+// });
 
 app.get('/pdf', (req,res) => {
     conn.query("SELECT * FROM `questions`", (err, results) => {
         if(err) throw err;
         console.log(results);
+        conn.end();
     });
     res.render('pdf');
 });

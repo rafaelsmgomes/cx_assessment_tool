@@ -85,3 +85,16 @@ $(document).ready(function(){
 	// $('.btn__progress--6').click();
 	window.statete = state;
 });
+
+$('.header__rectangle--grow-3').click(postState);
+async function postState() {
+	console.log(window.statete);
+	const options = {
+		method: 'POST',
+		body: JSON.stringify(window.statete),
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	}
+	fetch('/api', options)
+}

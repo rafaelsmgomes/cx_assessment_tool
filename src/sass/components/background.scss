@@ -1,0 +1,27 @@
+.background{	
+	position: fixed;
+	z-index: -100;
+	width: 100vw;
+	height: 100vh;
+	opacity: 1;
+	background-size: 100%;
+	background-repeat: no-repeat;
+  transition-property: background;
+  transition-delay: 0.75s;
+ 
+  &--0{
+  	background-image: url(../assets/images/1x/bg-0.jpg);
+  }
+  &--1{
+  	background-image: url(../assets/images/1x/bg-1.png);  		
+  }
+  &--2{
+  	background-image: url(../assets/images/1x/bg-2.jpg);  		
+  }
+  &--3{
+  	background-image: url(../assets/images/1x/bg-3.png);  		
+  }    
+  &.fadeInout{
+  	animation: bgFadeInOut 1.5s linear normal forwards;
+  }
+}

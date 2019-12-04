@@ -25,6 +25,16 @@
     stroke-dasharray: 0;
     stroke: #ae562c; } }
 
+@keyframes bgFadeInOut {
+  0% {
+    opacity: 1; }
+  45% {
+    opacity: 0; }
+  55% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @font-face {
   font-family: "Univers";
   src: url("../fonts/OracleSans_Rg.ttf");
@@ -71,28 +81,26 @@
   font-family: Univers, Arial, Helvetica, sans-serif;
   margin-top: 0.80rem; }
 
-.cta__wrapper {
-  width: 35.40rem;
-  height: 10rem;
-  border: 2px solid #56504b;
-  position: absolute;
-  left: 54vw;
-  padding: 0.80rem 0 0.80rem 0.80rem;
-  /* top: 100%; */
-  transform: translate(0%, 0%);
-  bottom: 0; }
-
-.cta__txt {
-  font-size: 0.8rem;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.31;
-  letter-spacing: normal;
-  color: #cad9de;
-  left: 52vw; }
-  .cta__txt--1 {
-    width: 15.25rem; }
+.background {
+  position: fixed;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition-property: background;
+  transition-delay: 0.75s; }
+  .background--0 {
+    background-image: url(../assets/images/1x/bg-0.jpg); }
+  .background--1 {
+    background-image: url(../assets/images/1x/bg-1.png); }
+  .background--2 {
+    background-image: url(../assets/images/1x/bg-2.jpg); }
+  .background--3 {
+    background-image: url(../assets/images/1x/bg-3.png); }
+  .background.fadeInout {
+    animation: bgFadeInOut 1.5s linear normal forwards; }
 
 .btn__progress {
   display: none; }
@@ -135,6 +143,29 @@
     display: flex; }
   .btn__regress.rotate--1 {
     transform: rotate(180deg); }
+
+.cta__wrapper {
+  width: 35.40rem;
+  height: 10rem;
+  border: 2px solid #56504b;
+  position: absolute;
+  left: 54vw;
+  padding: 0.80rem 0 0.80rem 0.80rem;
+  /* top: 100%; */
+  transform: translate(0%, 0%);
+  bottom: 0; }
+
+.cta__txt {
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #cad9de;
+  left: 52vw; }
+  .cta__txt--1 {
+    width: 15.25rem; }
 
 .checkbox__group {
   flex: 0 0 2.65rem;
@@ -877,8 +908,7 @@ html {
   -ms-text-size-adjust: 100%;
   overflow: hidden;
   font-size: 125%;
-  box-sizing: border-box;
-  background-image: url(../assets/images/1x/dark-pattern.jpg); }
+  box-sizing: border-box; }
 
 .panel--0 {
   z-index: 1000; }

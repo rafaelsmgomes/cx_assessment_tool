@@ -376,7 +376,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'How advanced are your targeting and segmentation processes?',
 				'textArr': ["We haven't had the opportunity to advance in this area", "We create a number of filters and audiences based on profile and behavioral attributes", "We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We have highly specific audience filters that target buyers in real time based on changing profile and behavior data"],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -394,7 +394,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you use any form of data science to derive segments?',
 				'textArr': ["We use advanced filters, account scores and signals to identify the best prospects", "We use look-a-like modeling to find prospects", "No"],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -412,7 +412,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you orchestrate your campaigns across all digital channels including email, mobile, SMS, display ads, web, and social to create a connected experience?',
 				'textArr': ['Yes', 'No'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -430,7 +430,7 @@ export const panels = [
 			${comp.createDial1({				
 				'question':'Do you deliver a personalized account experience across channels for contacts within that organization?',
 				'textArr': ['Never', 'Sometimes','Always'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -439,7 +439,7 @@ export const panels = [
 	`<div class="panel panel--24">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				Do you have an account-based marketing (ABM)&nbsp;program?
@@ -448,7 +448,7 @@ export const panels = [
 			${comp.createDial1({				
 				'question':'Do you have an account-based marketing (ABM) program?',
 				'textArr': ['No', "Just started one","Yes, it's great"],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -457,7 +457,7 @@ export const panels = [
 	`<div class="panel panel--25">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				Do you use a predictive vendor for populating predictive lead scores in your ABM program (e.g., Demandbase, Mintigo, 6thSense)?
@@ -466,7 +466,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you use a predictive vendor for populating predictive lead scores in your ABM program (e.g., Demandbase, Mintigo, 6thSense)?',
 				'textArr': ['Yes', "No","Not Applicable"],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -475,7 +475,7 @@ export const panels = [
 	`<div class="panel panel--26">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				Do you leverage Intelligence to optimize any part of your marketing campaigns?
@@ -484,7 +484,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you leverage Intelligence to optimize any part of your marketing campaigns?',
 				'textArr': ['Yes','No'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 		</div>
@@ -493,7 +493,7 @@ export const panels = [
 	`<div class="panel panel--27">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				What kinds of AI do you use in your marketing program? Check all that apply:
@@ -502,7 +502,7 @@ export const panels = [
 			${comp.createCheckbox({				
 				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
 				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}
 			<button class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</button>			
@@ -511,7 +511,7 @@ export const panels = [
 	`<div class="panel panel--28">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				Do you send emails to buyers optimized based on when they are most likely open?
@@ -520,7 +520,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
 				'textArr': ['Yes', 'No'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}			
 		</div>
@@ -529,7 +529,7 @@ export const panels = [
 	`<div class="panel panel--29">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				Do you provide real-time online personalization for customers or prospects based on their (interests) behavior on your website?
@@ -538,7 +538,7 @@ export const panels = [
 			${comp.createDial1({				
 				'question':'Do you provide real-time online personalization for customers or prospects based on their (interests) behavior on your website?',
 				'textArr': ['No', 'Only Basic', "Yes"],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}			
 		</div>
@@ -547,7 +547,7 @@ export const panels = [
 	`<div class="panel panel--30">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				How do you standardize data and improve data quality in your marketing database?
@@ -556,7 +556,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'How do you standardize data and improve data quality in your marketing database?',
 				'textArr': ['We have a process in place that supports data quality and standards in real time', 'We use a 3rd party solution to clean and append data', "We have defined standards, but don't always apply them",'We have no data-standardization in place'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}			
 		</div>
@@ -565,7 +565,7 @@ export const panels = [
 	`<div class="panel panel--31">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				How do you measure your marketing efforts?
@@ -574,7 +574,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'How do you measure your marketing efforts?',
 				'textArr': ['Generate basic reports', 'Some consistent means of measuring campaigns with some deep analysis in specific areas', "Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)"],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}			
 		</div>
@@ -583,7 +583,7 @@ export const panels = [
 	`<div class="panel panel--32">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Responsive Marketing
+				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
 				How integrated is your marketing data?
@@ -592,7 +592,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'How integrated is your marketing data?',
 				'textArr': ['All of our marketing data is siloed', 'We have integrated some customer data, but using and manipulating it  is a manual process', "We have a unified customer database that automates some essential online and offline data",'We have integrated all online and offline data as well as known profiles from 3rd party data'],
-				'group': 'Relationship',
+				'group': 'relationship',
 				'count': true,
 			})}			
 		</div>

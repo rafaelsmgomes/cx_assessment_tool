@@ -25,3 +25,21 @@
 		stroke: $color-orange-1;
 	}
 }
+
+@keyframes bgFadeInOut{
+	0%{
+		opacity: 1;
+	}
+	45%{
+		opacity: 0;
+	}	
+	55%{
+		opacity: 0;
+	}
+	// 50% {
+	// 	background-image: url(../assets/images/1x/bg-1.png);		
+	// } 
+	100%{
+		opacity: 1;
+	}
+}

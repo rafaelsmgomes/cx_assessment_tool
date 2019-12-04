@@ -1,13 +1,15 @@
 import 'jquery';
 import 'cpr_pathpackage'; 
 
-import Checkbox from './models/Checkbox';
-import Dial from './models/Dial';
-import Likert from './models/Likert';
-import Slider from './models/Slider';
-import Vertfc from './models/Vertfc';
+// import Checkbox from './models/Checkbox';
+// import Dial from './models/Dial';
+// import Likert from './models/Likert';
+// import Slider from './models/Slider';
+// import Vertfc from './models/Vertfc';
 
 import {panels} from './views/panels';
+import ColorScheme from './views/colorScheme';
+
 import {state} from './state';
 
 import variables from './../sass/abstracts/variables.scss';
@@ -18,16 +20,41 @@ state.qLen = question_length;
 state.brown2 = variables.brown2;
 state.white = variables.white1;
 
+const colorSchemeGroup = new ColorScheme(
+	{'colorSchemes':[{
+		'dialBgColor':'hotpink',
+		'dialFgColor':'hotpink',
+		'checkboxColor':'hotpink',
+		'sliderFillColor':'hotpink',
+		'sliderWrapperColor':'green',
+		'buttonColor':'hotpink',
+		'lineColor': 'hotpink',		
+		'background': 'background--0',		
+	},
+	{				
+		'background': 'background--1',		
+	},
+	{				
+		'background': 'background--2',		
+	},
+	{				
+		'background': 'background--3',		
+	},		
+	],
+	'pageBreaks':[0,10,20,33],			
+	}
+);
+state.colorScheme = colorSchemeGroup;
+
 $(document).ready(function(){
 	/*** App path Ctrl ***/ 		
 		$('.pathfinder').build({
 			'panels': panels,
 			'timing': timing,
 			'spacing': 400,
+			'state': state,
 			// 'delay': 1,
 		});
-
-
 
 	/*** Dial Ctrl ***/ 
 		$(".dial-tracker").cprDial({
@@ -80,8 +107,15 @@ $(document).ready(function(){
 		});
 
 	/*** Custom CSS on Btn Progress ***/
+		// $('.btn__progress').click(function(){
+		// 	colorSchemeGroup1.addPage();
+		// 	console.log(colorSchemeGroup1);
+		// });
 
+		// $('.btn__regress').click(function(){
+		// 	colorSchemeGroup1.minusPage();
+		// 	console.log(colorSchemeGroup1);
+		// });
 
-	// $('.btn__progress--6').click();
-	window.statete = state;
+	window.statete = state.colorScheme;
 });

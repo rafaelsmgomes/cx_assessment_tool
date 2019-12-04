@@ -7,7 +7,6 @@ const express     = require("express"),
 const app = express();
 
 const fs      = require("fs");
-let userID = [];
 
 
 
@@ -48,13 +47,41 @@ app.post('/api', (req,res) => {
     console.log("----------------------------------------")
     console.log("----------------------------------------")
     const data = req.body;
+    // data.dials.forEach()
     // console.log(data);
-    conn.query(sql.insertAnswer, [1,1,64,'[Something, Something]'], (err, results) => {
-        if(err) throw err;
-        console.log(results)
+    let questionsIdArray = [],
+    valueArray = [],
+    userArr = [],
+    textArr = [];
+
+    let userID = 2;
+    let dialsAnsArr = [];
+    data.dials.forEach(el => {
+        let dialAnsRow = [];
+
+        questionID = el.id;
+        value = el.val;
+        textAns = el.textArr;
+
+        dialAnsRow.push(userID, questionID, value, `${textAns}`);
+        dialsAnsArr.push(dialAnsRow);
+
+        console.log(dialAnsRow);
+
+        conn.query(sql.insertAnswer, dialAnsRow, (err, results) => {
+            if(err) throw err;
+            console.log(results)
+        });
     });
+
     conn.end();
-    res.end();
+    res.status(200).json({
+        status: 'success',
+        results: data.length,
+        data: {
+            data
+        }
+    });
 });
 
 // app.post('/pdf', (req,res) => {

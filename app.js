@@ -1,5 +1,6 @@
 const express     = require("express"),
-    bodyParser    = require("body-parser")
+    bodyParser    = require("body-parser"),
+    faker         = require("faker"),
     mysql         = require("mysql"),
     path          = require("path"),
     ejs           = require("ejs");
@@ -21,7 +22,8 @@ app.set('views', path.join(__dirname, 'bin_dev'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
  
-const conn = mysql.createConnection({
+const conn = mysql.createPool({
+    connectionLimit: 100,
     host: "72.10.48.193",
     user: "root",
     password: "DBase_0243",
@@ -29,52 +31,37 @@ const conn = mysql.createConnection({
 });
 
 // console.log(state);
-
+let userArr = [];
+let userID;
 
 app.get('/', (req, res) => {
     res.render('homepage');
     let userArrID = []
-    conn.query(`SELECT id FROM users`, (err, results) => {
+    conn.query(`SELECT * FROM users`, (err, results) => {
         for(i = 0; i < results.length; i++){
             userArrID.push(results[i].id);
         };
         console.log(userArrID);
     });    
-    conn.end();
+    conn.release();
 });
 
 app.post('/api', (req,res) => {
     console.log("----------------------------------------")
-    console.log("----------------------------------------")
+    
     const data = req.body;
-    // data.dials.forEach()
-    // console.log(data);
-    let questionsIdArray = [],
-    valueArray = [],
-    userArr = [],
-    textArr = [];
 
-    let userID = 2;
-    let dialsAnsArr = [];
-    data.dials.forEach(el => {
-        let dialAnsRow = [];
+    let userID = Date.now();
+    userArr.push(userID);
 
-        questionID = el.id;
-        value = el.val;
-        textAns = el.textArr;
+    createFakeCompany(userArr);
 
-        dialAnsRow.push(userID, questionID, value, `${textAns}`);
-        dialsAnsArr.push(dialAnsRow);
+    data.likerts.forEach(getAnswers);
+    data.dials.forEach(getAnswers);
+    data.vertfcs.forEach(getAnswers);
+    data.checkboxes.forEach(getAnswers);
 
-        console.log(dialAnsRow);
 
-        conn.query(sql.insertAnswer, dialAnsRow, (err, results) => {
-            if(err) throw err;
-            console.log(results)
-        });
-    });
-
-    conn.end();
     res.status(200).json({
         status: 'success',
         results: data.length,
@@ -82,27 +69,7 @@ app.post('/api', (req,res) => {
             data
         }
     });
-});
-
-// app.post('/pdf', (req,res) => {
-//     console.log("----------------------------------------")
-//     console.log("----------------------------------------")
-//     // console.log(req);
-//     console.log("----------------------------------------")
-//     // console.log(res);
-//     res.json(res);
-//     // console.log(body);
-//     res.redirect('pdf')
-// });
-
-app.get('/pdf', (req,res) => {
-    conn.query("SELECT * FROM `questions`", (err, results) => {
-        if(err) throw err;
-        console.log(results);
-        conn.end();
-    });
-    res.render('pdf');
-});
+}); 
 
 /**
  * CREATE ALL SCHEMAS
@@ -126,7 +93,37 @@ app.get('/pdf', (req,res) => {
 // });
 
 
+function getAnswers(el) {
+    let ansRow = [];
 
+    userID = userID;
+    questionID = el.id;
+    value = el.val;
+    textAns = el.textArr;
+
+    ansRow.push(userID, questionID, value, `${textAns}`);
+    // console.log(ansRow);
+    conn.query(sql.insertAnswer, ansRow, (err, results) => {
+        if(err) throw err;
+        // console.log(results)
+        // conn.release();
+    });
+}; 
+
+function createFakeCompany(arr) {
+    compName = faker.company.companyName();
+    compSize = faker.random.number();
+    compIndustry = faker.company.bs();
+    numEmployees = faker.random.number()/100;
+    compCountry = faker.address.country();
+    arr.push(compName, compSize, compIndustry, numEmployees, compCountry);
+    console.log(arr)
+    conn.query(sql.insertUser, arr, (err, results) => {
+        if(err) throw err;  
+        console.log(results); 
+        // conn.release();
+    })
+}
 
 app.listen(3000 || process.env.PORT, process.env.IP, () => {
     console.log("Customer Experience Assessment Tool is online")

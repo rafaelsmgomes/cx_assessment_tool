@@ -1,6 +1,6 @@
 -- USER SCHEMA
 CREATE TABLE users (
-    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
     created_at TIMESTAMP DEFAULT NOW(),
     user_name VARCHAR(255) UNIQUE,
     size INT,
@@ -23,7 +23,7 @@ CREATE TABLE questions (
 
 -- ANSWER SCHEMA
 CREATE TABLE answers (
-    user_id INTEGER NOT NULL, -- test this NOT NULL
+    user_id BIGINT NOT NULL, -- test this NOT NULL
     question_id INTEGER NOT NULL,
     ans_value INT,
     ans_text TEXT,
@@ -37,7 +37,7 @@ CREATE TABLE answers (
 -- RESULTS SCHEMA
 CREATE TABLE results (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    user_id INTEGER,
+    user_id BIGINT,
     broadcast_results INT,
     responsive_results INT,
     relationship_results INT,

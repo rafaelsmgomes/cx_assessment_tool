@@ -75,3 +75,19 @@ sql.insertAnswer = `INSERT INTO answers(
     ?,
     ?
 )`
+
+sql.insertUser = `INSERT INTO users (
+    id,
+    user_name,
+    size,
+    industry,
+    number_employees,
+    country
+) VALUES (
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?
+)`

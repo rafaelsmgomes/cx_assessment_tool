@@ -1,6 +1,6 @@
 .line{
 	
-	stroke: $color-orange-1;
+	stroke: $color-white-1;
   stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
@@ -15,7 +15,7 @@
   
   &.deactivate{
     animation: fadeorange .5s linear;
-    stroke: $color-orange-1;
+    stroke: $color-white-1;
     stroke-dasharray: 4;   
 
     stroke-width: 2;

@@ -3,6 +3,14 @@
   orange1: #ae562c;
   brown1: #282623;
   brown2: #56504b;
+  green1: #759C6C;
+  green2: #2B6242;
+  blue1: #94AFAF;
+  blue2: #2C5967;
+  red1: #AE562C;
+  tan1: #E5DBBE;
+  grey1: #8B8580;
+  grey2: #312D2A;
   timing1: 1500; }
 
 @keyframes stroke {
@@ -12,7 +20,7 @@
 @keyframes fadewhite {
   0% {
     stroke-dasharray: 4;
-    stroke: #ae562c; }
+    stroke: #fcfbfa; }
   100% {
     stroke-dasharray: 0;
     stroke: #fcfbfa; } }
@@ -23,7 +31,7 @@
     stroke: #fcfbfa; }
   100% {
     stroke-dasharray: 0;
-    stroke: #ae562c; } }
+    stroke: #fcfbfa; } }
 
 @keyframes bgFadeInOut {
   0% {
@@ -92,11 +100,11 @@
   transition-property: background;
   transition-delay: 0.75s; }
   .background--0 {
-    background-image: url(../assets/images/1x/bg-0.jpg); }
+    background-image: url(../assets/images/1x/bg-0.png); }
   .background--1 {
     background-image: url(../assets/images/1x/bg-1.png); }
   .background--2 {
-    background-image: url(../assets/images/1x/bg-2.jpg); }
+    background-image: url(../assets/images/1x/bg-2.png); }
   .background--3 {
     background-image: url(../assets/images/1x/bg-3.png); }
   .background.fadeInout {
@@ -129,14 +137,21 @@
   width: 2.00rem;
   height: 2rem;
   border-radius: 1rem;
-  border: solid 0.1rem #ae562c;
+  border: solid 0.1rem #fcfbfa;
   justify-content: center;
   align-items: center;
-  background-color: #282623;
   cursor: pointer;
   transition: opacity 300ms;
   pointer-events: none;
   opacity: 0; }
+  .btn__regress--0 {
+    background-color: #759C6C; }
+  .btn__regress--1 {
+    background-color: #94AFAF; }
+  .btn__regress--2 {
+    background-color: #AE562C; }
+  .btn__regress--3 {
+    background-color: #8B8580; }
   .btn__regress.show {
     pointer-events: auto;
     opacity: 1;
@@ -191,9 +206,26 @@
   height: 2.65rem;
   align-items: center;
   justify-content: center; }
-  .checkbox__input:checked ~ .checkbox__label .checkbox__button {
-    background-color: #a25a36;
-    border: 2px solid #a25a36; }
+  .checkbox__button--0 {
+    background-color: #759C6C; }
+    .checkbox__input:checked ~ .checkbox__label .checkbox__button--0 {
+      background-color: #2B6242;
+      border: 2px solid #2B6242; }
+  .checkbox__button--1 {
+    background-color: #94AFAF; }
+    .checkbox__input:checked ~ .checkbox__label .checkbox__button--1 {
+      background-color: #2C5967;
+      border: 2px solid #2C5967; }
+  .checkbox__button--2 {
+    background-color: #AE562C; }
+    .checkbox__input:checked ~ .checkbox__label .checkbox__button--2 {
+      background-color: #FACD62;
+      border: 2px solid #FACD62; }
+  .checkbox__button--3 {
+    background-color: #8B8580; }
+    .checkbox__input:checked ~ .checkbox__label .checkbox__button--3 {
+      background-color: #67605B;
+      border: 2px solid #67605B; }
 
 .checkbox__form {
   display: flex;
@@ -311,6 +343,7 @@
 
 .dial__line {
   background-color: #56504b;
+  opacity: 0;
   border: solid 0.1rem #56504b; }
   .dial__line--0 {
     transform: rotate(112.5deg); }
@@ -406,11 +439,11 @@
     width: 2.00rem;
     height: 2.00rem;
     border-radius: 50.00rem;
-    border: solid 0.1rem #ae562c;
+    border: solid 0.1rem #fcfbfa;
     transition: all .2s;
     right: -.1rem;
     z-index: 5;
-    background-color: #282623;
+    background-color: #56504b;
     overflow: hidden;
     padding-left: .75rem; }
     .header__rectangle--grow-1, .header__rectangle--grow-3 {
@@ -458,14 +491,14 @@
   margin-top: 5.70rem;
   width: 32.90rem;
   height: 32.90rem;
-  border: solid 2px #282623;
+  border: solid 2px #fcfbfa;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   transition: all .5s;
-  background-color: #282623; }
+  background-color: #759C6C; }
 
 .landing__title {
   font-size: 2.4rem;
@@ -546,22 +579,38 @@
   justify-content: space-between; }
 
 .likert__button {
-  border: 2px solid #fff;
+  border: 2px solid #fcfbfa;
   width: 100%;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 150%;
-  background-color: #282623;
   box-sizing: content-box; }
-  .likert__input:checked ~ .likert__label .likert__button {
-    background-color: #a25a36;
-    border: 2px solid #a25a36; }
+  .likert__button--0 {
+    background-color: #759C6C; }
+    .likert__input:checked ~ .likert__label .likert__button--0 {
+      background-color: #2B6242;
+      border: 2px solid #2B6242; }
+  .likert__button--1 {
+    background-color: #94AFAF; }
+    .likert__input:checked ~ .likert__label .likert__button--1 {
+      background-color: #2C5967;
+      border: 2px solid #2C5967; }
+  .likert__button--2 {
+    background-color: #AE562C; }
+    .likert__input:checked ~ .likert__label .likert__button--2 {
+      background-color: #FACD62;
+      border: 2px solid #FACD62; }
+  .likert__button--2 {
+    background-color: #8B8580; }
+    .likert__input:checked ~ .likert__label .likert__button--2 {
+      background-color: #67605B;
+      border: 2px solid #67605B; }
 
 .likert__line {
   stroke-width: 2;
-  stroke: #fff; }
+  stroke: #fcfbfa; }
   .likert__line--group {
     width: 100%;
     z-index: -1; }
@@ -628,7 +677,7 @@
     width: 100%;
     padding-left: 0.86rem;
     padding-right: 0.86rem;
-    background-color: #ae562c; }
+    background-color: transparent; }
   .slider__content:not(:last-of-type) {
     margin-bottom: 0.80rem;
     overflow: hidden; }
@@ -676,7 +725,8 @@
   .rangeslider--horizontal {
     width: 100%;
     height: 2.20rem;
-    border: solid 0.1rem rgba(229, 219, 190, 0.2);
+    background-color: #2B6242;
+    border: solid 0.1rem #fcfbfa;
     cursor: pointer;
     margin-top: 0.65rem; }
     .scroller__content--active .rangeslider--horizontal {
@@ -739,9 +789,26 @@
   height: 2.65rem;
   align-items: center;
   justify-content: center; }
-  .vertfc__input:checked ~ .vertfc__label .vertfc__button {
-    background-color: #a25a36;
-    border: 2px solid #a25a36; }
+  .vertfc__button--0 {
+    background-color: #759C6C; }
+    .vertfc__input:checked ~ .vertfc__label .vertfc__button--0 {
+      background-color: #2B6242;
+      border: 2px solid #2B6242; }
+  .vertfc__button--1 {
+    background-color: #94AFAF; }
+    .vertfc__input:checked ~ .vertfc__label .vertfc__button--1 {
+      background-color: #2C5967;
+      border: 2px solid #2C5967; }
+  .vertfc__button--2 {
+    background-color: #AE562C; }
+    .vertfc__input:checked ~ .vertfc__label .vertfc__button--2 {
+      background-color: #FACD62;
+      border: 2px solid #FACD62; }
+  .vertfc__button--3 {
+    background-color: #8B8580; }
+    .vertfc__input:checked ~ .vertfc__label .vertfc__button--3 {
+      background-color: #67605B;
+      border: 2px solid #67605B; }
 
 .vertfc__checkmark {
   background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
@@ -774,7 +841,7 @@
   color: #fcfbfa; }
 
 .line {
-  stroke: #ae562c;
+  stroke: #fcfbfa;
   stroke-width: 2;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
@@ -786,7 +853,7 @@
     stroke-dasharray: 0; }
   .line.deactivate {
     animation: fadeorange .5s linear;
-    stroke: #ae562c;
+    stroke: #fcfbfa;
     stroke-dasharray: 4;
     stroke-width: 2;
     stroke-dasharray: 4;

@@ -28,10 +28,34 @@
     height: 2.65rem;
     align-items: center;
     justify-content: center;
-		.checkbox__input:checked ~ .checkbox__label &{
-			background-color: $color-orange-2;
-    	border: 2px solid $color-orange-2;
-		}    
+	    &--0{
+            background-color: $color-green-1;
+            .checkbox__input:checked ~ .checkbox__label &{
+                background-color: $color-green-2;
+               border: 2px solid $color-green-2;
+            }
+        }    	    
+        &--1{
+            background-color: $color-blue-1;
+            .checkbox__input:checked ~ .checkbox__label &{
+                background-color: $color-blue-2;
+               border: 2px solid $color-blue-2;
+            }
+        }           
+        &--2{
+            background-color: $color-red-1;
+            .checkbox__input:checked ~ .checkbox__label &{
+                background-color: $color-mustard-1;
+               border: 2px solid $color-mustard-1;
+            }
+        }           
+        &--3{
+            background-color: $color-grey-1;
+            .checkbox__input:checked ~ .checkbox__label &{
+                background-color: $color-grey-3;
+               border: 2px solid $color-grey-3;
+            }
+        }           
 	}
 	&__form{
 		// height: 16rem;

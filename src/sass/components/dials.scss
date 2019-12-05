@@ -102,6 +102,7 @@
   }
   &__line{
     background-color: #56504b;
+    opacity: 0;
     border: solid 0.1rem #56504b;
     &--0{
       transform: rotate(112.5deg);

@@ -260,7 +260,7 @@ export const panels = [
 				Responsive Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you perform lead scoring to identify high value buyers?
+				Do you perform lead scoring to identify high value&nbsp;buyers?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				

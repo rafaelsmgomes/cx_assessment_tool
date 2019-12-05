@@ -17,27 +17,27 @@ import variables from './../sass/abstracts/variables.scss';
 const question_length = panels.length-2;
 const timing = variables.timing1;
 state.qLen = question_length;
-state.brown2 = variables.brown2;
 state.white = variables.white1;
 
 const colorSchemeGroup = new ColorScheme(
 	{'colorSchemes':[{
-		'dialBgColor':'hotpink',
-		'dialFgColor':'hotpink',
-		'checkboxColor':'hotpink',
-		'sliderFillColor':'hotpink',
-		'sliderWrapperColor':'green',
-		'buttonColor':'hotpink',
-		'lineColor': 'hotpink',		
+		'dialBgColor': variables.green2,
+		'btnColorClass': '--0',	
 		'background': 'background--0',		
 	},
 	{				
+		'dialBgColor':variables.blue2,
+		'btnColorClass':'--1',			
 		'background': 'background--1',		
 	},
 	{				
+		'dialBgColor':variables.tan1,
+		'btnColorClass':'--2',		
 		'background': 'background--2',		
 	},
 	{				
+		'dialBgColor':variables.grey2,
+		'btnColorClass':'--3',		
 		'background': 'background--3',		
 	},		
 	],
@@ -60,7 +60,7 @@ $(document).ready(function(){
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',
-			'bgColor': state.brown2,
+			'bgColor': variables.brown2,
 			'fgColor': state.white,
 			'state': state,
 			'percShow': false,		
@@ -69,7 +69,7 @@ $(document).ready(function(){
 		$(".dial-tracker2").cprDial({
 			'thickness': .12,
 			'height': '200%',
-			'bgColor': state.brown2,
+			'bgColor': variables.brown2,
 			'fgColor': state.white,
 			'state': state,		
 			'percShow': true,

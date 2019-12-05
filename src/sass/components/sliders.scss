@@ -27,7 +27,7 @@
 	    width: 100%;
 	    padding-left: 0.86rem;
 	    padding-right: 0.86rem;
-	    background-color: #ae562c;
+	    background-color: transparent;
 		}		
 		&:not(:last-of-type){
 			margin-bottom: 0.80rem;
@@ -82,8 +82,8 @@
   &--horizontal{
 	  width: 100%;
 	  height: 2.20rem;
-
-		border: solid 0.10rem rgba(229, 219, 190, 0.2);	  	
+		background-color: $color-green-2;
+		border: solid 0.10rem $color-white-1;	  	
 	  // overflow: hidden;
 	  cursor: pointer;
 	  margin-top: 0.65rem;

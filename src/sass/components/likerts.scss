@@ -18,24 +18,48 @@
 		justify-content: space-between;
 	}
 	&__button{
-		border: 2px solid #fff;
+		border: 2px solid $color-white-1;
     width: 100%;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 150%;
-    background-color: $color-brown-1;
+
     box-sizing: content-box;
 
-    .likert__input:checked ~ .likert__label &{
-    	background-color: $color-orange-2;
-	    border: 2px solid $color-orange-2;
+    &--0{
+	    background-color: $color-green-1;
+	    .likert__input:checked ~ .likert__label &{
+	    	background-color: $color-green-2;
+		    border: 2px solid $color-green-2;
+	    }
     }
+		&--1{
+	    background-color: $color-blue-1;
+	    .likert__input:checked ~ .likert__label &{
+	    	background-color: $color-blue-2;
+		    border: 2px solid $color-blue-2;
+	    }
+    }  
+		&--2{
+	    background-color: $color-red-1;
+	    .likert__input:checked ~ .likert__label &{
+	    	background-color: $color-mustard-1;
+		    border: 2px solid $color-mustard-1;
+	    }
+    }  
+		&--2{
+	    background-color: $color-grey-1;
+	    .likert__input:checked ~ .likert__label &{
+	    	background-color: $color-grey-3;
+		    border: 2px solid $color-grey-3;
+	    }
+    }            
 	}
 	&__line{
 		stroke-width: 2;    
-    stroke: #fff;
+    stroke: $color-white-1;
 
 		&--group{
 			width: 100%;

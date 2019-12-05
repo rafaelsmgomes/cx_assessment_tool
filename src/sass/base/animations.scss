@@ -7,7 +7,7 @@
 @keyframes fadewhite{
 	0% {
 	  stroke-dasharray: 4;
-		stroke: $color-orange-1;
+		stroke: $color-white-1;
 	}
 	100% {
 		stroke-dasharray: 0;
@@ -22,7 +22,7 @@
 	}
 	100% {
 		stroke-dasharray: 0;
-		stroke: $color-orange-1;
+		stroke: $color-white-1;
 	}
 }
 

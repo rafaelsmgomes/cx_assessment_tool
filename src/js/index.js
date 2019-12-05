@@ -60,7 +60,7 @@ $(document).ready(function(){
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',
-			'bgColor': variables.brown2,
+			'bgColor': variables.green2,
 			'fgColor': state.white,
 			'state': state,
 			'percShow': false,		
@@ -69,7 +69,7 @@ $(document).ready(function(){
 		$(".dial-tracker2").cprDial({
 			'thickness': .12,
 			'height': '200%',
-			'bgColor': variables.brown2,
+			'bgColor': variables.green2,
 			'fgColor': state.white,
 			'state': state,		
 			'percShow': true,

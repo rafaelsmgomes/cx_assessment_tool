@@ -76,6 +76,9 @@
   margin-top: 1.05rem; }
   .main__title--1 {
     width: 62.25rem; }
+    @media only screen and (max-width: 1440px) {
+      .main__title--1 {
+        width: 90%; } }
 
 .main__direction {
   font-size: 0.95em;
@@ -826,6 +829,9 @@
   height: 100%;
   width: max-content;
   position: relative; }
+  @media only screen and (max-width: 1440px) {
+    .vertfc__label {
+      width: 100%; } }
 
 .vertfc__text {
   white-space: nowrap;
@@ -839,6 +845,15 @@
   line-height: 1.3;
   letter-spacing: normal;
   color: #fcfbfa; }
+  @media only screen and (max-width: 1440px) {
+    .panel--31 .vertfc__text {
+      white-space: normal; } }
+  @media only screen and (max-width: 1440px) {
+    .panel--38 .vertfc__text {
+      white-space: normal; } }
+  @media only screen and (max-width: 1440px) {
+    .panel--40 .vertfc__text {
+      white-space: normal; } }
 
 .line {
   stroke: #fcfbfa;
@@ -870,6 +885,9 @@
     overflow: visible;
     left: 50%;
     transform: translateX(-50%); }
+    @media only screen and (max-width: 1440px) {
+      .line__wrapper {
+        width: 83.333%; } }
 
 .body__content {
   width: 70rem;
@@ -880,6 +898,9 @@
   margin: 0 auto;
   left: 0;
   right: 0; }
+  @media only screen and (max-width: 1440px) {
+    .body__content {
+      width: 83.333%; } }
 
 .footer {
   position: fixed;
@@ -891,6 +912,9 @@
   left: 0;
   right: 0;
   height: 2rem; }
+  @media only screen and (max-width: 1440px) {
+    .footer {
+      width: 83.333%; } }
   .footer-text {
     width: 1.30rem;
     height: 0.90rem;
@@ -923,6 +947,9 @@
   margin: 0 auto;
   left: 0;
   right: 0; }
+  @media only screen and (max-width: 1440px) {
+    .header__container {
+      width: 83.333%; } }
 
 .panel {
   height: 100vh;

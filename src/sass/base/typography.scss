@@ -37,6 +37,10 @@
     // height: 6.00rem;
     &--1{
     	width: 62.25rem;
+  
+      @include bp($width-1){
+        width: 90%;
+      }
     }
 	}
 	&__direction{

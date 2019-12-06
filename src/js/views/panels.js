@@ -701,7 +701,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?',
-				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or upsell"],
+				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended&nbsp;offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or&nbsp;upsell"],
 				'group': 'Beyond',
 				'count': true,
 			})}
@@ -737,7 +737,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you track, measure and analyze customer lifetime value?',
-				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
+				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
 				'group': 'Beyond',
 				'count': true,
 			})}

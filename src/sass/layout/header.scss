@@ -8,6 +8,9 @@
 	  transition-property: opacity;
 	  transition-duration: .1s;	
 		@include layoutOrientation;
+		@include bp($width-1){
+			width: 83.333%;
+		}
 	}
 }
 

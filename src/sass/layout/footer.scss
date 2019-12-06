@@ -5,6 +5,9 @@
   transform: translateY(-50%);	
 	@include layoutOrientation;
 	height: 2rem;
+    @include bp($width-1){
+        width: 83.333%;
+    }    
 
 
 	&-text{

@@ -5,5 +5,8 @@
     padding-top: 4.00rem; 
     position: relative;
 		@include layoutOrientation;
+		@include bp($width-1){
+			width: 83.333%;
+		}
   }
 }

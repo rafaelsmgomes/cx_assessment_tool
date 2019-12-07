@@ -86,8 +86,15 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow:hidden;
+  position: fixed;
   font-size: 125%; //20px    
   box-sizing: border-box; 
+  touch-action: none;
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
 }
 
   //TEST
@@ -98,6 +105,7 @@ html {
 
 .pathfinder{
 	//TEST
+  // position: relative;
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
   // transform: translateY(400vw);

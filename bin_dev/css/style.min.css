@@ -98,7 +98,7 @@
   width: 100vw;
   height: 100vh;
   opacity: 1;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   transition-property: background;
   transition-delay: 0.75s; }
@@ -190,7 +190,7 @@
   display: flex;
   align-items: center; }
   .checkbox__group:not(:first-of-type) {
-    margin-top: 15px; }
+    margin-top: 0.75rem; }
 
 .checkbox__input {
   display: none; }
@@ -203,7 +203,7 @@
   position: relative; }
 
 .checkbox__button {
-  border: 2px solid #fcfbfa;
+  border: 0.1rem solid #fcfbfa;
   border-radius: 50%;
   display: flex;
   height: 2.65rem;
@@ -213,22 +213,22 @@
     background-color: #759C6C; }
     .checkbox__input:checked ~ .checkbox__label .checkbox__button--0 {
       background-color: #2B6242;
-      border: 2px solid #2B6242; }
+      border: 0.1rem solid #2B6242; }
   .checkbox__button--1 {
     background-color: #94AFAF; }
     .checkbox__input:checked ~ .checkbox__label .checkbox__button--1 {
       background-color: #2C5967;
-      border: 2px solid #2C5967; }
+      border: 0.1rem solid #2C5967; }
   .checkbox__button--2 {
     background-color: #AE562C; }
     .checkbox__input:checked ~ .checkbox__label .checkbox__button--2 {
       background-color: #FACD62;
-      border: 2px solid #FACD62; }
+      border: 0.1rem solid #FACD62; }
   .checkbox__button--3 {
     background-color: #8B8580; }
     .checkbox__input:checked ~ .checkbox__label .checkbox__button--3 {
       background-color: #67605B;
-      border: 2px solid #67605B; }
+      border: 0.1rem solid #67605B; }
 
 .checkbox__form {
   display: flex;
@@ -282,7 +282,7 @@
   position: absolute;
   height: 0;
   border-style: solid;
-  border-width: 0 12.3px 357px 12.3px;
+  border-width: 0 0.62rem 17.85rem 0.62rem;
   cursor: grab;
   border-color: transparent transparent #fff transparent;
   bottom: 0px;
@@ -494,7 +494,7 @@
   margin-top: 5.70rem;
   width: 32.90rem;
   height: 32.90rem;
-  border: solid 2px #fcfbfa;
+  border: solid 0.1rem #fcfbfa;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -582,7 +582,7 @@
   justify-content: space-between; }
 
 .likert__button {
-  border: 2px solid #fcfbfa;
+  border: 0.1rem solid #fcfbfa;
   width: 100%;
   border-radius: 50%;
   display: flex;
@@ -594,22 +594,22 @@
     background-color: #759C6C; }
     .likert__input:checked ~ .likert__label .likert__button--0 {
       background-color: #2B6242;
-      border: 2px solid #2B6242; }
+      border: 0.1rem solid #2B6242; }
   .likert__button--1 {
     background-color: #94AFAF; }
     .likert__input:checked ~ .likert__label .likert__button--1 {
       background-color: #2C5967;
-      border: 2px solid #2C5967; }
+      border: 0.1rem solid #2C5967; }
   .likert__button--2 {
     background-color: #AE562C; }
     .likert__input:checked ~ .likert__label .likert__button--2 {
       background-color: #FACD62;
-      border: 2px solid #FACD62; }
+      border: 0.1rem solid #FACD62; }
   .likert__button--2 {
     background-color: #8B8580; }
     .likert__input:checked ~ .likert__label .likert__button--2 {
       background-color: #67605B;
-      border: 2px solid #67605B; }
+      border: 0.1rem solid #67605B; }
 
 .likert__line {
   stroke-width: 2;
@@ -625,7 +625,7 @@
   cursor: pointer; }
 
 .likert__group {
-  flex: 0 0 53px; }
+  flex: 0 0 2.65rem; }
 
 .likert__text {
   position: absolute;
@@ -785,7 +785,7 @@
     margin-top: 0.75rem; }
 
 .vertfc__button {
-  border: 2px solid #fcfbfa;
+  border: 0.1rem solid #fcfbfa;
   border-radius: 50%;
   display: flex;
   cursor: pointer;
@@ -796,22 +796,22 @@
     background-color: #759C6C; }
     .vertfc__input:checked ~ .vertfc__label .vertfc__button--0 {
       background-color: #2B6242;
-      border: 2px solid #2B6242; }
+      border: 0.1rem solid #2B6242; }
   .vertfc__button--1 {
     background-color: #94AFAF; }
     .vertfc__input:checked ~ .vertfc__label .vertfc__button--1 {
       background-color: #2C5967;
-      border: 2px solid #2C5967; }
+      border: 0.1rem solid #2C5967; }
   .vertfc__button--2 {
     background-color: #AE562C; }
     .vertfc__input:checked ~ .vertfc__label .vertfc__button--2 {
       background-color: #FACD62;
-      border: 2px solid #FACD62; }
+      border: 0.1rem solid #FACD62; }
   .vertfc__button--3 {
     background-color: #8B8580; }
     .vertfc__input:checked ~ .vertfc__label .vertfc__button--3 {
       background-color: #67605B;
-      border: 2px solid #67605B; }
+      border: 0.1rem solid #67605B; }
 
 .vertfc__checkmark {
   background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
@@ -1001,8 +1001,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow: hidden;
+  position: fixed;
   font-size: 125%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  touch-action: none; }
+
+.main {
+  width: 100vw;
+  height: 100vh; }
 
 .panel--0 {
   z-index: 1000; }

@@ -56,7 +56,7 @@ $(document).ready(function(){
 			// 'delay': 1,
 		});
 
-	/*** Dial Ctrl ***/ 
+	// /*** Dial Ctrl ***/ 
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',
@@ -76,14 +76,14 @@ $(document).ready(function(){
 		});		
 
 
-	/*** Likert Ctrl ***/ 
+	// /*** Likert Ctrl ***/ 
 
 		$('.likert__form').cprLikert({
 			'vertical': false,
 			'state': state,
 		});
 
-	/*** Checkbox Ctrl ***/ 
+	// /*** Checkbox Ctrl ***/ 
 
 		$('.checkbox__form').cprCheckbox({
 			'vertical': false,
@@ -91,7 +91,7 @@ $(document).ready(function(){
 			'size': .15,
 		});
 
-	/*** Vertfc Ctrl ***/ 
+	// /*** Vertfc Ctrl ***/ 
 
 		$('.vertfc__form').cprVertfc({
 			'state': state,

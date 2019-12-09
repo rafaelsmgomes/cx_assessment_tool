@@ -10,8 +10,9 @@
 // @import 'components/arrows';
 // @import 'components/eloqua';
 // @import 'components/clouds';
-@import 'components/cta';
+@import 'components/background';
 @import 'components/btns';
+@import 'components/cta';
 @import 'components/checkboxes';
 @import 'components/dials';
 // @import 'components/detailed';
@@ -85,13 +86,15 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow:hidden;
+  position: fixed;
   font-size: 125%; //20px    
   box-sizing: border-box; 
-  // transform: scale(0.08) translateY(215rem);
-  background-image: url(../assets/images/1x/dark-pattern.jpg);
-    // transform: scale(.05) translateY(100rem);	
-	//TEST
-  // transform: scale(.05);
+  touch-action: none;
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
 }
 
   //TEST
@@ -102,6 +105,7 @@ html {
 
 .pathfinder{
 	//TEST
+  // position: relative;
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
   // transform: translateY(400vw);

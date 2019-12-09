@@ -12,9 +12,31 @@ $color-orange-2: #a25a36;
 $color-brown-1: #282623;
 $color-brown-2: #56504b;
 
+$color-green-1: #759C6C;
+$color-green-2: #2B6242;
+
+$color-blue-1: #94AFAF;
+$color-blue-2: #2C5967;
+
+$color-red-1: #AE562C;
+
+$color-mustard-1: #FACD62;
+
+$color-tan-1: #E5DBBE;
+
+
+
+
+$color-grey-1: #8B8580;
+$color-grey-2: #312D2A;
+$color-grey-3: #67605B;
+
 // TIMING
 $timing-1: 1500;
 $timing-2: 300ms;
+
+// WIDTH
+$width-1: 1440;
 
 :export {
   white1: $color-white-1;
@@ -22,5 +44,17 @@ $timing-2: 300ms;
   brown1: $color-brown-1;	
 	brown2: $color-brown-2;
 	
+	green1: $color-green-1;
+	green2: $color-green-2;
+
+	blue1: $color-blue-1;
+	blue2: $color-blue-2;	
+
+	red1: $color-red-1;
+	tan1: $color-tan-1;
+
+	grey1: $color-grey-1;
+	grey2: $color-grey-2;		
+
 	timing1: $timing-1;
 }

@@ -10,7 +10,7 @@
 
 		display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 	}
 
 	&__input{
@@ -26,17 +26,44 @@
 	}
 
 	&__button{
-		border: 2px solid #fff;
+		border: 0.10rem solid $color-white-1;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
     // height: 100%;
     height: 2.65rem;
     align-items: center;
     justify-content: center;
-		.vertfc__input:checked ~ .vertfc__label &{
-			background-color: $color-orange-2;
-    	border: 2px solid $color-orange-2;
-		}       
+
+		&--0{
+			background-color: $color-green-1;
+			.vertfc__input:checked ~ .vertfc__label &{
+				background-color: $color-green-2;
+	    	border: 0.10rem solid $color-green-2;
+			}       
+		}
+		&--1{
+			background-color: $color-blue-1;
+			.vertfc__input:checked ~ .vertfc__label &{
+				background-color: $color-blue-2;
+	    	border: 0.10rem solid $color-blue-2;
+			}       
+		}
+		&--2{
+			background-color: $color-red-1;
+			.vertfc__input:checked ~ .vertfc__label &{
+				background-color: $color-mustard-1;
+	    	border: 0.10rem solid $color-mustard-1;
+			}       
+		}
+		&--3{
+			background-color: $color-grey-1;
+			.vertfc__input:checked ~ .vertfc__label &{
+				background-color: $color-grey-3;
+	    	border: 0.10rem solid $color-grey-3;
+			}       
+		}
+
 	}	
 	&__checkmark{
 		background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
@@ -55,20 +82,41 @@
     align-items: center;
     height: 100%;
     width: max-content;
-    cursor: pointer;
+    // cursor: pointer;
     position: relative;
-    flex: 1;
+    // flex: 1;
+		@include bp($width-1){
+  		width: 100%;
+  	}
 	}
 	&__text{
-		width: 39.5rem;
+		// width: 39.5rem;
+		white-space: nowrap;
 		padding-left: 1.10rem;
     font-family: $font-reg;
     font-size: 1.15rem;
+    cursor: pointer;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.3;
     letter-spacing: normal;
     color: $color-white-1;
+		
+		.panel--31 &{
+			@include bp($width-1){
+	  		white-space: normal;
+	  	}
+		}	
+		.panel--38 &{
+			@include bp($width-1){
+	  		white-space: normal;
+	  	}
+		}		  
+		.panel--40 &{
+			@include bp($width-1){
+	  		white-space: normal;
+	  	}
+		}		    			  	  
 	}
 }

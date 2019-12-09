@@ -174,7 +174,7 @@ export const createLikert = (attr) => {
             <div class="likert__group">
                 <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}">
                 <label for="likert__id--${id}-${j}" class="likert__label">
-                    <div class="likert__button">
+                    <div class="likert__button likert__button--0">
                         <div class="likert__checkmark"></div>
                     </div>
                     <span class="likert__text">${textArr[j]}</span>
@@ -221,7 +221,7 @@ export const createCheckbox = (attr) => {
             <div class="checkbox__group">
                 <input type="checkbox" class="checkbox__input" name="checkbox--${id}" id="checkbox--${id}--${j}" value=${textArr[j]}>
                 <label for="checkbox--${id}--${j}" class="checkbox__label">
-                <div class="checkbox__button">
+                <div class="checkbox__button checkbox__button--0">
                 <div class="checkbox__checkmark"></div>
                 </div>
                 <span class='checkbox__text'>${textArr[j]}</span>
@@ -267,7 +267,7 @@ export const createVertfc = (attr) => {
         <div class="vertfc__group vertfc__group--${j}">
             <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${startPoint} name="vertfc__name--${id}">
             <label for="vertfc__id--${id}-${j}" class="vertfc__label">
-                <div class="vertfc__button">
+                <div class="vertfc__button vertfc__button--0">
                     <div class="vertfc__checkmark"></div>
                 </div>
                 <span class="vertfc__text">${textArr[j]}</span>

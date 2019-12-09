@@ -24,7 +24,7 @@
     border-style: solid;
 
     //THIS NEEDS TO BE RESPONSIVE
-    border-width: 0 12.3px 357px 12.3px;
+    border-width: 0 0.62rem 17.85rem 0.62rem;
     //
     cursor: grab;
     border-color: transparent transparent #fff transparent;
@@ -102,6 +102,7 @@
   }
   &__line{
     background-color: #56504b;
+    opacity: 0;
     border: solid 0.1rem #56504b;
     &--0{
       transform: rotate(112.5deg);

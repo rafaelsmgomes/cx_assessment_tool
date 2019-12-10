@@ -862,6 +862,9 @@
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
   opacity: 0; }
+  @media only screen and (max-width: 1075px) {
+    .line--1x, .line--2x {
+      stroke-width: 4; } }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #fcfbfa;
@@ -1014,4 +1017,8 @@ html {
   z-index: 1000; }
 
 .pathfinder {
+  position: relative;
   transition-timing-function: cubic-bezier(0.47, 0.11, 0, 1.08); }
+
+.main-container {
+  width: 100vw; }

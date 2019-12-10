@@ -105,10 +105,13 @@ html {
 
 .pathfinder{
 	//TEST
-  // position: relative;
+  position: relative;
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
   // transform: translateY(400vw);
   // transform: translateX(-400vw);
 }
 
+.main-container{
+  width: 100vw;
+}

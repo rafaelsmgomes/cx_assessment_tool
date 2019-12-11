@@ -26,7 +26,7 @@ const conn = mysql.createPool({
     connectionLimit: 100,
     host: "72.10.48.193",
     user: "root",
-    password: "DBase_0243",
+    password: "Fael_0243",
     database: "test_1",
     multipleStatements: true
 });
@@ -38,14 +38,16 @@ let userID;
 
 app.get('/', (req, res) => {
     res.render('homepage');
-    let userArrID = []
-    conn.query(`SELECT * FROM users`, (err, results) => {
-        for(i = 0; i < results.length; i++){
-            userArrID.push(results);
-        };
-        console.log(userArrID);
+    let questionsArr = []
+    conn.query(`SELECT * FROM questions`, (err, results) => {
+        if(err) throw err; 
+        console.log(results[0]);
+        // for(i = 0; i < results.length; i++){
+        //     userArrID.push(results);
+        // };
+        // console.log(userArrID); 
     });    
-    conn.release();
+    // conn.release();
 });
 
 app.post('/api', (req,res) => {
@@ -56,45 +58,65 @@ app.post('/api', (req,res) => {
         dials       = data.dials,
         vertfcs     = data.vertfcs,
         checkboxes  = data.checkboxes;
+        sliders  = data.sliders;
 
-    // userID = Date.now();
-    // userArr.push(userID);
+    userID = Date.now();
+    // userArr.push(userID); 
     createFakeCompany(userArr)
-        // .then(() => {
-        //     likerts.forEach(getAnswers);
-        //     dials.forEach(getAnswers);
-        //     vertfcs.forEach(getAnswers);
-        //     checkboxes.forEach(getAnswers);
-        // });
+        .then(() => {
+            likerts.forEach(getAnswers);
+            dials.forEach(getAnswers);
+            vertfcs.forEach(getAnswers);
+            checkboxes.forEach(getAnswers);
+            sliders.forEach(getAnswers); 
+        })
+        .then( () => {
+            calculateAnswers();
+
+        });
 
     res.status(200).json({
         status: 'success',
         results: data.length,
         data: {
             data
-        }
+        }  
     });
 }); 
 
+
+function calculateAnswers () {
+    return new Promise( (res, rej) => {
+        conn.query(sql.updateAnswers, userID, (err, results, fields) => {
+            if(err) throw err;
+            console.log(results);
+            res();
+        });
+    })
+};
+
+
 function getAnswers(el) { 
-    let ansRow = [];
-
-    questionID = el.id;
-    value = el.val;
-    textAns = el.textArr;
-
-    ansRow.push(userID, questionID, value, `${textAns}`); 
-    // console.log(ansRow);
-    conn.query(sql.insertAnswer, ansRow, (err, results) => {
-        console.log(results);
-        // conn.destroy();
-        if(err) throw err;
-    });
+    return new Promise( (res, rej) => {
+        let ansRow = [];
+    
+        questionID = el.id;
+        value = el.val;
+        textAns = el.textArr;
+    
+        ansRow.push(userID, questionID, value, `${textAns}`); 
+        // console.log(ansRow);
+        conn.query(sql.insertAnswer, ansRow, (err, results) => {
+            // console.log(results);
+            // conn.destroy();
+            if(err) throw err;
+            res();
+        });
+    })
 }; 
 
 function createFakeCompany(arr) {
     return new Promise( (res, rej) => {
-        userID = Date.now();
         compName = faker.company.companyName();
         compSize = faker.random.number();
         compIndustry = faker.company.bs();
@@ -106,9 +128,9 @@ function createFakeCompany(arr) {
             console.log(results); 
             // conn.destroy();
             if(err) throw err;  
-            userArr = [];
+            // userArr = [];
+            res(); 
         })
-        res(); 
     })
 };
 

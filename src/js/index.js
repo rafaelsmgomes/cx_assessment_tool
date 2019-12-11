@@ -119,7 +119,7 @@ $(document).ready(function(){
 
 
 	// $('.btn__progress--6').click();
-	window.statete = state.colorScheme;
+	window.statete = state;
 });
 
 $('.header__rectangle--grow-3').click(postState);

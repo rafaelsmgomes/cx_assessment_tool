@@ -64,17 +64,36 @@ sql.resultsSchema = `CREATE TABLE results (
  * Insert Data
  */
 
-sql.insertAnswer = `INSERT INTO answers(
-    user_id,
-    question_id,
-    ans_value,
-    ans_text
-) VALUES (
-    ?,
-    ?,
-    ?,
-    ?
-)`
+// sql.insertAnswer = `INSERT INTO answers(
+//     user_id,
+//     question_id,
+//     ans_value,
+//     ans_text
+// ) VALUES (
+//     ?,
+//     ?,
+//     ?,
+//     ?
+// )`
+sql.insertAnswer = `
+INSERT INTO answers
+    SET user_id = ?,
+        question_id = ?,
+        ans_value = ?,
+        ans_text = ?
+`
+
+sql.updateAnswers = `
+UPDATE answers
+SET weighted = ((SELECT questions.q_weight FROM questions WHERE answers.question_id = questions.id) * ans_value),
+ans_section = (SELECT questions.marketing_type FROM questions WHERE answers.question_id = questions.id),
+answers.recommendation = IF (answers.ans_value >= 75,
+    (SELECT questions.recommendation_high FROM questions WHERE questions.id= question_id),
+    (SELECT questions.recommendation_low FROM questions WHERE questions.id= question_id)) 
+WHERE user_id = ?
+`
+
+
 
 sql.insertUser = `INSERT INTO users (
     id,

@@ -6,11 +6,16 @@ export default class Vertfc {
       this.count = attr.count;  
     	this.val = 25;
     	this.textArr = attr.textArr;
-      this.id = null;      
+      this.id = null;   
+      this.choseAns = null;   
     }
 
-    assignValue(qLen,v){
+    assignValue(v){
     	// console.log(v);
-    	this.val = Math.round(100*(1/qLen)*(v/100));
+    	this.val = Number(v);
     }    
+
+    chooseAns(txt){
+      this.choseAns = txt;
+    }
 }

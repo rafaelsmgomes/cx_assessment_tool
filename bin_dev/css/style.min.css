@@ -162,6 +162,10 @@
   .btn__regress.rotate--1 {
     transform: rotate(180deg); }
 
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .btn__regress > img {
+    width: 62%; } }
+
 .cta__wrapper {
   width: 35.40rem;
   height: 10rem;
@@ -189,8 +193,16 @@
   flex: 0 0 2.65rem;
   display: flex;
   align-items: center; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .checkbox__group {
+    margin-bottom: .75rem; } }
   .checkbox__group:not(:first-of-type) {
     margin-top: 0.75rem; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .checkbox__group:not(:first-of-type) {
+    margin-top: 0; } }
 
 .checkbox__input {
   display: none; }
@@ -233,9 +245,14 @@
 .checkbox__form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
-  .panel--6 .checkbox__form {
-    height: 23rem; }
+  height: 23rem; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .checkbox__form {
+    flex-wrap: wrap;
+    height: 15rem;
+    width: 44rem;
+    justify-content: normal; } }
 
 .checkbox__checkmark {
   background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
@@ -261,9 +278,14 @@
 
 .dial-group {
   position: relative;
-  width: 810px;
-  height: 405.00px;
-  margin-top: 16px; }
+  width: 40.50rem;
+  height: 20.25rem;
+  margin-top: 0.80rem; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .dial-group {
+    height: 19.78rem;
+    width: 39.56rem; } }
 
 .dial-tracker__wrapper {
   position: absolute;
@@ -289,6 +311,10 @@
   left: 50%;
   transform: translateX(-50%) rotate(-88deg);
   transform-origin: 50% 100%; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .dial__hand {
+    border-width: 0 calc(34.78rem * .0175) calc(34.78rem * .5) calc(34.78re m * .0175); } }
 
 .dial__crown {
   background-color: #fcfbfa;
@@ -503,6 +529,16 @@
   transition: all .5s;
   background-color: #759C6C; }
 
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .landing__container {
+    width: 16.56rem;
+    height: 16.56rem;
+    margin-top: 5.7rem; } }
+  @media only screen and (max-width: 1100px) {
+    .landing__container {
+      width: 60vw;
+      height: 60vw; } }
+
 .landing__title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -518,6 +554,20 @@
   transition-duration: 0.5s;
   margin-top: 42%;
   padding: 0 2%; }
+  .landing__title--x {
+    display: none; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .landing__title {
+    display: none; }
+    .landing__title--x {
+      font-size: 2.1rem;
+      width: 100%;
+      display: block;
+      height: 2.67rem;
+      text-align: left;
+      padding-left: 0;
+      margin-top: 1rem; } }
 
 .landing__subtitle {
   font-family: Univers, Arial, Helvetica, sans-serif;
@@ -534,6 +584,20 @@
   transition-delay: 1s;
   transition-property: opacity;
   transition-duration: .5s; }
+  .landing__subtitle--x {
+    display: none; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .landing__subtitle {
+    display: none; }
+    .landing__subtitle--x {
+      height: 4.44rem;
+      display: block;
+      padding: 0;
+      text-align: left;
+      margin-top: 1.28rem;
+      font-size: 2.05rem;
+      width: 41%; } }
 
 .landing__txt {
   color: #fcfbfa; }
@@ -547,7 +611,12 @@
     line-height: 1.2;
     letter-spacing: normal;
     text-align: center;
-    margin-top: 27.25%; }
+    margin-top: 25.25%; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .landing__txt--1 {
+    font-size: 1.5rem;
+    margin-top: 47.25%; } }
 
 .landing__texture {
   background-image: url(../assets/images/desktop/group.png);
@@ -563,6 +632,32 @@
   background-size: 100%;
   background-repeat: no-repeat;
   top: 0; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .landing__texture {
+    width: 25rem;
+    height: 25rem;
+    margin-top: 17rem; } }
+  @media only screen and (max-width: 1100px) {
+    .landing__texture {
+      transform: none;
+      width: 100%; } }
+
+.landing__img {
+  display: none; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .landing__img {
+    display: block;
+    position: absolute;
+    background-image: url(../assets/graphics/down.svg);
+    transform: translateY(7.25rem);
+    transition: 300ms;
+    background-repeat: no-repeat;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-position: center;
+    margin-top: 5.85rem; } }
 
 .likert__input {
   display: none; }
@@ -849,6 +944,9 @@
     .panel--31 .vertfc__text {
       white-space: normal; } }
   @media only screen and (max-width: 1440px) {
+    .panel--37 .vertfc__text {
+      white-space: normal; } }
+  @media only screen and (max-width: 1440px) {
     .panel--38 .vertfc__text {
       white-space: normal; } }
   @media only screen and (max-width: 1440px) {
@@ -862,6 +960,9 @@
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
   opacity: 0; }
+  @media only screen and (max-width: 1075px) {
+    .line--1x, .line--2x {
+      stroke-width: 4; } }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #fcfbfa;
@@ -878,7 +979,7 @@
   .line.show {
     opacity: 1; }
   .line__wrapper {
-    height: 5.00rem;
+    height: 1px;
     width: 70rem;
     position: absolute;
     z-index: -100;
@@ -915,6 +1016,9 @@
   @media only screen and (max-width: 1440px) {
     .footer {
       width: 83.333%; } }
+  @media only screen and (max-width: 1024px) {
+    .footer {
+      top: calc(100vh - 1.95rem); } }
   .footer-text {
     width: 1.30rem;
     height: 0.90rem;
@@ -1006,6 +1110,13 @@ html {
   box-sizing: border-box;
   touch-action: none; }
 
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  html {
+    font-size: 84%; } }
+  @media only screen and (max-width: 1024px) {
+    html {
+      font-size: 113%; } }
+
 .main {
   width: 100vw;
   height: 100vh; }
@@ -1014,4 +1125,8 @@ html {
   z-index: 1000; }
 
 .pathfinder {
+  position: relative;
   transition-timing-function: cubic-bezier(0.47, 0.11, 0, 1.08); }
+
+.main-container {
+  width: 100vw; }

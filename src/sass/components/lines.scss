@@ -7,6 +7,13 @@
   animation: stroke 0.2s linear infinite;
 	opacity: 0;
 
+  &--1x,
+  &--2x{
+    @include bp(1075){
+      stroke-width: 4;
+    }
+  }
+
   &.activate{
     animation: fadewhite .5s linear;
     stroke: $color-white-1;
@@ -30,7 +37,7 @@
   }
 
 	&__wrapper{
-		height: 5.00rem;
+    height: 1px;
 		// display: none;
     width: 70rem;
     position: absolute;

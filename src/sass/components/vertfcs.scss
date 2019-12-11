@@ -108,6 +108,11 @@
 	  		white-space: normal;
 	  	}
 		}	
+		.panel--37 &{
+			@include bp($width-1){
+	  		white-space: normal;
+	  	}
+		}		  		
 		.panel--38 &{
 			@include bp($width-1){
 	  		white-space: normal;

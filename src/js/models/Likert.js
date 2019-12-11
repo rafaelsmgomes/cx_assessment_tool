@@ -6,10 +6,15 @@ export default class Likert {
     	this.textArr = attr.textArr;
     	this.group = attr.group;
     	this.count = attr.count;
-        this.id = null;        
+        this.id = null;     
+        this.choseAns = null;   
     }
 
-    assignValue(qLen,v){
-    	this.val = Math.round(100*(1/qLen)*(v/100));
+    assignValue(v){
+    	this.val = Number(v);
     }    
+
+    chooseAns(txt){
+        this.choseAns = txt;
+    }
 }

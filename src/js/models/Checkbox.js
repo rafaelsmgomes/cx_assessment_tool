@@ -6,19 +6,19 @@ export default class Checkbox {
         this.question = attr.question;
     	this.textArr = attr.textArr;
         this.id = null;
-    	this.chosenArr = new Set();
+    	this.choseAns = new Set();
         this.pointVal = this.retrievePointVal()*75;        
     }
 
     addAns(answers){
         this.clearAnswers();
         for(let answer of answers){
-    	   this.chosenArr.add(answer);
+    	   this.choseAns.add(answer);
         }
     }    
 
     clearAnswers(){
-    	this.chosenArr.clear();	
+    	this.choseAns.clear();	
     }
 
     retrievePointVal(){
@@ -28,7 +28,10 @@ export default class Checkbox {
         return value;        
     }
 
-    assignValue(qLen,v){
-        this.val = Math.round(100*(1/qLen)*(v/100))+25;
+    assignValue(){
+        const len = Number(this.textArr.length);
+        const ansLen = Number(this.choseAns.size);
+
+        this.val = (ansLen/len)*100;
     }
 }

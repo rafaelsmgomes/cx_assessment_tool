@@ -67,6 +67,14 @@
 		&.rotate--1{
 			transform: rotate(180deg);  //after 1
 		}
+
+		& > img{
+			@include bp($width-1){
+				@include bph(675){
+					width: 62%;
+				}
+			}
+		}
 	}
 }
 

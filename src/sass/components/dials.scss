@@ -1,9 +1,15 @@
 .dial{
   &-group{  
     position: relative;    
-    width: 810px;
-    height: 405.00px;
-    margin-top: 16px;
+    width: 40.50rem;
+    height: 20.25rem;
+    margin-top: 0.80rem;
+    @include bp($width-1){
+      @include bph(675){
+        height: 19.78rem;
+        width: 39.56rem;
+      }
+    }
   }
   &-tracker__wrapper{
     position: absolute;
@@ -32,6 +38,16 @@
     left: 50%;
     transform: translateX(-50%)rotate(-88deg);
     transform-origin: 50% 100%;       
+
+    @include bp($width-1){
+      @include bph(675){
+        // height: 19.78rem;
+        // width: 39.56rem;
+        border-width: 0 calc(#{34.78rem} * .0175) calc(#{34.78rem} * .5) calc(#{34.78re
+
+m} * .0175);        
+      }
+    }    
   }
   &__crown{
     background-color: #fcfbfa;

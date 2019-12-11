@@ -104,7 +104,11 @@ $(document).ready(function(){
 			'state': state,
 			'size': .1,
 			'sideIcons': false,
+			'windowWidth': $('.panel').width(),
+			'windowHeight': $('.panel').height(),
 		});
+
+
 
 	/*** Custom CSS on Btn Progress ***/
 		// $('.btn__progress').click(function(){

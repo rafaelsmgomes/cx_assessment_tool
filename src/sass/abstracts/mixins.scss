@@ -8,3 +8,7 @@
 @mixin bp($point) {
   @media only screen and (max-width: $point+px){ @content; }           
 }
+
+@mixin bph($point) {
+  @media only screen and (max-height: $point+px){ @content; }           
+}

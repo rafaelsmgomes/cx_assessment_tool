@@ -8,6 +8,9 @@
 	height: 2rem;
     @include bp($width-1){
         width: 83.333%;
+    }
+    @include bp($width-2){
+       top: calc(100vh - 1.95rem); 
     }    
 
 

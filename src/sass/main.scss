@@ -90,6 +90,14 @@ html {
   font-size: 125%; //20px    
   box-sizing: border-box; 
   touch-action: none;
+  @include bp($width-1){
+    @include bph(675){
+      font-size: 84%;
+    }
+  }
+  @include bp(1024){
+    font-size: 113%;
+  }
 }
 
 .main{
@@ -105,10 +113,13 @@ html {
 
 .pathfinder{
 	//TEST
-  // position: relative;
+  position: relative;
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
   // transform: translateY(400vw);
   // transform: translateX(-400vw);
 }
 
+.main-container{
+  width: 100vw;
+}

@@ -12,6 +12,18 @@
         cursor: pointer;
         transition: all .5s;
         background-color: $color-green-1;
+        @include bp($width-1){
+            @include bph(675){
+                width: 16.56rem;
+                height: 16.56rem;
+                margin-top: 5.7rem;
+            }
+        }
+        @include bp(1100){
+            width: 60vw;
+            height: 60vw;
+        
+        }
     }
     &__title{
         font-size: 2.4rem;
@@ -28,6 +40,26 @@
         transition-duration: 0.5s;
         margin-top: 42%;
         padding: 0 2%;
+
+        &--x{
+            display: none;
+        }
+
+        @include bp($width-1){
+            @include bph(675){
+                display: none;
+
+                &--x{
+                    font-size: 2.1rem;
+                    width: 100%;
+                    display: block;
+                    height: 2.67rem;
+                    text-align: left;
+                    padding-left: 0;
+                    margin-top: 1rem;
+                }
+            }            
+        }
     }
     &__subtitle{
         font-family: $font-reg;
@@ -44,6 +76,26 @@
         transition-delay: 1s;
         transition-property: opacity;
         transition-duration: .5s;
+        
+        &--x{
+            display: none;
+        }
+
+        @include bp($width-1){
+            @include bph(675){
+                display: none;
+
+                &--x{
+                    height: 4.44rem;                    
+                    display: block;
+                    padding: 0;
+                    text-align: left;       
+                    margin-top: 1.28rem;
+                    font-size: 2.05rem;
+                    width: 41%;                                 
+                }
+            }            
+        }        
     }       
     &__txt{
         color: $color-white-1;
@@ -57,7 +109,14 @@
             line-height: 1.2;
             letter-spacing: normal;
             text-align: center;
-            margin-top: 27.25%;
+            margin-top: 25.25%;
+
+            @include bp($width-1){
+                @include bph(675){
+                    font-size: 1.5rem;
+                    margin-top: 47.25%;
+                }
+            }
         }
     }
     &__texture{
@@ -74,5 +133,36 @@
         background-size: 100%;
         background-repeat: no-repeat;
         top: 0;
+        @include bp($width-1){
+            @include bph(675){
+                width: 25rem;
+                height: 25rem;
+                margin-top: 17rem;
+            }
+        }
+
+        @include bp(1100 ){
+            transform: none;
+            width: 100%;
+        }
+    }
+    &__img{
+        display: none;
+        @include bp($width-1){
+            @include bph(675){
+                display: block;
+                position: absolute;
+                background-image: url(../assets/graphics/down.svg);
+                transform: translateY(7.25rem);
+                transition: 300ms;
+
+                background-repeat: no-repeat;
+                width: 2.2rem;
+                height: 2.2rem;
+                background-position: center;
+
+                margin-top: 5.85rem;                
+            }
+        }
     }
 }

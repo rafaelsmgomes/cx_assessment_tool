@@ -193,8 +193,16 @@
   flex: 0 0 2.65rem;
   display: flex;
   align-items: center; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .checkbox__group {
+    margin-bottom: .75rem; } }
   .checkbox__group:not(:first-of-type) {
     margin-top: 0.75rem; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .checkbox__group:not(:first-of-type) {
+    margin-top: 0; } }
 
 .checkbox__input {
   display: none; }
@@ -237,9 +245,15 @@
 .checkbox__form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
-  .panel--6 .checkbox__form {
-    height: 23rem; }
+  justify-content: space-between;
+  height: 23rem; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .checkbox__form {
+    flex-wrap: wrap;
+    height: 15rem;
+    width: 44rem;
+    justify-content: normal; } }
 
 .checkbox__checkmark {
   background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);
@@ -265,9 +279,14 @@
 
 .dial-group {
   position: relative;
-  width: 810px;
-  height: 405.00px;
-  margin-top: 16px; }
+  width: 40.50rem;
+  height: 20.25rem;
+  margin-top: 0.80rem; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .dial-group {
+    height: 19.78rem;
+    width: 39.56rem; } }
 
 .dial-tracker__wrapper {
   position: absolute;
@@ -293,6 +312,10 @@
   left: 50%;
   transform: translateX(-50%) rotate(-88deg);
   transform-origin: 50% 100%; }
+
+@media only screen and (max-width: 1440px) and (max-height: 675px) {
+  .dial__hand {
+    border-width: 0 calc(34.78rem * .0175) calc(34.78rem * .5) calc(34.78re m * .0175); } }
 
 .dial__crown {
   background-color: #fcfbfa;

@@ -9,7 +9,7 @@ export default class Likert {
         this.id = null;        
     }
 
-    assignValue(qLen,v){
-    	this.val = Math.round(100*(1/qLen)*(v/100));
+    assignValue(v){
+    	this.val = Number(v);
     }    
 }

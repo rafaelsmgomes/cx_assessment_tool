@@ -9,8 +9,8 @@ export default class Vertfc {
       this.id = null;      
     }
 
-    assignValue(qLen,v){
+    assignValue(v){
     	// console.log(v);
-    	this.val = Math.round(100*(1/qLen)*(v/100));
+    	this.val = Number(v);
     }    
 }

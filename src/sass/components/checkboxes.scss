@@ -2,10 +2,21 @@
 	&__group{
 		flex: 0 0 2.65rem;
 		display: flex;
-    align-items: center;
-    &:not(:first-of-type) {
+        align-items: center;
+        @include bp($width-1){
+            @include bph(675){
+                margin-bottom: .75rem;
+            }
+          }
+
+        &:not(:first-of-type) {
 		    margin-top: 0.75rem;
-		}
+		  @include bp($width-1){
+            @include bph(675){
+                margin-top: 0;
+            }
+          }
+        }
 	}
 	&__input{
 		display: none;
@@ -60,12 +71,19 @@
 	&__form{
 		// height: 16rem;
 		display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 23rem;
 
-    .panel--6 & {
-    	height: 23rem;
-    }
+
+        @include bp($width-1){
+            @include bph(675){
+                flex-wrap: wrap;
+                height: 15rem;
+                width: 44rem;
+                justify-content: normal;
+            }
+        }
 	}
 
 	&__checkmark{

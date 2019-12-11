@@ -148,8 +148,8 @@ export const createDial1 = (attr) => {
 export const createLikert = (attr) => {
     const textArr = attr.textArr;     
 
-    const addTo = 75/(textArr.length-1);
-    let startPoint = 25;
+    const addTo = 100/(textArr.length);
+    let startPoint = 100/(textArr.length);
     let htmltext = '';
     var likert = new Likert(attr); 
 
@@ -242,8 +242,8 @@ export const createCheckbox = (attr) => {
 export const createVertfc = (attr) => {
     const textArr = attr.textArr;
 
-    const addTo = 75/(textArr.length-1);
-    let startPoint = 100;  
+    const addTo = 100/(textArr.length);
+    let startPoint = 100;
     let htmltext = '';
     const vertfc = new Vertfc(attr);
     state.vertfcs.push(vertfc);

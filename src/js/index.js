@@ -121,5 +121,5 @@ $(document).ready(function(){
 		// 	console.log(colorSchemeGroup1);
 		// });
 
-	window.statete = state.colorScheme;
+	window.statete = state;
 });

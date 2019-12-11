@@ -76,11 +76,12 @@ sql.resultsSchema = `CREATE TABLE results (
 //     ?
 // )`
 sql.insertAnswer = `
-INSERT INTO answers
-    SET user_id = ?,
-        question_id = ?,
-        ans_value = ?,
-        ans_text = ?
+INSERT INTO answers (
+    user_id,
+    question_id,
+    ans_value,
+    ans_text
+) Values ?
 `
 
 sql.updateAnswers = `

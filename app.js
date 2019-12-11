@@ -34,6 +34,7 @@ const conn = mysql.createPool({
 // console.log(state);
 let userArr = []; 
 let userID;
+let ansArr = []
 
 
 app.get('/', (req, res) => {
@@ -60,19 +61,26 @@ app.post('/api', (req,res) => {
         checkboxes  = data.checkboxes;
         sliders  = data.sliders;
 
+
     userID = Date.now();
     // userArr.push(userID); 
     createFakeCompany(userArr)
         .then(() => {
-            likerts.forEach(getAnswers);
-            dials.forEach(getAnswers);
-            vertfcs.forEach(getAnswers);
-            checkboxes.forEach(getAnswers);
-            sliders.forEach(getAnswers); 
+
+            likerts.forEach(createAnswersArray);
+            dials.forEach(createAnswersArray);
+            vertfcs.forEach(createAnswersArray);
+            checkboxes.forEach(createAnswersArray);
+            sliders.forEach(createAnswersArray); 
+
+        }).then(() => {
+
+            insertAnswers(ansArr)
+
         })
         .then( () => {
-            calculateAnswers();
-            // calculateResults();
+            updateAnswers();
+            createOverallResults();
         });
 
     res.status(200).json({
@@ -85,45 +93,6 @@ app.post('/api', (req,res) => {
 }); 
 
 
-function calculateAnswers () {
-    return new Promise( (res, rej) => {
-        conn.query(sql.updateAnswers, userID, (err, results, fields) => {
-            if(err) throw err;
-            console.log(results);
-            res();
-        });
-    })
-};
-function calculateResults () {
-    return new Promise( (res, rej) => {
-        conn.query(sql.insertResults, userID, (err, results, fields) => {
-            if(err) throw err;
-            console.log(results);  
-            res(); 
-        });
-    })
-};
-
-
-function getAnswers(el) { 
-    return new Promise( (res, rej) => {
-        let ansRow = [];
-    
-        questionID = el.id;
-        value = el.val;
-        textAns = el.textArr;
-    
-        ansRow.push(userID, questionID, value, `${textAns}`); 
-        // console.log(ansRow);
-        conn.query(sql.insertAnswer, ansRow, (err, results) => {
-            // console.log(results);
-            // conn.destroy();
-            if(err) throw err;
-            res();
-        });
-    })
-}; 
-
 function createFakeCompany(arr) {
     return new Promise( (res, rej) => {
         compName = faker.company.companyName();
@@ -134,14 +103,61 @@ function createFakeCompany(arr) {
         arr.push(userID, compName, compSize, compIndustry, numEmployees, compCountry);
         console.log(arr)
         conn.query(sql.insertUser, arr, (err, results) => {
-            console.log(results); 
-            // conn.destroy();
             if(err) throw err;  
-            // userArr = [];
+            console.log(results); 
+            userArr = [];
             res(); 
         })
     })
 };
+
+function createAnswersArray(el) { 
+    return new Promise( (res, rej) => {
+        let ansRow = [];
+
+        questionID = el.id;
+        value = el.val;
+        textAns = el.textArr;
+        ansRow.push(userID, questionID, value, `text`); 
+        ansArr.push(ansRow);
+
+        res();
+    })
+}; 
+
+function insertAnswers(elem) { 
+    return new Promise( (res, rej) => {
+
+        conn.query(sql.insertAnswer, [elem], (err, results) => {
+            console.log(results);
+            if(err) throw err;
+        });
+        res();
+    })
+}; 
+
+function updateAnswers () {
+    return new Promise( (res, rej) => {
+        conn.query(sql.updateAnswers, userID, (err, results, fields) => {
+            if(err) throw err;
+            console.log(results);
+            ansArr = [];
+            res();
+        });
+    })
+};
+
+function createOverallResults () {
+    return new Promise( (res, rej) => {
+        conn.query(sql.insertResults, [userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID], (err, results, fields) => {
+            if(err) throw err;
+            console.log(results);
+            res();
+        });
+    })
+};
+
+
 
 
 app.listen(3000 || process.env.PORT, process.env.IP, () => {

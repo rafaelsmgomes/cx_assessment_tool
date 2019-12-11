@@ -4,6 +4,8 @@ export const panels = [
 	`<div class="panel panel--0">
 		<div class="body__content">
 			<div class="landing__texture"></div>
+			<h1 class='landing__title landing__title--x'>B2B Marketing Maturity</h1>
+			<h2 class="landing__subtitle landing__subtitle--x">Is your business ahead of the curve, or do you need to catch up?</h2>			
 			<div class="landing__container btn__progress btn__progress--0" data-id='0' data-line='0'>
 				<h1 class="landing__title">B2B Marketing Maturity</h1>
 				<h2 class="landing__subtitle">Is your business ahead of the curve, or do you need to catch up?</h2>

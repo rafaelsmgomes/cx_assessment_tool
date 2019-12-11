@@ -104,7 +104,8 @@ $(document).ready(function(){
 			'state': state,
 			'size': .1,
 			'sideIcons': false,
-			'windowWidth': $('body').width(),
+			'windowWidth': $('.panel').width(),
+			'windowHeight': $('.panel').height(),
 		});
 
 

@@ -172,7 +172,7 @@ export const createLikert = (attr) => {
 
         htmltext +=  `
             <div class="likert__group">
-                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}">
+                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}" text='${textArr[j]}'>
                 <label for="likert__id--${id}-${j}" class="likert__label">
                     <div class="likert__button likert__button--0">
                         <div class="likert__checkmark"></div>
@@ -248,6 +248,8 @@ export const createVertfc = (attr) => {
     const vertfc = new Vertfc(attr);
     state.vertfcs.push(vertfc);
 
+
+
     const attrID =
     `${state.dials.length+ 
         state.likerts.length+
@@ -265,7 +267,7 @@ export const createVertfc = (attr) => {
         htmltext += 
         `
         <div class="vertfc__group vertfc__group--${j}">
-            <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${startPoint} name="vertfc__name--${id}">
+            <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${startPoint} name="vertfc__name--${id}" text='${textArr[j]}'>
             <label for="vertfc__id--${id}-${j}" class="vertfc__label">
                 <div class="vertfc__button vertfc__button--0">
                     <div class="vertfc__checkmark"></div>

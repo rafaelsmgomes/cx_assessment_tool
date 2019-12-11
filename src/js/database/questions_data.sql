@@ -266,7 +266,7 @@ VALUES
             c. We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model
             d. We have highly specific audience filters that target buyers in real time based on changing profile and behavior data", 
         NULL, 
-        .769, 
+        .0769, 
         "Advanced segmentation: According to Dun & Bradstreet, <20% of marketers are extremely confident their segmented campaign lists actually represent their target audience. Advanced segmentation empowers marketers to use segmentation tools and audience filters to target and engage buyers with more personalized, real-time communications based on changing profile and behavior data.",
         "It's great to see you're leveraging advanced segmentation! Hopefully you're recognizing an increase in your MQLs as a result. Keep up the good work!", 
         "Relationship",
@@ -279,7 +279,7 @@ VALUES
             b. We use look-a-like modeling to find prospects
             c. We use advanced filters, account scores and signals to identify the best prospects", 
         NULL, 
-        .769, 
+        .0769, 
         "Account Signals and Scoring: An account scoring model simplifies target prioritization in your market and identifies an account’s changing propensity to buy. Tracking important account signals provides an opportunity to engage at the right time with the right people in that account instead of relying on outdated information.",
         "Great job! With account scoring in place, you're giving your teams a better opportunity to engage at the right time with the right people in the account. ", 
         "Relationship",
@@ -291,7 +291,7 @@ VALUES
             a. yes
             b. no", 
         NULL, 
-        .769, 
+        .0769, 
         "Cross-channel orchestration: To create seamless experiences, marketers have to meet customers with consistent messaging, intent, and imagery on their preferred channels (social, web, email, events, or online advertising). B2B buyers who consume highly consistent information across multiple supplier channels are over 4x likelier to complete a high-value, low-regret purchase (Gartner).",
         "Your customers are getting a more consistent experience because you've adopted cross-channel orchestration. They're 4x more likely now to complete a high-value, low-regret purchase (Gartner).", 
         "Relationship",
@@ -304,7 +304,7 @@ VALUES
             b. Sometimes
             c. Yes! Always!", 
         NULL, 
-        .769, 
+        .0769, 
         "Account personalization: A successful ABM approach requires a shift from topical content designed to get the highest number of clicks, to hyper-targeted account-based content that appeals to the buying committees. With this, you can shift from developing content around the individual's interests to those of a range of stakeholders. ",
         "Well done! By personalizing content at the account level, you're better able to appeal to the buying committees your sales teams are engaged with.", 
         "Relationship",
@@ -317,7 +317,7 @@ VALUES
             b. Just started one
             c. Yes, it's great", 
         NULL, 
-        .769, 
+        .0769, 
         "Account based marketing: ABM drives more revenue than any other marketing approach. According to ITSMA, up to 45% of those who incorporate ABM see at least 2x ROI. ABM is now table stakes as it shifts the success metric towards Account Lifetime Value with its increased cross-sell and up-sell opportunities. ",
         "You're a superstar! According to ITSMA, as many as 45% of those who incorporate an ABM strategy are seeing at least double the ROI.", 
         "Relationship",
@@ -330,7 +330,7 @@ VALUES
             b. no
             c. not applicable", 
         NULL, 
-        .769, 
+        .0769, 
         "Predictive lead scoring: Powered by AI, marketers and sales benefit from a data-driven approach to identify the ripest opportunities to grow and nurture. Predictive lead scoring not only alleviates a traditionally time- and resource-intensive process, but it also takes the subjectivity out and helps build trust between marketing and sales. ",
         "You're upping your lead scoring game by incorporating predictive. Marketers and sales are benefitting from a data-driven approach to identify the ripest opportunities to grow and nurture.", 
         "Relationship",
@@ -342,7 +342,7 @@ VALUES
             a. Yes
             b. no",
         NULL, 
-        .769, 
+        .0769, 
         "Intelligence: Technology is transforming marketing faster than ever before. Add AI to the mix and marketers experience another layer of complexity. According to eMarketer, AI can help organizations bring new insights and data analysis, feed creativity, and improve organizational decision-making, all while crafting a better customer experience throughout.",
         "According to eMarketer, marketers who successfully deploy AI into their digital marketing strategy will most certainly rise above the rest. You're a rising star!", 
         "Relationship",
@@ -358,7 +358,7 @@ VALUES
             Other
             We do not currently use AI features", 
         NULL, 
-        .769, 
+        .0769, 
         "Intelligent recommendations: AI-driven decision-making increases the relevancy of your marketing programs and offers. Smart personalization engines used to recognize customer intent will enable digital businesses to increase profits by up to 15% (Gartner). AI that analyzes data about users, items, and interactions enables you to make real-time, data-driven suggestions. ",
         "Profits must be going way up! According to Gartner, smart personalization engines used to recognize customer intent will enable digital businesses to increase their profits by up to 15%.", 
         "Relationship",
@@ -371,7 +371,7 @@ VALUES
             b. no
             c. I don't know", 
         NULL, 
-        .769, 
+        .0769, 
         "Send time optimization: Get buyers' attention when they are historically most attentive to their emails. Send time optimization is a data-driven approach to ensure messages are sent at the contact's optimal time for engagement. Oracle CX Marketing sees a ~25% point increase in engagement when optimizing messaging by send time.",
         "Your emails aren't ending up in a SPAM folder because you're using send time optimization. That's smart marketing! ", 
         "Relationship",
@@ -384,7 +384,7 @@ VALUES
             b. Only basic
             c. No", 
         NULL, 
-        .769, 
+        .0769, 
         "Real-time personalization: Real-time data empowers you to adjust content and offers based on customer behavior at that moment. It provides insight into visitor movement to, from, and within a site, and helps you and your team understand where modifying messaging, content, and/or offers may be needed.",
         "You're getting real-time actionable insights from your personalization, which is helping to inform how you can modify messaging, content, and/or offers. Good job! ", 
         "Relationship",
@@ -398,7 +398,7 @@ VALUES
             c. we use a 3rd party solution to clean and append data
             d. we have a process in place that supports data quality and standards in real time", 
         NULL, 
-        .769, 
+        .0769, 
         "Real-time data insights: Understanding customer interactions across all touchpoints is still the number one challenge facing marketers today (Forrester and DMA) and the key to this is clean accurate customer data. Companies who adopt data-driven marketing are six times more likely to be profitable year-over-year (Forbes). ",
         "You've got a leg up over your competition. According to Forbes, you're 6x more likely be profitable year-over-year having adopted real-time data insights. ", 
         "Relationship",
@@ -411,7 +411,7 @@ VALUES
             b. Some consistent means of measuring campaigns with some deep analysis in specific areas
             c. Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)",
         NULL, 
-        .769, 
+        .0769, 
         "Marketing Measurement: There's no \"one size fits all\" approach. Marketers need to understand their marketing dollar spend, social media's impact, volume of qualified leads coming in and their source, etc. Marketers also must look from acquisition to sale to get the true measure and impact of marketing programs on revenue.",
         "Congratulations! With marketing measurement in place, you've got your finger on your marketing spend, the impact of social media, and the number of qualified leads coming in and their source. ", 
         "Relationship",
@@ -425,7 +425,7 @@ VALUES
             c. We have a unified customer database that automates some essential online and offline data
             d. We have integrated all online and offline data as well as known profiles from 3rd party data", 
         NULL, 
-        .769, 
+        .0769, 
         "Marketing data integrations: Integrating data across marketing channels and incorporating offline data allows multiple strands of information across different platforms to be cross-referenced for a deeper understanding of the customer. This provides a stronger base for targeting and scoring your buyers and a more holistic insight into their interest.",
         "According to Bain and Company, marketing leaders in North America are 1.6x more likely than laggards to prioritize integrating their platforms. You're a leader. ", 
         "Relationship",

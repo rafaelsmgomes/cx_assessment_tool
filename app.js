@@ -72,7 +72,7 @@ app.post('/api', (req,res) => {
         })
         .then( () => {
             calculateAnswers();
-
+            // calculateResults();
         });
 
     res.status(200).json({
@@ -91,6 +91,15 @@ function calculateAnswers () {
             if(err) throw err;
             console.log(results);
             res();
+        });
+    })
+};
+function calculateResults () {
+    return new Promise( (res, rej) => {
+        conn.query(sql.insertResults, userID, (err, results, fields) => {
+            if(err) throw err;
+            console.log(results);  
+            res(); 
         });
     })
 };

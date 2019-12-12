@@ -40,14 +40,14 @@ let ansArr = []
 app.get('/', (req, res) => {
     res.render('homepage');
     let questionsArr = []
-    conn.query(`SELECT * FROM questions`, (err, results) => {
-        if(err) throw err; 
-        console.log(results[0]);
+    // conn.query(`SELECT * FROM questions`, (err, results) => {
+    //     if(err) throw err; 
+    //     console.log(results[0]);
         // for(i = 0; i < results.length; i++){
         //     userArrID.push(results);
         // };
         // console.log(userArrID); 
-    });    
+    // });    
     // conn.release();
 });
 
@@ -154,7 +154,7 @@ function createOverallResults () {
             console.log(results);
             res();
         });
-    })
+    }) 
 };
 
 

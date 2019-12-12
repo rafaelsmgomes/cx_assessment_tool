@@ -79,6 +79,9 @@
     @media only screen and (max-width: 1440px) {
       .main__title--1 {
         width: 90%; } }
+    @media only screen and (max-width: 1024px) {
+      .main__title--1 {
+        width: 100%; } }
 
 .main__direction {
   font-size: 0.95em;
@@ -244,8 +247,7 @@
 
 .checkbox__form {
   display: flex;
-  flex-direction: column;
-  height: 23rem; }
+  flex-direction: column; }
 
 @media only screen and (max-width: 1440px) and (max-height: 675px) {
   .checkbox__form {
@@ -668,6 +670,9 @@
   position: relative;
   z-index: 2;
   margin-top: 2.35rem; }
+  @media only screen and (max-width: 1024px) {
+    .likert__container {
+      width: 90%; } }
 
 .likert__form {
   width: 100%;
@@ -941,16 +946,7 @@
   letter-spacing: normal;
   color: #fcfbfa; }
   @media only screen and (max-width: 1440px) {
-    .panel--31 .vertfc__text {
-      white-space: normal; } }
-  @media only screen and (max-width: 1440px) {
-    .panel--37 .vertfc__text {
-      white-space: normal; } }
-  @media only screen and (max-width: 1440px) {
-    .panel--38 .vertfc__text {
-      white-space: normal; } }
-  @media only screen and (max-width: 1440px) {
-    .panel--40 .vertfc__text {
+    .vertfc__text {
       white-space: normal; } }
 
 .line {
@@ -1018,7 +1014,7 @@
       width: 83.333%; } }
   @media only screen and (max-width: 1024px) {
     .footer {
-      top: calc(100vh - 1.95rem); } }
+      top: calc(100vh - 1.7rem); } }
   .footer-text {
     width: 1.30rem;
     height: 0.90rem;

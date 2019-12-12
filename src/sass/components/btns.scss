@@ -70,7 +70,7 @@
 
 		& > img{
 			@include bp($width-1){
-				@include bph(675){
+				@include bph(900){
 					width: 62%;
 				}
 			}

@@ -45,7 +45,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Does your company use email, campaign and form templates to save time?
+				Does your company use email, campaign and form templates to save&nbsp;time?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
@@ -81,7 +81,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				How would you rate your use of email and your website as marketing channels?
+				How would you rate your use of email and your website as marketing&nbsp;channels?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
@@ -117,7 +117,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				What metrics do you track to show success in your marketing programs?
+				What metrics do you track to show success in your marketing&nbsp;programs?
 			</div>			
 			<div class="main__direction">Select all that apply:</div>			
 			${comp.createCheckbox({				
@@ -153,7 +153,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				What do you focus your marketing on?
+				What do you focus your marketing&nbsp;on?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
@@ -244,7 +244,7 @@ export const panels = [
 				Responsive Marketing
 			</div>
 			<div class="main__title main__title--1">
-				How personalized is your marketing content across your marketing channels?
+				How personalized is your marketing content across your marketing&nbsp;channels?
 			</div>			
 			<div class="main__direction">Please select one response.</div>
 			${comp.createVertfc({				
@@ -316,7 +316,7 @@ export const panels = [
 				Responsive Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you currently incorporate behavioral re-targeting in your marketing campaigns?
+				Do you currently incorporate behavioral re-targeting in your marketing&nbsp;campaigns?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
@@ -357,7 +357,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you currently use testing and optimization tools on your landing pages and website?',
-				'textArr': ['No',"Yes, but only for A/B testing",'Yes, we use A/B, multivariate testing and optimization tools regularly'],
+				'textArr': ['Yes, we use A/B, multivariate testing and optimization tools regularly',"Yes, but only for A/B testing",'No'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -395,7 +395,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you use any form of data science to derive segments?',
-				'textArr': ["We use advanced filters, account scores and signals to identify the best prospects", "We use look-a-like modeling to find prospects", "No"],
+				'textArr': ["We use advanced filters, account scores and signals to identify the best&nbsp;prospects", "We use look-a-like modeling to find prospects", "No"],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -408,7 +408,7 @@ export const panels = [
 				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you orchestrate your campaigns across all digital channels including email, mobile, SMS, display ads, web, and social to create a connected experience?
+				Do you orchestrate your campaigns across all digital channels including email, mobile, SMS, display ads, web, and social to create a connected&nbsp;experience?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
@@ -557,7 +557,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How do you standardize data and improve data quality in your marketing database?',
-				'textArr': ['We have a process in place that supports data quality and standards in real time', 'We use a 3rd party solution to clean and append data', "We have defined standards, but don't always apply them",'We have no data-standardization in place'],
+				'textArr': ['We have a process in place that supports data quality and standards in real&nbsp;time', 'We use a 3rd party solution to clean and append data', "We have defined standards, but don't always apply them",'We have no data-standardization in place'],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -649,7 +649,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?',
-				'textArr': ['Yes, our commerce site has been integrated into our overall marketing strategy',"Yes, but it's a separate team who runs the commerce program",'No'],
+				'textArr': ['Yes, our commerce site has been integrated into our overall marketing&nbsp;strategy',"Yes, but it's a separate team who runs the commerce program",'No'],
 				'group': 'Beyond',
 				'count': true,
 			})}

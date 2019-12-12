@@ -9,6 +9,9 @@
 		position: relative;
 		z-index: 2;
 		margin-top: 2.35rem;
+		@include bp($width-2){
+			width: 90%;
+		}
 	}
 	&__form{
 		width: 100%;

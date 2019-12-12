@@ -4,7 +4,7 @@
 		display: flex;
         align-items: center;
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 margin-bottom: .75rem;
             }
           }
@@ -12,7 +12,7 @@
         &:not(:first-of-type) {
 		    margin-top: 0.75rem;
 		  @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 margin-top: 0;
             }
           }
@@ -73,11 +73,11 @@
 		display: flex;
         flex-direction: column;
         // justify-content: space-between;
-        height: 23rem;
+        // height: 23rem;
 
 
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 flex-wrap: wrap;
                 height: 15rem;
                 width: 44rem;

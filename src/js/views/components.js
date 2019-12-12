@@ -189,7 +189,7 @@ export const createLikert = (attr) => {
             <svg class="likert__line--group"> 
                 <line class="likert__line" x1='0' x2='800' y1='50' y2='50'></line>                             
             </svg>
-            <form action="#" class="likert__form likert__form--${id}" data-id='${id}'>
+            <form action="" class="likert__form likert__form--${id}" data-id='${id}'>
                 ${htmltext}
             </form>
         </div>

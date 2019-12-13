@@ -41,6 +41,9 @@
       @include bp($width-1){
         width: 90%;
       }
+      @include bp($width-2){
+        width: 100%;
+      }
     }
 	}
 	&__direction{

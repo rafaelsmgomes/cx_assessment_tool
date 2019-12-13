@@ -13,7 +13,7 @@
         transition: all .5s;
         background-color: $color-green-1;
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 width: 16.56rem;
                 height: 16.56rem;
                 margin-top: 5.7rem;
@@ -46,7 +46,7 @@
         }
 
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 display: none;
 
                 &--x{
@@ -82,7 +82,7 @@
         }
 
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 display: none;
 
                 &--x{
@@ -112,7 +112,7 @@
             margin-top: 25.25%;
 
             @include bp($width-1){
-                @include bph(675){
+                @include bph(900){
                     font-size: 1.5rem;
                     margin-top: 47.25%;
                 }
@@ -134,7 +134,7 @@
         background-repeat: no-repeat;
         top: 0;
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 width: 25rem;
                 height: 25rem;
                 margin-top: 17rem;
@@ -149,7 +149,7 @@
     &__img{
         display: none;
         @include bp($width-1){
-            @include bph(675){
+            @include bph(900){
                 display: block;
                 position: absolute;
                 background-image: url(../assets/graphics/down.svg);

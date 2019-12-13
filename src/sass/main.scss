@@ -95,8 +95,11 @@ html {
       font-size: 84%;
     }
   }
-  @include bp(1024){
+  @include bp($width-2){
     font-size: 113%;
+  }
+  @include bp($width-5){
+    font-size: 78%;
   }
 }
 

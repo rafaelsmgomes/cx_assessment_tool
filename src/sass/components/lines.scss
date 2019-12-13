@@ -48,5 +48,8 @@
     @include bp($width-1){
       width: 83.333%;
     }    
+    @include bp($width-4){
+      width: 95%;
+    }
 	}
 }

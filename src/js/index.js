@@ -127,6 +127,8 @@ $(document).ready(function(){
 });
 
 $('.header__rectangle--grow-3').click(postState);
+
+
 async function postState() {
 	console.log(window.statete);
 	const options = {

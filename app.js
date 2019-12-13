@@ -40,14 +40,15 @@ let ansArr = []
 app.get('/', (req, res) => {
     res.render('homepage');
     let questionsArr = []
-    // conn.query(`SELECT * FROM questions`, (err, results) => {
-    //     if(err) throw err; 
-    //     console.log(results[0]);
+    conn.query(`SELECT * FROM questions`, (err, results) => {
+        if(err) throw err; 
+        console.log(results[1]); 
         // for(i = 0; i < results.length; i++){
-        //     userArrID.push(results);
+        //     // userArrID.push(results);
         // };
         // console.log(userArrID); 
-    // });    
+        res.render('/', {name: 'John'})
+    });    
     // conn.release();
 });
 
@@ -92,6 +93,21 @@ app.post('/api', (req,res) => {
     });
 }); 
 
+app.get('/api2', (req, res) => {
+
+    setTimeout(() => {        
+        conn.query(`SELECT * FROM results WHERE user_id = ?`, userID, (err, results) => {
+            if (err) throw err;
+            const data = results;
+            console.log(results)
+    
+            res.send({ 
+                data
+            })
+        })
+    }, 2000);
+})
+
 
 function createFakeCompany(arr) {
     return new Promise( (res, rej) => {
@@ -104,7 +120,7 @@ function createFakeCompany(arr) {
         console.log(arr)
         conn.query(sql.insertUser, arr, (err, results) => {
             if(err) throw err;  
-            console.log(results); 
+            // console.log(results); 
             userArr = [];
             res(); 
         })
@@ -129,7 +145,7 @@ function insertAnswers(elem) {
     return new Promise( (res, rej) => {
 
         conn.query(sql.insertAnswer, [elem], (err, results) => {
-            console.log(results);
+            // console.log(results);
             if(err) throw err;
         });
         res();
@@ -140,7 +156,7 @@ function updateAnswers () {
     return new Promise( (res, rej) => {
         conn.query(sql.updateAnswers, userID, (err, results, fields) => {
             if(err) throw err;
-            console.log(results);
+            // console.log(results);
             ansArr = [];
             res();
         });
@@ -151,8 +167,8 @@ function createOverallResults () {
     return new Promise( (res, rej) => {
         conn.query(sql.insertResults, [userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID], (err, results, fields) => {
             if(err) throw err;
-            console.log(results);
-            res();
+            // console.log(results);
+            res(); 
         });
     }) 
 };

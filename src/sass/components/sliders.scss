@@ -3,6 +3,9 @@
 		width: 40.90rem;
 		height: 20rem;
 		position: relative;
+		@include bp($width-3){
+			width: 100%;
+		}
 	}
 	&__form{
 		width: 100%;

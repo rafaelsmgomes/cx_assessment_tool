@@ -12,6 +12,11 @@
 		@include bp($width-2){
 			width: 90%;
 		}
+		@include bp($width-4){
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 2.35rem;
+		}
 	}
 	&__form{
 		width: 100%;

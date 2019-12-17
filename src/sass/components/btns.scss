@@ -32,6 +32,10 @@
 	    margin-top: 0;
 	    position: absolute;
 	    left: 50%;	    
+
+	    @include bp($width-5){
+	    	left: 65%;
+	    }
 		}
 	}
 	&__regress{

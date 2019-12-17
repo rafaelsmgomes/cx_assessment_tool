@@ -81,7 +81,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				How would you rate your use of email and your website as marketing&nbsp;channels?
+				How would you rate your use of email and your website as marketing channels?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
@@ -118,7 +118,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				What metrics do you track to show success in your marketing&nbsp;programs?
+				What metrics do you track to show success in your marketing programs?
 			</div>			
 			<div class="main__direction">Select all that apply:</div>			
 			${comp.createCheckbox({				
@@ -229,7 +229,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Do you listen to contact behavior in order to direct them into a more specific campaign?
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you listen to contact behavior in order to direct them into a more specific campaign?',
 				'textArr': ['Yes','No'],
@@ -337,7 +337,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Do you perform any A/B email testing or optimization?
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you perform any A/B email testing or optimization?',
 				'textArr': ['Yes',"No"],
@@ -375,7 +375,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				How advanced are your targeting and segmentation processes?
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How advanced are your targeting and segmentation processes?',
 				'textArr': ["We haven't had the opportunity to advance in this area", "We create a number of filters and audiences based on profile and behavioral attributes", "We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We have highly specific audience filters that target buyers in real time based on changing profile and behavior data"],
@@ -606,7 +606,7 @@ export const panels = [
 	`<div class="panel panel--33">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?
@@ -615,7 +615,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?',
 				'textArr': ['Yes! We have connections for all three','We connect our marketing and sales data', 'We connect our marketing and service data','No, we are not able to connect the data between any of these systems'],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -624,7 +624,7 @@ export const panels = [
 	`<div class="panel panel--34">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?
@@ -633,7 +633,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?',
 				'textArr': ['Yes','No, we only use marketing data for personalization'],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -642,7 +642,7 @@ export const panels = [
 	`<div class="panel panel--35">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?
@@ -651,7 +651,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?',
 				'textArr': ['Yes, our commerce site has been integrated into our overall marketing&nbsp;strategy',"Yes, but it's a separate team who runs the commerce program",'No'],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -660,7 +660,7 @@ export const panels = [
 	`<div class="panel panel--36">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do you run marketing programs targeted specifically to your loyalty program members?
@@ -669,7 +669,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do you run marketing programs targeted specifically to your loyalty program members?',
 				'textArr': ['Yes, loyalty has been integrated into our overall marketing strategy',"Yes, but it's a separate team who runs the loyalty program",'No'],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -678,7 +678,7 @@ export const panels = [
 	`<div class="panel panel--37">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do you have an automated way to stop or pause marketing promotions to specific customers when they are experiencing important service issues with your&nbsp;organization?
@@ -687,7 +687,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do you have an automated way to stop or pause marketing promotions to specific customers when they are experiencing important service issues with your organization?',
 				'textArr': ['Yes, we have an amazing line of communication and data sharing between marketing and service',"We have some insight, but it's not reliable",'No, unfortunately, we have no insight into service issues'],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -696,7 +696,7 @@ export const panels = [
 	`<div class="panel panel--38">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?
@@ -705,7 +705,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?',
 				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended&nbsp;offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or&nbsp;upsell"],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -714,7 +714,7 @@ export const panels = [
 	`<div class="panel panel--39">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?
@@ -723,7 +723,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?',
 				'textArr': ["Yes, sales reps have access to any service interactions and concerns","No, there is no data shared between sales and service"],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
@@ -732,7 +732,7 @@ export const panels = [
 	`<div class="panel panel--40">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Beyond Marketing
+				Lifecycle Management
 			</div>
 			<div class="main__title main__title--1">
 				Do you track, measure and analyze customer lifetime&nbsp;value?
@@ -741,7 +741,7 @@ export const panels = [
 			${comp.createVertfc({
 				'question':'Do you track, measure and analyze customer lifetime value?',
 				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
-				'group': 'Beyond',
+				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>

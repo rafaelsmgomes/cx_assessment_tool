@@ -55,6 +55,9 @@ app.get('/', (req, res) => {
 app.post('/api', (req,res) => {
     console.log("----------------------------------------")
     
+    console.log(req.body);    
+    // console.log(`res:${res}`);
+
     const data      = req.body,
         likerts     = data.likerts, 
         dials       = data.dials,
@@ -65,24 +68,24 @@ app.post('/api', (req,res) => {
 
     userID = Date.now();
     // userArr.push(userID); 
-    createFakeCompany(userArr)
-        .then(() => {
+    // createFakeCompany(userArr)
+    //     .then(() => {
 
-            likerts.forEach(createAnswersArray);
-            dials.forEach(createAnswersArray);
-            vertfcs.forEach(createAnswersArray);
-            checkboxes.forEach(createAnswersArray);
-            sliders.forEach(createAnswersArray); 
+    //         likerts.forEach(createAnswersArray);
+    //         dials.forEach(createAnswersArray);
+    //         vertfcs.forEach(createAnswersArray);
+    //         checkboxes.forEach(createAnswersArray);
+    //         sliders.forEach(createAnswersArray); 
 
-        }).then(() => {
+    //     }).then(() => {
 
-            insertAnswers(ansArr)
+    //         insertAnswers(ansArr)
 
-        })
-        .then( () => {
-            updateAnswers();
-            createOverallResults();
-        });
+    //     })
+    //     .then( () => {
+    //         updateAnswers();
+    //         createOverallResults();
+    //     });
 
     res.status(200).json({
         status: 'success',
@@ -117,7 +120,7 @@ function createFakeCompany(arr) {
         numEmployees = faker.random.number()/100;
         compCountry = faker.address.country();
         arr.push(userID, compName, compSize, compIndustry, numEmployees, compCountry);
-        console.log(arr)
+        // console.log(arr)
         conn.query(sql.insertUser, arr, (err, results) => {
             if(err) throw err;  
             // console.log(results); 
@@ -177,5 +180,5 @@ function createOverallResults () {
 
 
 app.listen(3000 || process.env.PORT, process.env.IP, () => {
-    console.log("Customer Experience Assessment Tool is online")
+    // console.log("Customer Experience Assessment Tool is online")
 });

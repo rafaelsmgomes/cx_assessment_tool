@@ -10,6 +10,12 @@
         width: 39.56rem;
       }
     }
+    @include bp($width-3){
+      $width: 100%;
+      width: $width;
+      height: auto;
+      padding-bottom: ($width * .5);
+    }
   }
   &-tracker__wrapper{
     position: absolute;
@@ -43,11 +49,15 @@
       @include bph(900){
         // height: 19.78rem;
         // width: 39.56rem;
-        border-width: 0 calc(#{34.78rem} * .0175) calc(#{34.78rem} * .5) calc(#{34.78re
-
-m} * .0175);        
+        border-width: 0 calc(#{34.78rem} * .0175) calc(#{34.78rem} * .5) calc(#{34.78rem} * .0175);        
       }
     }    
+
+    @include bp($width-5){      
+        // height: 19.78rem;
+        // width: 39.56rem;
+        border-width: 0 calc(#{27.78rem} * .0175) calc(#{27.78rem} * .5) calc(#{27.78rem} * .0175);        
+    }        
   }
   &__crown{
     background-color: #fcfbfa;

@@ -81,7 +81,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				How would you rate your use of email and your website as marketing&nbsp;channels?
+				How would you rate your use of email and your website as marketing channels?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				

@@ -295,7 +295,7 @@
   .dial-group {
     height: 19.78rem;
     width: 39.56rem; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 910px) {
     .dial-group {
       width: 100%;
       height: auto;
@@ -593,6 +593,9 @@
       text-align: left;
       padding-left: 0;
       margin-top: 1rem; } }
+  @media only screen and (max-width: 910px) {
+    .landing__title {
+      font-size: 1.6rem; } }
   @media only screen and (max-width: 767px) {
     .landing__title {
       display: none; }
@@ -670,6 +673,9 @@
   .landing__txt--1 {
     font-size: 1.5rem;
     margin-top: 47.25%; } }
+    @media only screen and (max-width: 910px) {
+      .landing__txt--1 {
+        margin-top: 20.25%; } }
     @media only screen and (max-width: 767px) {
       .landing__txt--1 {
         font-size: 1.5rem;
@@ -701,12 +707,16 @@
       width: 100%; } }
   @media only screen and (max-width: 767px) {
     .landing__texture {
-      width: 67%;
+      width: 58%;
       margin-top: 16.7rem; } }
   @media only screen and (max-width: 666px) {
     .landing__texture {
       width: 24rem;
-      margin-top: 16.7rem; } }
+      margin-top: 13.7rem; } }
+  @media only screen and (max-width: 405px) {
+    .landing__texture {
+      width: 24rem;
+      margin-top: 15.7rem; } }
 
 .landing__img {
   display: none; }
@@ -722,7 +732,7 @@
     width: 2.2rem;
     height: 2.2rem;
     background-position: center;
-    margin-top: 5.85rem; } }
+    margin-top: 2.85rem; } }
   @media only screen and (max-width: 666px) {
     .landing__img {
       display: none; } }
@@ -828,7 +838,7 @@
   width: 40.90rem;
   height: 20rem;
   position: relative; }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 910px) {
     .slider__container {
       width: 100%; } }
 

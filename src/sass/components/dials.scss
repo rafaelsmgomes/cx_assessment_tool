@@ -10,7 +10,7 @@
         width: 39.56rem;
       }
     }
-    @include bp($width-4){
+    @include bp($width-3){
       $width: 100%;
       width: $width;
       height: auto;

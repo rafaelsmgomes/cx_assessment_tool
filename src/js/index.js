@@ -126,11 +126,13 @@ $(document).ready(function(){
 	window.statete = state;
 });
 
+
+let myJson;
 $('.header__rectangle--grow-3').click(postState);
 
 
 async function postState() {
-	console.log(window.statete);
+	// console.log(window.statete);
 	const options = {
 		method: 'POST',
 		body: JSON.stringify(window.statete),
@@ -139,6 +141,42 @@ async function postState() {
 		},
 	}
 	fetch('/api', options)
+		.then((resp) => {
+			console.log(resp)
+		})
+		.then(() => {
+			fetch('/api2', { method: 'GET'} )
+			.then( response => {
+				return response.json();
+			})
+			.then( (el) => {
+				const myJson = el;
+				console.log(myJson);
+			})
+		})
+	// fetch('/api2', { method: 'GET'} )
+	// .then( response => {
+	// 	return response.json();
+	// })
+	// .then( (el) => {
+	// 	const myJson = el;
+	// 	console.log(myJson);
+	// })
+
+	// setTimeout(() => {
+	// 	fetch('/api2', { method: 'GET'} )
+	// 	.then( response => {
+	// 		return response.json();
+	// 	})
+	// 	.then( (el) => {
+	// 		const myJson = el;
+	// 		console.log(myJson);
+	// 	})
+	// },2000)
+
+	// const response = await fetch('/api2');
+	// myJson = await response.json();
+	// console.log(myJson);
 }
 
 

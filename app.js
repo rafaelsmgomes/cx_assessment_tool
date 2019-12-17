@@ -133,13 +133,13 @@ function createAnswersArray(el) {
 
         questionID = el.id;
         value = el.val;
-        textAns = el.textArr;
-        ansRow.push(userID, questionID, value, `text`); 
+        textAns = el.choseAns;
+        ansRow.push(userID, questionID, value, `${textAns}`); 
         ansArr.push(ansRow);
 
         res();
     })
-}; 
+};  
 
 function insertAnswers(elem) { 
     return new Promise( (res, rej) => {

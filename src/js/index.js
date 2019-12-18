@@ -127,7 +127,7 @@ $(document).ready(function(){
 });
 
 
-let myJson;
+
 $('.header__rectangle--grow-3').click(postState);
 
 
@@ -140,28 +140,36 @@ async function postState() {
 			'Content-Type': 'application/json',
 		},
 	}
+
+	// fetch('/api', options)
+	// 	.then((resp) => {
+	// 		console.log(resp)
+	// 	})
+	// 	.then(() => {
+	// 		fetch('/api2', { method: 'GET'} )
+	// 		.then( response => {
+	// 			return response.json();
+	// 		})
+	// 		.then( (el) => {
+	// 			const myJson = el;
+	// 			console.log(myJson);
+	// 		})
+	// 	})
+
 	fetch('/api', options)
 		.then((resp) => {
 			console.log(resp)
+			return fetch('/api2', { method: 'GET'} )
 		})
-		.then(() => {
-			fetch('/api2', { method: 'GET'} )
-			.then( response => {
-				return response.json();
-			})
-			.then( (el) => {
-				const myJson = el;
-				console.log(myJson);
-			})
+		.then((response) => {
+			return response.json();	
 		})
-	// fetch('/api2', { method: 'GET'} )
-	// .then( response => {
-	// 	return response.json();
-	// })
-	// .then( (el) => {
-	// 	const myJson = el;
-	// 	console.log(myJson);
-	// })
+		.then( (el) => {
+			const myJson = el;
+			console.log(myJson);
+		})
+
+
 
 	// setTimeout(() => {
 	// 	fetch('/api2', { method: 'GET'} )
@@ -179,4 +187,13 @@ async function postState() {
 	// console.log(myJson);
 }
 
-
+async function getPdfData() {
+	fetch('/pdf')
+	.then(response => {
+		return response.json()
+	})
+	.then( el => {
+		const pdfData = el;
+		console.log(pdfData)
+	})
+}

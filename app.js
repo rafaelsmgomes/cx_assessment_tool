@@ -11,7 +11,7 @@ const fs      = require("fs");
 
 
 
-const sql = require('./src/js/database/queries');
+const sql = require('./database/queries');
 // const state = require('./src/js/state');
 
 app.use(express.json());
@@ -108,11 +108,15 @@ app.get('/api2', (req, res) => {
                 data
             })
         })
-    }, 2000);
+    }, 500);
 })
 
 app.get('/pdf', (req, res) => {
-    
+    conn.query(placeholder, data, (err, results) => {
+        if (err) throw err;
+        const pdfData = results;
+        console.log(pdfData);
+    })    
 })
 
 
@@ -183,6 +187,6 @@ function createOverallResults () {
 
 
 
-app.listen(3000 || process.env.PORT, process.env.IP, () => {
+app.listen(process.env.PORT || 3000, process.env.IP, () => {
     console.log("Customer Experience Assessment Tool is online")
 });

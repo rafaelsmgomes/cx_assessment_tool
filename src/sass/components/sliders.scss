@@ -41,6 +41,11 @@
 		display: flex;
 		align-items: center;
 		opacity: 0;
+		@include bp($width-2){
+			@include bph(700){
+				display: none;
+			}
+		}
 	}	
 	&__title{
     font-size: 0.95em;    

@@ -6,6 +6,8 @@
     background-image: url(../assets/images/desktop/logo-white.svg);
     margin-right: auto;
     z-index: 1000;
+    background-size: 100%;
+    background-repeat: no-repeat;
     &:hover{
     	cursor: pointer;
     }		

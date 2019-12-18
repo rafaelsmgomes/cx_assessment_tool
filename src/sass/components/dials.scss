@@ -10,11 +10,50 @@
         width: 39.56rem;
       }
     }
+    @include bp($width-2){
+      @include bph(850){
+        $width: 75%;
+        width: $width;
+        height: auto;
+        padding-bottom: ($width * .5);      
+      }
+      @include bph(750){
+        $width: 40%;
+        width: $width;
+        height: auto;
+        padding-bottom: ($width * .5);
+      }
+    }
     @include bp($width-3){
       $width: 100%;
       width: $width;
       height: auto;
       padding-bottom: ($width * .5);
+
+      @include bph(750){
+        $width: 60%;
+        width: $width;
+        height: auto;
+        padding-bottom: ($width * .5);
+      }
+      @include bph(650){
+        margin-top: 0;
+        $width: 50%;
+        width: $width;
+        height: auto;
+        padding-bottom: ($width * .5);        
+      }
+    }
+    @include bp($width-4){
+      @include bph(550){
+        margin-top: -1.5rem;
+      }
+    }
+    @include bp($width-5){
+      $width: 100%;
+      width: $width;
+      height: auto;
+      padding-bottom: ($width * .5);      
     }
   }
   &-tracker__wrapper{
@@ -52,6 +91,16 @@
         border-width: 0 calc(#{34.78rem} * .0175) calc(#{34.78rem} * .5) calc(#{34.78rem} * .0175);        
       }
     }    
+
+    @include bp($width-2){
+      @include bph(850){
+        border-width: 0 calc(#{27.78rem} * .0175) calc(#{27.78rem} * .5) calc(#{27.78rem} * .0175);      
+      }
+
+      @include bph(750){
+        border-width: 0 calc(18rem * .0175) calc(18rem * .5) calc(18rem * .0175);
+      }      
+    }
 
     @include bp($width-5){      
         // height: 19.78rem;

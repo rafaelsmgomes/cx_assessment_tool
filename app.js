@@ -67,25 +67,25 @@ app.post('/api', (req,res) => {
 
 
     userID = Date.now();
-    // userArr.push(userID); 
-    // createFakeCompany(userArr)
-    //     .then(() => {
+    userArr.push(userID); 
+    createFakeCompany(userArr)
+        .then(() => {
 
-    //         likerts.forEach(createAnswersArray);
-    //         dials.forEach(createAnswersArray);
-    //         vertfcs.forEach(createAnswersArray);
-    //         checkboxes.forEach(createAnswersArray);
-    //         sliders.forEach(createAnswersArray); 
+            likerts.forEach(createAnswersArray);
+            dials.forEach(createAnswersArray);
+            vertfcs.forEach(createAnswersArray);
+            checkboxes.forEach(createAnswersArray);
+            sliders.forEach(createAnswersArray); 
 
-    //     }).then(() => {
+        }).then(() => {
 
-    //         insertAnswers(ansArr)
+            insertAnswers(ansArr)
 
-    //     })
-    //     .then( () => {
-    //         updateAnswers();
-    //         createOverallResults();
-    //     });
+        })
+        .then( () => {
+            updateAnswers();
+            createOverallResults();
+        });
 
     res.status(200).json({
         status: 'success',
@@ -180,5 +180,5 @@ function createOverallResults () {
 
 
 app.listen(3000 || process.env.PORT, process.env.IP, () => {
-    // console.log("Customer Experience Assessment Tool is online")
+    console.log("Customer Experience Assessment Tool is online")
 });

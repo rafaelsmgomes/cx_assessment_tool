@@ -23,6 +23,12 @@
     font-family: $font-b;
     margin-top: 0.75rem;
     display: block;
+
+      @include bp($width-3){
+        @include bph(600){
+          font-size: 1.5rem;
+        }
+      }
 		}
 	}
 	&__title{
@@ -43,6 +49,16 @@
       }
       @include bp($width-2){
         width: 100%;
+        font-size: 2rem;
+      }
+      @include bp($width-3){
+        @include bph(600){
+          font-size: 1.5rem;
+        }
+      }
+      @include bp($width-4){
+        font-size: 1.8rem;
+        margin-top: .95rem;
       }
     }
 	}

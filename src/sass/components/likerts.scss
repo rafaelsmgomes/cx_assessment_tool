@@ -16,6 +16,10 @@
 			width: 80%;
 			margin: 0 auto;
 			margin-top: 2.35rem;
+
+			@include bph(575){
+				margin-top: 0.35rem;
+			}
 		}
 	}
 	&__form{
@@ -83,6 +87,12 @@
 	&__group{
 		// flex: 0 0 10%;
 		flex: 0 0 2.65rem;
+
+		@include bp($width-4){
+			@include bph(650){
+				flex: 0 0 2rem;
+			}
+		}
 	}
 	&__text{
 		position: absolute;
@@ -99,6 +109,12 @@
     width: 9.75rem;
     text-align: center;
     color: $color-white-1;
+
+    @include bp(767){
+    	@include bph(650){
+    		padding-top: 0;
+    	}
+    }
 	}
 	&__checkmark{
 		background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);

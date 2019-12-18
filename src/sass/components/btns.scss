@@ -49,6 +49,7 @@
     transition: opacity $timing-2;
 		pointer-events: none;
 		opacity: 0;
+		opacity: 1;
 
 		&--0{
 			background-color: $color-green-1;

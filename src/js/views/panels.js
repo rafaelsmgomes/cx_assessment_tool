@@ -75,7 +75,7 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--3" data-id='3' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--4 panel--activate">	
+	`<div class="panel panel--4">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -675,7 +675,7 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--37">	
+	`<div class="panel panel--37 panel--activate">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Management

@@ -2,21 +2,31 @@
 	&__group{
 		flex: 0 0 2.65rem;
 		display: flex;
-        align-items: center;
+        align-items: center;        
+
+        &:not(:first-of-type) {
+		    margin-top: 0.75rem;
+            
+            @include bph(900){
+                margin-top: 0;
+            }
+
+		    @include bp($width-1){
+                @include bph(900){
+                    margin-top: 0;
+                }
+            }
+        }
+
+        @include bph(900){
+            margin-bottom: .75rem;
+        }
+
         @include bp($width-1){
             @include bph(900){
                 margin-bottom: .75rem;
             }
-          }
-
-        &:not(:first-of-type) {
-		    margin-top: 0.75rem;
-		  @include bp($width-1){
-            @include bph(900){
-                margin-top: 0;
-            }
-          }
-        }
+        }        
 	}
 	&__input{
 		display: none;
@@ -75,13 +85,25 @@
         // justify-content: space-between;
         // height: 23rem;
 
+        @include bph(900){
+            flex-wrap: wrap;
+            height: 6.85rem;
+        }
+
 
         @include bp($width-1){
             @include bph(900){
                 flex-wrap: wrap;
                 height: 15rem;
-                width: 44rem;
+                width: 100%;
                 justify-content: normal;
+            }
+        }
+
+        @include bp($width-4){
+            @include bph(500){
+                width: 100%;
+                height: 11rem;
             }
         }
 	

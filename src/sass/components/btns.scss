@@ -33,6 +33,11 @@
 	    position: absolute;
 	    left: 50%;	    
 
+	    @include bph(900){
+	    	left: calc(100% - 3.15rem);
+    		bottom: .7rem;
+	    }
+
 	    @include bp($width-5){
 	    	left: 65%;
 	    }

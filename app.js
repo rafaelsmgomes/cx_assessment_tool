@@ -40,22 +40,22 @@ let ansArr = []
 app.get('/', (req, res) => {
     res.render('homepage');
     let questionsArr = []
-    conn.query(`SELECT * FROM questions`, (err, results) => {
-        if(err) throw err; 
-        console.log(results[1]); 
+    // conn.query(`SELECT * FROM questions`, (err, results) => {
+    //     if(err) throw err; 
+    //     console.log(results[1]); 
         // for(i = 0; i < results.length; i++){
         //     // userArrID.push(results);
         // };
         // console.log(userArrID); 
-        res.render('/', {name: 'John'})
-    });    
+        // res.render('/', {name: 'John'})
+    // });    
     // conn.release();
 });
 
 app.post('/api', (req,res) => {
     console.log("----------------------------------------")
     
-    console.log(req.body);    
+    // console.log(req.body);    
     // console.log(`res:${res}`);
 
     const data      = req.body,
@@ -67,25 +67,25 @@ app.post('/api', (req,res) => {
 
 
     userID = Date.now();
-    // userArr.push(userID); 
-    // createFakeCompany(userArr)
-    //     .then(() => {
+    userArr.push(userID); 
+    createFakeCompany(userArr)
+        .then(() => {
 
-    //         likerts.forEach(createAnswersArray);
-    //         dials.forEach(createAnswersArray);
-    //         vertfcs.forEach(createAnswersArray);
-    //         checkboxes.forEach(createAnswersArray);
-    //         sliders.forEach(createAnswersArray); 
+            likerts.forEach(createAnswersArray);
+            dials.forEach(createAnswersArray);
+            vertfcs.forEach(createAnswersArray);
+            checkboxes.forEach(createAnswersArray);
+            sliders.forEach(createAnswersArray); 
 
-    //     }).then(() => {
+        }).then(() => {
 
-    //         insertAnswers(ansArr)
+            insertAnswers(ansArr)
 
-    //     })
-    //     .then( () => {
-    //         updateAnswers();
-    //         createOverallResults();
-    //     });
+        })
+        .then( () => {
+            updateAnswers();
+            createOverallResults();
+        });
 
     res.status(200).json({
         status: 'success',
@@ -109,6 +109,10 @@ app.get('/api2', (req, res) => {
             })
         })
     }, 2000);
+})
+
+app.get('/pdf', (req, res) => {
+    
 })
 
 
@@ -180,5 +184,5 @@ function createOverallResults () {
 
 
 app.listen(3000 || process.env.PORT, process.env.IP, () => {
-    // console.log("Customer Experience Assessment Tool is online")
+    console.log("Customer Experience Assessment Tool is online")
 });

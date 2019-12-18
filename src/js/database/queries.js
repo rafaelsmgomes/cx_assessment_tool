@@ -46,14 +46,14 @@ sql.answersSchema = `CREATE TABLE answers (
 sql.resultsSchema = `CREATE TABLE results (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     user_id INTEGER,
-    broadcast_results INT,
-    responsive_results INT,
-    relationship_results INT,
-    beyond_results INT,
-    recommendation_broadcast TEXT,
-    recommendation_responsive TEXT,
-    recommendation_relationship TEXT,
-    recommendation_beyond TEXT,
+    broadcast_res INT,
+    responsive_res INT,
+    relationship_res INT,
+    lifecycle_res INT,
+    broadcast_rec TEXT,
+    responsive_rec TEXT,
+    relationship_rec TEXT,
+    lifecycle_rec TEXT,
     created_at TIMESTAMP DEFAULT NOW(),
 
     FOREIGN KEY(user_id) REFERENCES users(id)
@@ -115,12 +115,12 @@ recommendation_responsive = CASE
         ELSE (SELECT overall_recommendations.low FROM overall_recommendations WHERE overall_recommendations.section = 'responsive')
     END,
 responsive_results = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'responsive'),
-recommendation_beyond = CASE
-        WHEN (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'beyond') >= 75 THEN (SELECT overall_recommendations.high FROM overall_recommendations WHERE overall_recommendations.section = 'beyond')
-        WHEN (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'beyond') >= 50 THEN (SELECT overall_recommendations.mid FROM overall_recommendations WHERE overall_recommendations.section = 'beyond')
-        ELSE (SELECT overall_recommendations.low FROM overall_recommendations WHERE overall_recommendations.section = 'beyond')
+recommendation_lifecycle = CASE
+        WHEN (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle') >= 75 THEN (SELECT overall_recommendations.high FROM overall_recommendations WHERE overall_recommendations.section = 'lifecycle')
+        WHEN (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle') >= 50 THEN (SELECT overall_recommendations.mid FROM overall_recommendations WHERE overall_recommendations.section = 'lifecycle')
+        ELSE (SELECT overall_recommendations.low FROM overall_recommendations WHERE overall_recommendations.section = 'lifecycle')
     END,
-beyond_results = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'beyond')
+lifecycle_results = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle')
 `
 
 sql.insertUser = `INSERT INTO users (

@@ -1,7 +1,7 @@
 import * as comp from './components';
 
 export const panels = [
-	`<div class="panel panel--0">
+	`<div class="panel panel--0 panel--activate">
 		<div class="body__content">
 			<div class="landing__texture"></div>
 			<h1 class='landing__title landing__title--x'>B2B Marketing Maturity</h1>
@@ -45,7 +45,7 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Does your company use email, campaign and form templates to save&nbsp;time?
+				Does your company use email, campaign and form templates to save time?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
@@ -675,7 +675,7 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--37 panel--activate">	
+	`<div class="panel panel--37">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Management

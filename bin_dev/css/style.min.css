@@ -1100,7 +1100,8 @@
   display: flex;
   height: 3.55rem;
   font-size: 1.75rem;
-  line-height: 1.67; }
+  line-height: 1.67;
+  display: none; }
 
 .slider__step {
   color: #fcfbfa; }
@@ -1127,6 +1128,7 @@
     height: 2.20rem;
     background-color: #2B6242;
     border: solid 0.1rem #fcfbfa;
+    overflow: hidden;
     cursor: pointer;
     margin-top: 0.65rem; }
     .scroller__content--active .rangeslider--horizontal {
@@ -1271,6 +1273,9 @@
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
   opacity: 0; }
+  @media only screen and (max-width: 1440px) {
+    .line--1x, .line--2x {
+      stroke-width: 3; } }
   @media only screen and (max-width: 1075px) {
     .line--1x, .line--2x {
       stroke-width: 4; } }

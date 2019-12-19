@@ -3,6 +3,17 @@
 		width: 100%;
 		height: 6.50rem;
 		margin-top: 0.80rem;
+		
+
+		.panel--37 &{
+			@include bph(650){
+					margin-top: -1rem;
+			}
+		}
+
+		@include bp($width-4){
+			margin-top: -.5rem;
+		}
 	}
 	&__form{
 		height: 100%;
@@ -22,6 +33,16 @@
 
 		&:not(:first-of-type){
 			margin-top: 0.75rem;
+			@include bp($width-4){
+				@include bph(600){
+					margin-top: .5rem;				
+				}
+			}
+		}
+		@include bp($width-4){
+			@include bph(600){
+				flex: 0 0 1.5rem;				
+			}
 		}
 	}
 
@@ -106,7 +127,11 @@
 		@include bp($width-1){
 			white-space: normal;
 		}
-
+		@include bp($width-4){
+			@include bph(600){
+				font-size: 1rem;
+			}
+		}
 		
 		// .panel--31 &{
 		// 	@include bp($width-1){

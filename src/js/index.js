@@ -1,11 +1,6 @@
 import 'jquery';
 import 'cpr_pathpackage'; 
-
-// import Checkbox from './models/Checkbox';
-// import Dial from './models/Dial';
-// import Likert from './models/Likert';
-// import Slider from './models/Slider';
-// import Vertfc from './models/Vertfc';
+import 'lottie-web';
 
 import {panels} from './views/panels';
 import ColorScheme from './views/colorScheme';
@@ -13,6 +8,8 @@ import ColorScheme from './views/colorScheme';
 import {state} from './state';
 
 import variables from './../sass/abstracts/variables.scss';
+
+import loadLoop from './lottie/loading-loop.json';
 
 const question_length = panels.length-2;
 const timing = variables.timing1;
@@ -47,6 +44,31 @@ const colorSchemeGroup = new ColorScheme(
 state.colorScheme = colorSchemeGroup;
 
 $(document).ready(function(){
+
+	/*** PRELOAD CTRL ***/
+	setTimeout(function(){
+		$('.preload').addClass('fade');	
+	}, 3000);
+		setTimeout(function(){
+		$('.preload').addClass('hide');	
+	}, 4000);
+
+	setTimeout(function(){
+		$('.pathfinder').addClass('fade-in');	
+		$('.header__container').addClass('fade-in');	
+	}, 4000);
+
+
+	/*** LOTTIE CTRL ***/
+	lottie.loadAnimation({
+	  container: document.getElementById('preload__container'),
+	  renderer: 'svg',
+	  autoplay: true,
+	  animationData: loadLoop,
+	  loop: true,
+	});
+
+
 	/*** App path Ctrl ***/ 		
 		$('.pathfinder').build({
 			'panels': panels,

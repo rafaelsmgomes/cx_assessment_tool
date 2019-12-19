@@ -9,6 +9,9 @@
 
   &--1x,
   &--2x{
+    @include bp($width-1){
+      stroke-width: 3;
+    }
     @include bp(1075){
       stroke-width: 4;
     }

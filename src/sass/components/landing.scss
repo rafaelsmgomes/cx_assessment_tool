@@ -4,8 +4,11 @@ $width: 100%;
     &__container{
         margin: 0 auto;
         margin-top: 5.70rem;
-        width: 32.90rem;
-        height: 32.90rem;        
+        // $width: 60%;
+        // width: $width;
+        // height: 0;
+        // padding-bottom: ($width);   
+        display: flex;   
         border: solid 0.10rem $color-white-1;
         border-radius: 50%;
         display: flex;
@@ -13,27 +16,60 @@ $width: 100%;
         align-items: center;
         cursor: pointer;
         transition: all .5s;
+        width: 36.90rem;
+        height: 36.90rem;
         background-color: $color-green-1;
+
+        @include bph(1000){
+            height: 0; 
+            $width: 50%;
+            width: $width;
+            height: 0;
+            padding-bottom: ($width);              
+        }
+        @include bph(950){
+            width: 16.56rem;
+            height: 16.56rem;
+            margin-top: 5.7rem;
+            padding-bottom: 0;
+        }
+
+        @include bph(800){
+            width: 11.56rem;
+            height: 11.56rem;
+            margin-top: 2.7rem;    
+        }
+
         @include bp($width-1){
-            @include bph(900){
+            width: 60%;
+            height: 0;
+            padding-bottom: 60%;
+
+            @include bph(950){
                 width: 16.56rem;
                 height: 16.56rem;
                 margin-top: 5.7rem;
+                padding-bottom: 0;
             }
         }
-        @include bp(1100){
-            width: 60vw;
-            height: 60vw;
-        
+        @include bp($width-2){
+            @include bph(700){
+                width: 12.56rem;
+                height: 12.56rem;
+                margin-top: 4.7rem;
+            }
         }
-
         @include bp($width-4){
             width: 13.89rem;
+            padding-bottom: 0;
             height: 13.89rem;
         }        
         @include bp($width-5){
             margin: 0 auto;
             margin-top: 2.7rem;
+            @include bph(450){
+                margin-top: 1.7rem;   
+            }
         }
     }
     &__title{
@@ -55,8 +91,28 @@ $width: 100%;
         &--x{
             display: none;
         }
+
+        @include bph(950){
+            display: none;
+
+            &--x{
+                font-size: 2.1rem;
+                width: 100%;
+                display: block;
+                height: 2.67rem;
+                text-align: left;
+                padding-left: 0;
+                margin-top: 1rem;
+            }
+        }                
         
         @include bp($width-1){
+            font-size: 2.2rem;  
+
+            @include bp(1050){
+                font-size: 2rem;
+            }      
+    
             @include bph(900){
                 display: none;
 
@@ -120,6 +176,20 @@ $width: 100%;
             display: none;
         }
 
+        @include bph(950){
+            display: none;
+
+            &--x{
+                height: 4.44rem;                    
+                display: block;
+                padding: 0;
+                text-align: left;       
+                margin-top: 1.28rem;
+                font-size: 2.05rem;
+                width: 75%;                                 
+            }
+        }            
+
         @include bp($width-1){
             @include bph(900){
                 display: none;
@@ -131,11 +201,18 @@ $width: 100%;
                     text-align: left;       
                     margin-top: 1.28rem;
                     font-size: 2.05rem;
-                    width: 41%;                                 
+                    width: 75%;                                 
                 }
             }            
         }        
 
+        @include bp($width-3){
+            width: 95%;
+            font-size: 1rem;
+            &--x{
+                font-size: 1.75rem;
+            }
+        }
         @include bp($width-4){
             display: none;
 
@@ -169,7 +246,18 @@ $width: 100%;
             text-align: center;
             margin-top: 25.25%;
 
+            @include bph(950){
+                margin-top: 48.25%;
+            }
+
             @include bp($width-1){
+
+                @include bp(1050){
+                    margin-top: 23.25%;
+                }
+                @include bph(950){
+                    margin-top: 46.25%;
+                }
                 @include bph(900){
                     font-size: 1.5rem;
                     margin-top: 47.25%;
@@ -178,6 +266,9 @@ $width: 100%;
 
             @include bp($width-3){
                 margin-top: 20.25%;
+                @include bph(950){
+                    margin-top: 48.25%;   
+                }
             }
 
             @include bp($width-4){               
@@ -195,22 +286,41 @@ $width: 100%;
         right: 0;
         z-index: -1;
         transform: translateX(-4%);
-        width: 47.34rem;
-        height: 40.05rem;
+        width: 51.34rem;
+        height: 51.34rem;
         background-size: 100%;
         background-repeat: no-repeat;
         top: 0;
+
+        @include bph(950){
+            width: 25.34rem;
+            height: 25.34rem;
+            margin-top: 16.7rem;
+        }
+
+        @include bph(750){
+            width: 18.34rem;
+            height: 18.34rem;
+            margin-top: 13.7rem;
+        }
+
         @include bp($width-1){
-            @include bph(900){
+            width: 94%;
+            @include bph(950){
                 width: 25rem;
+                transform: translateX(-4%);                
                 height: 25rem;
                 margin-top: 17rem;
             }
-        }
+        }        
 
-        @include bp(1100){
-            transform: none;
-            width: 100%;
+        @include bp($width-2){
+            @include bph(700){
+                width: 19rem;
+                transform: translateX(-4%);
+                height: 19rem;
+                margin-top: 16rem;
+            }
         }
 
         @include bp($width-4){
@@ -220,6 +330,10 @@ $width: 100%;
         @include bp($width-5){
             width: 24rem;
             margin-top: 13.7rem;
+            @include bph(450){
+                margin-top: 15rem;
+            }
+
         }
         @include bp(405){
             width: 24rem;
@@ -241,7 +355,13 @@ $width: 100%;
                 height: 2.2rem;
                 background-position: center;
 
-                margin-top: 2.85rem;                
+                margin-top: 4.85rem;                
+            }
+        }
+
+        @include bp($width-2){
+            @include bph(700){
+                margin-top: 1.85rem;
             }
         }
         @include bp($width-5){

@@ -23,6 +23,12 @@
     font-family: $font-b;
     margin-top: 0.75rem;
     display: block;
+
+      @include bp($width-3){
+        @include bph(600){
+          font-size: 1.5rem;
+        }
+      }
 		}
 	}
 	&__title{
@@ -43,6 +49,45 @@
       }
       @include bp($width-2){
         width: 100%;
+        font-size: 2rem;
+      }
+      @include bp($width-3){
+        @include bph(600){
+          font-size: 1.5rem;
+        }
+      }
+      @include bp($width-4){
+        font-size: 1.8rem;
+        margin-top: .95rem;
+      }
+
+      .panel--37 &{
+        @include bph(700){
+          font-size: 2rem;
+          line-height: 1;
+        }
+        @include bp($width-1){
+          width: 90%;
+        }
+        @include bp($width-2){
+          width: 100%;
+          font-size: 2rem;
+          @include bph(650){
+            font-size: 1.75rem;
+          }
+        }
+        @include bp($width-3){
+          @include bph(600){
+            font-size: 1.5rem;
+          }
+        }
+        @include bp($width-4){
+          font-size: 1.8rem;
+          margin-top: .95rem;
+          @include bph(600){
+            font-size: 1.6rem;
+          }
+        }
       }
     }
 	}

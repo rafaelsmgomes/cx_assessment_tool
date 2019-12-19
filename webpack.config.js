@@ -15,7 +15,7 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
-			
+			lottie: 'lottie-web',
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',

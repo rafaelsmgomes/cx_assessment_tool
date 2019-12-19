@@ -126,13 +126,13 @@ $(document).ready(function(){
 	window.statete = state;
 });
 
-
+// ------------------------------------------------
+// POST AND GET REQUEST TO GENERATE DATABASE
+// ------------------------------------------------
 
 $('.header__rectangle--grow-3').click(postState);
-
-
 async function postState() {
-	// console.log(window.statete);
+
 	const options = {
 		method: 'POST',
 		body: JSON.stringify(window.statete),
@@ -140,60 +140,33 @@ async function postState() {
 			'Content-Type': 'application/json',
 		},
 	}
-
-	// fetch('/api', options)
-	// 	.then((resp) => {
-	// 		console.log(resp)
-	// 	})
-	// 	.then(() => {
-	// 		fetch('/api2', { method: 'GET'} )
-	// 		.then( response => {
-	// 			return response.json();
-	// 		})
-	// 		.then( (el) => {
-	// 			const myJson = el;
-	// 			console.log(myJson);
-	// 		})
-	// 	})
-
 	fetch('/api', options)
-		.then((resp) => {
-			console.log(resp)
-			return fetch('/api2', { method: 'GET'} )
-		})
-		.then((response) => {
-			return response.json();	
-		})
-		.then( (el) => {
-			const myJson = el;
-			console.log(myJson);
-		})
 
-
-
-	// setTimeout(() => {
-	// 	fetch('/api2', { method: 'GET'} )
-	// 	.then( response => {
-	// 		return response.json();
-	// 	})
-	// 	.then( (el) => {
-	// 		const myJson = el;
-	// 		console.log(myJson);
-	// 	})
-	// },2000)
-
-	// const response = await fetch('/api2');
-	// myJson = await response.json();
-	// console.log(myJson);
-}
-
-async function getPdfData() {
-	fetch('/pdf')
-	.then(response => {
-		return response.json()
+	.then((resp) => {
+		console.log(resp)
+		return fetch('/api2', { method: 'GET'} )
 	})
-	.then( el => {
-		const pdfData = el;
-		console.log(pdfData)
+	.then((response) => {
+		return response.json();	
+	})
+	.then( (el) => {
+		const myJson = el;
+		console.log(myJson);
 	})
 }
+
+// ------------------------------------------------
+// GET PDF DATA FUNCTION
+// ------------------------------------------------
+
+// $('.header__rectangle--grow-3').click(getPdfData);
+// async function getPdfData() {
+// 	fetch('/pdf')
+// 	.then(response => {
+// 		return response.json()
+// 	})
+// 	.then( el => {
+// 		const pdfData = el;
+// 		console.log(pdfData)
+// 	})
+// }

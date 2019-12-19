@@ -159,14 +159,14 @@ async function postState() {
 // GET PDF DATA FUNCTION
 // ------------------------------------------------
 
-// $('.header__rectangle--grow-3').click(getPdfData);
-// async function getPdfData() {
-// 	fetch('/pdf')
-// 	.then(response => {
-// 		return response.json()
-// 	})
-// 	.then( el => {
-// 		const pdfData = el;
-// 		console.log(pdfData)
-// 	})
-// }
+$('.header__rectangle--grow-2').click(getPdfData);
+async function getPdfData() {
+	fetch('/pdf')
+	.then(response => {
+		return response.json()
+	})
+	.then( el => {
+		const pdfData = el;
+		console.log(pdfData)
+	})
+}

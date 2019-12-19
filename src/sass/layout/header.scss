@@ -5,9 +5,12 @@
 	  height: 2.95rem;  
 	  display: flex;
 	  padding-top: 0.95rem;
-	  transition-property: opacity;
-	  transition-duration: .1s;	
-	  // display: none;
+	  opacity: 0;
+	  transition: opacity 1s;
+	  &.fade-in{
+	    opacity: 1;
+	  }		
+
 		@include layoutOrientation;
 		@include bp($width-1){
 			width: 83.333%;	

@@ -749,9 +749,22 @@ export const panels = [
 	</div>`,
 
 
-	`<div class="panel panel--41">	
+	`<div class="panel panel--41 panel--activate">	
 		<div class="body__content">
-			<h1>42</h1>
+			<h1 class='results__title results__title--1'>Your Marketing Maturity Assessment Results</h1>
+			<div class="wrapper wrapper--1">				
+				<div class="cloud cloud--1">
+						<div class="cloud__title cloud__title--1">
+							Maturity Score
+						</div>
+						<div class="cloud__text cloud__text--1">
+							64/100
+						</div>			
+				</div>
+			</div>
+			<div class="btn__pdf btn__pdf--1">
+				Download your Marketing Maturity Report
+			</div>
 		</div>		
 	</div>`,
 

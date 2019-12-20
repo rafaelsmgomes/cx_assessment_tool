@@ -15,7 +15,7 @@ const question_length = panels.length-2;
 const timing = variables.timing1;
 state.qLen = question_length;
 state.white = variables.white1;
-
+//test
 const colorSchemeGroup = new ColorScheme(
 	{'colorSchemes':[{
 		'dialBgColor': variables.green2,

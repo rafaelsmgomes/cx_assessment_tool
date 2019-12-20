@@ -133,6 +133,12 @@
   font-family: Univers, Arial, Helvetica, sans-serif;
   margin-top: 0.80rem; }
 
+.results__title--1 {
+  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-size: 2.80rem;
+  margin-top: 2.00rem;
+  color: #fcfbfa; }
+
 .background {
   position: fixed;
   z-index: -100;
@@ -213,6 +219,16 @@
 @media only screen and (max-width: 1440px) and (max-height: 900px) {
   .btn__regress > img {
     width: 62%; } }
+
+.btn__pdf {
+  display: flex;
+  width: fit-content;
+  background-color: red;
+  border: 1px solid white; }
+
+.cloud--1 {
+  width: 20.80rem;
+  height: 11.40rem; }
 
 .cta__wrapper {
   width: 35.40rem;
@@ -1482,6 +1498,7 @@ html {
 .pathfinder {
   position: relative;
   transition-timing-function: cubic-bezier(0.47, 0.11, 0, 1.08);
+  transform: translateY(-800vw);
   opacity: 0;
   transition: opacity 1s; }
   .pathfinder.fade-in {

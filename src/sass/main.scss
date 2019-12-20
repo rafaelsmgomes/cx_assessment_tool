@@ -12,6 +12,7 @@
 // @import 'components/clouds';
 @import 'components/background';
 @import 'components/btns';
+@import 'components/cloud';
 @import 'components/cta';
 @import 'components/checkboxes';
 @import 'components/dials';
@@ -35,8 +36,9 @@
 @import 'layout/bodyContent';
 @import 'layout/footer';
 @import 'layout/header';
+@import 'layout/wrapper';
 // @import 'layout/results';
-
+// @import 'layout/results';
 // @import 'pages/body';
 @import 'panels/panels';
 
@@ -119,7 +121,7 @@ html {
   position: relative;
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
-  // transform: translateY(400vw);
+  transform: translateY(-800vw);
   // transform: translateX(-400vw);
   opacity: 0;
   transition: opacity 1s;

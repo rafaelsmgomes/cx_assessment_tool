@@ -144,11 +144,17 @@
   @media only screen and (max-width: 1100px) {
     .results__text--wrapper {
       margin-top: 3.00rem; } }
+  @media only screen and (max-width: 1000px) {
+    .results__text--wrapper {
+      width: 90%; } }
 
 .results__text--1 {
   font-family: Univers, Arial, Helvetica, sans-serif;
   color: #fcfbfa;
   font-size: 1rem; }
+  @media only screen and (max-width: 1000px) {
+    .results__text--1 {
+      font-size: 1.3rem; } }
 
 .results__header--1 {
   font-family: UniversB, Arial, Helvetica, sans-serif;

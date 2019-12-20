@@ -89,8 +89,23 @@
 	&__pdf{
     display: flex;
     width: fit-content;
-    background-color: red;
-    border: 1px solid white;
+    background-color: $color-green-2;
+    margin: 0 auto;
+    margin-top: 3.75rem;
+    margin-bottom: 5.00rem;
+    height: 3.80rem;
+    width: 28.00rem;    
+    padding-left: 2.20rem;
+    border-radius: 5.00rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.20rem;
+    font-family: $font-b;    
+    cursor: pointer;
+    color: $color-white-1;
+    @include bp($width-1){
+    	margin-top: 0;
+    }
 	}
 
 }

@@ -236,11 +236,20 @@
 .btn__pdf {
   display: flex;
   width: fit-content;
-  background-color: red;
-  border: 1px solid white;
+  background-color: #2B6242;
   margin: 0 auto;
   margin-top: 3.75rem;
-  margin-bottom: 5.00rem; }
+  margin-bottom: 5.00rem;
+  height: 3.80rem;
+  width: 28.00rem;
+  padding-left: 2.20rem;
+  border-radius: 5.00rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.20rem;
+  font-family: UniversB, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  color: #fcfbfa; }
 
 .cloud {
   position: relative; }
@@ -275,7 +284,7 @@
     font-size: 1.20rem;
     width: 11rem;
     margin-top: 0.75rem; }
-    .cloud--2-3 + .cloud__subtitle {
+    .cloud__subtitle--1 {
       width: 14rem; }
   .cloud__text {
     color: #312D2A;
@@ -1489,13 +1498,16 @@
   display: flex;
   padding-top: 0.95rem;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 1s, transform .2s;
   width: 70rem;
   margin: 0 auto;
   left: 0;
   right: 0; }
   .header__container.fade-in {
     opacity: 1; }
+  .header__container.fade-up {
+    opacity: 0;
+    transform: translateY(-100%); }
   @media only screen and (max-width: 1440px) {
     .header__container {
       width: 83.333%; } }

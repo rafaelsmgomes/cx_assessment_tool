@@ -6,10 +6,14 @@
 	  display: flex;
 	  padding-top: 0.95rem;
 	  opacity: 0;
-	  transition: opacity 1s;
+	  transition: opacity 1s, transform .2s;
 	  &.fade-in{
 	    opacity: 1;
 	  }		
+	  &.fade-up{
+	  	opacity: 0;
+	  	transform: translateY(-100%);
+	  }
 
 		@include layoutOrientation;
 		@include bp($width-1){

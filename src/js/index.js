@@ -3,6 +3,8 @@ import 'cpr_pathpackage';
 import 'lottie-web';
 
 import {panels} from './views/panels';
+
+import * as css from './views/cssView';
 import ColorScheme from './views/colorScheme';
 
 import {state} from './state';
@@ -73,7 +75,40 @@ $(document).ready(function(){
 			// 'delay': 1,
 		});
 
+	/***CSS Ctrl***/
+
+		css.toggleHeader();
+
 	/*** LOTTIE CTRL ***/
+		$('.header__rectangle--2').click(function(){	
+
+			loadLottie({
+				'cloud--1-0': cloudMain,
+				'cloud--2-0': cloud0,
+				'cloud--2-1': cloud1,
+				'cloud--2-2': cloud2,
+				'cloud--2-3': cloud3,
+			});
+
+			function loadLottie(obj){
+
+
+				for(const key in obj){
+					const lottieTemp = lottie.loadAnimation({
+					  container: document.getElementById(key),
+					  renderer: 'svg',
+					  autoplay: false,
+					  animationData: obj[key],
+					  loop: false,
+					});
+
+					setTimeout(function(){
+						lottieTemp.play(); 
+					}, timing*2)
+				}
+			}
+		})
+
 		lottie.loadAnimation({
 		  container: document.getElementById('preload__container'),
 		  renderer: 'svg',
@@ -81,42 +116,6 @@ $(document).ready(function(){
 		  animationData: loadLoop,
 		  loop: true,
 		});
-
-		lottie.loadAnimation({
-		  container: document.getElementById('cloud--1-0'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: cloudMain,
-		  loop: 1,
-		});		
-		lottie.loadAnimation({
-		  container: document.getElementById('cloud--2-0'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: cloud0,
-		  loop: 1,
-		});		
-		lottie.loadAnimation({
-		  container: document.getElementById('cloud--2-1'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: cloud1,
-		  loop: 1,
-		});		
-		lottie.loadAnimation({
-		  container: document.getElementById('cloud--2-2'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: cloud2,
-		  loop: 1,
-		});	
-		lottie.loadAnimation({
-		  container: document.getElementById('cloud--2-3'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: cloud3,
-		  loop: 1,
-		});					
 
 	// /*** Dial Ctrl ***/ 
 		$(".dial-tracker").cprDial({

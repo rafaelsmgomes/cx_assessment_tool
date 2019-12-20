@@ -808,7 +808,7 @@ export const panels = [
 							<div class="cloud__text cloud__text--2 cloud__text--2-3"><span class='cloud__score--2-3'>X</span>/100</div>
 						</div>
 					</div>
-					<div class="cloud__subtitle">Lifecycle Engagement Marketing</div>
+					<div class="cloud__subtitle cloud__subtitle--1">Lifecycle Engagement Marketing</div>
 				</div>
 			</div>
 			<div class="btn__pdf btn__pdf--1">

@@ -7,3 +7,31 @@ export const toggleHeader = () => {
     }              
   });
 };
+
+export const loadLottie = (obj, data, timing) => {
+
+	console.log(
+		'asdfasdf',
+		data
+	// data[0].BroadcastScore,
+	// data[0].ResponsiveScore,
+	// data[0].RelationshipScore,
+	// data[0].LifecycleScore,
+	// // 'asdfasdf'
+	);
+
+
+	for(const key in obj){
+		const lottieTemp = lottie.loadAnimation({
+		  container: document.getElementById(key),
+		  renderer: 'svg',
+		  autoplay: false,
+		  animationData: obj[key],
+		  loop: false,
+		});
+
+		setTimeout(function(){
+			lottieTemp.play(); 
+		}, timing*2)
+	}
+}

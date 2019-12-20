@@ -13,6 +13,9 @@
 		    padding-left: 10.71%;
 	    }
 		}
+		@include bp($width-2){
+			flex-direction: column;
+		}
 	}
 	&--2{
 		width: 100%;

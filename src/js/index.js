@@ -90,36 +90,36 @@ $(document).ready(function(){
 		  loop: true,
 		});
 
-		$('.header__rectangle--2').click(function(){	
-			loadLottie({
-				'cloud--1-0': cloudMain,
-				'cloud--2-0': cloud0,
-				'cloud--2-1': cloud1,
-				'cloud--2-2': cloud2,
-				'cloud--2-3': cloud3,
-			});
+		// $('.header__rectangle--2').click(function(){	
+		// 	loadLottie({
+		// 		'cloud--1-0': cloudMain,
+		// 		'cloud--2-0': cloud0,
+		// 		'cloud--2-1': cloud1,
+		// 		'cloud--2-2': cloud2,
+		// 		'cloud--2-3': cloud3,
+		// 	});
 
-			function loadLottie(obj){
+		// 	function loadLottie(obj){
 
 
-				for(const key in obj){
+		// 		for(const key in obj){
 
-					obj[key]['op'] = 50;
+		// 			obj[key]['op'] = 50;
 
-					const lottieTemp = lottie.loadAnimation({
-					  container: document.getElementById(key),
-					  renderer: 'svg',
-					  autoplay: false,
-					  animationData: obj[key],
-					  loop: false,
-					});
+		// 			const lottieTemp = lottie.loadAnimation({
+		// 			  container: document.getElementById(key),
+		// 			  renderer: 'svg',
+		// 			  autoplay: false,
+		// 			  animationData: obj[key],
+		// 			  loop: false,
+		// 			});
 
-					setTimeout(function(){
-						lottieTemp.play(); 
-					}, timing*2)
-				}
-			}
-		})
+		// 			setTimeout(function(){
+		// 				lottieTemp.play(); 
+		// 			}, timing*2)
+		// 		}
+		// 	}
+		// })
 
 	/*** Dial Ctrl ***/
 		$(".dial-tracker").cprDial({
@@ -216,9 +216,18 @@ async function postState() {
 	})
 	.then( (el) => {
 		const myJson = el;
-		console.log(myJson);
+
+		css.loadLottie({
+			'cloud--1-0': cloudMain,
+			'cloud--2-0': cloud0,
+			'cloud--2-1': cloud1,
+			'cloud--2-2': cloud2,
+			'cloud--2-3': cloud3,
+		}, myJson, timing);
 	})
 }
+
+
 
 // ------------------------------------------------
 // GET PDF DATA FUNCTION
@@ -235,3 +244,24 @@ async function getPdfData() {
 		console.log(pdfData)
 	})
 }
+
+// function loadLottie(obj, data){
+
+// 	console.log(data);
+
+
+
+// 	for(const key in obj){
+// 		const lottieTemp = lottie.loadAnimation({
+// 		  container: document.getElementById(key),
+// 		  renderer: 'svg',
+// 		  autoplay: false,
+// 		  animationData: obj[key],
+// 		  loop: false,
+// 		});
+
+// 		setTimeout(function(){
+// 			lottieTemp.play(); 
+// 		}, timing*2)
+// 	}
+// }

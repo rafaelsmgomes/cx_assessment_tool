@@ -82,12 +82,12 @@ app.post('/api', (req,res) => {
             sliders.forEach(createAnswersArray); 
 
         }).then(() => {
-
             insertAnswers(ansArr)
-
         })
         .then( () => {
             updateAnswers();
+        })
+        .then(() => {
             createOverallResults();
         });
 
@@ -112,7 +112,7 @@ app.get('/api2', (req, res) => {
                 data 
             })
         })
-    }, 1000);
+    }, 3000);
 })
 
 app.get('/pdf', (req, res) => {

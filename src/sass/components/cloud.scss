@@ -4,7 +4,7 @@
 		flex: 0 0 20.80rem;
 		height: 11.40rem;
 		margin-right: 3.40rem;
-		background-color: red;
+		// background-color: red;
 		
 		@include bp(1100){
 	    width: 20.8rem;
@@ -15,16 +15,21 @@
     		height: 11.40rem;
 	    }
 		}
+
+		@include bp($width-2){
+	    width: 20.8rem;
+	    flex: 0 0 11.40rem;
+		}
 	}
 	&--2{
 		width: 100%;
 		flex: 0 0 8rem;
-		background-color: #fff;
+		// background-color: #fff;
 	}
 
 	&__wrapper{
 		flex: 0 0 15.89rem;
-		background-color: blue;
+		// background-color: blue;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;    

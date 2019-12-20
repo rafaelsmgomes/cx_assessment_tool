@@ -770,9 +770,9 @@ export const panels = [
 					</div>
 				</div>
 			</div>
-			<svg class="line__wrapper--x">
-				<line class="line--x-1" data-id='0' x1='0' x2='1058' y1='58.5' y2="58.5"></line>
-			</svg>
+			<div class="line__wrapper--x">
+			
+			</div>
 			<div class="wrapper wrapper--2">
 				<div class="cloud__wrapper">
 					<div class="cloud cloud--2" id='cloud--2-0'>

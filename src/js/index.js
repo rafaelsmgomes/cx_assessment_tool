@@ -17,6 +17,7 @@ import cloud0 from './lottie/small-cloud-green.json';
 import cloud1 from './lottie/small-cloud-blue.json';
 import cloud2 from './lottie/small-cloud-orange.json';
 import cloud3 from './lottie/small-cloud-gray.json';
+import { ok } from 'assert';
 
 const question_length = panels.length-2;
 const timing = variables.timing1;
@@ -206,9 +207,11 @@ async function postState() {
 		},
 	}
 	fetch('/api', options)
-
 	.then((resp) => {
-		console.log(resp)
+		return resp.json();
+	})
+	.then(resp =>{
+		console.log(resp);
 		return fetch('/api2', { method: 'GET'} )
 	})
 	.then((response) => {

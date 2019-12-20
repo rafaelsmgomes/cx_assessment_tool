@@ -73,57 +73,63 @@ app.post('/api', (req,res) => {
     userID = Date.now();
 
     createFakeCompany(userArr)
-        .then(() => {
+    .then(() => {
 
-            likerts.forEach(createAnswersArray);
-            dials.forEach(createAnswersArray);
-            vertfcs.forEach(createAnswersArray);
-            checkboxes.forEach(createAnswersArray);
-            sliders.forEach(createAnswersArray); 
-            return ('ok')
+        likerts.forEach(createAnswersArray);
+        dials.forEach(createAnswersArray);
+        vertfcs.forEach(createAnswersArray);
+        checkboxes.forEach(createAnswersArray);
+        sliders.forEach(createAnswersArray); 
+        return ('ok')
 
-        }).then((el) => {
-            console.log(el);
-            insertAnswers(ansArr);
-            return ('ok2');
-        })
-        .then( (el) => {
-            console.log(el);
-            updateAnswers();
-            return ('ok3')
+    }).then((el) => {
+        console.log(el);
+        const results = insertAnswers(ansArr);
+        return (results);
+    })
+    .then( (el) => {
+        console.log(el);
+        const results = updateAnswers();
+        return results
 
-        })
-        .then((el) => {
-            console.log(el);
-            createOverallResults();
-            return ('ok4')
-        })
-        .then(el => {
-            console.log(el)
+    })
+    .then((el) => {
+        console.log(el);
+        const results = createOverallResults();
+        return results
+    })
+    .then(el => {
+        console.log(el)
+        return ('done')
+    })
+    .then((el) => {
+        console.log(el)
+        res.status(200).json({
+            status: 'success',
+            results: data.length,
+            data: {
+                data: 'success'
+            }  
         });
 
-    res.status(200).json({
-        status: 'success',
-        results: data.length,
-        data: {
-            data
-        }  
+    })
+    .catch((err) => {
+        console.log(err)
     });
 }); 
 
 app.get('/api2', (req, res) => {
 
-    setTimeout(() => {        
-        conn.query(`SELECT * FROM results WHERE user_id = ?`, userID, (err, results) => {
-            if (err) throw err;
-            const data = results;
-            // console.log(results)
-    
-            res.send({ 
-                data 
-            })
+    conn.query(`SELECT * FROM results WHERE user_id = ?`, userID, (err, results) => {
+        if (err) throw err;
+        const data = results;
+        // console.log(results)
+
+        res.send({ 
+            data 
         })
-    }, 1000);
+    })
+
 })
 
 app.get('/pdf', (req, res) => {
@@ -258,8 +264,8 @@ function insertAnswers(elem) {
         conn.query(sql.insertAnswer, [elem], (err, results) => {
             // console.log(results);
             if(err) throw err;
+            res(results);
         });
-        res();
     })
 }; 
 
@@ -269,7 +275,7 @@ function updateAnswers () {
             if(err) throw err;
             // console.log(results);
             ansArr = [];
-            res();
+            res(results);
         });
     })
 };
@@ -279,7 +285,7 @@ function createOverallResults () {
         conn.query(sql.insertResults, [userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID, userID], (err, results, fields) => {
             if(err) throw err;
             // console.log(results);
-            res(); 
+            res(results); 
         });
     }) 
 };

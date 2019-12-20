@@ -80,15 +80,26 @@ app.post('/api', (req,res) => {
             vertfcs.forEach(createAnswersArray);
             checkboxes.forEach(createAnswersArray);
             sliders.forEach(createAnswersArray); 
+            return ('ok')
 
-        }).then(() => {
-
-            insertAnswers(ansArr)
+        }).then((el) => {
+            console.log(el);
+            insertAnswers(ansArr);
+            return ('ok2');
+        })
+        .then( (el) => {
+            console.log(el);
+            updateAnswers();
+            return ('ok3')
 
         })
-        .then( () => {
-            updateAnswers();
+        .then((el) => {
+            console.log(el);
             createOverallResults();
+            return ('ok4')
+        })
+        .then(el => {
+            console.log(el)
         });
 
     res.status(200).json({

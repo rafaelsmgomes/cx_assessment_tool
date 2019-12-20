@@ -36,7 +36,7 @@ let userArr = [];
 let userID;
 let ansArr = []
 
-app.get('/oracle/maturity/cx', (req, res) => {
+app.get('/cx/maturity', (req, res) => {
     res.render('index');
 })
 

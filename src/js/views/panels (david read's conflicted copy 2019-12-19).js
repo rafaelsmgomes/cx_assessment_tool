@@ -753,15 +753,13 @@ export const panels = [
 		<div class="body__content">
 			<h1 class='results__title results__title--1'>Your Marketing Maturity Assessment Results</h1>
 			<div class="wrapper wrapper--1">				
-				<div class="cloud cloud--1" id='cloud--1-0'>
-						<div class="text__wrapper text__wrapper--1">
-							<div class="cloud__title cloud__title--1">
-								Maturity Score
-							</div>
-							<div class="cloud__text cloud__text--1 cloud__text--1-0">
-								<span class='cloud__score--1-0'>X</span>/100
-							</div>			
+				<div class="cloud cloud--1">
+						<div class="cloud__title cloud__title--1">
+							Maturity Score
 						</div>
+						<div class="cloud__text cloud__text--1">
+							64/100
+						</div>			
 				</div>
 				<div class="results__text--wrapper">
 					<div class="results__header results__header--1">Overall Maturity Score</div>
@@ -773,44 +771,7 @@ export const panels = [
 			<svg class="line__wrapper--x">
 				<line class="line--x-1" data-id='0' x1='0' x2='1058' y1='58.5' y2="58.5"></line>
 			</svg>
-			<div class="wrapper wrapper--2">
-				<div class="cloud__wrapper">
-					<div class="cloud cloud--2" id='cloud--2-0'>
-						<div class="text__wrapper text__wrapper--2">
-							<div class="cloud__title cloud__title--2">Maturity Score</div>
-							<div class="cloud__text cloud__text--2 cloud__text--2-0"><span class='cloud__score--2-0'>X</span>/100</div>
-						</div>
-					</div>
-					<div class="cloud__subtitle">Broadcast Marketing</div>
-				</div>
-				<div class="cloud__wrapper">
-					<div class="cloud cloud--2" id='cloud--2-1'>
-						<div class="text__wrapper text__wrapper--2">
-							<div class="cloud__title cloud__title--2">Maturity Score</div>
-							<div class="cloud__text cloud__text--2 cloud__text--2-1"><span class='cloud__score--2-1'>X</span>/100</div>
-						</div>
-					</div>
-					<div class="cloud__subtitle">Responsive Marketing</div>
-				</div>
-				<div class="cloud__wrapper">
-					<div class="cloud cloud--2" id='cloud--2-2'>
-						<div class="text__wrapper text__wrapper--2">
-							<div class="cloud__title cloud__title--2">Maturity Score</div>
-							<div class="cloud__text cloud__text--2 cloud__text--2-2"><span class='cloud__score--2-2'>X</span>/100</div>
-						</div>
-					</div>
-					<div class="cloud__subtitle">Relationship Marketing</div>
-				</div>
-				<div class="cloud__wrapper">
-					<div class="cloud cloud--2" id='cloud--2-3'>
-						<div class="text__wrapper text__wrapper--2">
-							<div class="cloud__title cloud__title--2">Maturity Score</div>
-							<div class="cloud__text cloud__text--2 cloud__text--2-3"><span class='cloud__score--2-3'>X</span>/100</div>
-						</div>
-					</div>
-					<div class="cloud__subtitle">Lifecycle Engagement Marketing</div>
-				</div>
-			</div>
+
 			<div class="btn__pdf btn__pdf--1">
 				Download your Marketing Maturity Report
 			</div>

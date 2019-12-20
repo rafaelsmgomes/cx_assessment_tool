@@ -114,4 +114,22 @@
       color: $color-white-1;
     }
   }
+  &__text{
+    &--wrapper{
+      width: 31.70rem;
+    }
+    &--1{
+      font-family: $font-reg;
+      color: $color-white-1;
+      font-size: 1rem;
+    }
+  }
+
+  &__header{
+    &--1{
+      font-family: $font-b;
+      font-size: 1.60rem;
+      color: $color-white-1; 
+    }
+  }
 }

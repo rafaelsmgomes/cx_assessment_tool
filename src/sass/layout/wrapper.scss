@@ -1,0 +1,12 @@
+.wrapper{
+	display: flex;
+	&--1{
+		padding-left: 10.71%; 
+		margin-top: 3.75rem;
+	}
+	&--2{
+		width: 100%;
+		margin-top: 1.00rem;
+		justify-content: space-between;
+	}
+}

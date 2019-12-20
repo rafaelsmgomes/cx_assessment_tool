@@ -442,7 +442,7 @@ VALUES
         .125, 
         "Unified Customer Profile: Connecting all your data sources allows you to build a single customer profile for each customer with the highest accuracy. A single view of your customer enables timely, relevant, and consistent experiences across every customer interaction and simplifies the integration of online, offline, and third-party data sources.",
         "Great job! With a single view of your customer, you ensure timely, relevant, and consistent experiences across every customer interaction.", 
-        "Beyond",
+        "Lifecycle",
         "Unified Customer Profile"
     ),
     (
@@ -454,7 +454,7 @@ VALUES
         .125, 
         "Advanced personalization: Customers expect real-time, personalized and contextual experiences when they want them and how they want them, and for marketers to know them better than they do. But to really know them, marketers must access all customer journey data like marketing, sales, and service, to drive true personalization.",
         "Congratulations! According to McKinsey, by providing personalized experiences, marketers experienced a ~ 15% lift in revenue, a 10-30% increase in efficiencies, and acquisition costs decreased by as much as 50%. ", 
-        "Beyond",
+        "Lifecycle",
         "Advanced personalization"
     ),
     (
@@ -467,7 +467,7 @@ VALUES
         .125, 
         "B2B Commerce: B2B buyers prefer an easier buying experience similar to their consumer experience. For repeat purchases and low consideration ancillary products/services, buyers don’t want to speak with a rep – they prefer to shop online when possible. Your competitors are already moving this direction and taking market share daily.",
         "You're a smart B2B marketer who recognizes that B2B buyers demand a buying experience that more closely resembles the consumer experience. ", 
-        "Beyond",
+        "Lifecycle",
         "B2B Commerce"
     ),
     (
@@ -480,7 +480,7 @@ VALUES
         .125, 
         "Customer Loyalty:  According to Gartner, 80% of all future profits will come from 20% of existing customers. You have a greater chance of selling to an existing customer than a new one. It can cost up to 7x more to acquire a new account than to keep one. ",
         "According to Gartner, 80% of all future profits will come from 20% of existing customers. You understand the importance of customer retention. ", 
-        "Beyond",
+        "Lifecycle",
         "Customer Loyalty"
     ),
     (
@@ -493,7 +493,7 @@ VALUES
         .125, 
         "Service Aware Marketing: To the customer, the “service experience” isn't limited to their contact center interaction. It extends across every touchpoint of your brand.  Ensuring your marketing teams are automatically informed of ongoing customer concerns can help avoid unwanted \"unsubscribes\" to new offers due to their frustration in-the-moment.  ",
         "Great work ensuring your marketing teams are armed well with automatic customer service concerns. You're not targeting customers in the heat of a bad moment.", 
-        "Beyond",
+        "Lifecycle",
         "Service Aware Marketing"
     ),
     (
@@ -506,7 +506,7 @@ VALUES
         .125, 
         "Empowered Service: 89% of brands expect to be competing mostly or completely on the basis of customer experience (Gartner). The asset of customer data is unique to your company. Giving your service reps in-the-moment insights may provide the perfect opportunity to upsell something that would suit them perfectly.",
         "Congratulations! By empowering your service teams with data, you're in a strong position to compete on customer experience, AND drive upsell. ", 
-        "Beyond",
+        "Lifecycle",
         "Empowered service"
     ),
     (
@@ -519,7 +519,7 @@ VALUES
         .125, 
         "Service Aware Sales: Every customer wants to feel like they have been heard when they have an issue, including by their sales rep. Connecting the critical digital touchpoints across sales and service interactions will position your sales team to provide relevant interactions that will lead to better experiences.",
         "Connecting critical digital touchpoints across sales and service interactions positions your sales team to provide relevant interactions, timed appropriately, that lead to better experiences. ", 
-        "Beyond",
+        "Lifecycle",
         "Service aware sales"
     ),
     (
@@ -533,6 +533,6 @@ VALUES
         .125, 
         "Measure Customer Lifetime Value: Customer lifetime value measures a customer's revenue over the duration of your business relationship. This insight helps to prioritize your marketing efforts and spend, while maintaining profitability. And it can help identify trends that could predict propensity to buy or if their business becomes a flight risk.",
         "Understanding your customer across their many touchpoints with your brand creates better experiences than your competition. You're also building higher customer lifetime value, and more defensible, long-term customer relationships.", 
-        "Beyond",
+        "Lifecycle",
         "Measure Customer Lifetime Value"
     );

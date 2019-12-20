@@ -1,8 +1,8 @@
-import Checkbox from '.././models/Checkbox';
-import Dial from '.././models/Dial';
-import Likert from '.././models/Likert';
-import Slider from '.././models/Slider';
-import Vertfc from '.././models/Vertfc';
+import Checkbox from '../models/Checkbox';
+import Dial from '../models/Dial';
+import Likert from '../models/Likert';
+import Slider from '../models/Slider';
+import Vertfc from '../models/Vertfc';
 
 import {state} from '.././state';
 

@@ -1,10 +1,20 @@
 .cloud{
 	position: relative;
 	&--1{
-		width: 20.80rem;
+		flex: 0 0 20.80rem;
 		height: 11.40rem;
 		margin-right: 3.40rem;
 		background-color: red;
+		
+		@include bp(1100){
+	    width: 20.8rem;
+	    flex: 0 0 11.40rem;
+
+	    @include bph(900){
+	    	flex: 0 0 20.80rem;
+    		height: 11.40rem;
+	    }
+		}
 	}
 	&--2{
 		width: 100%;
@@ -19,6 +29,9 @@
 		justify-content: space-between;
 		flex-direction: column;    
 		position: relative;
+		@include bp($width-1){
+	    margin-bottom: 2.50rem;
+		}
 	}
 
 	&__title{

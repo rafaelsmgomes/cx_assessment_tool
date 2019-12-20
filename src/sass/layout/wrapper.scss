@@ -3,10 +3,54 @@
 	&--1{
 		padding-left: 10.71%; 
 		margin-top: 3.75rem;
+		@include bp(1100){
+			flex-direction: column;
+	    padding: 0;
+	    align-items: center;
+
+	    @include bph(900){
+	    	flex-direction: row;
+		    padding-left: 10.71%;
+	    }
+		}
 	}
 	&--2{
 		width: 100%;
 		margin-top: 1.00rem;
 		justify-content: space-between;
+
+		@include bp($width-1){
+	    flex-wrap: wrap;
+	    width: 60%;
+	    margin: 0 auto;
+	    margin-top: 4rem;
+			@include bph(900){
+				width: 34.5rem;
+			}
+		}
+		@include bp(1375){
+			width: 66%;
+			@include bph(900){
+				width: 34.5rem;
+			}
+		}
+		@include bp(1250){
+			width: 71%;
+			@include bph(900){
+				width: 34.5rem;
+			}
+		}
+		@include bp(1175){
+			width: 75%;
+			@include bph(900){
+				width: 34.5rem;
+			}
+		}
+		@include bp(1070){
+			width: 80%;
+			@include bph(900){
+				width: 34.5rem;
+			}
+		}
 	}
 }

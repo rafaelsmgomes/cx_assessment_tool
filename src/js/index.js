@@ -80,8 +80,17 @@ $(document).ready(function(){
 		css.toggleHeader();
 
 	/*** LOTTIE CTRL ***/
-		$('.header__rectangle--2').click(function(){	
 
+		//preloader
+		lottie.loadAnimation({
+		  container: document.getElementById('preload__container'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: loadLoop,
+		  loop: true,
+		});
+
+		$('.header__rectangle--2').click(function(){	
 			loadLottie({
 				'cloud--1-0': cloudMain,
 				'cloud--2-0': cloud0,
@@ -94,6 +103,9 @@ $(document).ready(function(){
 
 
 				for(const key in obj){
+
+					obj[key]['op'] = 50;
+
 					const lottieTemp = lottie.loadAnimation({
 					  container: document.getElementById(key),
 					  renderer: 'svg',
@@ -109,15 +121,7 @@ $(document).ready(function(){
 			}
 		})
 
-		lottie.loadAnimation({
-		  container: document.getElementById('preload__container'),
-		  renderer: 'svg',
-		  autoplay: true,
-		  animationData: loadLoop,
-		  loop: true,
-		});
-
-	// /*** Dial Ctrl ***/ 
+	/*** Dial Ctrl ***/
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',
@@ -208,12 +212,13 @@ async function postState() {
 		.then(() => {
 			fetch('/api2', { method: 'GET'} )
 			.then( response => {
+				console.log(response)
 				return response.json();
 			})
-			.then( (el) => {
-				const myJson = el;
-				console.log(myJson);
-			})
+			// .then( (el) => {
+			// 	const myJson = el;
+			// 	console.log(myJson);
+			// })
 		})
 	// fetch('/api2', { method: 'GET'} )
 	// .then( response => {

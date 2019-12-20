@@ -117,6 +117,9 @@
   &__text{
     &--wrapper{
       width: 31.70rem;
+      @include bp(1100){
+        margin-top: 3.00rem;
+      }
     }
     &--1{
       font-family: $font-reg;

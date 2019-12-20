@@ -103,6 +103,9 @@
     font-family: $font-b;    
     cursor: pointer;
     color: $color-white-1;
+    @include bp($width-1){
+    	margin-top: 0;
+    }
 	}
 
 }

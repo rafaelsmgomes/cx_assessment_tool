@@ -3,6 +3,8 @@ import 'cpr_pathpackage';
 import 'lottie-web';
 
 import {panels} from './views/panels';
+
+import * as css from './views/cssView';
 import ColorScheme from './views/colorScheme';
 
 import {state} from './state';
@@ -10,6 +12,11 @@ import {state} from './state';
 import variables from './../sass/abstracts/variables.scss';
 
 import loadLoop from './lottie/loading-loop.json';
+import cloudMain from './lottie/medium-cloud-texture.json';
+import cloud0 from './lottie/small-cloud-green.json';
+import cloud1 from './lottie/small-cloud-blue.json';
+import cloud2 from './lottie/small-cloud-orange.json';
+import cloud3 from './lottie/small-cloud-gray.json';
 
 const question_length = panels.length-2;
 const timing = variables.timing1;
@@ -59,16 +66,6 @@ $(document).ready(function(){
 	}, 4000);
 
 
-	/*** LOTTIE CTRL ***/
-	lottie.loadAnimation({
-	  container: document.getElementById('preload__container'),
-	  renderer: 'svg',
-	  autoplay: true,
-	  animationData: loadLoop,
-	  loop: true,
-	});
-
-
 	/*** App path Ctrl ***/ 		
 		$('.pathfinder').build({
 			'panels': panels,
@@ -78,7 +75,53 @@ $(document).ready(function(){
 			// 'delay': 1,
 		});
 
-	// /*** Dial Ctrl ***/ 
+	/***CSS Ctrl***/
+
+		css.toggleHeader();
+
+	/*** LOTTIE CTRL ***/
+
+		//preloader
+		lottie.loadAnimation({
+		  container: document.getElementById('preload__container'),
+		  renderer: 'svg',
+		  autoplay: true,
+		  animationData: loadLoop,
+		  loop: true,
+		});
+
+		$('.header__rectangle--2').click(function(){	
+			loadLottie({
+				'cloud--1-0': cloudMain,
+				'cloud--2-0': cloud0,
+				'cloud--2-1': cloud1,
+				'cloud--2-2': cloud2,
+				'cloud--2-3': cloud3,
+			});
+
+			function loadLottie(obj){
+
+
+				for(const key in obj){
+
+					obj[key]['op'] = 50;
+
+					const lottieTemp = lottie.loadAnimation({
+					  container: document.getElementById(key),
+					  renderer: 'svg',
+					  autoplay: false,
+					  animationData: obj[key],
+					  loop: false,
+					});
+
+					setTimeout(function(){
+						lottieTemp.play(); 
+					}, timing*2)
+				}
+			}
+		})
+
+	/*** Dial Ctrl ***/
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',

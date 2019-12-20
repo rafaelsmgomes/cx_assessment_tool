@@ -114,4 +114,31 @@
       color: $color-white-1;
     }
   }
+  &__text{
+    &--wrapper{
+      width: 31.70rem;
+      @include bp(1100){
+        margin-top: 3.00rem;
+      }
+      @include bp(1000){
+        width: 90%;
+      }
+    }
+    &--1{
+      font-family: $font-reg;
+      color: $color-white-1;
+      font-size: 1rem;
+      @include bp(1000){
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__header{
+    &--1{
+      font-family: $font-b;
+      font-size: 1.60rem;
+      color: $color-white-1; 
+    }
+  }
 }

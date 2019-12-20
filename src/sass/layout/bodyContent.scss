@@ -11,5 +11,9 @@
 		@include bp($width-4){
 			width: 95%;
 		}
+
+		.panel--41 &{
+    	transform: translateX(0.50rem);
+		}
   }
 }

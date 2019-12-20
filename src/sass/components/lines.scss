@@ -7,6 +7,13 @@
   animation: stroke 0.2s linear infinite;
 	opacity: 0;
 
+  &--x-1{
+    stroke: $color-white-1;
+    stroke-width: 2;
+    stroke-dasharray: 4;
+    stroke-dashoffset: 8;
+  }
+
   &--1x,
   &--2x{
     @include bp($width-1){
@@ -53,6 +60,22 @@
     }    
     @include bp($width-4){
       width: 95%;
+    }
+
+
+    &--x{
+      height: 6.70rem;
+      background-color: blue;
+      width: 100%;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      margin-top: -0.80rem;
+      padding-left: 10.71%;
+
+      @include bp($width-1){
+        display: none;
+      }
     }
 	}
 }

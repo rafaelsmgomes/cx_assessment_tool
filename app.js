@@ -193,11 +193,11 @@ app.get('/pdf', (req, res) => {
             lifecycle_7: results[0][38].ans_value,
             lifecycle_8: results[0][39].ans_value
         }
-        console.log(pdfData);
+        // console.log(pdfData);
 
-        res.render('pdf', {
-            data: pdfData,
-        })
+        // res.render('pdf', {
+        //     data: pdfData,
+        // })
     })    
 })
 

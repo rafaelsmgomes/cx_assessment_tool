@@ -233,7 +233,7 @@ async function getPdfData() {
 	.then(response => {
 		return response.json()
 	})
-	.then( el => {
+	.then(el => {
 		const pdfData = el;
 		console.log(pdfData)
 	})

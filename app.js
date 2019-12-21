@@ -193,35 +193,11 @@ app.get('/pdf', (req, res) => {
             lifecycle_7: results[0][38].ans_value,
             lifecycle_8: results[0][39].ans_value
         }
-        
         console.log(pdfData);
-        
 
-
-        // --------------------------------------------------------------------------------------------------------------
-        // CREATING ARRAY OF VARIABLES FOR PDF (Simplest way possible)
-        // --------------------------------------------------------------------------------------------------------------
-        
-        // var broadcast_1 = results
-
-        // --------------------------------------------------------------------------------------------------------------
-        // CREATING ARRAY OF VARIABLES FOR PDF (MAKING IT MORE DYNAMIC)
-
-        // results.forEach((el, index) => {
-        //     if(el[0].ans_section === 'Broadcast') {
-        //         pdfData[`broadcast_${index}`] = el.ans_value
-        //     }
-        //     // console.log(el.ans_section)
-        // })
-        // console.log(pdfData)
-        
-        // --------------------------------------------------------------------------------------------------------------
-        
-
-        res.send({
-            data: pdfData
+        res.render('pdf', {
+            data: pdfData,
         })
-
     })    
 })
 

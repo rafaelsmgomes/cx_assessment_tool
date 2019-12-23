@@ -133,16 +133,19 @@ app.get('/api2', (req, res) => {
     })
 })
 
-app.get('/pdf', (req, res) => {
+app.get('/pdf/:id', (req, res) => {
     res.render('PDF/cx_pdf')
 })
 
-app.get('/pdfdata', (req, res) => {
+app.get('/pdfdata/:id', (req, res) => {
+
+    userID = req.params.id;
+    console.log(userID);
 
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                SELECT companyName, id FROM users WHERE id = ?;
                SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
-               `, [1576786383648, 1576786383648, 1576786383648], (err, results, fields) => {
+               `, [userID, userID, userID], (err, results, fields) => {
         if (err) throw err; 
         // console.log(results[1][0]);
 

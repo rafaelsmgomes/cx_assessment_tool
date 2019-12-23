@@ -171,7 +171,8 @@ $width: 100%;
         transition-delay: 1s;
         transition-property: opacity;
         transition-duration: .5s;
-        
+    
+
         &--x{
             display: none;
         }
@@ -251,7 +252,9 @@ $width: 100%;
             }
 
             @include bp($width-1){
-
+                @include bp(1200){
+                    margin-top: 18.25%;
+                }
                 @include bp(1050){
                     margin-top: 23.25%;
                 }
@@ -263,7 +266,6 @@ $width: 100%;
                     margin-top: 47.25%;
                 }
             }
-
             @include bp($width-3){
                 margin-top: 20.25%;
                 @include bph(950){
@@ -341,8 +343,15 @@ $width: 100%;
         }        
     }
     &__img{
-        display: none;
-        @include bp($width-1){
+        // display: none;
+        background-image: url(../assets/graphics/down.svg);
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        flex: 0 0 1.5rem;
+        background-position: center;
+        background-size: 100%;
+        margin-top: 0.80rem;  
+        @include bp($width-1){  
             @include bph(900){
                 display: block;
                 position: absolute;

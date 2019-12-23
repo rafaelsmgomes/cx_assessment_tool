@@ -85,7 +85,7 @@ export const panels = [
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
-				'question':'How would you rate your use of email and your website as marketing channels?',
+				'question':'How much do you use email and your website as marketing channels?',
 				'textArr': ['Barely', 'Some', 'A lot'],
 				'group': 'broadcast',
 				'count': true,
@@ -120,7 +120,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What metrics do you track to show success in your marketing programs?
 			</div>			
-			<div class="main__direction">Select all that apply:</div>			
+			<div class="main__direction">Select all that apply.</div>			
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
 				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
@@ -522,7 +522,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
-				'textArr': ['Yes', 'No'],
+				'textArr': ['Yes', 'No', "I don't know"],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -749,7 +749,7 @@ export const panels = [
 	</div>`,
 
 
-	`<div class="panel panel--41 panel--activate">	
+	`<div class="panel panel--41">	
 		<div class="body__content">
 			<h1 class='results__title results__title--1'>Your Marketing Maturity Assessment Results</h1>
 			<div class="wrapper wrapper--1">				
@@ -811,9 +811,9 @@ export const panels = [
 					<div class="cloud__subtitle cloud__subtitle--1">Lifecycle Engagement Marketing</div>
 				</div>
 			</div>
-			<div class="btn__pdf btn__pdf--1">
+			<a href='oracle.assessment-tools.com/cx/maturity/bin_dev/PDF' target='_blank' class="btn__pdf btn__pdf--1">
 				Download your Marketing Maturity Report
-			</div>
+			</a>
 		</div>		
 	</div>`,
 

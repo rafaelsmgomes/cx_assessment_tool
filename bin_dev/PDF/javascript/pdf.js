@@ -5,7 +5,7 @@ var BroadcastScore=100;
 var ResponsiveScore=100;
 var RelationshipScore=100;
 var LifecycleScore=100;
-var companyName="Kraken Heavy Eqiuipment";
+var companyName="Kraken Heavy Equipment";
 
 var broadcast_1=100;
 var broadcast_2=100;
@@ -55,6 +55,8 @@ var breakpoint=99;
 var data;
 
 
+
+
 var jqxhr = $.getJSON( "pdf.json", function(data) { });
 
 jqxhr.fail(function(data) {
@@ -72,6 +74,31 @@ jqxhr.always(function(data) {
     getConclusion(data);
     document.getElementById('company_name').innerHTML=companyName;
 
+});
+
+/*
+const mysql = require('mysql');
+const conn = mysql.createPool({
+    connectionLimit: 100,
+    host: "72.10.48.193",
+    user: "root",
+    password: "Fael_0243",
+    database: "test_1",
+    multipleStatements: true
+});
+*/
+
+fetch('/pdfdata')
+    .then(response => {
+    console.log(response);
+    return response.json()
+})
+    .then(el => {
+    var pdfData = el;
+    console.log(pdfData)
+})
+    .catch(err => {
+    console.log(err)
 });
 
 

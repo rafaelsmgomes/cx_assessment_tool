@@ -91,7 +91,7 @@ p, li, td {
   font-size : 10px;
   line-height : 17px;
   letter-spacing : 0.1px;
-  color : #000000;
+  color : #312D2A;
     margin-bottom: 17px;
 }
 
@@ -105,6 +105,7 @@ h1 {
     font-family: Georgia;
     font-weight: normal;
     font-size: 60px;
+    line-height: 60px;
     letter-spacing: 0.5mm;
     margin: 0;
     margin-top: -2mm;
@@ -116,7 +117,13 @@ h3{
   font-size : 36px;
   line-height : 24px;
   color : #2B6242;
-font-weight: normal;
+  font-weight: normal;
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+h3.h3-para-spacing{
+        margin-top: 41px;
+    margin-bottom: 9px;
 }
 .responsive h3{
     color:#2C5967;
@@ -135,6 +142,22 @@ h4{
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 10px;
+}
+h5{
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 18px;
+    color : #2B6242;
+    margin-bottom: 12px
+}
+.responsive h5{
+    color:#2C5967;
+}
+.relationship h5{
+    color: #AE562C;
+}
+.lifecycle h5{
+    color:#67605B;
 }
 
 a[href] { 
@@ -197,11 +220,14 @@ a[id] {
     
 }
 .button span{
+    width: 102px;
+    font-size: 18px;
     font-style: normal;
     position: absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%, -50%)
+    transform:translate(-50%, -50%);
+    
 }
 .green-button{
     background-color: #2B6242
@@ -303,21 +329,23 @@ a[id] {
     bottom:21px;
     width:100%
 }
+.cloud-score-numerals{
+    font-size: 26px;
+}
 .internal-cloud .cloud-title{
     text-align: left;
     left:40px;
     bottom:0px;
 }
 .internal-cloud .cloud-score{
-    font-size: 26px;
     left: 152px;
-        top: -100px;
+    top: -74px;
     width: 163px;
 }
 .cloud-score{
     position: absolute;
-    left: 130px;
-    top: -20px;
+    left: 174px;
+    top: -64px;
     width: 151px;
     text-align: right;
     font-family: OracleSans-Bold;
@@ -326,17 +354,35 @@ a[id] {
 #overall-cloud{
        background-color: rgba(117, 156, 108, 0.2); 
 }
+.spider-chart-holder{
+        position: absolute;
+        top: 314px;
+    width: 100%;
+    height: 300px;
+        background-color: rgba(117, 156, 108, 0.1);
+        background-color: rgba(117, 156, 108, 0.1);
+    background-image: url(../assets/2x/spider-key.png);
+    background-repeat: no-repeat;
+        background-size: 157px 16px;
+    background-position: center 205px;
+}
 .spider-chart{
     position: absolute;
-    background-color: rgba(117, 156, 108, 0.1);
-    width: 100%;
-    height: 279px;
-    top: 314px;
-    padding: 10px 40px 10px 40px;
-    width: 316px;
+    width: 385px;
+    top: 0px;
+    padding: 00px 0px 10px 0px;
+
 }
 #spiderChart{
-    margin-top: -20px;
+    margin-top: -70px;
+    height: 350px!important;
+}
+.spider-label{
+    font-size: 18px;
+    line-height: 19px;
+    position: absolute;
+    top:225px;
+    left:92px
 }
 
 .kpis, .drivers{
@@ -469,10 +515,10 @@ height: 71px;
 .reccomendation{
     height: 91px;
     margin-bottom: 20px;
-   width: 357px;
+   width: 350px;
 }
 .reccomendation.congradulations{
-    height: auto;
+    height: 82px;;
     margin-bottom: 0px;
 }
 .reccomendation-text{
@@ -481,7 +527,7 @@ height: 71px;
     display: inline-block;
 }
 .recommendation-text{
-    width: 326px;
+    width: 321px;
     float:right;
 }
 .responsive .reccomendations_text{
@@ -803,5 +849,6 @@ height: 71px;
 .txt-21{
     font-size: 21px;
     line-height: 19px;
+    font-weight: normal;
 }
 

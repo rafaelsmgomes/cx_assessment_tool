@@ -1,5 +1,6 @@
 .cloud{
 	position: relative;
+	transform: scale(1.2) translate(-2%, -8%);
 	&--1{
 		flex: 0 0 20.80rem;
 		height: 11.40rem;
@@ -43,6 +44,7 @@
 		color: $color-grey-2;
 		font-family: $font-b;
 		// position: absolute;
+		display: none;
 		&--1{
 			font-size: 1.40rem;	
 			width: 5.75rem;
@@ -58,13 +60,15 @@
 		font-size: 1.20rem;
 		width: 11rem;
 		margin-top: 0.75rem;
+		margin-left: 8%;
 		&--1{
 			width: 14rem;
 		}
 	}
 	&__text{
 		color: $color-grey-2;
-		font-family: $font-b;		
+		font-family: $font-b;
+		display: none;		
 		&--1{
 			font-size: 1.70rem;
 		}

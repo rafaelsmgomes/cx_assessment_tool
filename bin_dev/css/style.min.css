@@ -44,24 +44,24 @@
     opacity: 1; } }
 
 @font-face {
-  font-family: "Univers";
+  font-family: "OracleReg";
   src: url("../fonts/OracleSans_Rg.ttf");
   font-weight: normal; }
 
 @font-face {
-  font-family: "UniversLite";
+  font-family: "OracleLite";
   src: url("../fonts/OracleSans_Lt.ttf");
   font-weight: normal; }
 
 @font-face {
-  font-family: "UniversB";
+  font-family: "OracleB";
   src: url("../fonts/OracleSans_SBd.ttf");
   font-weight: normal; }
 
 .main__subheader--1 {
   color: #fcfbfa;
   font-size: 1.50rem;
-  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
   margin-top: 0.75rem;
   display: block; }
 
@@ -71,7 +71,7 @@
 
 .main__title {
   font-size: 2.4rem;
-  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -130,11 +130,11 @@
   letter-spacing: normal;
   color: #fcfbfa;
   height: 3.25rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   margin-top: 0.80rem; }
 
 .results__title--1 {
-  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
   font-size: 2.80rem;
   margin-top: 2.00rem;
   color: #fcfbfa; }
@@ -149,7 +149,7 @@
       width: 90%; } }
 
 .results__text--1 {
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   color: #fcfbfa;
   font-size: 1rem; }
   @media only screen and (max-width: 1000px) {
@@ -157,7 +157,7 @@
       font-size: 1.3rem; } }
 
 .results__header--1 {
-  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
   font-size: 1.60rem;
   color: #fcfbfa; }
 
@@ -199,7 +199,7 @@
     background: transparent;
     font-size: 0.7em;
     color: #fcfbfa;
-    font-family: UniversB, Arial, Helvetica, sans-serif;
+    font-family: OracleB, Arial, Helvetica, sans-serif;
     bottom: 0;
     margin-top: 0;
     position: absolute;
@@ -256,7 +256,8 @@
   display: flex;
   align-items: center;
   font-size: 1.20rem;
-  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
+  text-decoration: none;
   cursor: pointer;
   color: #fcfbfa; }
   @media only screen and (max-width: 1440px) {
@@ -264,7 +265,8 @@
       margin-top: 0; } }
 
 .cloud {
-  position: relative; }
+  position: relative;
+  transform: scale(1.2) translate(-2%, -8%); }
   .cloud--1 {
     flex: 0 0 20.80rem;
     height: 11.40rem;
@@ -295,7 +297,8 @@
         margin-bottom: 2.50rem; } }
   .cloud__title {
     color: #312D2A;
-    font-family: UniversB, Arial, Helvetica, sans-serif; }
+    font-family: OracleB, Arial, Helvetica, sans-serif;
+    display: none; }
     .cloud__title--1 {
       font-size: 1.40rem;
       width: 5.75rem; }
@@ -303,16 +306,18 @@
       width: 4.55rem;
       font-size: 1.05rem; }
   .cloud__subtitle {
-    font-family: Univers, Arial, Helvetica, sans-serif;
+    font-family: OracleReg, Arial, Helvetica, sans-serif;
     color: #fcfbfa;
     font-size: 1.20rem;
     width: 11rem;
-    margin-top: 0.75rem; }
+    margin-top: 0.75rem;
+    margin-left: 8%; }
     .cloud__subtitle--1 {
       width: 14rem; }
   .cloud__text {
     color: #312D2A;
-    font-family: UniversB, Arial, Helvetica, sans-serif; }
+    font-family: OracleB, Arial, Helvetica, sans-serif;
+    display: none; }
     .cloud__text--1 {
       font-size: 1.70rem; }
     .cloud__text--2 {
@@ -446,7 +451,7 @@
 .checkbox__text {
   padding-left: 1.10rem;
   white-space: nowrap;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   font-size: 1.15rem;
   font-weight: normal;
   font-stretch: normal;
@@ -575,7 +580,7 @@
       transform: translateX(-50%);
       top: 108%;
       visibility: hidden;
-      font-family: Univers, Arial, Helvetica, sans-serif;
+      font-family: OracleReg, Arial, Helvetica, sans-serif;
       font-size: 0.95em;
       font-weight: normal;
       font-style: normal;
@@ -609,7 +614,7 @@
     transform: rotate(-112.5deg); }
 
 .dial__text {
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   font-size: 0.95em;
   font-weight: normal;
   font-style: normal;
@@ -650,7 +655,7 @@
     margin-right: 0.40rem;
     margin-left: 0.40rem;
     color: #fcfbfa;
-    font-family: Univers, Arial, Helvetica, sans-serif; }
+    font-family: OracleReg, Arial, Helvetica, sans-serif; }
 
 .header__wrapper {
   display: flex;
@@ -729,7 +734,7 @@
 
 .grow--text {
   font-size: 0.80rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   color: #fcfbfa;
   transition: opacity 0s;
   opacity: 0; }
@@ -808,7 +813,7 @@
 .landing__title {
   font-size: 2.4rem;
   font-weight: 700;
-  font-family: UniversB, Arial, Helvetica, sans-serif;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -869,7 +874,7 @@
       height: auto; } }
 
 .landing__subtitle {
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: normal;
   font-style: normal;
@@ -935,7 +940,7 @@
     width: 11.95rem;
     height: 1.50rem;
     font-size: 1.25rem;
-    font-family: UniversB, Arial, Helvetica, sans-serif;
+    font-family: OracleB, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.2;
@@ -945,6 +950,10 @@
     @media only screen and (max-height: 950px) {
       .landing__txt--1 {
         margin-top: 48.25%; } }
+
+@media only screen and (max-width: 1440px) and (max-width: 1200px) {
+  .landing__txt--1 {
+    margin-top: 18.25%; } }
 
 @media only screen and (max-width: 1440px) and (max-width: 1050px) {
   .landing__txt--1 {
@@ -1026,7 +1035,13 @@
       margin-top: 15.7rem; } }
 
 .landing__img {
-  display: none; }
+  background-image: url(../assets/graphics/down.svg);
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  flex: 0 0 1.5rem;
+  background-position: center;
+  background-size: 100%;
+  margin-top: 0.80rem; }
 
 @media only screen and (max-width: 1440px) and (max-height: 900px) {
   .landing__img {
@@ -1131,7 +1146,7 @@
   text-align: center;
   margin-top: 2.65rem;
   padding-top: 1.55rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   font-size: 1.15rem;
   font-weight: normal;
   font-stretch: normal;
@@ -1221,7 +1236,7 @@
 
 .slider__mid {
   color: #fcfbfa;
-  font-family: UniverLite, Arial, Helvetica, sans-serif;
+  font-family: OracleLite, Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: space-between; }
 
@@ -1362,7 +1377,7 @@
 .vertfc__text {
   white-space: nowrap;
   padding-left: 1.10rem;
-  font-family: Univers, Arial, Helvetica, sans-serif;
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
   font-size: 1.15rem;
   cursor: pointer;
   font-weight: normal;
@@ -1505,7 +1520,7 @@
     width: 1.30rem;
     height: 0.90rem;
     font-size: 0.70rem;
-    font-family: UniversB, Arial, Helvetica, sans-serif;
+    font-family: OracleB, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.29;
@@ -1564,7 +1579,7 @@
         flex-direction: column; } }
   .wrapper--2 {
     width: 100%;
-    margin-top: 1.00rem;
+    margin-top: -1%;
     justify-content: space-between; }
     @media only screen and (max-width: 1440px) {
       .wrapper--2 {
@@ -1677,7 +1692,6 @@ html {
 .pathfinder {
   position: relative;
   transition-timing-function: cubic-bezier(0.47, 0.11, 0, 1.08);
-  transform: translateY(-800vw);
   opacity: 0;
   transition: opacity 1s; }
   .pathfinder.fade-in {

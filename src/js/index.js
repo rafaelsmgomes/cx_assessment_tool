@@ -91,36 +91,9 @@ $(document).ready(function(){
 		  loop: true,
 		});
 
-		// $('.header__rectangle--2').click(function(){	
-		// 	loadLottie({
-		// 		'cloud--1-0': cloudMain,
-		// 		'cloud--2-0': cloud0,
-		// 		'cloud--2-1': cloud1,
-		// 		'cloud--2-2': cloud2,
-		// 		'cloud--2-3': cloud3,
-		// 	});
+		const preimages=["../assets/images/desktop/group.png","../assets/images/1x/bg-0.pn"];
 
-		// 	function loadLottie(obj){
-
-
-		// 		for(const key in obj){
-
-		// 			obj[key]['op'] = 50;
-
-		// 			const lottieTemp = lottie.loadAnimation({
-		// 			  container: document.getElementById(key),
-		// 			  renderer: 'svg',
-		// 			  autoplay: false,
-		// 			  animationData: obj[key],
-		// 			  loop: false,
-		// 			});
-
-		// 			setTimeout(function(){
-		// 				lottieTemp.play(); 
-		// 			}, timing*2)
-		// 		}
-		// 	}
-		// })
+		css.preloadImgs(preimages);
 
 	/*** Dial Ctrl ***/
 		$(".dial-tracker").cprDial({
@@ -190,45 +163,116 @@ $(document).ready(function(){
 
 	// $('.btn__progress--6').click();
 	window.statete = state;
+
+
+	$('.btn__progress--40').click(postState);
+	async function postState() {
+
+		const options = {
+			method: 'POST',
+			body: JSON.stringify(window.statete),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+		fetch('/api', options)
+		.then((resp) => {
+			return resp.json();
+		})
+		.then(resp =>{
+			console.log(resp);
+			return fetch('/api2', { method: 'GET'} )
+		})
+		.then((response) => {
+			return response.json();	
+		})
+		.then( (el) => {
+			const myJson = el;
+
+			css.loadLottie({
+				'cloud--1-0': cloudMain,
+				'cloud--2-0': cloud0,
+				'cloud--2-1': cloud1,
+				'cloud--2-2': cloud2,
+				'cloud--2-3': cloud3,
+			}, myJson, timing);
+		})
+	}
+
+
 });
 
 // ------------------------------------------------
 // POST AND GET REQUEST TO GENERATE DATABASE
 // ------------------------------------------------
 
-$('.header__rectangle--grow-3').click(postState);
-async function postState() {
+	// $('.btn__progress--40').click(postState);
+	// async function postState() {
 
-	const options = {
-		method: 'POST',
-		body: JSON.stringify(window.statete),
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	}
-	fetch('/api', options)
-	.then((resp) => {
-		return resp.json();
-	})
-	.then(resp =>{
-		console.log(resp);
-		return fetch('/api2', { method: 'GET'} )
-	})
-	.then((response) => {
-		return response.json();	
-	})
-	.then( (el) => {
-		const myJson = el;
+	// 	const options = {
+	// 		method: 'POST',
+	// 		body: JSON.stringify(window.statete),
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 	}
+	// 	fetch('/api', options)
+	// 	.then((resp) => {
+	// 		return resp.json();
+	// 	})
+	// 	.then(resp =>{
+	// 		console.log(resp);
+	// 		return fetch('/api2', { method: 'GET'} )
+	// 	})
+	// 	.then((response) => {
+	// 		return response.json();	
+	// 	})
+	// 	.then( (el) => {
+	// 		const myJson = el;
 
-		css.loadLottie({
-			'cloud--1-0': cloudMain,
-			'cloud--2-0': cloud0,
-			'cloud--2-1': cloud1,
-			'cloud--2-2': cloud2,
-			'cloud--2-3': cloud3,
-		}, myJson, timing);
-	})
-}
+	// 		css.loadLottie({
+	// 			'cloud--1-0': cloudMain,
+	// 			'cloud--2-0': cloud0,
+	// 			'cloud--2-1': cloud1,
+	// 			'cloud--2-2': cloud2,
+	// 			'cloud--2-3': cloud3,
+	// 		}, myJson, timing);
+	// 	})
+	// }
+
+// $('.btn__progress--40').on('click', function(){
+// async function postState() {
+
+// 	const options = {
+// 		method: 'POST',
+// 		body: JSON.stringify(window.statete),
+// 		headers: {
+// 			'Content-Type': 'application/json',
+// 		},
+// 	}
+// 	fetch('/api', options)
+// 	.then((resp) => {
+// 		return resp.json();
+// 	})
+// 	.then(resp =>{
+// 		console.log(resp);
+// 		return fetch('/api2', { method: 'GET'} )
+// 	})
+// 	.then((response) => {
+// 		return response.json();	
+// 	})
+// 	.then( (el) => {
+// 		const myJson = el;
+
+// 		css.loadLottie({
+// 			'cloud--1-0': cloudMain,
+// 			'cloud--2-0': cloud0,
+// 			'cloud--2-1': cloud1,
+// 			'cloud--2-2': cloud2,
+// 			'cloud--2-3': cloud3,
+// 		}, myJson, timing);
+// 	})
+// })
 
 
 

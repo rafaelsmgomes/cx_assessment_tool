@@ -18,18 +18,14 @@ export const preloadImgs = (preimages) => {
 }
 
 export const loadLottie = (obj, data, timing) => {
-
-	console.log(data);
-
 	const score0 = data.data[0].BroadcastScore+1;
 	const score1 = data.data[0].ResponsiveScore+1;
 	const score2 = data.data[0].RelationshipScore+1;
 	const score3 = data.data[0].LifecycleScore+1;
 
-	const scoremain = ((score0+score1+score2+score3)/4);
+	console.log(data);
 
-
-	console.log(scoremain);
+	const scoremain = ((score0+score1+score2+score3)/4)+1;
 
 	for(const key in obj){
 

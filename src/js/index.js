@@ -167,7 +167,7 @@ $(document).ready(function(){
 
 	$('.btn__progress--40').click(postState);
 	async function postState() {
-
+		$('.footer').hide();
 		const options = {
 			method: 'POST',
 			body: JSON.stringify(window.statete),
@@ -187,8 +187,10 @@ $(document).ready(function(){
 			return response.json();	
 		})
 		.then( (el) => {
-			const myJson = el;
-
+			const myJson = el;	
+			const userId = myJson.data[0].user_id;
+			console.log(`userID: ${userId}`);
+			$('.btn__pdf--1').attr('href',`http://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
 			css.loadLottie({
 				'cloud--1-0': cloudMain,
 				'cloud--2-0': cloud0,

@@ -4,6 +4,13 @@
     width: 40.50rem;
     height: 20.25rem;
     margin-top: 0.80rem;
+      
+
+    @include bph(950){
+      width: 29.16rem;
+      height: 14.58rem;
+    }
+
     @include bp($width-1){
       @include bph(900){
         height: 19.78rem;

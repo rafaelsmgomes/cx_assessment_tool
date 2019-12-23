@@ -535,7 +535,7 @@ export const panels = [
 				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you provide real-time online personalization for customers or prospects based on their (interests) behavior on your website?
+				Do you provide real-time online personalization for customers or prospects based on their behavior?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
@@ -729,7 +729,7 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--39" data-id='39' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--40">	
+	`<div class="panel panel--40 panel--activate">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Management
@@ -811,7 +811,7 @@ export const panels = [
 					<div class="cloud__subtitle cloud__subtitle--1">Lifecycle Engagement Marketing</div>
 				</div>
 			</div>
-			<a href='oracle.assessment-tools.com/cx/maturity/bin_dev/PDF' target='_blank' class="btn__pdf btn__pdf--1">
+			<a href='http://oracle.assessment-tools.com/cx/maturity/bin_dev/PDF/cx_pdf.html' target='_blank' class="btn__pdf btn__pdf--1">
 				Download your Marketing Maturity Report
 			</a>
 		</div>		

@@ -1,60 +1,119 @@
 //DB vars
 
-var TotalScore=100;
-var BroadcastScore=100;
-var ResponsiveScore=100;
-var RelationshipScore=100;
-var LifecycleScore=100;
-var companyName="Kraken Heavy Equipment";
-
-var broadcast_1=100;
-var broadcast_2=100;
-var broadcast_3=100;
-var broadcast_4=100;
-var broadcast_5=100;
-
-var responsive_1=0;
-var responsive_2=0;
-var responsive_3=0;
-var responsive_4=0;
-var responsive_5=0;
-var responsive_6=0;
-var responsive_7=0;
-var responsive_8=0;
-var responsive_9=0;
-var responsive_10=0;
-
-var relationship_1=100;
-var relationship_2=100;
-var relationship_3=100;
-var relationship_4=100;
-var relationship_5=100;
-var relationship_6=100;
-var relationship_7=100;
-var relationship_8=100;
-var relationship_9=100;
-var relationship_10=100;
-var relationship_11=100;
-var relationship_12=100;
-var relationship_13=100;
-
-var lifecycle_1=0;
-var lifecycle_2=0;
-var lifecycle_3=0;
-var lifecycle_4=0;
-var lifecycle_5=100;
-var lifecycle_6=100;
-var lifecycle_7=0;
-var lifecycle_8=0;
-var lifecycle_9=0;
+var TotalScore;
+var BroadcastScore;
+var ResponsiveScore;
+var RelationshipScore;
+var LifecycleScore;
+var companyName;
 
 
+var broadcast_1;
+var broadcast_2;
+var broadcast_3;
+var broadcast_4;
+var broadcast_5;
 
-//vars not from DB
-var breakpoint=99;
-var data;
+var responsive_1;
+var responsive_2;
+var responsive_3;
+var responsive_4;
+var responsive_5;
+var responsive_6;
+var responsive_7;
+var responsive_8;
+var responsive_9;
+var responsive_10;
+
+var relationship_1;
+var relationship_2;
+var relationship_3;
+var relationship_4;
+var relationship_5;
+var relationship_6;
+var relationship_7;
+var relationship_8;
+var relationship_9;
+var relationship_10;
+var relationship_11;
+var relationship_12;
+var relationship_13;
+
+var lifecycle_1;
+var lifecycle_2;
+var lifecycle_3;
+var lifecycle_4;
+var lifecycle_5;
+var lifecycle_6;
+var lifecycle_7;
+var lifecycle_8;
+var lifecycle_9;
 
 
+fetch('/pdfdata')
+    .then(response => {
+    return response.json();
+})
+    .then(el => {
+    var pdfData = el;
+    pdf=pdfData
+    console.log(pdf)
+    
+    
+    TotalScore=pdfData.data.TotalScore;
+    BroadcastScore=pdfData.data.BroadcastScore;
+    ResponsiveScore=pdfData.data.ResponsiveScore;
+    RelationshipScore=pdfData.data.RelationshipScore;
+    LifecycleScore=pdfData.data.LifecycleScore;
+    companyName=pdfData.data.companyName;
+    
+    broadcast_1=pdfData.data.broadcast_1;
+    broadcast_2=pdfData.data.broadcast_2;
+    broadcast_3=pdfData.data.broadcast_3;
+    broadcast_4=pdfData.data.broadcast_4;
+    broadcast_5=pdfData.data.broadcast_5;
+    
+    responsive_1=pdfData.data.responsive_1;
+    responsive_2=pdfData.data.responsive_2;
+    responsive_3=pdfData.data.responsive_3;
+    responsive_4=pdfData.data.responsive_4;
+    responsive_5=pdfData.data.responsive_5;
+    responsive_6=pdfData.data.responsive_6;
+    responsive_7=pdfData.data.responsive_7;
+    responsive_8=pdfData.data.responsive_8;
+    responsive_9=pdfData.data.responsive_9;
+    responsive_10=pdfData.data.responsive_10;
+    
+    relationship_1=pdfData.data.relationship_1;
+    relationship_2=pdfData.data.relationship_2;
+    relationship_3=pdfData.data.relationship_3;
+    relationship_4=pdfData.data.relationship_4;
+    relationship_5=pdfData.data.relationship_5;
+    relationship_6=pdfData.data.relationship_6;
+    relationship_7=pdfData.data.relationship_7;
+    relationship_8=pdfData.data.relationship_8;
+    relationship_9=pdfData.data.relationship_9;
+    relationship_10=pdfData.data.relationship_10;
+    relationship_11=pdfData.data.relationship_11;
+    relationship_12=pdfData.data.relationship_12;
+    relationship_13=pdfData.data.relationship_13;
+    
+    
+    lifecycle_1=pdfData.data.lifecycle_1;
+    lifecycle_2=pdfData.data.lifecycle_2;
+    lifecycle_2=pdfData.data.lifecycle_2;
+    lifecycle_3=pdfData.data.lifecycle_3;
+    lifecycle_4=pdfData.data.lifecycle_4;
+    lifecycle_5=pdfData.data.lifecycle_5;
+    lifecycle_5=pdfData.data.lifecycle_5;
+    lifecycle_6=pdfData.data.lifecycle_6;
+    lifecycle_7=pdfData.data.lifecycle_7;
+    
+
+    console.log("co1: " + pdfData.data.companyName + 'companyName: ' + companyName);
+    document.getElementById('company_name').innerHTML=companyName;
+    
+    var data;
 
 
 var jqxhr = $.getJSON( "pdf.json", function(data) { });
@@ -72,34 +131,26 @@ jqxhr.always(function(data) {
     getRelationship(data);
     getLifecycle(data);
     getConclusion(data);
-    document.getElementById('company_name').innerHTML=companyName;
+  
 
 });
+    
+    
 
-/*
-const mysql = require('mysql');
-const conn = mysql.createPool({
-    connectionLimit: 100,
-    host: "72.10.48.193",
-    user: "root",
-    password: "Fael_0243",
-    database: "test_1",
-    multipleStatements: true
-});
-*/
-
-fetch('/pdfdata')
-    .then(response => {
-    console.log(response);
-    return response.json()
-})
-    .then(el => {
-    var pdfData = el;
-    console.log(pdfData)
 })
     .catch(err => {
     console.log(err)
 });
+
+
+
+
+//vars not from DB
+var breakpoint=99;
+
+
+
+
 
 
 function getSummary(data){
@@ -403,13 +454,14 @@ function getLifecycle(data){
             $('#lifecycle-col-content').append('<div class="action-item"><span>'+data.lifecycle.recommendations[i-1].title+'</span></div>');
             if(ncount < 3){
                 appendTo='#lifecycle-recs-1';
+                swapBackgrounds($('#lifecycle-page-2'));
             }
             if((ncount >= 3) &&  (ncount < 6)){
-                swapBackgrounds($('#lifecycle-page-3'));
+                
                 appendTo='#lifecycle-recs-2';
             }
             if((ncount >= 6) &&  (ncount < 10)){
-             
+             swapBackgrounds($('#lifecycle-page-3'));
                 appendTo='#lifecycle-recs-3';
             }
             $(appendTo).append('<div class="reccomendation icon '+data.lifecycle.recommendations[i-1].icon+'">'+

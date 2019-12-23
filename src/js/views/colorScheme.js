@@ -9,7 +9,8 @@ export default class ColorScheme {
 
 	addPage(){
 		this.currPage++;
-		
+
+		console.log(this.currPage);
 
 		if(this.pageBreaks.includes(this.currPage)){
 			const index = this.pageBreaks.indexOf(this.currPage);

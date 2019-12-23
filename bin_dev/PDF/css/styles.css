@@ -337,19 +337,20 @@ a[id] {
     left:40px;
     bottom:0px;
 }
-.internal-cloud .cloud-score{
-    left: 152px;
-    top: -74px;
-    width: 163px;
-}
+
 .cloud-score{
     position: absolute;
     left: 174px;
-    top: -64px;
+    top: -74px;
     width: 151px;
     text-align: right;
     font-family: OracleSans-Bold;
     border-bottom: 2px solid #312D2A;
+}
+.internal-cloud .cloud-score{
+    left: 152px;
+    top: -72px;
+    width: 163px;
 }
 #overall-cloud{
        background-color: rgba(117, 156, 108, 0.2); 
@@ -712,6 +713,7 @@ height: 71px;
     font-size: 12px;
     margin-bottom: 5px;
 }
+
 
 #broadcast-col-content .action-item{
     background-image: url(../assets/1x/broadcast-check.png)

@@ -129,8 +129,8 @@ app.get('/api2', (req, res) => {
         res.send({ 
             data 
         })
-    })
 
+    })
 })
 
 app.get('/pdf', (req, res) => {

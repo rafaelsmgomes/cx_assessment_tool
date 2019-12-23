@@ -16,6 +16,7 @@ const sql = require('./database/queries');
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/bin_dev`));
+app.use(express.static(`${__dirname}/bin_dev/PDF`)); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', path.join(__dirname, 'bin_dev')); 
@@ -52,8 +53,8 @@ app.get('/', (req, res) => {
         // };
         // console.log(userArrID); 
         // res.render('/', {name: 'John'})
+        // conn.release();
     // });    
-    // conn.release();
 });
 
 app.post('/api', (req,res) => {
@@ -133,13 +134,17 @@ app.get('/api2', (req, res) => {
 })
 
 app.get('/pdf', (req, res) => {
+    res.render('PDF/cx_pdf')
+})
+
+app.get('/pdfdata', (req, res) => {
 
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                SELECT companyName, id FROM users WHERE id = ?;
                SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
                `, [1576786383648, 1576786383648, 1576786383648], (err, results, fields) => {
         if (err) throw err; 
-        console.log(results[1][0]);
+        // console.log(results[1][0]);
 
         var pdfData = {
 
@@ -194,10 +199,7 @@ app.get('/pdf', (req, res) => {
             lifecycle_8: results[0][39].ans_value
         }
         // console.log(pdfData);
-
-        // res.render('pdf', {
-        //     data: pdfData,
-        // })
+        res.json({data: pdfData})
     })    
 })
 

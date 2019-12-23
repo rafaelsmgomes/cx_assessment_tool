@@ -229,7 +229,7 @@ async function postState() {
 
 $('.header__rectangle--grow-2').click(getPdfData);
 async function getPdfData() {
-	fetch('/pdf')
+	fetch('/pdfdata')
 	.then(response => {
 		return response.json()
 	})

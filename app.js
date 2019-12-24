@@ -14,12 +14,13 @@ const fs      = require("fs");
 const sql = require('./database/queries');
 // const state = require('./src/js/state');
 
-app.use(express.json());
-app.use(express.static(`${__dirname}/bin_dev`));
-app.use(express.static(`${__dirname}/bin_dev/PDF`)); 
+app.use(express.json()); 
+app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/public/PDF`)); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.set('views', path.join(__dirname, 'bin_dev')); 
+app.set('views', path.join(__dirname, 'public')); 
+// app.set('views', path.join(__dirname, 'public/PDF')); 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
@@ -38,24 +39,14 @@ let userID;
 let ansArr = []
 
 app.get('/cx/maturity', (req, res) => {
-    res.render('index');
+    // res.render('index'); 
+    res.send('This is where the HTML page should be')
 })
 
 
-app.get('/', (req, res) => {
-    res.render('homepage');
-    let questionsArr = []
-    // conn.query(`SELECT * FROM questions`, (err, results) => {
-    //     if(err) throw err; 
-    //     console.log(results[1]); 
-        // for(i = 0; i < results.length; i++){
-        //     // userArrID.push(results);
-        // };
-        // console.log(userArrID); 
-        // res.render('/', {name: 'John'})
-        // conn.release();
-    // });    
-});
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
 
 app.post('/api', (req,res) => {
     console.log("----------------------------------------")
@@ -133,8 +124,8 @@ app.get('/api2', (req, res) => {
     })
 })
 
-app.get('/pdf/:id', (req, res) => {
-    res.render('PDF/cx_pdf')
+app.get('/cx/maturity/pdf/:id', (req, res) => {
+    res.render('cx_pdf')
 })
 
 app.get('/pdfdata/:id', (req, res) => {

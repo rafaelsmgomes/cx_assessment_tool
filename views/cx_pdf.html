@@ -8,6 +8,10 @@
             
             
             window.onload = async function() {
+                
+                var l= window.location;
+                var id=l.[^/]+(?=/$|$);
+                console.log('id: ' + id);
 
 
                 // Create new PDFreactor instance

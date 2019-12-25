@@ -15,15 +15,12 @@ const sql = require('./database/queries');
 // const state = require('./src/js/state');
 
 app.use(express.json()); 
-app.use(express.static(`${__dirname}/bin_dev`));
+app.use(express.static(`${__dirname}/public`));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'html');
 app.engine("html", require("ejs").renderFile);
-app.set('views', path.join(__dirname, "bin_dev"));
-// app.set('views', path.join(__dirname, "cx")); 
-// app.set('views', path.join(__dirname, "cx/maturity")); 
-// app.set('views', path.join(__dirname, "cx/maturity/PDF")); 
+app.set('views', path.join(__dirname, "views"));
 
 const conn = mysql.createPool({
     connectionLimit: 100,
@@ -40,6 +37,9 @@ let userID;
 let ansArr = []
 
 app.get('/', (req, res) => {
+    res.render('homepage'); 
+})
+app.get('/cx/maturity', (req, res) => {
     res.render('homepage'); 
 })
 

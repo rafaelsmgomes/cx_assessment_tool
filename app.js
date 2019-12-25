@@ -15,6 +15,7 @@ const sql = require('./database/queries');
 // const state = require('./src/js/state');
 
 app.use(express.json()); 
+app.use(express.static(`${__dirname}/`));
 app.use(express.static(`${__dirname}/public`));
 app.use(express.static(`${__dirname}/public/PDF`)); 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,8 +40,8 @@ let userID;
 let ansArr = []
 
 app.get('/cx/maturity', (req, res) => {
-    // res.render('index'); 
-    res.send('This is where the HTML page should be')
+    res.render('index'); 
+    // res.send('This is where the HTML page should')
 })
 
 

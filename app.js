@@ -15,15 +15,15 @@ const sql = require('./database/queries');
 // const state = require('./src/js/state');
 
 app.use(express.json()); 
-app.use(express.static(`${__dirname}/`));
-app.use(express.static(`${__dirname}/public`));
-app.use(express.static(`${__dirname}/public/PDF`)); 
+app.use(express.static(`${__dirname}/bin_dev`));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.set('views', path.join(__dirname, 'public')); 
-// app.set('views', path.join(__dirname, 'public/PDF')); 
-app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.engine("html", require("ejs").renderFile);
+app.set('views', path.join(__dirname, "bin_dev"));
+// app.set('views', path.join(__dirname, "cx")); 
+// app.set('views', path.join(__dirname, "cx/maturity")); 
+// app.set('views', path.join(__dirname, "cx/maturity/PDF")); 
 
 const conn = mysql.createPool({
     connectionLimit: 100,
@@ -39,15 +39,16 @@ let userArr = [];
 let userID;
 let ansArr = []
 
-app.get('/cx/maturity', (req, res) => {
-    res.render('index'); 
-    // res.send('This is where the HTML page should')
+app.get('/', (req, res) => {
+    res.render('homepage'); 
 })
 
-
-// app.get('/', (req, res) => {
-//     res.render('index');
-// });
+app.get('/cx/maturity/pdf', (req, res) => {
+    res.render('pdf-file')
+})
+app.get('/cx/maturity/pdf/:id', (req, res) => {
+    res.render('pdf-file') 
+})
 
 app.post('/api', (req,res) => {
     console.log("----------------------------------------")
@@ -120,24 +121,21 @@ app.get('/api2', (req, res) => {
 
         res.send({ 
             data 
-        })
-
+        });
     })
 })
 
-app.get('/cx/maturity/pdf/:id', (req, res) => {
-    res.render('cx_pdf')
-})
 
-app.get('/pdfdata/:id', (req, res) => {
-
+app.get('/pdfdata', (req, res) => {
+ 
     userID = req.params.id;
     console.log(userID);
 
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                SELECT companyName, id FROM users WHERE id = ?;
                SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
-               `, [userID, userID, userID], (err, results, fields) => {
+               `, [1577293819790, 1577293819790, 1577293819790], (err, results, fields) => {
+                // 1577293819790
         if (err) throw err; 
         // console.log(results[1][0]);
 
@@ -194,7 +192,8 @@ app.get('/pdfdata/:id', (req, res) => {
             lifecycle_8: results[0][39].ans_value
         }
         // console.log(pdfData);
-        res.json({data: pdfData})
+        res.json({data: pdfData});
+        // conn.end()
     })    
 })
 

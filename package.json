@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "watch:sass": "node-sass ./src/sass/main.scss ./bin_dev/css/style.min.css -w",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "compile:sass": "node-sass src/sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
     "compress:css": "uglifycss css/style.prefix.css > ../bin_dev/css/style.min.css",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",

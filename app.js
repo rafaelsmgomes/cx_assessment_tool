@@ -16,6 +16,7 @@ const sql = require('./database/queries');
 
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/PDF`));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'html');
@@ -41,6 +42,12 @@ app.get('/', (req, res) => {
 })
 app.get('/cx/maturity', (req, res) => {
     res.render('homepage'); 
+})
+app.get('/pdf/:id', (req, res) => {
+    res.render('cx_pdf'); 
+})
+app.get('/pdf', (req, res) => {
+    res.render('cx_pdf'); 
 })
 
 app.get('/cx/maturity/pdf', (req, res) => {

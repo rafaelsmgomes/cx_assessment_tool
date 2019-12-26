@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <title>CX Assessment Results</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+      <section id="page1">
+             <div class="racetrack"><img src="assets/o-tag.png"></div>
+             <div class="section-inner">
+                       <div class="logo"><img src="assets/logo-o-mktg-cloud.png"></div>
+             <div class="red-line"></div>
+             <h1>Marketing Maturity<br> Assessment Report</h1>
+             <h2 >for <span id="company_name"> </span></h2>
+             <a class="button green-button" href="#broadcast-page-1"><span>Read Report</span></a>   
+             
+             </div>
+
+      </section>
+      <section id="broadcast-page-1">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+               <div class="two-col">
+                   <div class="col-left padded">
+                         <div class="col-inner">
+                    <h3 class="width-110">Executive Summary</h3>
+                     <div id="summary_content"></div> 
+                   </div>
+                   </div>
+                   <div class="col-right">
+                       <div class="cloud-chart" id="overall-cloud">
+                            <div class="score-holder" id="score-holder">
+                                <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="total-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
+                           </div>
+                           <div class="cloud-bg" id="cloud-bg">
+                           </div>
+                           <div class="cloud-outline"></div>
+                           <div class="cloud-title">Maturity Score</div>
+                       </div>
+                       <div class="spider-chart-holder">
+                    <div class="spider-chart">
+                       <canvas id="spiderChart" width="200" height="200"></canvas></div>
+                       <div class="spider-label">Component Maturity Score</div>
+                   </div>
+                   </div>
+               </div>
+      </section>
+      <section id="broadcast-page-2">
+          <div class="bottom-image">
+              <div class="bottom-content">
+                  <h4>You are positively impacting the following Business Drivers and KPIs</h4>
+                  <div class="three-col-layout">
+                      <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Attract and Nurture Prospects</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Addressable/realized reach</span>
+                                      <div class="checkmark"></div>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer Database Growth</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Cost per acquisition</span>
+                                 <div class="checkmark"></div>
+                            </div>  
+                      </div>
+                         <div class="three-col">
+                                
+                      </div>
+                         <div class="three-col">
+                              
+                      </div>
+                  </div></div></div>
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                       <div class="col-inner">
+                            <h3 class="width-150 h3-para-spacing">Broadcast Marketing Score</h3>
+                           <h5>Automate marketing, improve efficiencies and integrate
+with CRM.</h5>
+                             <div id="broadcast_content"></div>
+                       </div>
+              </div>
+                   <div class="col-right">
+                       <div class="cloud-chart internal-cloud" id="broadcast-cloud">
+                            <div class="score-holder" id="broadcast-score-holder">
+                                 <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="broadcast-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
+                           </div>
+                           <div class="cloud-bg" id="broadcast-cloud-bg">
+                           </div>
+                           <div class="cloud-outline"></div>
+                           <div class="cloud-title">Keep up the good work!</div>
+                       </div>
+                   </div>
+          </div>
+      </section>
+      <section id="broadcast-page-3">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+           <h3 class="rec-title">Recommendations</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="broadcast-recs-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of recommendations based upon your answers to the Broadcast Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="broadcast-recs-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+      <section id="broadcast-page-4">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+       <h3 class="rec-title">Marketing Excellence</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="broadcast-congrads-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of what you are doing well based upon
+your answers to the Broadcast Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="broadcast-congrads-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+       <section id="responsive-page-1" class=" responsive">
+              <div class="bottom-image">
+              <div class="bottom-content">
+                  <h4>You are positively impacting the following Business Drivers and KPIs</h4>
+                  <div class="three-col-layout">
+                      <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Attract and Nurture Prospects</span>
+                                     <div class="checkmark"></div>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Addressable/realized reach</span>
+                                      <div class="checkmark"></div>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer Database Growth</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Cost per acquisition</span>
+                                 <div class="checkmark"></div>
+                            </div>  
+                      </div>
+                       <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Engage and acquire customers</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Online traffic</span>
+                                     <div class="checkmark"></div>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer reach</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer engagement</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Conversion rates</span>
+                                 <div class="checkmark"></div>
+                            </div> 
+                      </div>
+                         <div class="three-col">
+                              
+                      </div>
+                  </div></div>
+           </div>
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                       <div class="col-inner">
+                            <h3 class="width-150 h3-para-spacing">Responsive Marketing Score</h3>
+                           <h5>React and respond to multiple channels while focusing on improving conversions and shortening buying cycles.</h5>
+                             <div id="responsive_content"></div> 
+                       </div>
+              </div>
+                   <div class="col-right">
+                       <div class="cloud-chart internal-cloud" id="responsive-cloud">
+                            <div class="score-holder" id="responsive-score-holder">
+                                   <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="responsive-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
+                           </div>
+                           <div class="cloud-bg" id="responsive-cloud-bg">
+                           </div>
+                           <div class="cloud-outline"></div>
+                           <div class="cloud-title">Keep up the good work!</div>
+                       </div>
+              </div>
+           </div>
+      </section>
+      <section id="responsive-page-2"  class="responsive">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <h3 class="rec-title">Recommendations</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-recs-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of recommendations based upon your answers to the Responsive Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left padded">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-recs-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+ </section>
+      <section id="responsive-page-3"  class="responsive">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <h3 class="rec-title">Recommendations (cont.)</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-recs-3">
+
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-right padded">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-recs-4">
+
+                             </div>
+                       </div>
+                   </div>
+               </div>
+ </section>
+        <section id="responsive-page-4">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+            <h3 class="rec-title">Marketing Excellence</h3>
+            <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-congrads-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of what you are doing well based upon
+your answers to the Responsive Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-congrads-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+      <section id="responsive-page-5">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+       <h3 class="rec-title">Marketing Excellence (cont.)</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-congrads-3">
+                                
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="responsive-congrads-4">
+                            
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+       <section id="relationship-page-1" class="relationship">
+          <div class="bottom-image">
+                  <div class="bottom-content">
+                  <h4>You are positively impacting the following Business Drivers and KPIs</h4>
+                  <div class="three-col-layout">
+                      <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Attract and Nurture Prospects</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Addressable/realized reach</span>
+                                      <div class="checkmark"></div>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer Database Growth</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Cost per acquisition</span>
+                                 <div class="checkmark"></div>
+                            </div>  
+                      </div>
+                       <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Engage and acquire customers</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Online traffic</span>
+                                     <div class="checkmark"></div>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer reach</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer engagement</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Conversion rates</span>
+                                 <div class="checkmark"></div>
+                            </div> 
+                               <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Average order value</span>
+                                 <div class="checkmark"></div>
+                            </div> 
+                      </div>
+                         <div class="three-col">
+                              
+                      </div>
+                  </div></div></div>
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                       <div class="col-inner">
+                            <h3 class="width-150 h3-para-spacing">Relationship Marketing Score</h3>
+                           <h5>Achieve cross channel consistency with advanced account engagement and AI driven decision making.</h5>
+                             <div id="relationship_content"></div> 
+                       </div>
+              </div>
+                   <div class="col-right">
+                       <div class="cloud-chart internal-cloud" id="relationship-cloud">
+                            <div class="score-holder" id="relationship-score-holder">
+                                   <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="relationship-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
+                           </div>
+                           <div class="cloud-bg" id="relationship-cloud-bg">
+                           </div>
+                           <div class="cloud-outline"></div>
+                           <div class="cloud-title">Keep up the good work!</div>
+                       </div>
+              </div>
+           </div>
+      </section>
+       <section id="relationship-page-2"  class="relationship">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <h3 class="rec-title">Recommendations for Improvement</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="relationship-recs-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of recommendations based upon your answers to the Relationship Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-right padded">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="relationship-recs-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+      <section id="relationship-page-3"  class="relationship">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                    <h3 class="width-110">Recommendations <span class="txt-18">(cont.)</span></h3>
+                             <div class="rec-holder" id="relationship-recs-3">
+                             
+                             </div>
+                       </div>
+                   </div>
+                   <div class="col-right">
+                        <div class="col-inner rec-holder" id="relationship-recs-4">
+                       </div>
+              </div>
+               </div>
+
+      </section>
+      <section id="relationship-page-4"  class="relationship">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                    <h3>Marketing Excellence</h3>
+                             <p class="reccomendations_text">Your curated list of what you are doing well based upon your answers to the <strong>Responsive Marketing</strong> section of the Marketing Maturity Assessment Tool.</p>
+                             <div class="rec-holder" id="relationship-congrads-1">
+                             
+                             </div>
+                       </div>
+                   </div>
+                   <div class="col-right">
+                        <div class="col-inner rec-holder" id="relationship-congrads-2">
+                       </div>
+              </div>
+               </div>
+      </section>
+      <section id="relationship-page-5" class="relationship">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                    <h3 class="width-110">Marketing Excellence <span class="txt-18">(cont.)</span></h3>
+                             <div class="rec-holder" id="relationship-congrads-3">
+                             
+                             </div>
+                       </div>
+                   </div>
+                   <div class="col-right">
+                        <div class="col-inner rec-holder" id="relationship-congrads-4">
+                       </div>
+              </div>
+               </div>
+
+      </section>
+       <section id="lifecycle-page-1" class="lifecycle beyond">
+          <div class="bottom-image">
+              <div class="bottom-content">
+              <h4>You are positively impacting the following Business Drivers and KPIs</h4>
+                  <div class="three-col-layout">
+                      <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Attract and Nurture Prospects</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Addressable/realized reach</span>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer Database Growth</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Cost per acquisition</span>
+                                 <div class="checkmark"></div>
+                            </div>  
+                      </div>
+                         <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Engage and acquire customers</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Online traffic</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                             <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Customer reach</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                            <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Customer engagement</span>
+                                 <div class="checkmark"></div>
+                            </div>  
+                            <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Conversion rates</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                              <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Average order value</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                              <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>CSAT/NPS</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                              <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Speed to market</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                              <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Inventory holding costs</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                              <div class="kpi">
+                                  <div class="arrow-down"></div>
+                                  <span>Customer lifetime value</span>
+                                 <div class="checkmark"></div>
+                            </div>
+                      </div>
+                         <div class="three-col">
+                                <div class="driver">
+                                  <div class="icon-driver"></div>
+                                  <span>Single view of customer</span>
+                            </div>
+                                 <div class="kpi">
+                                  <div class="arrow-up"></div>
+                                  <span>Increase actionable consumer data</span>
+                                 <div class="checkmark"></div>
+                            </div> 
+                      </div>
+                  </div>
+              </div>
+              
+              
+           </div>
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <div class="two-col">
+                   <div class="col-left">
+                       <div class="col-inner">
+                            <h3 class="width-150 h3-para-spacing">Lifecycle Engagement Score</h3>
+                           <h5>Deliver a unifed brand experience across the customer lifecycle.</h5>
+                             <div id="lifecycle_content"></div> 
+                       </div>
+              </div>
+                   <div class="col-right">
+                       <div class="cloud-chart internal-cloud" id="lifecycle-cloud">
+                            <div class="score-holder" id="lifecycle-score-holder">
+                                   <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="lifecycle-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
+                           </div>
+                           <div class="cloud-bg" id="lifecycle-cloud-bg">
+                           </div>
+                           <div class="cloud-outline"></div>
+                           <div class="cloud-title">Keep up the good work!</div>
+                       </div>
+
+              </div>
+           </div>
+      </section>
+       <section id="lifecycle-page-2"  class="lifecycle">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+           <h3 class="rec-title">Recommendations for Improvement</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-recs-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of recommendations based upon your answers to the Lifecycle Engagement Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-recs-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+       <section id="lifecycle-page-3"  class="lifecycle">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+          <h3 class="rec-title">Recommendations (cont.)</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-recs-3">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"></p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left padded">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-recs-4">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+       <section id="lifecycle-page-4"  class="lifecycle">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+           <h3 class="rec-title">Marketing Excellence</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-congrads-1">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text">Your curated list of what you are doing well based upon
+your answers to the Lifecycle Engagement Marketing section of the Marketing Maturity Assessment Tool. </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-congrads-2">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+             <section id="lifecycle-page-5"  class="lifecycle">
+          <div class="racetrack"><img src="assets/o-tag.png"></div>
+           <h3 class="rec-title">Marketing Excellence (cont.)</h3>
+          <div class="two-col">
+                   <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-congrads-3">
+                                
+                             </div>
+                       </div>
+                   </div>
+                    <div class="col-left">
+                         <div class="col-inner">
+                             <div class="rec-holder" id="lifecycle-congrads-4">
+                                 <div class="top-block">
+                                     <p class="reccomendations_text"> </p>
+                                 </div>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+      </section>
+      <section id="summary">
+           <div class="racetrack"><img src="assets/o-tag.png"></div>
+           <div class="section-inner">
+      <h3 >Summary and Next Steps</h3>
+          <div class="conclusion">
+              <div id="conclusion_text"></div>
+          </div>
+          <div class="action_list_title">Your action list for marketing maturity improvement</div>
+          <div class="four-col-layout">
+                   <div class="four-col" id="broadcast-col">
+                   <div class="col-title">Broadcast Marketing</div>
+                       <div id="broadcast-col-content">
+                       
+                       </div>
+                   </div>
+                   <div class="four-col" id="responsive-col">
+                   <div class="col-title">Responsive Marketing</div>
+                        <div id="responsive-col-content">
+                       
+                       </div>
+                   </div>
+                   <div class="four-col" id="relationship-col">
+                   <div class="col-title">Relationship Marketing</div>
+                        <div id="relationship-col-content">
+                       
+                       </div>
+                   </div>
+                   <div class="four-col" id="lifecycle-col">
+                   <div class="col-title">Lifecycle Engagement Marketing</div>
+                        <div id="lifecycle-col-content">
+                       
+                       </div>
+                   </div>
+               
+               
+               
+               
+               </div>
+               <div class="cta-holder"  >
+                   <a class="cta" id="cta-1" href="https://www.oracle.com/a/ocom/resources/oracle-ignite-guide-cross-channel-marketing.pdf" target="_blank">
+                       <div class="cta-title-holder">
+                       <div class="cta-title" id="cta-title-dynamic">Go Further with Cross-Channel Marketing</div>
+                       </div>
+                   </a>
+                  <a class="cta" id="cta-2" href="https://www.gartner.com/doc/reprints?id=1-6K72KDY&ct=190423&st=sb" target="_blank">
+                       <div class="cta-title-holder">
+                       <div class="cta-title">Magic Quadrant for Multichannel Marketing Hubs</div>
+                       </div>
+                   </a>
+                      <a class="cta" id="cta-3" href="https://www.gartner.com/doc/reprints?id=1-1OJCRD8O&ct=190925&st=sb" target="_blank">
+                       <div class="cta-title-holder">
+                       <div class="cta-title">Magic Quadrant for CRM Lead Management
+</div>
+                       </div>
+                   </a>
+               
+               </div>
+          </div>
+      </section>
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+      <script src="javascript/Chart.js"></script>
+      <script type="text/javascript" src="javascript/pdf.js"></script>
+      <script>
+      var ctx = document.getElementById('spiderChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'radar',
+    defaultFontColor:'hotpink',
+
+    // The data for our dataset
+    data: {
+        labels: ['Broadcast', 'Responsive', 'Relationship', ['Lifecycle','Engagement']],
+        datasets: [{
+           label:'Component Maturity Score',
+            borderColor: 'rgb(0,0, 0)',
+            data: [BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+         scales: {
+             yAxes: [
+                 {
+                    scaleLabel: {
+                    display: false,
+                    },
+                 gridLines: {
+                     display:'false',
+                     color: 'transparent', 
+                     zeroLineColor: '#E5DBBE',
+                 },
+                 	ticks: {
+                        display:false,
+                       color: 'transparent'},
+             }]
+         },
+        scale: {
+            ticks: {
+                min: 0,
+                max: 100,
+                stepSize:25,
+                display: false,
+                fontColor: "#E5DBBE",
+            },
+            gridLines:{
+                lineWidth:2,
+                color:['#AE562C','#FACD62','#94AFAF','#41817E']
+            },
+            pointLabels:{
+                display: true,
+                fontColor:'#221F1F',
+                fontFamily:'OracleSans-Bold',
+                fontSize:'8',
+                fontStyle:'bold'
+            }
+            
+        },
+        legend:{
+            display:false
+        },
+           layout: {
+               padding: {
+                   left: 50,
+                   right: 50,
+                   top: 50,
+                   bottom: 50
+        }
+    }
+    }
+});</script>
+
+  </body>
+</html>
+

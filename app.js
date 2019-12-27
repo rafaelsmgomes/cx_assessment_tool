@@ -15,13 +15,14 @@ const sql = require('./database/queries');
 // const state = require('./src/js/state');
 
 app.use(express.json()); 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/bin_dev`));
 app.use(express.static(`${__dirname}/PDF`));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'html');
 app.engine("html", require("ejs").renderFile);
-app.set('views', path.join(__dirname, "views"));
+
+app.set('views', [path.join(__dirname, "bin_dev"), path.join(__dirname, "PDF")]);
 
 const conn = mysql.createPool({
     connectionLimit: 100,
@@ -37,14 +38,12 @@ let userArr = [];
 let userID;
 let ansArr = []
 
-app.get('/', (req, res) => {
-    res.render('homepage'); 
-})
 app.get('/cx/maturity', (req, res) => {
-    res.render('homepage'); 
+    res.render('index'); 
 })
 app.get('/pdf/:id', (req, res) => {
-    res.render('cx_pdf'); 
+    const id = req.params.id;
+    res.render('cx_pdf', { userID: id });  
 })
 app.get('/pdf', (req, res) => {
     res.render('cx_pdf'); 
@@ -54,7 +53,8 @@ app.get('/cx/maturity/pdf', (req, res) => {
     res.render('pdf-file')
 })
 app.get('/cx/maturity/pdf/:id', (req, res) => {
-    res.render('pdf-file') 
+    const id = req.params.id;
+    res.render('cx_pdf', { userID: id }); 
 })
 
 app.post('/api', (req,res) => {

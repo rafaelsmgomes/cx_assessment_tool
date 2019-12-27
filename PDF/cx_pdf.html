@@ -3,14 +3,17 @@
     <head>
         <!-- You can download the PDFreactor Web Service JavaScript wrapper from: 
             http://www.pdfreactor.com/download/get/?product=pdfreactor&type=webservice_clients&jre=false --> 
-        <script src="javascript/lib/PDFreactor.js"></script>
+        <script src="/javascript/lib/PDFreactor.js"></script>
         <script>
             
             
             window.onload = async function() {
                 
-                var l= window.location;
-                var id=l.href.substring(l.href.indexOf('pdf/')+4,);
+                // var l= window.location.href;
+                // var id=l.substring(l.indexOf('pdf/')+4,);
+                // console.log('id: ' + id);
+                
+                var id = <%= userID %>;
                 console.log('id: ' + id);
 
 
@@ -19,7 +22,7 @@
                 // Create a new PDFreactor configuration object
                 var config = {
                     // Specify the input document
-                    document: "/cx-content.html",
+                    document: "http://dev.assessment-tools.com/PDF/cx-content.html",
                     addLinks: true,
                     pixelsPerInch:71,
                     javaScriptSettings:{

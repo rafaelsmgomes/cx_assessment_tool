@@ -1696,7 +1696,6 @@ html {
 .pathfinder {
   position: relative;
   transition-timing-function: cubic-bezier(0.47, 0.11, 0, 1.08);
-  transform: translateY(-400vw);
   opacity: 0;
   transition: opacity 1s; }
   .pathfinder.fade-in {

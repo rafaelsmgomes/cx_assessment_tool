@@ -45,8 +45,13 @@ const colorSchemeGroup = new ColorScheme(
 		'btnColorClass':'--3',		
 		'background': 'background--3',		
 	},		
+	{
+		'dialBgColor': variables.green2,
+		'btnColorClass': '--0',	
+		'background': 'background--0',		
+	},
 	],
-	'pageBreaks':[0,10,20,33],			
+	'pageBreaks':[0,10,20,33,41],			
 	}
 );
 state.colorScheme = colorSchemeGroup;
@@ -188,16 +193,16 @@ $(document).ready(function(){
 		})
 		.then( (el) => {
 			const myJson = el;	
-			const userId = myJson.data[0].user_id;
-			console.log(`userID: ${userId}`);
-			$('.btn__pdf--1').attr('href',`http://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
-			css.loadLottie({
-				'cloud--1-0': cloudMain,
-				'cloud--2-0': cloud0,
-				'cloud--2-1': cloud1,
-				'cloud--2-2': cloud2,
-				'cloud--2-3': cloud3,
-			}, myJson, timing);
+			// const userId = myJson.data[0].user_id;
+			// console.log(`userID: ${userId}`);
+			// $('.btn__pdf--1').attr('href',`http://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
+			// css.loadLottie({
+			// 	'cloud--1-0': cloudMain,
+			// 	'cloud--2-0': cloud0,
+			// 	'cloud--2-1': cloud1,
+			// 	'cloud--2-2': cloud2,
+			// 	'cloud--2-3': cloud3,
+			// }, myJson, timing);
 		})
 	}
 

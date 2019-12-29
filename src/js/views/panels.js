@@ -138,7 +138,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				How many marketers are on your team?
 			</div>			
-			<div class="main__direction">Please select one response:</div>			
+			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
 				'question':'How many marketers are on your team?',
 				'textArr': ['1-2','3-5','5-10','10+'],

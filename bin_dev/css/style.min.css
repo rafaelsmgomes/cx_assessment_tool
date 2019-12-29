@@ -222,7 +222,8 @@
   cursor: pointer;
   transition: opacity 300ms;
   pointer-events: none;
-  opacity: 0; }
+  opacity: 0;
+  display: flex; }
   .btn__regress--0 {
     background-color: #759C6C; }
   .btn__regress--1 {
@@ -723,6 +724,14 @@
         padding: 0 1.25rem;
         padding-top: 0.50rem;
         padding-bottom: .5rem; }
+    .header__rectangle--grow--0 {
+      background-color: #759C6C; }
+    .header__rectangle--grow--1 {
+      background-color: #94AFAF; }
+    .header__rectangle--grow--2 {
+      background-color: #AE562C; }
+    .header__rectangle--grow--3 {
+      background-color: #8B8580; }
     .header__container--x .header__rectangle--grow {
       border: solid 0.1rem black; }
     .header__rectangle--1:hover .header__rectangle--grow {
@@ -1244,6 +1253,13 @@
   display: flex;
   justify-content: space-between; }
 
+.slider__output {
+  color: #fcfbfa;
+  font-family: OracleB, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin-top: 2.25rem;
+  text-align: center; }
+
 .rangeslider,
 .rangeslider__fill {
   display: block;
@@ -1260,7 +1276,6 @@
     height: 2.20rem;
     background-color: #2B6242;
     border: solid 0.1rem #fcfbfa;
-    overflow: hidden;
     cursor: pointer;
     margin-top: 0.65rem; }
     .scroller__content--active .rangeslider--horizontal {
@@ -1273,13 +1288,14 @@
     border-bottom-right-radius: 0; }
     .rangeslider--horizontal .rangeslider__fill {
       top: -.1rem;
-      left: -.1rem;
       height: calc(100% + 0.2rem); }
   .rangeslider__handle {
     background: #fcfbfa;
     cursor: pointer;
     display: inline-block;
-    position: absolute; }
+    position: absolute;
+    padding-left: inherit;
+    padding-right: inherit; }
     .rangeslider__handle::after {
       content: "";
       height: 0; }
@@ -1291,7 +1307,7 @@
       background-color: #fcfbfa;
       position: absolute;
       transform: translateX(-50%);
-      margin-top: 2.45rem;
+      margin-top: 0.50rem;
       -webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
       clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%); }
 
@@ -1350,8 +1366,8 @@
   .vertfc__button--2 {
     background-color: #AE562C; }
     .vertfc__input:checked ~ .vertfc__label .vertfc__button--2 {
-      background-color: #FACD62;
-      border: 0.1rem solid #FACD62; }
+      background-color: #E5DBBE;
+      border: 0.1rem solid #E5DBBE; }
   .vertfc__button--3 {
     background-color: #8B8580; }
     .vertfc__input:checked ~ .vertfc__label .vertfc__button--3 {

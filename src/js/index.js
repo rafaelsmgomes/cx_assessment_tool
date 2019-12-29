@@ -150,6 +150,8 @@ $(document).ready(function(){
 			'sideIcons': false,
 			'windowWidth': $('.panel').width(),
 			'windowHeight': $('.panel').height(),
+			'showOutput': true,
+			'outputPerc': true,  
 		});
 
 
@@ -166,7 +168,7 @@ $(document).ready(function(){
 		// });
 
 
-	// $('.btn__progress--6').click();
+	$('.btn__progress--0').click();
 	window.statete = state;
 
 
@@ -302,8 +304,6 @@ async function getPdfData() {
 // function loadLottie(obj, data){
 
 // 	console.log(data);
-
-
 
 // 	for(const key in obj){
 // 		const lottieTemp = lottie.loadAnimation({

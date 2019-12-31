@@ -57,12 +57,13 @@
 	  justify-content: center;
 	  align-items: center;
 	  cursor: pointer;			
-		&:not(:first-of-type){
-			margin-left: 1.20rem;
-		}
+		// &:not(:first-of-type){
+		// 	margin-left: 1.20rem;
+		// }
 
 		&--1{
 			// display: none;
+			margin-left: auto;			
 			&:hover{					
 			}
 			&.toggle{
@@ -76,11 +77,14 @@
 		}		
 	
 		&--2{
-			margin-left: auto;
-
+			margin-left: 1.2rem;
 			.header__container--x &{
 				display: none;
 			}
+		}
+
+		&--3{
+			display: none;
 		}
 
 		& > img{
@@ -148,8 +152,14 @@
 			}
 			.header__rectangle--2:hover &{
 				width: 16rem;
-		    height: 13rem;
+		    height: 12rem;
+		    // max-height: 12rem;
 			}
+			.header__rectangle--activate:hover &{
+				width: 16rem;
+		    height: 5.5rem;
+		    // max-height: 12rem;
+			}			
 			.header__rectangle--3:hover &{
 				width: 5.2rem;		   		    
 			}

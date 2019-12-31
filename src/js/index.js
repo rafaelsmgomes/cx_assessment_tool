@@ -55,14 +55,21 @@ const colorSchemeGroup = new ColorScheme(
 	'pageBreaks':[0,10,20,33,41],			
 	}
 );
-// const tipsView = new TipsScheme({
-// 	'tipsSchemes':[],
-// 	'pageBreaks':[],
-// });
-
-// console.log(tipsView);
+const tipsSchemeGroup = new TipsScheme({
+	'divActivate': '.panel--activate',
+	'schemeObj': {
+		'.landing__container': 'Tap on the circle in the center of your screen to advance to Question 1. Get help answering a question or navigating this tool by coming here anytime. You can always go back a question by clicking the arrow at the bottom of your screen.',
+		'.slider__container': 'Use your cursor to drag the slider to the correct position.',
+		'.likert__container': 'Click a circle to select the correct response.',
+		'.vertfc__container': 'Click a circle to select the correct response.',
+		'.dial-group': 'Use your cursor to drag the dial arm to the correct response.',
+		'.checkbox__container': "Click on as many circles as you like, then choose 'Next' to proceed.",
+	} 
+});
 
 state.colorScheme = colorSchemeGroup;
+state.tipsScheme = tipsSchemeGroup;
+
 
 $(document).ready(function(){
 

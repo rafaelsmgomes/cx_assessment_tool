@@ -1281,6 +1281,7 @@
     height: 2.20rem;
     background-color: #2B6242;
     border: solid 0.1rem #fcfbfa;
+    overflow: hidden;
     cursor: pointer;
     margin-top: 0.65rem; }
     .scroller__content--active .rangeslider--horizontal {

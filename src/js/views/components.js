@@ -326,7 +326,7 @@ export const createSlider = (attr) => {
                 <div class="slider__description slider__description--1">${sliderGroup.minSet[j]}</div>
                 <div class="slider__description slider__description--2">${sliderGroup.maxSet[j]}</div>
             </div>
-            <input type="range" min="25" max="100" value="27" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
+            <input type="range" min="0" max="100" value="5" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
         </div>
         `;
         counter++;

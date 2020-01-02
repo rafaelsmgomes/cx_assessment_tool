@@ -69,8 +69,11 @@ export default class ColorScheme {
 	}
 
 	changeRegressBtn(colorScheme){
-		$('.btn__regress').removeClass('btn__regress--0 btn__regress--1 btn__regress--2 btn__regress--3')
-		$('.btn__regress').addClass(`btn__regress${colorScheme.btnColorClass}`)
+		$('.btn__regress').removeClass('btn__regress--0 btn__regress--1 btn__regress--2 btn__regress--3');
+		$('.btn__regress').addClass(`btn__regress${colorScheme.btnColorClass}`);
+
+		$('.header__rectangle--grow').removeClass('header__rectangle--grow--0 header__rectangle--grow--1 header__rectangle--grow--2 header__rectangle--grow--3');
+		$('.header__rectangle--grow').addClass(`header__rectangle--grow${colorScheme.btnColorClass}`);
 	}
 
 }

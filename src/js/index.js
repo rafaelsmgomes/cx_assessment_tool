@@ -6,6 +6,7 @@ import {panels} from './views/panels';
 
 import * as css from './views/cssView';
 import ColorScheme from './views/colorScheme';
+import TipsScheme from './views/tipsView';
 
 import {state} from './state';
 
@@ -23,7 +24,7 @@ const question_length = panels.length-2;
 const timing = variables.timing1;
 state.qLen = question_length;
 state.white = variables.white1;
-//test
+
 const colorSchemeGroup = new ColorScheme(
 	{'colorSchemes':[{
 		'dialBgColor': variables.green2,
@@ -45,26 +46,45 @@ const colorSchemeGroup = new ColorScheme(
 		'btnColorClass':'--3',		
 		'background': 'background--3',		
 	},		
+	{
+		'dialBgColor': variables.green2,
+		'btnColorClass': '--0',	
+		'background': 'background--0',		
+	},
 	],
-	'pageBreaks':[0,10,20,33],			
+	'pageBreaks':[0,10,20,33,41],			
 	}
 );
+const tipsSchemeGroup = new TipsScheme({
+	'divActivate': '.panel--activate',
+	'schemeObj': {
+		'.landing__container': 'Tap on the circle in the center of your screen to advance to Question 1. Get help answering a question or navigating this tool by coming here anytime. You can always go back a question by clicking the arrow at the bottom of your screen.',
+		'.slider__container': 'Use your cursor to drag the slider to the correct position.',
+		'.likert__container': 'Click a circle to select the correct response.',
+		'.vertfc__container': 'Click a circle to select the correct response.',
+		'.dial-group': 'Use your cursor to drag the dial arm to the correct response.',
+		'.checkbox__container': "Click on as many circles as you like, then choose 'Next' to proceed.",
+	} 
+});
+
 state.colorScheme = colorSchemeGroup;
+state.tipsScheme = tipsSchemeGroup;
+
 
 $(document).ready(function(){
 
 	/*** PRELOAD CTRL ***/
-	setTimeout(function(){
-		$('.preload').addClass('fade');	
-	}, 3000);
 		setTimeout(function(){
-		$('.preload').addClass('hide');	
-	}, 4000);
+			$('.preload').addClass('fade');	
+		}, 3000);
+			setTimeout(function(){
+			$('.preload').addClass('hide');	
+		}, 4000);
 
-	setTimeout(function(){
-		$('.pathfinder').addClass('fade-in');	
-		$('.header__container').addClass('fade-in');	
-	}, 4000);
+		setTimeout(function(){
+			$('.pathfinder').addClass('fade-in');	
+			$('.header__container').addClass('fade-in');	
+		}, 4000);
 
 
 	/*** App path Ctrl ***/ 		
@@ -145,25 +165,13 @@ $(document).ready(function(){
 			'sideIcons': false,
 			'windowWidth': $('.panel').width(),
 			'windowHeight': $('.panel').height(),
+			'showOutput': true,
+			'outputPerc': true,  
 		});
 
-
-
 	/*** Custom CSS on Btn Progress ***/
-		// $('.btn__progress').click(function(){
-		// 	colorSchemeGroup1.addPage();
-		// 	console.log(colorSchemeGroup1);
-		// });
 
-		// $('.btn__regress').click(function(){
-		// 	colorSchemeGroup1.minusPage();
-		// 	console.log(colorSchemeGroup1);
-		// });
-
-
-	// $('.btn__progress--6').click();
 	window.statete = state;
-
 
 	$('.btn__progress--40').click(postState);
 	async function postState() {
@@ -297,8 +305,6 @@ async function getPdfData() {
 // function loadLottie(obj, data){
 
 // 	console.log(data);
-
-
 
 // 	for(const key in obj){
 // 		const lottieTemp = lottie.loadAnimation({

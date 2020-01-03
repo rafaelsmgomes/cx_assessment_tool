@@ -84,6 +84,7 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$('.pathfinder').addClass('fade-in');	
 			$('.header__container').addClass('fade-in');	
+			$('.gate__container').addClass('fade-in');
 		}, 4000);
 
 
@@ -95,10 +96,6 @@ $(document).ready(function(){
 			'state': state,
 			// 'delay': 1,
 		});
-
-	/***CSS Ctrl***/
-
-		css.toggleHeader();
 
 	/*** LOTTIE CTRL ***/
 
@@ -173,6 +170,24 @@ $(document).ready(function(){
 
 	window.statete = state;
 
+	css.toggleHeader();
+
+	$('.gate__form').submit(function(e){
+		e.preventDefault();
+		console.log('asdfasdf');
+		state.company = $('#gate__company').val();
+		state.revenue = $('#gate__revenue').val();
+		state.country = $('#gate__country').val();
+		state.employees = $('#gate__employees').val();
+		state.industry = $('#gate__industry').val();
+
+
+		$('.gate__form').removeClass('fade-in');
+		setTimeout(function(){
+			$('.gate__container').removeClass('fade-in');
+		}, 1000);		
+	});
+
 	$('.btn__progress--40').click(postState);
 	async function postState() {
 		$('.footer').hide();
@@ -196,9 +211,9 @@ $(document).ready(function(){
 		})
 		.then( (el) => {
 			const myJson = el;	
-			const userId = myJson.data[0].user_id;
-			console.log(`userID: ${userId}`);
-			$('.btn__pdf--1').attr('href',`/cx/maturity/pdf/${userId}`);
+			// const userId = myJson.data[0].user_id;
+			// console.log(`userID: ${userId}`);
+			// $('.btn__pdf--1').attr('href',`http://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
 			css.loadLottie({
 				'cloud--1-0': cloudMain,
 				'cloud--2-0': cloud0,

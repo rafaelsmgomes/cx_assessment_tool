@@ -11,11 +11,12 @@
 // @import 'components/eloqua';
 // @import 'components/clouds';
 @import 'components/background';
-@import 'components/btns';
+@import 'components/btns';  
 @import 'components/cloud';
 @import 'components/cta';
 @import 'components/checkboxes';
 @import 'components/dials';
+@import 'components/gate';
 // @import 'components/detailed';
 // @import 'components/detscroll';
 @import 'components/header';
@@ -122,7 +123,7 @@ html {
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
   // transition: transform 1.5s;
   // transform: translateY(-800vw);
-  // transform: translateY(-400vw);
+  // transform: translateY(-400vw);  
   opacity: 0;
   transition: opacity 1s;
   &.fade-in{

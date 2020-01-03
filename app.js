@@ -88,7 +88,7 @@ app.post('/api', (req,res) => {
 
     userID = Date.now();
 
-    createFakeCompany(userArr)
+    createFakeCompany(userArr, data)
     .then(() => {
 
         likerts.forEach(createAnswersArray);
@@ -153,8 +153,7 @@ app.get('/pdfdata', (req, res) => {
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                SELECT companyName, id FROM users WHERE id = ?;
                SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
-               `, [1577942554695, 1577942554695, 1577942554695], (err, results, fields) => {
-                // 1577293819790
+               `, [1578032137654, 1578032137654, 1578032137654], (err, results) => {
         if (err) throw err; 
         // console.log(results[1][0]);
 
@@ -287,13 +286,13 @@ app.get('/pdfdata/:id', (req, res) => {
 })
 
 
-function createFakeCompany(arr) {
+function createFakeCompany(arr, el) {
     return new Promise( (res, rej) => {
-        compName = faker.company.companyName();
-        compSize = faker.random.number();
-        compIndustry = faker.company.bs();
-        numEmployees = faker.random.number()/100;
-        compCountry = faker.address.country();
+        compName = el.company;
+        compSize = el.revenue;
+        compIndustry = el.industry;
+        numEmployees = el.employees;
+        compCountry = el.country;
         arr.push(userID, compName, compSize, compIndustry, numEmployees, compCountry);
         console.log(arr)
         conn.query(sql.insertUser, arr, (err, results) => {

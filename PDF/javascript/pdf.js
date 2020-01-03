@@ -50,7 +50,12 @@ var lifecycle_8;
 var lifecycle_9;
 
 
-fetch('/pdfdata')
+var l= window.location;
+var id=l.substr(id.lastIndexOf('/') + 1);
+console.log('pdf.js id: ' + id);
+
+
+fetch('/pdfdata/' + id)
     .then(response => {
     return response.json();
 })
@@ -110,7 +115,6 @@ fetch('/pdfdata')
     lifecycle_7=pdfData.data.lifecycle_7;
     
 
-    console.log("co1: " + pdfData.data.companyName + 'companyName: ' + companyName);
     document.getElementById('company_name').innerHTML=companyName;
     
     var data;
@@ -216,13 +220,10 @@ function getBroadcast(data){
                                  '<div class="recommendation-text">'+
                                  '<div class="recommendation_title">'+data.broadcast.recommendations[i-1].title+'</div>'+
                                  '<p>'+data.broadcast.recommendations[i-1].no+'</p> </div></div>' );
-
             ncount++;
-            console.log('ncount: ' + ncount + ' length: ' + data.broadcast.recommendations.length)
              if(ncount==data.broadcast.recommendations.length){
                  $('#broadcast-page-4').hide();
-              }
-            
+              } 
         }
         else{
              if(ycount<3){
@@ -239,6 +240,8 @@ function getBroadcast(data){
             ycount++;
             if(ycount==data.broadcast.recommendations.length){
                  $('#broadcast-page-3').hide();
+                $('#broadcast-col-content').append('<p>You did it! Your company has mastered Broadcast Marketing.</p>');
+                document.getElementById('broadcast-rec').innerHTML="Congratulations, based on your responses to the Broadcast Marketing Maturity section, your company has mastered this level of marketing maturity.";
                  $(appendTo).append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
                                  '<p>'+data.broadcast.perfect+'</p> </div></div>' );
@@ -318,6 +321,8 @@ function getResponsive(data){
             ycount++;
             if(ycount==data.responsive.recommendations.length){
                  $('#responsive-page-2').hide();
+                $('#responsive-col-content').append('<p>Keep up the momentum. Your company has top scores in Responsive Marketing.</p>');
+                 document.getElementById('responsive-rec').innerHTML="Congratulations, based on your responses to the Responsive Marketing Maturity section, your company joins an elite group of organizations that Oracle recognizes as experts in Responsive Marketing.";
                  $(appendTo).append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
                                  '<p>'+data.responsive.perfect+'</p> </div></div>' );
@@ -408,6 +413,8 @@ function getRelationship(data){
             ycount++;
            if(ycount==data.relationship.recommendations.length){
                  $('#relationship-page-2').hide();
+                 $('#relationship-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
+                 document.getElementById('relationship-rec').innerHTML="Congratulations, based on your responses to the Relationship Marketing Maturity section, your company is setting the pace that other organizations now follow when it comes to Relationship Marketing.";
                  $(appendTo).append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
                                  '<p>'+data.relationship.perfect+'</p> </div></div>' );
@@ -491,6 +498,8 @@ function getLifecycle(data){
             ycount++;
              if(ycount==data.lifecycle.recommendations.length){
                  $('#lifecycle-page-2').hide();
+                 $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
+                 document.getElementById('lifecycle-rec').innerHTML="You’re a leader and your company is well positioned to win. Congratulations on mastering Lifecycle Engagement.  ";
                  $(appendTo).append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
                                  '<p>'+data.lifecycle.perfect+'</p> </div></div>' );

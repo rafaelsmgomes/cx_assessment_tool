@@ -636,6 +636,79 @@
     margin-right: 7%;
     transform: translateY(18%); }
 
+.gate__container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s; }
+  .gate__container.fade-in {
+    z-index: 1000000;
+    opacity: 1; }
+
+.gate__form {
+  width: 35.00rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+  opacity: 0;
+  transition: opacity 1s; }
+  .gate__form.fade-in {
+    z-index: 1000000;
+    opacity: 1; }
+
+.gate__title {
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #67605B; }
+  .gate__title--emp {
+    color: #312D2A;
+    font-family: OracleB, Arial, Helvetica, sans-serif;
+    font-size: 1.20rem; }
+
+.gate__group {
+  width: 72%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; }
+  .gate__group--1 {
+    margin-top: 1.00rem; }
+  .gate__group--2 {
+    margin-top: 0.45rem; }
+
+.gate__label {
+  font-family: OracleReg, Arial, Helvetica, sans-serif;
+  font-size: 0.70rem;
+  color: #759C6C;
+  margin-left: auto;
+  margin-right: 1.00rem; }
+
+.gate__input {
+  width: 15.00rem;
+  height: 1.29rem; }
+
+.gate__submit {
+  -webkit-appearance: none;
+  user-select: none;
+  text-align: center;
+  cursor: default;
+  color: none;
+  color: #fcfbfa;
+  background-color: #312D2A;
+  border: none;
+  width: 5.00rem;
+  height: 1.80rem;
+  border-radius: 5.00rem;
+  margin: 0 auto;
+  margin-top: 1.25rem; }
+
 .header__logo {
   flex: 0 0 5.20rem;
   height: 1.60rem;
@@ -1221,6 +1294,7 @@
     padding-right: 0.86rem;
     background-color: transparent; }
   .slider__content:not(:last-of-type) {
+    background: none;
     margin-bottom: 0.80rem;
     overflow: hidden; }
 

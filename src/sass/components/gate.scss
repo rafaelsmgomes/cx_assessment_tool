@@ -1,0 +1,80 @@
+.gate{
+	&__container{
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		display: flex;
+		background: rgba(0,0,0,.5);    
+    align-items: center;
+    justify-content: center;
+	  opacity: 0;
+	  transition: opacity 1s;
+	  &.fade-in{
+	  	z-index: 1000000;
+	    opacity: 1;
+	  }		
+	}
+	&__form{
+		width: 35.00rem;
+		background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;   	
+	  opacity: 0;
+	  transition: opacity 1s;
+	  &.fade-in{
+	  	z-index: 1000000;
+	    opacity: 1;
+	  }		
+	}
+	&__title{
+		font-family: $font-reg;
+		font-size: 1rem;
+    text-align: center;		
+    color: $color-grey-3;
+		&--emp{
+			color: $color-grey-2;
+			font-family: $font-b;	
+			font-size: 1.20rem;
+		}		
+	}
+	&__group{
+    width: 72%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    &--1{
+    	margin-top: 1.00rem;
+    }
+    &--2{
+    	margin-top: 0.45rem;
+    }
+	}
+	&__label{
+		font-family: $font-reg;
+		font-size: 0.70rem;
+		color: $color-green-1;
+		margin-left: auto;
+    margin-right: 1.00rem;
+	}
+	&__input{
+		width: 15.00rem;
+		height: 1.29rem;
+	}
+	&__submit{
+		-webkit-appearance: none;
+    user-select: none;
+    text-align: center;
+    cursor: default;
+    color: none;
+    color: $color-white-1;
+    background-color: $color-grey-2;
+    border: none;
+    width: 5.00rem;
+    height: 1.80rem;
+    border-radius: 5.00rem;
+		margin: 0 auto;
+    margin-top: 1.25rem;
+	}
+}

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>B2B Marketing Maturity</title>
-		<link rel="stylesheet" type="text/css" href="/css/style.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.min.css" />
 		
 		<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true' crossorigin></script>	
 
@@ -39,10 +39,37 @@
 			</div>
 		</div>
 		<div class="main-container">
-
 			<div class="preload">
 				<div id="preload__container"></div>
-			</div>					
+			</div>		
+			<div class="gate__container">			
+				<form class="gate__form fade-in">
+					<div class="gate__title gate__title--1">Please provide some information for a personalized</div>
+					<div class="gate__title gate__title--2"><span class="gate__title--emp">Marketing Maturity</span>&nbsp;report.</div>
+					
+					<div class="gate__group gate__group--1">
+						<label for="gate__company" class="gate__label">Company name</label>
+						<input type="text" class="gate__input" id='gate__company'> 
+					</div>
+					<div class="gate__group gate__group--2">
+						<label for="gate__revenue" class="gate__label">Revenue</label>
+						<input type="text" class="gate__input" id='gate__revenue'>
+					</div>
+					<div class="gate__group gate__group--2">
+						<label for="gate__country" class="gate__label">Country</label>
+						<input type="text" class="gate__input" id='gate__country'>
+					</div>
+					<div class="gate__group gate__group--2">
+						<label for="gate__employees" class="gate__label">Number of employees</label>
+						<input type="text" class="gate__input" id='gate__employees'>
+					</div>								
+					<div class="gate__group gate__group--2">
+						<label for="gate__industry" class="gate__label">Industry</label>
+						<input type="text" class="gate__input" id='gate__industry'>
+					</div>	
+					<input type='submit' class='gate__submit'></input>											
+				</form>			
+			</div>
 			<div class='pathfinder'>
 			</div>
 		</div>

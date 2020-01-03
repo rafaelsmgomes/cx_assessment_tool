@@ -88,7 +88,8 @@ app.post('/api', (req,res) => {
 
     userID = Date.now();
 
-    createFakeCompany(userArr, data)
+    createCompany(userArr, data)
+    // createFakeCompany(userArr)
     .then(() => {
 
         likerts.forEach(createAnswersArray);
@@ -286,7 +287,7 @@ app.get('/pdfdata/:id', (req, res) => {
 })
 
 
-function createFakeCompany(arr, el) {
+function createCompany(arr, el) {
     return new Promise( (res, rej) => {
         compName = el.company;
         compSize = el.revenue;
@@ -303,6 +304,24 @@ function createFakeCompany(arr, el) {
         })
     })
 };
+
+// function createFakeCompany(arr, el) {
+//     return new Promise( (res, rej) => {
+//         compName = faker.company.companyName();
+//         compSize = faker.random.number();
+//         compIndustry = faker.company.bs();
+//         numEmployees = faker.random.number()/100;
+//         compCountry = faker.address.country();
+//         arr.push(userID, compName, compSize, compIndustry, numEmployees, compCountry);
+//         console.log(arr)
+//         conn.query(sql.insertUser, arr, (err, results) => {
+//             if(err) throw err;  
+//             console.log(results); 
+//             userArr = [];
+//             res(); 
+//         })
+//     })
+// };
 
 function createAnswersArray(el) { 
     return new Promise( (res, rej) => {

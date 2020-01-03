@@ -28,11 +28,13 @@
 			height: 12.65rem;
 	    opacity: 1;
 	    width: 100%;
+
 	    padding-left: 0.86rem;
 	    padding-right: 0.86rem;
 	    background-color: transparent;
 		}		
 		&:not(:last-of-type){
+			background: none;
 			margin-bottom: 0.80rem;
 	    overflow: hidden;
 		}
@@ -100,7 +102,7 @@
 	  height: 2.20rem;
 		background-color: $color-green-2;
 		border: solid 0.10rem $color-white-1;	  	
-	  // overflow: hidden;
+	  overflow: hidden;
 	  cursor: pointer;
 	  margin-top: 0.65rem;
 

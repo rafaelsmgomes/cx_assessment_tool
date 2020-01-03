@@ -1527,7 +1527,7 @@
   .line.show {
     opacity: 1; }
   .line__wrapper {
-    height: 1px;
+    height: 1rem;
     width: 70rem;
     position: absolute;
     z-index: -100;

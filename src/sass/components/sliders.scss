@@ -109,7 +109,6 @@
 	  .scroller__content--active &{
 		  height: 2.20rem;
 		  margin-top: 0.65rem;
-
 		}
 	}
 
@@ -119,10 +118,10 @@
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 		.rangeslider--horizontal & {
-		  top: -.1rem;
-		  // height: 100%;		
-		  // left: -.1rem;
-		  height: calc(#{100%} + #{.2rem});	
+		  // top: -.1rem;
+		  height: 100%;		
+		  // // left: -.1rem;
+		  // height: calc(#{100%} + #{.2rem});	
 		}
   }
 

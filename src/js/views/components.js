@@ -243,7 +243,7 @@ export const createVertfc = (attr) => {
     const textArr = attr.textArr;
 
     const addTo = 100/(textArr.length-1);
-    let startPoint = 0;
+    let startPoint = 100;
     let htmltext = '';
     const vertfc = new Vertfc(attr);
     state.vertfcs.push(vertfc);

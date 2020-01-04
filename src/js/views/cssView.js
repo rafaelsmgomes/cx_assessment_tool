@@ -17,6 +17,15 @@ export const preloadImgs = (preimages) => {
 	}
 }
 
+export const panelFix = (timing) =>{
+	$('.btn__progress').on('click', function(){
+		$('.panel').css('pointer-events', 'none');
+		setTimeout(function(){
+			$('.panel').css('pointer-events', 'auto');
+		}, timing);
+	});	
+}
+
 export const loadLottie = (obj, data, timing) => {
 	const score0 = data.data[0].BroadcastScore+1;
 	const score1 = data.data[0].ResponsiveScore+1;

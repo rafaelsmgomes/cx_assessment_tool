@@ -699,7 +699,7 @@
   -webkit-appearance: none;
   user-select: none;
   text-align: center;
-  cursor: default;
+  cursor: pointer;
   color: none;
   color: #fcfbfa;
   background-color: #312D2A;
@@ -1371,7 +1371,7 @@
       height: 100%; }
   .rangeslider__handle {
     background: #fcfbfa;
-    cursor: pointer;
+    cursor: grab;
     display: inline-block;
     position: absolute;
     padding-left: inherit;
@@ -1720,10 +1720,8 @@
   position: absolute;
   width: 100vw;
   z-index: -100;
-  opacity: 0;
-  pointer-events: none; }
+  opacity: 0; }
   .panel--activate {
-    pointer-events: auto;
     z-index: 10;
     opacity: 1; }
   .panel--41 {

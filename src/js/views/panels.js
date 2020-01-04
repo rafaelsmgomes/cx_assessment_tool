@@ -766,7 +766,7 @@ export const panels = [
 				<div class="results__text--wrapper">
 					<div class="results__header results__header--1">Overall Maturity Score</div>
 					<div class="results__text results__text--1">
-						Your score indicates your marketing organization is critical to delivering on your corporate strategy and goals. Key characteristics of companies like yours include a hyper focus on key business drivers including: aracting and nurturing prospects and activities around engaging and acquiring new customers. Companies that have achieved this level of marketing excellence have shifted their focus to be completely data-driven, leveraging a full arsenal of tools to achieve marketing excellence across all relevant channels.
+						Your score indicates your marketing organization is critical to delivering on your corporate strategy and goals. Key characteristics of companies like yours include a hyper focus on key business drivers including: attracting  and nurturing prospects and activities around engaging and acquiring new customers. Companies that have achieved this level of marketing excellence have shifted their focus to be completely data-driven, leveraging a full arsenal of tools to achieve marketing excellence across all relevant channels.
 					</div>
 				</div>
 			</div>

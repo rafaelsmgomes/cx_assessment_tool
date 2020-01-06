@@ -13,7 +13,7 @@ export default class Checkbox {
     addAns(answers){
         this.clearAnswers();
         for(let answer of answers){
-    	   this.choseAns.add(answer);
+    	   this.choseAns.add(answer); 
         }
     }    
 

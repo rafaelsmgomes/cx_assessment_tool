@@ -177,7 +177,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
 				'question':'What is your current unsubscribe rate?',
-				'textArr': ['Less than 0.2%','Greater than 0.5%',"We don't track unsubscribe rates"],
+				'textArr': ["We don't track unsubscribe rates",'Greater than 0.5%',"Less than 0.2%"],
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -197,7 +197,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'Are you coordinating across multiple channels in your marketing campaigns?',
-				'textArr': ['No', 'Sometimes', 'Always'],
+				'textArr': ['Always', 'Sometimes', 'No'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -250,7 +250,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>
 			${comp.createVertfc({				
 				'question':'How personalized is your marketing content across your marketing channels?',
-				'textArr': ['Same content for everyone',"Minimal, such as 'first name' or 'company'",'Highly personalized based on behavior'],
+				'textArr': ['Highly personalized based on behavior',"Minimal, such as 'first name' or 'company'",'Same content for everyone'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -268,7 +268,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'Do you perform lead scoring to identify high value buyers?',
-				'textArr': ['Never',"Sometimes",'Always'],
+				'textArr': ['Always',"Sometimes",'Never'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -286,7 +286,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Does your marketing automation platform score leads based on behavioral activities and profile data?',
-				'textArr': ['Only behavioral activities',"Only profile data",'Both behavioral activities and profile data',"We don't use lead scoring to qualify leads"],
+				'textArr': ['Both behavioral activities and profile data','Only behavioral activities',"Only profile data","We don't use lead scoring to qualify leads"],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -304,7 +304,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'What level of segmentation drives your campaigns?',
-				'textArr': ['Wide audience or&nbsp;list',"Basic customer persona defined segments",'Advanced segments based on profile and behavioral data',"1:1 real-time microsegments"],
+				'textArr': ["1:1 real-time microsegments",'Advanced segments based on profile and behavioral data',"Basic customer persona defined segments",'Wide audience or&nbsp;list'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -378,7 +378,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How advanced are your targeting and segmentation processes?',
-				'textArr': ["We haven't had the opportunity to advance in this area", "We create a number of filters and audiences based on profile and behavioral attributes", "We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We have highly specific audience filters that target buyers in real time based on changing profile and behavior data"],
+				'textArr': ["We have highly specific audience filters that target buyers in real time based on changing profile and behavior data","We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model","We create a number of filters and audiences based on profile and behavioral attributes","We haven't had the opportunity to advance in this area"],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -468,7 +468,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you use a predictive vendor for populating predictive lead scores in your ABM program (e.g., Demandbase, Mintigo, 6thSense)?',
-				'textArr': ['Yes', "No","Not Applicable"],
+				'textArr': ['Yes', "Not Applicable","No"],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -576,7 +576,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How do you measure your marketing efforts?',
-				'textArr': ['Generate basic reports', 'Some consistent means of measuring campaigns with some deep analysis in specific areas', "Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)"],
+				'textArr': ["Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)", 'Some consistent means of measuring campaigns with some deep analysis in specific areas', "Generate basic reports"],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -594,7 +594,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How integrated is your marketing data?',
-				'textArr': ['All of our marketing data is siloed', 'We have integrated some customer data, but using and manipulating it  is a manual process', "We have a unified customer database that automates some essential online and offline data",'We have integrated all online and offline data as well as known profiles from 3rd party data'],
+				'textArr': ['We have integrated all online and offline data as well as known profiles from 3rd party data', "We have a unified customer database that automates some essential online and offline data",'We have integrated some customer data, but using and manipulating it  is a manual process','All of our marketing data is siloed'],
 				'group': 'relationship',
 				'count': true,
 			})}			

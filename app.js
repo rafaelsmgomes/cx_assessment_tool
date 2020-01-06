@@ -154,7 +154,7 @@ app.get('/pdfdata', (req, res) => {
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                SELECT companyName, id FROM users WHERE id = ?;
                SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
-               `, [1578032137654, 1578032137654, 1578032137654], (err, results) => {
+               `, [1578127744350, 1578127744350, 1578127744350], (err, results) => {
         if (err) throw err; 
         // console.log(results[1][0]);
 

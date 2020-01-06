@@ -7,8 +7,8 @@ INSERT INTO questions (
     question, 
     q_type, 
     q_weight, 
-    recommendation_low, 
-    recommendation_high, 
+    rec_low, 
+    rec_high, 
     marketing_type, 
     capability
 ) 

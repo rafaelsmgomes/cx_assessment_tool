@@ -97,10 +97,10 @@ WHERE user_id = ?
 sql.insertResults = `
 INSERT INTO results
 SET user_id = ?,
-BroadcastScore = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'broadcast'),
-RelationshipScore = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'relationship'),
-ResponsiveScore = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'responsive'),
-LifecycleScore = (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle'),
+BroadcastScore = IF ((SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'broadcast') >= 25, (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'broadcast'), 25),
+RelationshipScore = IF ((SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'relationship') >= 25, (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'relationship'), 25),
+ResponsiveScore = IF ((SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'responsive') >= 25, (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'responsive'), 25),
+LifecycleScore = IF ((SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle') >= 25, (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle'), 25),
 rec_lifecycle = CASE
         WHEN (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle') >= 75 THEN (SELECT overall_recommendations.high FROM overall_recommendations WHERE overall_recommendations.section = 'lifecycle')
         WHEN (SELECT SUM(answers.weighted) FROM answers WHERE user_id = ? AND answers.ans_section = 'lifecycle') >= 50 THEN (SELECT overall_recommendations.mid FROM overall_recommendations WHERE overall_recommendations.section = 'lifecycle')

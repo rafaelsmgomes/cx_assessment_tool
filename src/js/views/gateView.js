@@ -1,6 +1,9 @@
 export const init = (state) => {
 	$('.gate__form').submit(function(e){
 		e.preventDefault();
+
+		console.log($('#gate__company').val().length);
+
 		state.company = $('#gate__company').val();
 		state.revenue = $('#gate__revenue').val();
 		state.country = $('#gate__country').val();

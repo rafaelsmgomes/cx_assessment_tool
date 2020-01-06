@@ -22,6 +22,7 @@
     padding-bottom: 3.25rem;   	
 	  opacity: 0;
 	  transition: opacity 1s;
+	  position: relative;
 	  &.fade-in{
 	  	z-index: 1000000;
 	    opacity: 1;
@@ -77,5 +78,26 @@
     border-radius: 5.00rem;
 		margin: 0 auto;
     margin-top: 1.25rem;
+	}
+}
+
+.form{
+	&__invalid{
+		font-family: $font-reg;
+    font-size: 0.70rem;
+    color: red;
+    margin-left: auto;
+    margin-right: 1.00rem;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 1.50rem;
+		display: none;
+		&--active{
+			display: block;
+		}
 	}
 }

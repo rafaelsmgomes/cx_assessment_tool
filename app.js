@@ -303,7 +303,7 @@ function createCompany(arr, el) {
             res(); 
         })
     })
-};
+}; 
 
 // function createFakeCompany(arr, el) {
 //     return new Promise( (res, rej) => {

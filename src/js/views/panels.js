@@ -89,7 +89,6 @@ export const panels = [
 				'textArr': ['Barely', 'Some', 'A lot'],
 				'group': 'broadcast',
 				'count': true,
-				'valueArr': '[0, 66, 100]'
 			})}
 		</div>
 		<div class="btn__progress btn__progress--4" data-id='4' data-line='4'></div>

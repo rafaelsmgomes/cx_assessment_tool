@@ -5,6 +5,7 @@ import 'lottie-web';
 import {panels} from './views/panels';
 
 import * as css from './views/cssView';
+import * as gate from './views/gateView';
 import ColorScheme from './views/colorScheme';
 import TipsScheme from './views/tipsView';
 
@@ -170,23 +171,14 @@ $(document).ready(function(){
 
 	window.statete = state;
 
+	//Header toggle on scroll
 	css.toggleHeader();
 
-	$('.gate__form').submit(function(e){
-		e.preventDefault();
-		console.log('asdfasdf');
-		state.company = $('#gate__company').val();
-		state.revenue = $('#gate__revenue').val();
-		state.country = $('#gate__country').val();
-		state.employees = $('#gate__employees').val();
-		state.industry = $('#gate__industry').val();
+	//Initialize Gate
+	gate.init(state);
 
-
-		$('.gate__form').removeClass('fade-in');
-		setTimeout(function(){
-			$('.gate__container').removeClass('fade-in');
-		}, 1000);		
-	});
+	//stop pointerevents on panel moving
+	css.panelFix(timing);	
 
 	$('.btn__progress--40').click(postState);
 	async function postState() {

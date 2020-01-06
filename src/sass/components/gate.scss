@@ -60,12 +60,14 @@
 	&__input{
 		width: 15.00rem;
 		height: 1.29rem;
+		border-width: 0.05rem;
+		border-style: solid;
 	}
 	&__submit{
 		-webkit-appearance: none;
     user-select: none;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
     color: none;
     color: $color-white-1;
     background-color: $color-grey-2;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- You can download the PDFreactor Web Service JavaScript wrapper from: 
+            http://www.pdfreactor.com/download/get/?product=pdfreactor&type=webservice_clients&jre=false --> 
+        <script src="/PDFReactor/wrappers/javascript/lib/PDFreactor.js"></script>
+        <script>
+            
+            
+            window.onload = async function() {
+                
+            //    var l= window.location;
+              //  var id=l.[^/]+(?=/$|$);
+              //  console.log('id: ' + id);
+
+
+                // Create new PDFreactor instance
+               var pdfReactor = new PDFreactor("http://dev.assessment-tools.com/service/rest");
+                // Create a new PDFreactor configuration object
+                var config = { 
+                    // Specify the input document
+                    document: "http://dev.assessment-tools.com/PDF/cx-content.html",
+                    addLinks: true,
+                    pixelsPerInch:71,
+                    javaScriptSettings:{
+                        enabled:true
+                        
+                    }
+                }
+                   
+                // Render document and save result  
+                try {
+                    var result = await pdfReactor.convert(config);
+                    document.getElementById("result").src = "data:application/pdf;base64," + result.document;
+                } catch (error) {
+                    document.body.innerHTML = "<h1>An Error Has Occurred</h1><h2>" + error + "</h2>";
+                }
+               
+            }
+        </script>
+       
+    </head>
+    <body>
+        <iframe id="result" style="width: 100%; height: 95vh"></iframe>
+    </body>
+</html>

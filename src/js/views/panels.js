@@ -197,7 +197,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'Are you coordinating across multiple channels in your marketing campaigns?',
-				'textArr': ['Always', 'Sometimes', 'No'],
+				'textArr': ['No', 'Sometimes', 'Always'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -268,7 +268,7 @@ export const panels = [
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
 				'question':'Do you perform lead scoring to identify high value buyers?',
-				'textArr': ['Always',"Sometimes",'Never'],
+				'textArr': ['Never',"Sometimes",'Always'],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -522,7 +522,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
-				'textArr': ['Yes', 'No', "I don't know"],
+				'textArr': ['Yes', "I don't know", 'No'],
 				'group': 'relationship',
 				'count': true,
 			})}			

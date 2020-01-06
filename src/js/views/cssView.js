@@ -34,7 +34,7 @@ export const loadLottie = (obj, data, timing) => {
 
 	console.log(data);
 
-	const scoremain = ((score0+score1+score2+score3)/4)+1;
+	const scoremain = Math.round((score0+score1+score2+score3)/4);
 
 	for(const key in obj){
 

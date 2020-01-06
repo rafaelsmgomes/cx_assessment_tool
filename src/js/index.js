@@ -202,7 +202,7 @@ $(document).ready(function(){
 			return response.json();	
 		})
 		.then( (el) => {
-			const myJson = el;	
+			const myJson = el;
 			const userId = myJson.data[0].user_id;
 			// console.log(`userID: ${userId}`);
 			$('.btn__pdf--1').attr('href',`http://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);

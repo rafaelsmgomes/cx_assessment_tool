@@ -210,9 +210,7 @@ app.get('/pdfdata', (req, res) => {
             lifecycle_7: results[0][38].ans_value,
             lifecycle_8: results[0][39].ans_value
         }
-        // console.log(pdfData);
         res.json({data: pdfData});
-        // conn.end()
     })    
 })
 app.get('/pdfdata/:id', (req, res) => {
@@ -298,7 +296,7 @@ function createCompany(arr, el) {
         console.log(arr)
         conn.query(sql.insertUser, arr, (err, results) => {
             if(err) throw err;  
-            console.log(results); 
+            // console.log(results); 
             userArr = [];
             res(); 
         })
@@ -330,6 +328,9 @@ function createAnswersArray(el) {
         questionID = el.id;
         value = el.val;
         textAns = el.choseAns;
+        console.log(textAns)
+
+
         ansRow.push(userID, questionID, value, `${textAns}`); 
         ansArr.push(ansRow);
 

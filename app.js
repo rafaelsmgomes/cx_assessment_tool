@@ -24,12 +24,11 @@ var config = {
         
     // }
 }
-doSomething()
 async function doSomething() {
     try{
         const result = await pdfReactor.convert(config);
         
-        fs.writeFile('pdfResult.pdf', result.document, 'base64', function(err) {
+        fs.writeFile('./bin_dev/pdfResult.pdf', result.document, 'base64', function(err) {
             if (err) {
                 console.log(err)
             }
@@ -86,21 +85,14 @@ let ansArr = []
 // ROUTES
 // ------------------------------------------------------------
 
-// app.get('/pdfreactor', (req, res) => {
-//     try{
-//         const PDFResult = await pdfReactor.convert(config);
-    
-//         fs.writeFile('pdfResult.pdf', PDFResult.document, 'base64', function(err) {
-//             if (err) {
-//                 console.log(err)
-//             } else {
-//                 res.send('pdfResult.pdf')
-//             }
-//         });
-//     } catch (err) {
-//         console.log(err)
-//     }
-// })
+app.get('/pdfreactor', (req, res) => {
+    doSomething()
+    .then(() => {
+        fs.readFile('./bin_dev/pdfResult.pdf', (err, data) => {
+            res.contentType('application/pdf').send(data)
+        })
+    })
+})
 
 app.get('/cx/maturity', (req, res) => {
     res.render('index'); 

@@ -3,16 +3,55 @@ const express     = require("express"),
     faker         = require("faker"),
     mysql         = require("mysql"),
     path          = require("path"),
-    ejs           = require("ejs");
+    ejs           = require("ejs"),
+    fs            = require("fs");
 
 const app = express();
 
-const fs      = require("fs");
-
-
-
 const sql = require('./database/queries');
-// const state = require('./src/js/state');
+const PDFReactor = require('./PDF/PDFreactor/wrappers/nodejs/lib/PDFreactor');
+
+var pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");
+
+var config = {
+    document: "http://www.pdfreactor.com/product/samples/textbook/textbook.html",
+    // document: "http://oracle.assessment-tools.com/PDF/cx-content.html",
+    // document: "./PDF/cx-content.html",
+    // addLinks: true,
+    // pixelsPerInch:71,
+    // javaScriptSettings:{
+    //     enabled:true
+        
+    // }
+}
+doSomething()
+async function doSomething() {
+    try{
+        const result = await pdfReactor.convert(config);
+        
+        fs.writeFile('pdfResult.pdf', result.document, 'base64', function(err) {
+            if (err) {
+                console.log(err)
+            }
+        });
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+// try{
+//     const result = await pdfReactor.convert(config);
+    
+//     fs.writeFile('pdfResult.pdf', result.document, 'base64', function(err) {
+//         if (err) {
+//             console.log(err)
+//         }
+//     });
+// } catch (err) {
+//     console.log(err)
+// }
+
+
 
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/bin_dev`));
@@ -39,31 +78,29 @@ const conn = mysql.createPool({
     multipleStatements: true 
 }); 
 
-// conn.config.queryFormat = (query, values) => {
-//     if (!values) return query;
-//     return query.replace(/\:(\w+)/g, (txt, key) => {
-//         if (values.hasOwnProperty(key)) {
-//             return this.escape(values[key]);
-//         }
-//         return txt;
-//     }.bind(this));
-// } 
-
-conn.config.queryFormat = function (query, values) {
-    if (!values) return query;
-    return query.replace(/\:(\w+)/g, function (txt, key) {
-      if (values.hasOwnProperty(key)) {
-        return this.escape(values[key]);
-      }
-      return txt;
-    }.bind(this));
-};
-  
-
-// console.log(state);
 let userArr = []; 
 let userID;
 let ansArr = []
+
+// ------------------------------------------------------------
+// ROUTES
+// ------------------------------------------------------------
+
+// app.get('/pdfreactor', (req, res) => {
+//     try{
+//         const PDFResult = await pdfReactor.convert(config);
+    
+//         fs.writeFile('pdfResult.pdf', PDFResult.document, 'base64', function(err) {
+//             if (err) {
+//                 console.log(err)
+//             } else {
+//                 res.send('pdfResult.pdf')
+//             }
+//         });
+//     } catch (err) {
+//         console.log(err)
+//     }
+// })
 
 app.get('/cx/maturity', (req, res) => {
     res.render('index'); 

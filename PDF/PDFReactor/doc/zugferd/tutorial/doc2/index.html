@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Basic ZUGFeRD Sample</title>
+    <link type="text/css" href="../resources/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="zugferd.js"></script>
+</head>
+
+<body>
+    
+    <!-- Angaben des Verkäufers-->
+    <div id="seller">
+        <p>
+            <span id="sellerName">Brutto Handelswaren GmbH</span><br />
+            <span id="sellerLineone">Prager Str. 45</span><br />
+            <span id="sellerPostcode">66115</span> <span id="sellerCity">Saarbrücken</span><br />
+            <span id="sellerCountry">GERMANY</span>
+        </p>
+    </div>
+    
+    <!-- Angaben des Käufers-->
+    <div id="buyer">
+        <p>
+            <span id="buyerName">Max Mustermann</span><br />
+            <span id="buyerLineone">Musterstraße 17</span><br />
+            <span id="buyerPostcode">50606</span> <span id="buyerCity">Köln</span><br />
+            <span id="buyerCountry">GERMANY</span>
+        </p>
+    </div>
+    
+    <!-- Angaben zur Rechnung-->
+    <div id="invoiceData">
+        <table>
+            
+            <!-- Name -->
+            <tr>
+                <th colspan="2">Rechnung</th>
+            </tr>
+            
+            <!-- Rechnungs ID -->
+            <tr>
+                <td>Rechnungsnummer:</td>
+                <td>574182</td>
+            </tr>
+            
+            <!-- Datum der Rechnung -->
+            <tr>
+                <td>Austellungsdatum:</td>
+                <td>2017-07-04</td>
+            </tr>
+            
+            <!--  Voraussichtliches Lieferdatum -->
+            <tr>
+                <td>Lieferdatum:</td>
+                <td>2017-07-15</td>
+            </tr>
+        </table>
+    </div>
+    
+    <table id="articles">
+        <tr>
+            <td>Pos.</td>
+            <td>Artikelnr.</td>
+            <td>Bezeichnung</td>
+            <td>Menge</td>
+            <td>ME</td>
+            <td>Einzelpreis</td>
+            <td>Gesamtpreis</td>
+            <td>Steuersatz</td>
+        </tr>
+        
+        <!-- 1. Position -->
+        <tr class="item">
+            <td>1</td>
+            <td>5874</td>
+            <td>Druckerpapier 200 Blatt Größe A4; Weiß</td>
+            <td>50</td>
+            <td>stk.</td>
+            <td>15,00</td>
+            <td>750,00</td>
+            <td>19,00%</td>
+        </tr>
+        
+        <!-- 2. Position -->
+        <tr class="item">
+            <td>2</td>
+            <td>2356</td>
+            <td>Tackernadeln 500 Nadeln</td>
+            <td>5</td>
+            <td>stk.</td>
+            <td>4,99</td>
+            <td>24,95</td>
+            <td>19,00%</td>
+        </tr>
+        
+        <!-- 3. Position -->
+        <tr class="item">
+            <td>3</td>
+            <td>3521</td>
+            <td>Mineralwasser 6 Flaschen</td>
+            <td>12</td>
+            <td class="kaesten">Kästen</td>
+            <td>7,99</td>
+            <td>95,88</td>
+            <td>7,00%</td>
+        </tr>
+        
+        <tr id="subTotal">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Zwischensumme</td>
+            <td>EUR</td>
+            <td id="taxBasis">870,83</td>                       <!-- Gesamtbetrag aller Position ohne Steuern-->
+            <td></td>
+        </tr>
+        
+        <!-- 1. Steuerberechnung -->
+        <tr class="tax">
+            <td></td>
+            
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>7,00% von</td>                                  <!-- Steuerprozent -->
+            <td>95,88</td>                                      <!-- Basisbetrag -->
+            <td>6,71</td>                                       <!-- Berechneter Betrag -->
+            <td></td>
+        </tr>
+        
+        <!-- 2. Steuerberechnung -->
+        <tr class="tax">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>19,00% von</td>                                 <!-- Steuerprozent -->
+            <td>774,95</td>                                     <!-- Basisbetrag -->
+            <td>147,24</td>                                     <!-- Berechneter Betrag -->
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="taxTotal">153,95</td>                       <!-- Steuergesamtbetrag -->
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Gesamtbetrag</td>
+            <td id="waehrung">EUR</td>
+            <td id="grandTotal">1.024,78</td>                    <!-- Gesamtbetrag mit Steuern -->
+            <td></td>
+        </tr>
+    </table>
+    
+    <p>Der Rechnungsbetrag ist unter Angabe der Belegnummer innerhalb der Zahlungsfrist durch Überweisung auf unser unten genanntes
+       Konto bankspesenfrei für uns zu bezahlen.</p>
+       
+    <div id="zahlungsvereinbarungen">
+        <h3>Zahlungsvereinbarungen:</h3>
+        <p><span>30 Tage</span><span>(bis 2017-08-02)</span><span>ohne Abzug</span><span>1.024,78 EUR</span></p>
+    </div>
+    
+    <!-- Enthält VAT- und TAX-ID -->
+    <div id="footer">
+        Brutto Warenhandel GmbH - Amtsgericht Saarbrücken, HRB 94711 - Geschäftsführer: Herbert Mustermann, Gabriela Mustermann<br/>
+        Depotbank Saarbrücken - IBAN: DE13 6845 1229 3154 9235 60 - Swift Code: SBESDE65 - USt-IdNr: DE335344217 - St.-Nr: 151/257/11526<br/>
+        Rechtliche Hinweise: All Angaben auf dieser Seite sind fiktiv. Jede Ähnlichkeit mit realen Daten ist rein zufällig.<br/>
+        Es gibt keine Garantie dass diese Angaben genau, aktuell oder vollständig sind.
+    </div>
+</body>
+
+</html>

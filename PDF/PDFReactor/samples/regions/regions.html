@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Regions Sample</title>
+        
+        <link href="../common.css" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Regions Sample</h1>
+        
+        <!-- Around the picture Sample -->
+        
+        <h2>Around the Picture</h2>
+        
+        <p>The following example shows how to create a document with regions 
+           placed around a picture.
+        </p> 
+        
+        
+        <!--  Around the Picture: Named Flow  -->
+        
+        <div id="aroundthePictureFlow">
+            <h1>The History of Bridges</h1>
+            <p>The first bridges were made by nature itself — as simple as a log fallen across a stream or stones in the river.</p>
+            <p>The first bridges made by humans were probably spans of cut wooden logs or planks and eventually stones, using a simple support and crossbeam arrangement.</p>
+            <p>Some early Americans used trees or bamboo poles to cross small caverns or wells to get from one place to another.</p>
+            <p>A common form of lashing sticks, logs, and deciduous branches together involved the use of long reeds or other harvested fibers woven together to form a connective rope capable of binding and holding together the materials used in early bridges.</p>
+            <p>The Arkadiko Bridge is one of four Mycenaean corbel arch bridges part of a former network of roads, designed to accommodate chariots, between Tiryns to Epidauros in the Peloponnese, in Greece.</p>
+            <p>Dating to the Greek Bronze Age (13th century BC), it is one of the oldest arch bridges still in existence and use. Several intact arched stone bridges from the Hellenistic era can be found in the Peloponnese in southern Greece</p>
+            <p>The greatest bridge builders of antiquity were the ancient Romans. The Romans built arch bridges and aqueducts that could stand in conditions that would damage or destroy earlier designs. Some stand today.</p>
+            <p>An example is the Alcántara Bridge, built over the river Tagus, in Spain.</p>
+            <p class="source">Excerpt from "Bridge" via Wikipedia:<br/><span class="nobreak">http://en.wikipedia.org/wiki/Bridge</span></p>
+        </div>
+        
+        <!--  Around the Picture: Regions  -->
+        
+        <div id="aroundThePictureSample">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <img src="bridge.jpg" alt=""/>
+        </div>
+        
+        <div class="code"><code>#aroundthePictureFlow {
+    -ro-flow-into: textFlow; /* defines the named flow "textFlow" */
+    ...
+}
+#aroundThePictureSample div {
+    -ro-flow-from: aroundThePictureFlow; /* fills the divs wit the named flow "textFlow" */
+}
+
+#aroundThePictureSample :-ro-matches(div, img) {
+    position: absolute;
+}
+
+#aroundThePictureSample img { /* places the picture */
+    display: block;
+    top: 5cm; left: 6cm;
+    width: 10.5cm; height: 7cm;
+}
+
+#aroundThePictureSample :nth-child(1) { /* places one of the regions */
+    top: 0.5cm; left: 0.5cm; right: 0.5cm; 
+    height: 0.75cm;
+}
+
+...</code>
+        </div>
+        
+        <!-- Hourglass Sample -->
+        
+        <h2>Hourglass</h2>
+        
+        <p>The following example shows how to create an hour glass shape with 
+           regions.
+        </p> 
+        
+        
+        <!--  Hourglass: Named Flow  -->
+        
+        <div id="hourGlassFlow">
+            An hourglass (sandglass, sand timer, sand watch, sand clock, egg timer) measures the passage of a few minutes or an hour of time. It has two connected vertical glass bulbs allowing a regulated trickle of material from the top to the bottom. Once the top bulb is empty, it can be inverted to begin timing again. Factors affecting the time measured include the amount of sand, the bulb size, the neck width, and the sand quality. Alternatives to sand are powdered eggshell and powdered marble (sources disagree on the best material). In modern times, hourglasses are ornamental, or used when an approximate measure suffices, as in egg timers for cooking or for board games.
+        </div>
+        
+        
+        <!--  Hourglass: Regions  -->
+        
+        <div id="hourGlassSample">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <p class="source">Excerpt from "Hourglass" via Wikipedia: <span class="nobreak">http://en.wikipedia.org/wiki/Hourglass</span></p>
+        
+        <div class="code"><code>#hourGlassFlow {
+    -ro-flow-into: hourGlassFlow;
+}
+
+#hourGlassFlow {
+    hyphens: auto;
+    font-size: 3mm;
+    orphans: 1; widows: 1;
+    text-align: justify; -ro-text-align-last: justify;
+    line-height: 1; letter-spacing: 0.10mm;
+}
+
+#hourGlassSample {
+    margin: 5mm auto;
+}
+
+#hourGlassSample div {
+    -ro-flow-from: hourGlassFlow;
+    height: 5mm;
+    margin: 0.5mm auto;
+}
+
+#hourGlassSample div:nth-child( 1) { width: 8cm; }
+#hourGlassSample div:nth-child( 2) { width: 8.15cm; }
+#hourGlassSample div:nth-child( 3) { width: 6cm; }
+...</code>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,77 @@
+@media screen {
+    .flex {
+        width: 15cm;
+    }
+}
+
+@media page {
+    .flex {
+        width: auto;
+    }
+}
+
+.flex {
+    border: 1px solid grey;
+    background-color: seashell;
+    padding: 0.5cm;
+    display: flex;
+    break-before: avoid;
+}
+
+.flex div {
+    margin: 0.1cm;
+    height: 1cm;
+    background-color: lightgreen;
+    border: 1px solid grey;
+    text-align: center;
+    padding: 0.2cm;
+    font-size: 0.8em;
+    font-family: Courier, monospace;
+}
+
+.grow div {
+    flex-grow: 1;
+}
+
+.grow2 div:nth-of-type(3) {
+    flex-grow: 3;
+}
+
+.alignSingle div:nth-of-type(4) {
+    margin-left: 8cm;
+    background-color: red;
+}
+
+.rowWrap {
+    -ro-flow-into: rowWrapRegion;
+    -webkit-flow-into: rowWrapRegion;
+    flow-into: rowWrapRegion;
+}
+
+.fakePage {
+    margin: 1cm;
+    border: 1px solid black;
+    width: 7cm;
+    height: 4.5cm;
+    break-before: avoid;
+}
+
+.rowWrapRegion1, .rowWrapRegion2 {
+    -ro-flow-from: rowWrapRegion;
+    webkit-flow-from: rowWrapRegion;
+    flow-from: rowWrapRegion;
+    padding: 0.2cm;
+}
+
+.columnWrap {
+    -ro-flow-into: columnWrapRegion;
+    -webkit-flow-into: columnWrapRegion;
+    flow-into: columnWrapRegion;
+}
+
+.columnWrapRegion1, .columnWrapRegion2 {
+    -ro-flow-from: columnWrapRegion;
+    webkit-flow-from: columnWrapRegion;
+    flow-from: columnWrapRegion;
+    padding: 0.2cm;
+}

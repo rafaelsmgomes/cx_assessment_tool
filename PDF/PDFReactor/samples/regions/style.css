@@ -1,0 +1,176 @@
+/* Fonts */
+
+@font-face {
+    font-family: Handwriting;
+    src: url("JOURNAL.TTF") format("truetype");
+}
+
+
+/* General */
+
+body > h2:not(:first-of-type) {
+    break-before: page;
+    margin-top: 0;
+}
+
+div.sample {
+    border: thin solid black;
+    hyphens: auto;
+}
+
+p.source {
+    text-align: left;
+}
+
+span.nobreak {
+    white-space: pre;
+}
+
+
+/* Sample: Around the Picture */
+
+#aroundthePictureFlow {
+    -ro-flow-into: textFlow;
+    margin: 0;
+    padding: 0;
+}
+
+
+#aroundthePictureFlow :-ro-matches(h1, p) {
+    font-family: arial, sans-serif;
+    color: black;
+    
+    margin: 0;
+}
+
+#aroundthePictureFlow p {
+    font-size: 8.5pt;
+    line-height: 1.25;
+    hyphens: auto;
+}
+
+#aroundthePictureFlow p.source {
+    font-size: 7.5pt;
+    font-style: italic;
+    text-indent: 0;
+    
+    margin-top: 3.5mm;
+    border-top: 0.3mm solid grey;
+    padding-top: 1mm;
+}
+
+#aroundthePictureFlow p + p {
+    text-indent: 1em;
+}
+
+#aroundthePictureFlow h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 2mm;
+    text-align: center;
+    
+    break-after: region;
+}
+
+#aroundThePictureSample {
+    position: relative;
+    width: 16cm;
+    height: 11.5cm;
+    
+    margin: 5mm auto;
+    border: 0.3mm solid grey;
+    padding: 5mm;
+}
+
+#aroundThePictureSample :-ro-matches(div, img) {
+    position: absolute;
+}
+
+#aroundThePictureSample div {
+    -ro-flow-from: textFlow;
+}
+
+#aroundThePictureSample :nth-child(1) {
+    top: 0.5cm;
+    left: 0.5cm;
+    right: 0.5cm;
+    height: 0.75cm;
+}
+
+#aroundThePictureSample :nth-child(2) {
+    top: 1.5cm;
+    left: 0.5cm;
+    width: 5cm;
+    height: 10.5cm;
+}
+
+#aroundThePictureSample :nth-child(3) {
+    top: 1.5cm;
+    left: 6cm;
+    width: 5cm;
+    height: 3.3cm;
+}
+
+#aroundThePictureSample :nth-child(4) {
+    top: 1.5cm;
+    left: 11.5cm;
+    width: 5cm;
+    height: 3cm;
+}
+
+#aroundThePictureSample img {
+    display: block;
+    top: 5cm;
+    left: 6cm;
+    width: 10.5cm;
+    height: 7cm;
+}
+
+
+/* Sample: Hourglass */
+
+#hourGlassFlow {
+    -ro-flow-into: hourGlassFlow;
+    font-family: arial, sans-serif;
+}
+
+#hourGlassFlow {
+    hyphens: auto;
+    font-size: 3mm;
+    orphans: 1;
+    widows: 1;
+    text-align: justify;
+    -ro-text-align-last: justify;
+    letter-spacing: 0.10mm;
+}
+
+#hourGlassSample {
+    margin: 5mm auto;
+}
+
+#hourGlassSample div {
+    -ro-flow-from: hourGlassFlow;
+    
+    height: 5mm;
+    margin: 0.5mm auto;
+}
+
+#hourGlassSample div:nth-child( 1) { width: 8cm; }
+#hourGlassSample div:nth-child( 2) { width: 8.15cm; }
+#hourGlassSample div:nth-child( 3) { width: 6cm; }
+#hourGlassSample div:nth-child( 4) { width: 6cm; }
+#hourGlassSample div:nth-child( 5) { width: 6cm; }
+#hourGlassSample div:nth-child( 6) { width: 5.75cm; }
+#hourGlassSample div:nth-child( 7) { width: 5cm; }
+#hourGlassSample div:nth-child( 8) { width: 4cm; }
+#hourGlassSample div:nth-child( 9) { width: 2.25cm; }
+#hourGlassSample div:nth-child(10) { width: 1.5cm; }
+#hourGlassSample div:nth-child(11) { width: 2.25cm; }
+#hourGlassSample div:nth-child(12) { width: 4cm; }
+#hourGlassSample div:nth-child(13) { width: 5cm; }
+#hourGlassSample div:nth-child(14) { width: 5.75cm; }
+#hourGlassSample div:nth-child(15) { width: 6cm; }
+#hourGlassSample div:nth-child(16) { width: 6cm; }
+#hourGlassSample div:nth-child(17) { width: 6cm; }
+#hourGlassSample div:nth-child(18) { width: 8.15cm; }
+#hourGlassSample div:nth-child(19) { width: 8cm; }

@@ -1,0 +1,226 @@
+@font-face {
+    src: url("fnt/Alegreya/Alegreya.woff");
+    font-family: textFont;
+}
+
+@font-face {
+    src: url("fnt/Alegreya/AlegreyaBold.woff");
+    font-family: textFont;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url("fnt/ChristensenCaps.ttf");
+    font-family: dropCapFont;
+}
+
+@page:first {
+    counter-increment: page 0;
+    @bottom-center {
+        content: none;
+    }
+}
+
+@page:-ro-nth(2) {
+    counter-increment: page 0;
+    @bottom-center {
+        content: none;
+    }
+}
+
+@page {
+    size: letter;
+    margin: 1in;
+    padding: 0.25in 0;
+    font-size: 22pt;
+    
+    @bottom-center { 
+        content: counter(page); 
+        text-align: center; 
+    }
+    
+    @top-center {
+        padding-top: 0.5in;
+        border-bottom: 2.5pt solid black;
+    }
+}
+
+@page:left { 
+    margin-left: 1.5in;
+    margin-right: 0.75in;
+    
+    @top-center { 
+        content: "The Wonderful Wizard of Oz";
+        text-align: left;
+    } 
+}
+
+@page:right { 
+    margin-left: 0.75in;
+    margin-right: 1.5in;
+    
+    @top-center { 
+        content: string(chapter, last); 
+        text-align: right;
+    } 
+}
+
+@page:blank {
+    background-image: url('Decoline01.svg');
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 0.375in) 50%;
+    
+    @top-center {
+        content: "";
+        border-bottom: none;
+    }
+}
+
+@page title {
+    margin: 0;
+    @top-center { content: none }
+    @bottom-center { content: none }
+}
+
+@-ro-preferences {
+    first-page-side: right;
+    page-layout: 2 column;
+    initial-zoom: fit-page;
+}
+
+html {
+    font-family: textFont, 'times new roman', serif;
+    font-size: 16pt;
+    line-height: 1.25;
+    -ro-line-grid: create;
+}
+
+body {
+    margin-left: 6pt;
+    margin-right: 6pt;
+}
+
+p {
+    text-align: justify;
+    margin: 0;
+    -ro-line-snap: baseline;
+    text-indent: 1.75em;
+    orphans: 3;
+    widows: 3;
+    hyphens: auto;
+    hyphenate-before: 3;
+    hyphenate-after: 3;
+}
+
+/* first paragraph of each chapter */
+h2 + p {
+    text-indent: 0;
+}
+h2 + p::first-letter {
+    float: left;
+    font-family: dropCapFont;
+    font-size: 3.6em;
+    margin-right: 0.075em;
+    line-height: 0.5;
+}
+
+/* chapter headings */
+h2 {
+    line-height: 110%;
+    string-set: chapter self;
+    break-before: left;
+    break-after: page;
+    margin-top: 0;
+    font-size: 50pt;
+    padding-top: 1.5in;
+    width: 55%;
+}
+
+/* chapter headings, except the first one ("Introduction") */
+body > h2:nth-of-type(n+2) {
+    counter-increment: chapter;
+    string-set: chapter before; 
+}
+body > h2:nth-of-type(n+2)::before { 
+    content: "Chapter " counter(chapter, "-ro-spelled-out-en") "\A";
+    white-space: pre;
+    text-transform: capitalize;
+    font-size: 0.25em;
+    font-weight: normal;
+    letter-spacing: 0.5em;
+}
+
+/* author and title */
+h1 {
+    padding-top: 3in;
+    font-size: 1em;
+    font-weight: normal;
+    counter-reset: chapter;
+    text-align: center;
+    margin-top: 0;
+    page: title;
+}
+
+h1 + h1 {
+    -ro-bookmark-level: none;
+    -ro-pdf-tag-type: "P"
+}
+
+/* title */
+h1:first-child {
+    font-size: 65pt;
+    font-weight: bold;
+    line-height: 1.5;
+    padding-top: 2in;
+    padding-bottom: 1.2in;
+}
+
+div.tableOfContents {
+    break-after: page;
+}
+
+div.tableOfContents div {
+    margin-bottom: 1.5pt;
+}
+
+div.tableOfContents a {
+    color: black;
+    text-decoration: none;
+}
+
+div.tableOfContents a::after {
+    content: leader(dotted) target-counter(-ro-attr(href url), page);
+}
+
+div.tableOfContents a::before {
+    content: target-counter(-ro-attr(href url), chapter ) ". ";
+    width: 1.5em;
+    float: left;
+    text-align: right;
+    padding-right: 0.3em;
+}
+
+.acknowledgements {
+    page: acknowledgements;
+    text-indent: 0;
+    text-align: left;
+    margin: 1.5em 0;
+}
+
+.acknowledgements.title {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+@page acknowledgements {
+    @top-center { content: none }
+    @bottom-center { content: none }
+    margin-left: 0.75in;
+    margin-right: 0.75in;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ZUGFeRD Documentation and API Documentation</title>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        
+        <h1>ZUGFeRD Documentation</h1>
+        
+        <h2>The ZUGFeRD Format</h2>
+        
+        <p>ZUGFeRD is a standard developed by FeRD (Forum for Electronic Invoicing in Germany)
+        to standardize the process of creating and sharing electronic invoices.
+        A XML format is used to enable the electronic invoice checks.
+        This XML is generated via the ZUGFeRD API from PDFreactor. The integrator itself does
+        not have to deal with the XML.</p>
+        
+        <h3>ZUGFeRD Profile</h3>
+        
+        <p>PDFreactor supports two out of the three profiles specified by FeRD which can be used
+        to generate the ZUGFeRD PDF in the profiles <code>basic</code> and <code>comfort</code>.
+        The profile <code>extended</code> is currently not supported. Profile determines which 
+        ZUGFeRD-properties can be generated into the ZUGFeRD PDF and which cannot.
+        Without a profile the ZUGFeRD PDF cannot be created and the conversion will terminate 
+        with an appropriate error message.</p>
+        <p>If for example the profile is <code>basic</code>, properties which require
+        the profile <code>comfort</code>, even if specified, will not be generated. However if the
+        profile would be <code>comfort</code>, properties which only require <code>basic</code>
+        will be generated, if specified. There are also properties which are always required 
+        in order to create a ZUGFeRD PDF. These properties all require the profile <code>basic</code>,
+        and have to be specified in your JavaScript using the API. Furthermore with a higher 
+        profile, there won't be any new required properties. Hence it is possible to generate a ZUGFeRD PDF with the
+        profile <code>comfort</code> while only specifying properties which are used in <code>basic</code>.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Profile</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>basic</code></td>
+                    <td>The lowest ZUGFeRD profile.
+                    Allows to set all required information.
+                    Does not allow full support for electronic checks. </td>
+                </tr>
+                <tr>
+                    <td><code>comfort</code></td>
+                    <td>Higher level than <code>basic</code>.
+                    Allows to set more specific information, especially in terms of positions.
+                    Allows support for electronic checks to a certain degree.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>PDF and XML</h3>
+        
+        <p>A ZUGFeRD PDF consists of two parts, the PDF and the XML.
+        Everything that is visible in the PDF can be generated into the XML. 
+        Though it is not prevented programmatically, the ZUGFeRD specification states that 
+        only information that is visible or can be derived from the PDF is allowed to be 
+        generated into the XML. The last case could be the country, which is a 2-character 
+        long code. This means, if a ZUGFeRD-property is required to generate the ZUGFeRD XML 
+        and cannot be specified from the PDF, the PDF as well as the XML are invalid. 
+        There are of course some exceptions where the required information may not be specified 
+        in the PDF. This could be the <code>zugferd-profile</code> or the <code>test-indicator</code>.</p>
+        
+        <h3>The Requirements</h3>
+        
+        <p>To generate a ZUGFeRD PDF, there are some requirements that have to be met.</p>
+        
+        <h4>PDF/A3 Conformance Level</h4>
+        
+        <p>For ZUGFeRD, the PDF/A standard has to be used, which enables long term archivability.
+        The PDF standard must also allow the attachment of the ZUGFeRD XML, which 
+        limits the options to PDF/A-3a, PDF/A-3b, PDF/A-3u and PDF/A-3a with the PDF/UA-1
+        specification.</p>
+        
+        <h4>JavaScript processing</h4>
+        
+        <p>To create the ZUGFeRD PDF from the PDF, the JavaScript has to be specified in 
+        either the document or the PDFreactor API.
+        For PDFreactor to be able to process the JavaScript, the JavaScriptProcessing has to be
+        enabled.</p>
+        
+        <p>The following example specifies all requirements for PDFreactor to create a ZUGFeRD PDF
+        with either the Java library or the Java wrapper:</p>
+        
+        <div class="example">// Create a configuration object
+Configuration config = new Configuration();
+
+// Specifying the conformance
+config.setConformance(Conformance.PDFA3A);
+
+// Enable JavaScript
+config.setJavaScriptMode(JavaScriptMode.ENABLED);
+
+// Defining the JavaScript via file URL
+Resource zugferd = new Resource();
+zugferd.setUri("file:///path/to/your/zugferd.js");
+config.setUserScripts(zugferd);
+</div>
+        
+        <h3>ZUGFeRD Validation</h3>
+        
+        <p>PDFreactor does not validate prices and totals which have been specified via the 
+        ZUGFeRD API. When using the API, PDFreactor assumes that all positions, taxes and
+        totals have been calculated correctly. If they were not, the document itself would
+        not be valid. However some properties are validated. For the most part this includes
+        properties which have to be specified as ZUGFeRD code like the <code>document-type</code>
+        or the country code. This also includes codes which have been set via the
+        <a href="#options">options object</a>. There are also special cases which have to
+        be validated to ensure that the resulting ZUGFeRD PDF is correct, like the 
+        elements Gross- and NetPrice.</p>
+        
+        <h2>The Two Types of Elements</h2>
+        
+        <p>Before using the API the two types of elements have to be known.
+        Unique and repeating elements, which follow a tree data structure.</p>
+        
+        <h3 id="unique">Unique Elements</h3>
+        
+        <p>Unique elements are leaf elements directly connected to the root.
+        This elements will only be set once via the API, but are the most important
+        elements. In fact it is possible to create a ZUGFeRD PDF without any repeating
+        elements. These are elements like <code>currency</code> to set the currency used in 
+        the document or <code>document-type</code> which describes the type of the 
+        document, like invoice, with ZUGFeRD codes.</p>
+        
+        <h3 id="repeating">Repeating Elements</h3>
+        
+        <p>While repeating elements are not required to create the ZUGFeRD PDF, they add more
+        information to it. Depending on your PDF these elements will be set once or multiple
+        times. Repeating elements itself are not directly
+        connected to the root, instead they branch off the root into leaves.
+        An example for repeating elements are positions. These branch off with the
+        <a href="#path">path</a> <code>item</code> and the leaves holding the information
+        of the position, like the product name (<code>item.name</code>) or the quantity 
+        (<code>item.billed-quantity</code>) for the position.</p>
+        
+        <p>It is also possible that a repeating element branches off from another repeating
+        element. These are called nested repeating elements.
+        When <a href="#usingProperty">using a ZUGFeRD-property</a> the structure will be self-explanatory.
+        There are also some restrictions on what leaves have to be specified. When specifying a position,
+        the most important information is the product name (<code>item.name</code>) and thus has to be
+        specified. Otherwise the element will not be generated. All other information should be specified if possible
+        but are not a requirement.</p>
+        
+        <h2 id="usingProperty">Using ZUGFeRD-properties</h2>
+        
+        <p>To specify which value has to be passed to which element,
+        ZUGFeRD-properties have to be used. These ZUGFeRD-properties can be fragmented 
+        into paths and properties. While most documents will not require
+        the use of fragments, they will be useful if they are used correctly.</p>
+        
+        <h3 id="fragments">Fragments</h3>
+        
+        <p>A ZUGFeRD-property is made from fragments.
+        These fragments define the tree data structure, by splitting at the "<code>.</code>"
+        of the ZUGFeRD-property.</p>
+        
+        <div class="example">// Fragmenting a ZUGFeRD-property
+"zugferd-profile"   = "zugferd-profile"
+"item.name"         = "item", "name"
+"item.tax.type"     = "item", "tax", "type"</div>
+        
+        <p>If a ZUGFeRD-property, like "zugferd-profile", does not contain a "<code>.</code>"
+        it is automatically a property.</p>
+        
+        <h3 id="path">Path Fragment</h3>
+        
+        <p>Paths are all fragments except the last fragment.
+        The path is used to specify one or multiple repeating elements.
+        The reason for this is, that a repeating element itself cannot have a value.
+        Only the leaf elements of a repeating element can hold values.
+        So when using a path the tree data structure will be specified.</p>
+        
+        <div class="example">// Path "item" 
+ro.zugferd.get("item", 0);</div>
+        
+        <p>If a ZUGFeRD-property contains more than one "<code>.</code>" it means that there 
+        is a repeating element inside a repeating element. This also means that there are two 
+        paths fragments. It is not possible to specify these as a single path.
+        Instead the first path retrieves a repeating element from the <code>ro.zugferd</code>
+        object, and the second path retrieves the repeating elements from the retrieved 
+        element.</p>
+        
+        <div class="example">// Path "item.tax"
+var item = ro.zugferd.get("item", 0);
+
+item.get("tax", 0);</div>
+        
+        <p>Because unique elements only occur once, they do not have a path.</p>
+        
+        <h3 id="property">Property Fragment</h3>
+        
+        <p>The last fragment or the ZUGFeRD-property itself, if the ZUGFeRD-property does 
+        not contain a "<code>.</code>", is the property.
+        This fragment defines the leaf element to which the specified or retrieved 
+        value will be applied.</p>
+        
+        <div class="example">// Unique Elements
+ro.zugferd.set("zugferd-profile", "basic");
+
+// Repeating elements
+ro.zugferd.get("item", 0).set("name", "Sample Product");
+
+// Nested repeating elements
+ro.zugferd.get("item", 0).get("tax", 0).set("type", "VAT");</div>
+        
+        <h3>When to Use Fragments?</h3>
+        
+        <p>Most of the time the use of fragments is unnecessary.
+        A ZUGFeRD PDF can be generated from a complex document without ever having to fragment
+        a ZUGFeRD-property.
+        Fragments are only required if a value has to be passed to a specific repeating element.
+        Whenever the <code>get</code> method is called from the "ro.zugferd" object with the 
+        first fragment, to retrieve a repeating element every other method which is called 
+        on this repeating element has to be the next fragment of the ZUGFeRD-property.
+        Let's examine the following HTML snippet for example:</p>
+        
+        <div class="example">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;thead&gt;
+    &lt;tbody&gt;
+        &lt;tr class="item"&gt;
+            &lt;td&gt;Position 1&lt;/td&gt;
+            &lt;td&gt;50.00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="item"&gt;
+            &lt;td&gt;Position 2&lt;/td&gt;
+            &lt;td&gt;4.99&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</div>
+        
+        <p>This table can be converted into a ZUGFeRD PDF by using fragments, but 
+        it can also be avoided:</p>
+        
+        <div class="example">// Without fragments
+// Setting the product names
+ro.zugferd.setFromSelectorAll("item.name", ".item td:nth-child(0)");
+
+// Setting the product prices
+ro.zugferd.setFromSelectorAll("item.line-total", ".item td:nth-child(1)", { inputFormat: "." } );
+
+
+// With fragments, assuming that there were at least two items specified already
+// Retrieving all elements with the path "item"
+var items = ro.zugferd.get("item");
+   
+// Iterating over the items array
+for (var i = 0; i &lt; items.length; i++) {
+    
+    // Setting the product names
+    items[i].setFromSelector("name", ".item:nth-child(" + i + ") td:nth-child(0)");
+    
+    // Setting the product prices
+    items[i].setFromSelector("line-total", ".item:nth-child(" + i + ") td:nth-child(1)", { inputFormat: "." } );
+}</div>
+        
+        <p>As seen above, both ways are possible but using fragments adds an extra layer of
+        complexity. Consequently, fragments should only be used if the case requires them.</p>
+        
+        <h2>Special Cases</h2>
+        
+        <p>While the API should be as easy to use as possible, some elements and properties 
+        require more attention than others. This is either due to the ZUGFeRD specification 
+        or how they were implemented in PDFreactor.</p>
+        
+        <h3>VAT and Tax Id</h3>
+        
+        <p>While the ZUGFeRD specification does allow an unlimited amount of tax registrations, 
+        PDFreactor limits this information to two ZUGFeRD-properties per involved party.
+        To specify this information for the selling party for example, the properties 
+        <code>seller-vatid</code> and <code>seller-taxid</code> are used.</p>
+        
+        <h3>Gross- and NetPrice Elements</h3>
+        
+        <p>Gross- and NetPrice are two elements, which are always generated if at least 
+        one of them is specified with the ZUGFeRD-properties <code>item.gross-price-amount</code> or 
+        <code>item.net-price-amount</code>. As long as the ZUGFeRD-property <code>item.gross-price-allowance-charge.amount</code>
+        has not been specified to define an allowance or charge, Gross and NetPrice are the 
+        same and no special attention has to be given. If <code>item.gross-price-allowance-charge.amount</code> 
+        has been specified however, the net price is not allowed to be equal to the gross price 
+        and the ZUGFeRD PDF will not be generated. An appropriate exception will be thrown.</p>
+        
+        <h3>Referenced Documents</h3>
+        
+        <p>When referencing a document, like a previously sent invoice which now has to 
+        be canceled, the <a href="#options">options object</a> is still required to specify 
+        the current date format. However, the output format is fixed to <code>yyyy-MM-dd'T'00:00:00</code> 
+        and thus has not to be specified via the <a href="#options">options object</a> property scheme.</p>
+        
+        <h3>document-type</h3>
+        
+        <p>To specify the document type by ZUGFeRD code, the property <code>document-type</code> has to be used.
+        While the document does not have to be a commercial invoice, with the ZUGFeRD profile <code>basic</code> 
+        only the ZUGFeRD code <code>380</code> is allowed. Other document types may require 
+        more information than it is possible to specify with a basic profile.</p>
+        
+        <h3>charge-total and allowance-total</h3>
+        
+        <p>These two ZUGFeRD-properties are required per ZUGFeRD specification to generate the ZUGFeRD PDF.
+        While they are required, PDFreactor will set this properties automatically with the value <code>0.00</code>.
+        This is because, these two properties may not be able to be set from the PDF. However if they are
+        specified in the PDF these two properties should be set to ensure that the ZUGFeRD PDF is valid.</p>
+        
+        <h3>item.global-id-type</h3>
+        
+        <p>When using the ZUGFeRD-property <code>item.global-id</code>, it is not possible 
+        to specify the organization in which this product is registered via the <a href="#options">options object</a> 
+        property scheme. This is due to the fact that different products can be registered 
+        by different organizations and setting them via the API in bulk can lead to undesirable results.
+        To specify the organization by ZUGFeRD code, the ZUGFeRD-property <code>item.global-id-type</code> is used
+        instead.</p>
+        
+        <h3>mandate-reference-id</h3>
+        
+        <p>When specifying the ZUGFeRD-property <code>mandate-reference</code> it is possible 
+        to specify an id for this mandate. This <code>mandate-reference-id</code> is given by 
+        the mandate itself and has to be used. The ZUGFeRD-property <code>mandate-reference-id</code> 
+        is not required to generate the <code>mandate-reference</code>.</p>
+        
+        <h1>API Methods</h1>
+        
+        <h2>ro.zugferd</h2>
+        
+        <p>To interact with the ZUGFeRD API, the <code>ro.zugferd</code> object has to be used.
+        With this object it is possible to configure certain values, set <a href="#defaults">default</a>
+        values for repeating elements and to define the input and output formats, as
+        well as setting unique and repeating elements and retrieving repeating elements.</p>
+        
+        <div>
+            <h3>addMapping(key, value, <a href="#options">options</a>?)</h3>
+            
+            <p>Mappings can be used to set the specified value instead of the value passed to a method.
+            This is especially useful if a human readable value was retrieved from the document, 
+            but it has to be passed as a ZUGFeRD code.
+            Please note that the key is case sensitive and does not ignore spaces.
+            To disable the mapping use the <a class="code" href="#options">options</a> object
+            property <a class="code" href="#optionalIgnoreMapping">ignoreMapping</a> when calling 
+            a method. An <a class="code" href="#optionalHandler">errorHandler</a> can be appended via
+            the <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">ro.zugferd.addMapping("Invoice", "380");
+ro.zugferd.addMapping("Piece", "C62");
+ro.zugferd.addMapping("England", "GB");
+ro.zugferd.addMapping("USA", "US");</div>
+        </div>
+        
+        <div>
+            <h3>set(zugferdProperty, value, <a href="#options">options</a>?)</h3>
+            
+            <p>Sets the specified value as content for the specified ZUGFeRD-property.
+            The value can be modified using the <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">ro.zugferd.set("zugferd-profile", "basic");</div>
+        </div>
+        
+        <div>
+            <h3>setFromSelector(zugferdProperty, selector, <a href="#options">options</a>?)</h3>
+            
+            <p>Retrieves the text content of an element matching the given selector and sets 
+            it as value for the specified ZUGFeRD-property. The content of the ZUGFeRD-element 
+            can be modified using the <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">ro.zugferd.setFromSelector("grand-total", "#grandTotal", { inputFormat: "." });</div>
+        </div>
+        
+        <div>
+            <h3>setFromSelectorAll(zugferdProperty, selector, <a href="#options">options</a>?)</h3>
+            
+            <p>Retrieves the text content of each element matching the given selector and 
+            sets it as value of the specified ZUGFeRD-property. If no matching elements 
+            are found, this process will create new elements.
+            This method is not allowed for ZUGFeRD-properties with multiple <a href="#path">paths</a>
+            fragments. Use the setFromSelectorAll method with the selector array for these ZUGFeRD-properties instead.
+            The content of the ZUGFeRD-element can be modified using the <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">ro.zugferd.setFromSelectorAll("item.name", ".items .ProductName");</div>
+        </div>
+        
+        <div>
+            <h3>setFromSelectorAll(zugferdProperty, selector[], <a href="#options">options</a>?)</h3>
+            
+            <p>When using this method it is possible to define each <a href="#fragments">fragment</a> with its 
+            own selector. If more selectors than fragments have been specified, the method call will be interrupted.
+            If the selector defines a <a href="#path">path</a> fragment, new repeating elements
+            with this path fragment will be created. The number of newly created repeating elements depends on
+            how many elements have been found via the selector and how many elements already exist. It is possible
+            to select direct child elements only, by using the ">" selector after the first selector in the array.
+            The content of the ZUGFeRD-element can be modified using the <a class="code" href="#options">options</a>
+            object.</p>
+            
+            <div class="example">// Non-nested elements
+ro.zugferd.setFromSelectorAll("item.name", [".items", ".ProductName"] );
+
+// Nested elements
+// ".tax" contains the value.
+ro.zugferd.setFromSelectorAll("item.tax.percent", [".items", ".tax"] );
+
+// ".percent" contains the value.
+ro.zugferd.setFromSelectorAll("item.tax.percent", [".items", ".tax", ".percent"] );
+
+// > Selector
+ro.zugferd.setFromSelectorAll("item.tax.percent", [".items", "> tr:nth-child(2)"] );</div>
+        </div>
+        
+        <div>
+            <h3>get(pathFragment, index, <a href="#options">options</a>?)</h3>
+            
+            <p>Returns the repeating element with the specified <a href="#path">path</a> at the specified index.
+            If no repeating element with the specified path exists, the element itself as well
+            as all previous elements will be created.
+            An <a class="code" href="#optionalHandler">errorHandler</a> can be appended using 
+            the <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">ro.zugferd.get("item", 3);</div>
+        </div>
+        
+        <div>
+            <h3>get(pathFragment, <a href="#options">options</a>?)</h3>
+            
+            <p>Returns an array containing all repeating elements matching the given 
+            <a href="#path">path</a>. If there are no repeating elements 
+            matching the specified path, an error of <a class="code" href="#errorType">errorType</a> 
+            5000 will be passed to the <a class="code" href="#optionalHandler">errorHandler</a>.
+            An <a class="code" href="#optionalHandler">errorHandler</a> 
+            can be appended using the <a class="code" href="#options">options</a> object.
+            While the returned array is <strong>not</strong> live, values which have been set
+            will still be applied.</p>
+            
+            <div class="example">ro.zugferd.get("item");</div>
+        </div>
+        
+        
+        <h2>Elements</h2>
+        
+        <p>Elements are the repeating elements retrieved via the <code>ro.zugferd</code> get methods.</p>
+        
+        <div>
+            <h3>set(propertyFragment, value, <a href="#options">options</a>?)</h3>
+            
+            <p>Sets the given value as content of the specified ZUGFeRD-property.
+            Because the repeating Element is known, only the last <a href="#fragments">fragment</a> of the ZUGFeRD-property has to be specified.
+            The value can be modified using the <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">// Sets the product name
+// Single element
+ro.zugferd.get("item", 3).set("name", "Sample Product");
+
+// Multiple elements
+ro.zugferd.get("item").forEach( function (param) {
+    param.set("name", "Muster Produkt");
+});</div>
+        </div>
+        
+        <div>
+            <h3>setFromSelector(propertyFragment, selector, <a href="#options">options</a>?)</h3>
+            
+            <p>Sets the text content of an element matching the given selector as value of 
+            the specified ZUGFeRD-property. Because the repeating element is known, only the 
+            <a href="#property">property</a> fragment has to be specified.
+            The content of the ZUGFeRD-element can be modified using the
+            <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">// Sets the product name
+// Single element
+ro.zugferd.get("item", 3).setFromSelector("name", "#specificItemName");
+
+// Multiple elements
+var items = ro.zugferd.get("item");
+for (var i = 0; i &lt; items.length; i++) {
+    items[i].setFromSelector("name", ".items:nth-child(" + (i + 1) + ") .ProductName");
+}</div>
+        </div>
+        
+        <div>
+            <h3>get(pathFragment, index, <a href="#options">options</a>?)</h3>
+            
+            <p>When called on a repeating element, this method returns the repeating element within
+            this element, matching the specified <a href="#path">path</a> fragment at the
+            specified index. If no repeating element with the specified path fragment exists,
+            the elements and all previous elements will be created. An
+            <a class="code" href="#optionalHandler">errorHandler</a> can be appended using the
+            <a class="code" href="#options">options</a> object.</p>
+            
+            <div class="example">var item = ro.zugferd.get("item", 3);
+
+item.get("tax", 3);</div>
+        </div>
+        
+        <div>
+            <h3>get(pathFragment, <a href="#options">options</a>?)</h3>
+            
+            <p>When called on a repeating element, this method returns an array containing 
+            all repeating elements within the element, with the specified
+            <a href="#path">path</a> fragment. If there are no repeating
+            elements with the specified path an error with the
+            <a class="code" href="#errorType">errorType</a> 5000 will be logged from the
+            <a class="code" href="#optionalHandler">errorHandler</a>.
+            An <a class="code" href="#optionalHandler">errorHandler</a> can be appended using 
+            the <a class="code" href="#options">options</a> object. 
+            While the returned array is <strong>not</strong> live, values which have been set
+            will still be applied.</p>
+            
+            <div class="example">var item = ro.zugferd.get("item", 3);
+
+item.get("tax");</div>
+        </div>
+        
+        
+        
+        
+        <h2 id="options">The "options" Object</h2>
+        
+        <p>The "options" object can be passed to a method to modify a text and to specify 
+        required information. If the ZUGFeRD-property type is <code>Date</code> or 
+        <code>Number</code> this object is required, unless the information has already been 
+        specified via the <a class="code" href="#default">default</a> object properties
+        <code>inputFormat</code> and <code>scheme</code>. If information of the same property 
+        has been specified in both the <code>options</code> and the <code>default</code> object, 
+        only the <code>options</code> object's information will be considered.</p>
+        
+        <div>
+            <h3>inputFormat</h3>
+            
+            <p>The <code>inputFormat</code> has to be specified for ZUGFeRD-properties of the 
+            type <code>Date</code> and <code>Number</code>. For ZUGFeRD-properties of the type 
+            <code>Date</code>, the Date's source format has to be described as a Java pattern.
+            If the ZUGFeRD-property is of the type <code>Number</code>, the decimal mark has 
+            to be specified. The <code>inputFormat</code> is used and processed in these two 
+            cases only. The default value for ZUGFeRD-properties of the type <code>Number</code> is
+            "<code>,</code>"</p>
+            
+            <div class="example">// Date
+ro.zugferd.set("buyer-order-reference-issue-date", "26.05.2017", { inputFormat: "dd.MM.yyyy" } );
+
+// Number
+ro.zugferd.set("line-total", "12,550.85", { inputFormat: "." } );</div>
+        </div>
+        
+        <div>
+            <h3>scheme</h3>
+            
+            <p>To specify the output format of a ZUGFeRD-property of the type <code>Date</code>,
+            the property <code>scheme</code> is needed.
+            The format is specified by a ZUGFeRD code.
+            Attention: Referenced documents use the type <code>Date</code>, but do not need an output format.
+            Another use for <code>scheme</code> is for <code>Global ID</code>s. 
+            All codes can be found in the property list under each type.
+            The property <code>scheme</code> is only used and processed in these two cases.
+            The default Value for ZUGFeRD-properties of the type <code>Date</code> is <code>102</code></p>
+            
+            <div class="example">// Date 
+ro.zugferd.set("document-issue-date", "26.05.2017", { inputFormat: "dd.MM.yyyy", scheme: "102" } );
+
+// Global ID
+ro.zugferd.set("seller-global-id", "4000001123452", { scheme: "0088" } );</div>
+        </div>
+        <div>
+            <h3>startDelimiter</h3>
+            
+            
+            <p>The property <code>startDelimiter</code> allows to extract a text starting
+            from the <strong>first</strong> occurrence of the delimiter, to the end of the text.
+            If both <code>startDelimiter</code> and <code>endDelimiter</code> are specified,
+            the text between the two specified delimiters is extracted.</p>
+            
+            <div class="example">ro.zugferd.set("seller-city", "66435 Frankfurt/M", { startDelimiter: " " });
+// Result: "Frankfurt/M"</div>
+        </div>
+        <div>
+            <h3>endDelimiter</h3>
+            
+            <p>The property <code>endDelimiter</code> allows to extract a text from the start
+            to the <strong>last</strong> occurrence of the specified delimiter.
+            If both <code>startDelimiter</code> and <code>endDelimiter</code> are specified,
+            the text between the two specified delimiters is extracted.</p>
+            
+            <div class="example">ro.zugferd.set("seller-postcode", "66435 Frankfurt/M", { endDelimiter: " " });
+// Result: "66435"</div>
+            
+        </div>
+        <div>
+            <h3>splitDelimiter</h3>
+            
+            <p>With the property <code>splitDelimiter</code> a text can be split at the specified delimiter. 
+            The property <code>splitIndex</code> can then be used to select the desired part.</p>
+        </div>
+        <div>
+            <h3>splitIndex</h3>
+            
+            <p>After splitting the text with the property <code>splitDelimiter</code>, the desired
+            part can be selected with the property <code>splitIndex</code>.
+            If no <code>splitDelimiter</code> has been specified, nothing can be retrieved.
+            The first part has the index 0.</p>
+            
+            <div class="example">ro.zugferd.set("zugferd-profile", "The ZUGFeRD profile is basic", { splitDelimiter: " ", splitIndex: 4 });
+// Result
+// "basic"</div>
+        </div>
+        <div>
+            <h3>processor</h3>
+            
+            <p>The property <code>processor</code> allows to pass your own function to a method.
+            This enables the use of conditions for further text manipulation.
+            It is also possible to redefine the properties <code>inputFormat</code> and <code>scheme</code>.
+            The following <strong>read-only</strong> properties can be called as parameter:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">rawText</td>
+                        <td>String</td>
+                        <td>Returns the unprocessed text.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">text</td>
+                        <td>String</td>
+                        <td>Returns the processed text.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">propertyName</td>
+                        <td>String</td>
+                        <td>Returns the name of the property with which the method has been called.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">element</td>
+                        <td>Element</td>
+                        <td>Returns the element retrieved by the selector.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">content</td>
+                        <td>String</td>
+                        <td>Returns the text content of the element, including the generated 
+                            <i>before</i> and <i>after</i> text.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">contentBefore</td>
+                        <td>String</td>
+                        <td>Returns the generated <i>before</i> text content of the element.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">contentAfter</td>
+                        <td>String</td>
+                        <td>Returns the generated <i>after</i> text content of the element.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">contentText</td>
+                        <td>String</td>
+                        <td>Returns the text content of the element.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="example">// Does not require an inputFormat, because tax.category is not of type "Number".
+ro.zugferd.set("tax.category", "19.00", { processor: function (param) {
+        if (param.text == "19.00" || param.text == "7.00") {
+            return "S";     // Default rate
+        }
+    }
+});
+
+// Setting the decimal mark
+ro.zugferd.set("tax.percent", "19.00", { processor: function (param) {
+        if (param.text.indexOf(".") !== -1) {
+            param.inputFormat = ".";
+        }
+        else {
+            param.inputFormat = ",";
+        }
+    }
+});</div>
+        </div>
+        
+        <div>
+            <h3 id="optionalIgnoreMapping">ignoreMapping</h3>
+            
+            <p>If mapping should be disabled for a ZUGFeRD-property use the property 
+            <code>ignoreMapping</code>.</p>
+            
+            <div class="example">// Mapping from "Invoice" to the ZUGFeRD Code "380".
+ro.zugferd.addMapping("Invoice", "380");
+
+// Name of the document should be "Invoice"
+ro.zugferd.set("document-name", "Invoice", { ignoreMapping: true });
+
+// Type of the document should be "380".
+ro.zugferd.set("document-type", "Invoice");</div>
+            
+        </div>
+        <div>
+            <h3 id="optionalHandler">errorHandler</h3>
+            
+            <p>With the property <code>errorHandler</code> it is possible to identify and 
+            analyze possible error cases. It is also possible to retrieve information regarding 
+            the current processing step. The following information can be retrieved:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">methodName</td>
+                        <td>String</td>
+                        <td>Name of the method.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">propertyName</td>
+                        <td>String</td>
+                        <td>The name of the ZUGFeRD-property or the key if the called method 
+                        was <code>addMapping</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">value</td>
+                        <td>String</td>
+                        <td>The value which was passed to the method <code>set</code> or 
+                        <code>addMapping</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">selectors</td>
+                        <td>String or [String]</td>
+                        <td>In case of <code>setFromSelector</code>, the specified selector 
+                        or the selector array in case of <code>setFromSelectorAll</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">options</td>
+                        <td>Object</td>
+                        <td>The <a class="code" href="#options">options</a> object that was 
+                        passed to the method.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">message</td>
+                        <td>String</td>
+                        <td>The message of the current log.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">errorType</td>
+                        <td>Number</td>
+                        <td>The type of the <code>warning</code> or <code>error</code>. 
+                        There is no errorType for <code>info</code>.
+                        More information about the types can be found <a href="#errorType">here</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">level</td>
+                        <td>String</td>
+                        <td>The log level. The following levels are possible:
+                        <ul>
+                            <li><code>info</code>:    Information regarding newly created ZUGFeRD-elements.</li>
+                            <li><code>warning</code>: Warnings do not end the conversion. Information regarding 
+                            the cause can be retrieved via the property <code>message</code>.</li>
+                            <li><code>error</code>:   Errors <strong>do not</strong> end the 
+                            conversion, but may end the JavaScript processing or lead to an invalid ZUGFeRD PDF.
+                            Information regarding the cause can be retrieved via the property <code>message</code>.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td class="code">matchCount</td>
+                        <td>[Number]</td>
+                        <td>On level <code>info</code> the property <code>matchCount</code> 
+                        contains an array of numbers, indicating how often a selector did find an element.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="example">ro.zugferd.set("document-issue-date", "2017-06-06", { errorHandler: function (param) {
+        if (param.level == "error") {
+            console.log(param.level);
+            console.log(param.errorType);
+            console.log(param.message);
+        }
+    }
+});</div>
+        
+        <p><strong>Note:</strong> If no <code>errorHandler</code> has been specifiedvia the options or
+        default object, it is not possible to retrieve any information regarding the ZUGFeRD processing. 
+        Possible errors cannot be analyzed.</p>
+        
+        </div> 
+        
+        <h2 id="default">The "default" Object</h2>
+        
+        <p>The <code>default</code> object is used to specify the properties <code>inputFormat</code>
+        and <code>scheme</code> on a global level.
+        Their values will be used if properties that are required by the current ZUGFeRD type, 
+        have not been specified via the <a class="code" href="#options">options</a>
+        object. It is also possible to set default values for repeating elements.</p>
+        
+        <div>
+            <h3>inputFormat</h3>
+            
+            <p>With the property <code>inputFormat</code> it is possible to set default values
+            for the ZUGFeRD-properties <code>Date</code> and <code>Number</code>.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">dateFormat</td>
+                        <td>Specifies a Java date format pattern.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">decimalMark</td>
+                        <td>Specifies a decimal mark to process ZUGFeRD-properties of the 
+                        type <code>Number</code>. The default value is "<code>,</code>".</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div>
+            <h3>scheme</h3>
+            
+            <p>The property <code>scheme</code> allows to set default values for the ZUGFeRD-properties <code>Date</code> and <code>Global ID</code>.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">dateFormat</td>
+                        <td>Specifies a ZUGFeRD Code as output format for a date. The code 
+                        list can be found in the property list for the type <code>Date</code>.
+                        The default value is <code>102</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="code">globalId</td>
+                        <td>Defines the organization the <code>Global ID</code> is registered with. 
+                        An excerpt of possible codes can be found in the property list for 
+                        the type <code>Global ID</code>. Because different products can be 
+                        registered in different organizations, this property will not be processed 
+                        for the ZUGFeRD-property <code>item.global-id</code>. Use the property 
+                        <code>item.global-id-type</code> to specify the organization instead.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div>
+            <h3>propertyValues</h3>
+            
+            <p>To set default values for repeating elements, the property <code>propertyValues</code> is used.
+            The syntax is as follows:</p>
+            
+            <div class="example">propertyValues: { 
+    "propertyName": "Value",
+    "propertyName": "Value"
+};</div>
+        </div>
+        
+        <div>
+            <h3>errorHandler</h3>
+            
+            <p>The property <code>errorHandler</code> is used in the same way as the 
+            <a class="code" href="#options">options</a> object.
+            If an <code>errorHandler</code> is specified as default, it will be called for 
+            each method call, as long as no <a class="code" href="#optionalHandler">errorHandler</a>
+            is defined as an argument when calling the method.</p>
+            
+            <p>A possible use case would be:</p>
+            
+            <div class="example">ro.zugferd.defaults = {
+    inputFormat: { dateFormat: "dd-MM-yyyy", decimalMark: "." },
+    scheme: { globalId: "0088", dateFormat: "102"  },
+    propertyValues: { "tax.type": "VAT",
+                      "item.tax.type": "VAT"
+                    }
+    errorHandler: function (param) {
+        if (param.level == "error") {
+            console.log(param.level);
+            console.log(param.errorType);
+            console.log(param.message);
+        }
+    }
+};</div>
+        </div>
+        
+        <h2 id="errorType">ErrorTypes</h2>
+        <p>In case of a <code>warning</code> or <code>error</code> the problem is summarized 
+        by the following types. A more detailed description can be retrieved from the <code>message</code>
+        property of the <a class="code" href="#optionalHandler">errorHandler</a>.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="code">1000</td>
+                    <td>API usage error</td>
+                </tr>
+                <tr>
+                    <td class="code">2000</td>
+                    <td>The value or text content of an element could not be processed with 
+                    the specified <a class="code" href="#options">options</a> object.</td>
+                </tr>
+                <tr>
+                    <td class="code">3000</td>
+                    <td>The value or text content of an element is invalid or invalid for 
+                    the specified ZUGFeRD-property.</td>
+                </tr>
+                <tr>
+                    <td class="code">4000</td>
+                    <td>The value or text content could not be parsed.
+                    This only occurs if the ZUGFeRD-property is either of the type <code>Date</code> 
+                    or <code>Number</code>.</td>
+                </tr>
+                <tr>
+                    <td class="code">5000</td>
+                    <td>Error while trying to access a repeating element via <code>get</code> or if no 
+                    element could be found with the specified selectors.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+The PDFreactor Software License Agreement and additional notices and license agreements for third-party software and/or open source software can be found in the
+
+	/license subdirectory.
+
+By installing and using this software, you accept the terms and conditions of the RealObjects PDFreactor Software License Agreement notices and the additional license agreements for third-party software and/or open source software.

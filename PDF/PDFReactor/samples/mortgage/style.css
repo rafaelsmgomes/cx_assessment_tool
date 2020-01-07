@@ -1,0 +1,461 @@
+/***********************************************************
+ * General Style
+ ***********************************************************/
+
+html {
+    font-family: arial, sans-serif;
+    line-height: 1.5;
+    
+    hyphens: auto;
+}
+
+body {
+    max-width: 21cm;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'times new roman', serif;
+    font-weight: normal;
+    color: darkslategray;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 6mm;
+    padding: 0;
+    font-size: 21pt;
+}
+
+h2 {
+    margin: 6mm 0 2mm;
+    padding: 0;
+    font-size: 16pt;
+}
+
+h3 {
+    margin: 5mm 0 2mm;
+    padding: 0;
+    font-size: 12pt;
+}
+
+p, li, td, th {
+    margin: 2mm 0;
+    padding: 0;
+    font-size: 9pt;
+}
+
+p + p {
+    margin-top: 4mm;
+}
+
+h1 + h2 {
+    margin-top: 4mm;
+}
+
+.clearFix {
+    height: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+/***********************************************************
+ * Mortgage Overview
+ ***********************************************************/
+
+#mortgageOverview > div:not(:last-child) {
+    float: left;
+    
+    width: 5.855cm;
+    height: 5cm;
+    
+    outline: 1px solid gray;
+}
+
+#balanceGraph {
+    margin: 0 5mm;
+}
+
+.flotr-legend {
+    display: none;
+}
+
+#mortgageOverview > div h4 {
+    text-align: center;
+    margin: 1mm 0;
+}
+
+#mortgageOverview > div canvas {
+    display: block;
+    margin: 1mm auto;
+}
+
+#mortgageOverview > div ul {
+    margin: 0;
+    margin-left: 6mm;
+    list-style-type: none;
+    padding: 0 1mm;
+}
+
+#mortgageOverview li {
+    float: left;
+    width: 10mm;
+    height: 3mm;
+    padding: 0;
+    margin: 0;
+    font-size: 7pt;
+}
+
+#mortgageOverview li::before {
+    content: "";
+    float: left;
+    width: 2mm;
+    height: 2mm;
+    margin-top: 0.25mm;
+    margin-left: -4mm;
+    color: black;
+}
+
+#mortgageOverview li:nth-of-type(odd) {
+    margin-right: 5mm;
+}
+
+#mortgageSummaryGraph li {
+    width: 21mm;
+    margin: 1mm 0;
+}
+
+#mortgageSummaryGraph li:nth-of-type(1)::before {
+    background-color: indianred;
+}
+#mortgageSummaryGraph li:nth-of-type(2)::before {
+    background-color: steelblue;
+}
+#mortgageSummaryGraph li:nth-of-type(3):before {
+    background-color: seagreen;
+}
+#mortgageSummaryGraph li:nth-of-type(4)::before {
+    background-color: palegoldenrod;
+}
+
+#balanceGraph li:nth-of-type(1)::before,
+#interestPrincipalGraph li:nth-of-type(1)::before {
+    background-color: indianred;
+}
+
+#interestPrincipalGraph li:nth-of-type(2)::before {
+    background-color: steelblue;
+}
+
+/***********************************************************
+ * Mortgage Summary
+ ***********************************************************/
+
+#mortgageSummary {
+    column-count: 2;
+    column-gap: 5mm;
+}
+
+#mortgageSummary h2 {
+    column-span: all;
+}
+
+#mortgageSummary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#mortgageSummary td {
+    border: 1px solid silver;
+}
+
+#mortgageSummary th {
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+#mortgageSummary td, #mortgageSummary th {
+    padding: 1.2mm;
+    padding-left: 1mm;
+    padding-right: 1mm;
+}
+
+#mortgageSummary table tr:nth-of-type(odd) td {
+    background-color: gainsboro;
+}
+
+/***********************************************************
+ * Legal Disclaimer
+ ***********************************************************/
+
+#legalDisclaimer {
+    color: rgb(166,170,177);
+}
+
+#legalDisclaimer p {
+    margin: 0.66em auto;
+    font-size: 8pt;
+    text-align: justify;
+}
+
+/***********************************************************
+ * Amortization Table
+ ***********************************************************/
+
+#amortizationTable {
+    break-before: page;
+    column-count: 2;
+    column-gap: 5mm;
+}
+
+#amortizationTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#amortizationTable td {
+    border: 1px solid silver;
+}
+
+#amortizationTable thead td {
+    font-weight: bold;
+    font-size: 8pt;
+    background-color: darkslategray;
+    color: white;
+}
+
+#amortizationTable td {
+    padding: 1mm;
+    padding-left: 1mm;
+    padding-right: 1mm;
+    font-size: 7pt;
+}
+
+#amortizationTable tr:nth-child(odd) {
+    background-color: gainsboro;
+}
+
+
+/***********************************************************
+ * Header Style
+ ***********************************************************/
+
+header {
+    position: running(headerElement);
+    height: 30mm;
+    overflow: hidden;
+    margin-left: 10pt;
+    
+    font-family: 'times new roman', serif;
+}
+
+header > div {
+    width: 197.9mm;
+    height: 10mm;
+    margin-left: -1mm;
+    margin-right: -1mm;
+    
+    padding: 10mm;
+    padding-top: 10mm;
+    padding-bottom: 7mm;
+    
+}
+
+header p {
+    margin: 0;
+    font-size: 28pt;
+    color: darkslategray;
+    
+    line-height: 1;
+}
+
+header p img {
+    margin-right: 3mm;
+    height: 12mm;
+    vertical-align: -2.5mm;
+}
+
+header p > span {
+    letter-spacing: 0.5mm;
+    margin-right: 2mm;
+}
+
+/***********************************************************
+ * Footer Style
+ ***********************************************************/
+
+footer {
+    position: running(footerElement);
+    color: darkslategray;
+    font-size: 9pt;
+    text-align: center;
+}
+
+footer::after {
+    content: counter(page) " / " counter(pages);
+    position: absolute;
+    bottom: 30pt;
+    right: 0;
+    color: darkslategray;
+    font-size: 10pt;
+}
+
+footer .qrcode {
+    -ro-replacedelement: qrcode;
+    -ro-qrcode-quality: high;
+    -ro-qrcode-forcedcolors: none;
+    height: 100%;
+    position: absolute;
+    color: inherit;
+    left: 0;
+    top: 0;
+}
+
+footer div {
+    position: relative;
+}
+
+/***********************************************************
+ * Page Style 
+ ***********************************************************/
+
+@page:first {
+    margin-top: 30mm;
+    
+    padding-top: 5mm;
+    
+    @top-center {
+        content: element(headerElement);
+        margin-top: 0mm;
+        margin-left: -15mm;
+        margin-right: -20mm;
+        
+        z-index: 1;
+    }
+}
+
+@page {
+    margin-top: 15mm;
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-bottom: 30mm;
+    padding-bottom: 5mm;
+    
+    size: legal portrait;
+    
+    @bottom-center {
+        content: element(footerElement, last);
+        vertical-align: top;
+        padding-top: 5mm;
+        z-index: 1;
+    }
+    
+    @left-middle {
+        content: "";
+        
+        position: relative;
+        
+        left: -3mm;
+        margin-right: 9mm;
+        margin-top: -300mm;
+        margin-bottom: -300mm;
+        
+        z-index: 0;
+    }
+}
+
+@page:-ro-last {
+    @bottom-center {
+        -ro-pdf-tag-type: "Div";
+    }
+}
+
+#mortgageOverview h4 {
+    -ro-pdf-tag-type: "Caption";
+}
+
+/***********************************************************
+ * Screen Style 
+ ***********************************************************/
+
+@media screen {
+    header, footer {
+        position: inherit;
+    }
+    
+    #mortgageSummary, #amortizationTable {
+        column-count: auto;
+    }
+    
+    footer#midFooter {
+        display: none;
+    }
+    
+    footer {
+        margin-top: 5mm;
+    }
+    
+    footer#endFooter address {
+        margin: auto;
+    }
+    
+    .pageNumber::before {
+        display: none;
+    }
+}
+
+
+/***********************************************************
+ * PDF Comment Style 
+ ***********************************************************/
+
+notecomment, commentend {
+    -ro-comment-title: -ro-attr(author);
+    -ro-comment-date: -ro-attr(date);
+    -ro-comment-dateformat: "yyyy-dd-MM HH:mm";
+    -ro-comment-content: -ro-attr(text);
+}
+
+notecomment {
+    -ro-comment-position: page-right;
+}
+
+commentstart {
+    -ro-comment-start: -ro-attr(uid);
+}
+
+commentend {
+    -ro-comment-end: -ro-attr(uid);
+    
+    -ro-comment-title: -ro-attr(author);
+    -ro-comment-content: -ro-attr(text);
+    -ro-comment-date: -ro-attr(date);
+    
+    -ro-comment-style: -ro-attr(commentstyle -ro-ident);
+}
+
+commentend[commentstyle="strikeout"] {
+    -ro-comment-color: red;
+}
+
+commentend[commentstyle="underline"] {
+    -ro-comment-color: green;
+}
+
+commentend[commentstyle="squiggly"] {
+    -ro-comment-color: blue;
+}
+
+
+commentend[commentstyle="highlight"] {
+    -ro-comment-color: yellow;
+}
+/***********************************************************
+ * ro-preferences
+ ***********************************************************/
+@-ro-preferences {
+    page-layout: 1 column;
+    initial-zoom: 125%;
+}

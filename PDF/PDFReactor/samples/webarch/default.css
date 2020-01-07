@@ -1,0 +1,81 @@
+@media all { a:link img, a:visited img { border: none } }
+
+a img { color: white; background: white }
+
+dfn { font-style: italic; font-weight: bold }
+
+blockquote { font-style: italic }
+
+ul.toc {
+  list-style: none
+}
+li.tocline1 {font-weight: bold}
+li.tocline2 {font-weight: normal}
+li.tocline3 {font-weight: normal}
+li.tocline4 {font-weight: normal}
+a.tocprinciple { background: #f7ebd7 }
+
+span.note { background: #aeefef; color: black }
+
+dl#all-properties { margin-left: 2em }
+dl#all-properties dt { margin-top: .25em}
+
+.glossary-entry { font-weight: bold }
+
+.ednote {
+   background: #fee;
+   padding: 1pt 2pt 0 1pt;
+   border: 1pt solid #fcc;
+   font-style: italic 
+}
+
+.icon { 
+   float:left;  
+   padding-right: .3em;
+}
+
+.figure {
+    text-align: center;
+}
+
+.boxedtext {
+   border: solid #bebebe 1pt;
+   margin: 2em 1em 1em 2em;
+ }
+
+.principle, .practice, .constraint, .property, div.story {
+   margin: 1.5em 0.5em 1.5em 1em;
+ }
+
+.principlelab, .constraintlab,
+.propertylab, .practicelab,
+.storylab {
+   margin: 1.5em 0.5em 1em 1em;
+   font-weight: bold;
+   font-style: italic;
+ }
+
+.principlelab  { background: #f7ebd7 }
+.constraintlab { background: #becece }
+.propertylab   { background: #f7ebd7 }
+.practicelab   { background: #dfffff }
+.storylab      { background: #005a9c; color: #fff; }
+
+.principle, .practice, .constraint, .property, div.story {
+   position: relative;
+   top: -2em;
+   padding: 0;
+   margin: 1.3em 0.5em -1em 1em;
+}
+    
+.principlelab, .constraintlab,
+.propertylab, .practicelab,
+.storylab {
+   position: relative;
+   padding: 0 0.5em;
+   top: -1.5em;
+ }
+
+div.story {
+   margin-bottom: -2em;
+}

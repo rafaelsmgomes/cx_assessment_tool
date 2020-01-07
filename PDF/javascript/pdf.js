@@ -49,11 +49,14 @@ var lifecycle_7;
 var lifecycle_8;
 var lifecycle_9;
 
-
-var l= window.location;
-var id=l.substr(id.lastIndexOf('/') + 1);
+/*
+var loc= window.location.href;
+console.log(loc)
+var r=loc.lastIndexOf('/');
+var id=r.substring(r + 1);
 console.log('pdf.js id: ' + id);
-
+*/
+var id=1578340502495;
 
 fetch('/pdfdata/' + id)
     .then(response => {
@@ -61,9 +64,10 @@ fetch('/pdfdata/' + id)
 })
     .then(el => {
     var pdfData = el;
-    pdf=pdfData
-    console.log(pdf)
-    
+    pdf=pdfData;
+    console.log(pdf);
+});
+ 
     
     TotalScore=pdfData.data.TotalScore;
     BroadcastScore=pdfData.data.BroadcastScore;
@@ -140,21 +144,17 @@ jqxhr.always(function(data) {
 });
     
     
-
+/*
 })
     .catch(err => {
     console.log(err)
 });
 
 
-
+*/
 
 //vars not from DB
 var breakpoint=99;
-
-
-
-
 
 
 function getSummary(data){

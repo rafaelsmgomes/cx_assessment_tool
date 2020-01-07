@@ -1,0 +1,92 @@
+/* Additional print style sheet made by RealObjects */
+
+@media print {
+
+    @page {
+      margin: 1.5cm;
+      padding-top: 12pt;
+      /* Initialize the page counter */
+      counter-increment: page 1;
+     
+     /* The following lines are styles for page margin boxes
+        which are described in the CSS 3 paged media module draft. 
+        The @xyz selector indicates the location of the box 
+     */
+        @top-left { 
+         font: 12pt arial, sans-serif;
+         text-align:left;
+         content: "Architecture of the World Wide Web, Volume One";
+         margin-top: 5mm;
+         margin-bottom: 2mm;
+         border-bottom: 0.2mm solid #006DAB;
+        }
+    
+        @bottom-left { 
+         font: 7pt arial, sans-serif;
+         text-align: left;
+         margin-bottom: 5mm;
+         margin-top: 2mm;
+         border-top: 0.2mm solid #006DAB;
+         vertical-align: top;
+         padding-top: 0.1cm;
+         content: "Copyright (C) 2002-2004 W3C (R) (MIT, ERCIM, Keio), All Rights Reserved.";
+        }    
+        
+        @bottom-right { 
+         font: 9pt arial, sans-serif;
+         text-align: right;
+         margin-bottom: 5mm;
+         margin-top: 2mm;
+         border-top: 0.2mm solid #006DAB;
+         vertical-align: top;
+         padding-top: 0.1cm;
+         content: "Page " counter(page) " / " counter(pages);
+        }    
+    }
+    
+    /* repeating page background image */
+    html {
+        background-attachment: scroll;
+        box-decoration-break: clone;
+        background-position: 0 -12pt;
+    }
+    
+    /* Cross-references */
+    a.int::after {
+        content: ' (see page ' target-counter(-ro-attr(href url),page) ')';
+    }
+}
+
+@-ro-preferences {
+    page-layout: 1 column;
+    initial-zoom: 125%;
+}
+
+/* 
+The following lines avoids page breaks inside bordered boxes to improve 
+the layout in page mode.
+*/
+div.boxedtext {
+    break-inside: avoid;
+}
+
+/*
+The following lines tweak line breaks around certain elements.
+*/
+dt, .figure {
+    break-after: avoid;
+}
+dt, dd, .figure {
+    break-inside: avoid;
+}
+.figure {
+    break-before: avoid;
+}
+h2:not(.notoc) {
+    break-before: page;
+    margin-top: 0;
+}
+
+div + hr {
+    display: none;
+}

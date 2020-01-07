@@ -1,0 +1,286 @@
+<html>
+    <head>
+        <title>RealObjects PDFreactor 10.1.10722.9 readme</title>
+        <style>
+            html {
+                margin: 0;
+                padding: 0;
+                
+                background-color: #ffffff;
+            }
+            body {
+                margin: 0;
+                padding-bottom: 50pt;
+                
+                font-size: 11pt;
+                font-family: sans-serif;
+                line-height: 1.5;
+                
+                color: #666666;
+                
+            }
+            
+            body > * {
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            
+            h2 {
+                padding: 4pt 0;
+                float: left;
+                text-align: left;
+                
+                font-size: 21pt;
+                font-weight: normal;
+                
+                color: #ffffff;
+            }
+            
+            #header {
+                background-color: #003399;
+                height: 32pt;
+                padding-top: 4pt;
+                padding-bottom: 4pt;
+            }
+            #header h3 {
+                padding-top: 17pt;
+                
+                text-align: right;
+                
+                font-size: 10pt;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            #header h2, #header h3 {
+                margin: 0;
+            }
+            
+            h3 {
+                margin-top: 40pt;
+                margin-bottom: 10pt;
+                
+                font-size: 18pt;
+                font-weight: normal;
+                text-transform: uppercase;
+                
+                color: #222222;
+            }
+            
+            p {
+                margin-bottom: 10pt;
+            }
+            
+            p.breakAfterAvoid {
+                break-after: avoid;
+            }
+            
+            code {
+                font-family: monospace;
+            }
+            
+            a[href] {
+                color: #c20b01;
+                text-decoration: none;
+            }
+            
+            a[href]:hover {
+                color: #6d0b2c;
+                text-decoration: underline;
+            }
+            
+            li {
+                margin-left: 15pt;
+                margin-bottom: 3pt;
+            }
+            
+            sup {
+                padding-left: 3pt;
+                padding-right: 3pt;
+                
+                font-size: 14pt;
+            }
+            
+            @media print {
+                @page:first {
+                    @top-left {
+                        content: element(header);
+                        background-color: #003399;
+                        color:white;
+                        
+                        margin-left: -2cm;
+                        margin-right: -2cm;
+                        padding-left: 2cm;
+                        padding-right: 2cm;
+                        
+                        margin-top: 0.5cm;
+                        margin-bottom: 0.25cm;
+                    }
+                
+                }
+                @page {
+                    margin: 2cm;
+                    margin-top: 2.5cm;
+                    font-family: sans-serif;
+                }
+                
+                body {
+                    padding-bottom: 0;
+                    color: #000000;
+                }
+                
+                body > * {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                
+                #header {
+                    position: running(header);
+                }
+                
+                a[href] {
+                    -ro-link: none;
+                    color: inherit;
+                }
+                
+                a[href^="http"],
+                a[href^="mailto"],
+                a[href^="#"] {
+                    -ro-link: -ro-attr(href, url);
+                    color: #c20b01;
+                }
+            }
+            body {
+    font-size: 10pt;
+    line-height: 1.1;
+}
+#header {
+    background-color: white;
+}
+#header h2 {
+    padding-bottom: 1pt;
+    padding-top: 2pt;
+    color: #003399;
+}
+#header h3 {
+    position: static;
+    text-align: left;
+    color: #000000;
+}
+h3 {
+    font-size: 15pt;
+    margin-top: 15pt;
+    margin-bottom: 0;
+}
+p, ul {
+    margin-top: 10pt;
+    margin-bottom: 0;
+}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h2>RealObjects <b>PDFreactor</b><sup>&reg;</sup></h2>
+            <h3>Version 10.1.10722.9, 2019-12-16</h3>
+        </div>
+        <h3>Changes in this Version</h3>
+        <p>For a complete version history please see the <a href="https://www.pdfreactor.com/product/changelog.htm#v10_1_10722_9">change log</a>.</p>
+        <h3>Important</h3>
+        <p>This software and support material is copyrighted, it may only be used with a legally acquired and fully paid license and in accordance with the PDFreactor Software License Agreement. By installing and using this software, you accept the terms and conditions of the RealObjects PDFreactor Software License Agreement notices and the additional license agreements for third-party software and/or open source software. For details, see the license.txt file.
+        <br />If you have not purchased a license, you are only allowed to test and evaluate this software to find out how it fits your requirements during an evaluation period of 30 days. When running in evaluation mode, PDFreactor will insert watermarks on every page and an evaluation notice on the second page of the PDF documents it creates.</p>
+        <p>For more information or to purchase a PDFreactor license, please visit our website at <a href="https://www.pdfreactor.com/">www.pdfreactor.com</a>.</p>
+        <p><b>Note: </b>If you are upgrading from a previous major version, you need a new license key. Please contact <a href="mailto:support@realobjects.com">support@realobjects.com</a> to upgrade 
+        your license key to the new version if you have a valid maintenance and upgrade subscription or to purchase an upgrade.</p>
+        <h3>Folder Contents</h3>
+        <p class="breakAfterAvoid"><code>/doc</code></p>
+        <p>Contains the PDFreactor Manual (PDF and HTML format).</p>
+        <p class="breakAfterAvoid"><code>/doc/apidocs</code></p>
+        <p>Contains the PDFreactor Java API documentation.</p>
+        <p class="breakAfterAvoid"><code>/doc/webservice</code></p>
+        <p>Contains the documentation for the web service client APIs.</p>
+        <p class="breakAfterAvoid"><code>/doc/zugferd</code></p>
+        <p>Contains the documentation for the optional ZUGFeRD add-on.</p>
+        <p class="breakAfterAvoid"><code>/license</code></p>
+        <p>Contains the PDFreactor Software License Agreement and additional notices and license agreements for third-party software and/or open source software.
+        <br />By installing and using this software, you accept the terms and conditions of the RealObjects PDFreactor Software License Agreement notices and the additional license agreements for third-party software and/or open source software.</p>
+        <p class="breakAfterAvoid"><code>/bin</code></p>
+        <p>Executables to launch the PDFreactor Preview and the command line version of PDFreactor.
+        <br />The PDFreactor Preview allows you to easily browse various sample documents, check out their source codes, get an instant paged mode preview and create PDFs.</p>
+        <p class="breakAfterAvoid"><code>/lib</code></p>    
+        <p>Contains the self-contained library pdfreactor.jar.</p>
+        <p class="breakAfterAvoid"><code>/lib/modular</code></p>    
+        <p>Contains the non-self-contained version pdfreactorcore.jar, as well as the required and optional 3rd party libraries. Please see the README.txt in the lib folder for details.</p>
+        <p class="breakAfterAvoid"><code>/samples</code></p>
+        <p>Various sample documents in several formats demonstrating the capabilities of PDFreactor.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/dotnet</code></p>
+        <p>.NET wrapper API for PDFreactor (DLL, ASP.NET sample). To use the .NET API, copy the assembly PDFreactor.dll from the /wrappers/dotnet/bin to the /bin directory of your IIS application.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/java</code></p>
+        <p>Java wrapper API for PDFreactor (JAR, Java sample). To use the Java API, include the pdfreactor-wrapper.jar from the /wrappers/java/lib in your class path.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/javascript</code></p>
+        <p>JavaScript wrapper API for PDFreactor (JS, JavaScript sample). To use the JavaScript API, include the PDFreactor.js from the /wrappers/javascript/lib.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/nodejs</code></p>
+        <p>Node.js wrapper API for PDFreactor (JS, Node.js sample). To use the Node.js API, include the PDFreactor.js from the /wrappers/nodejs/lib.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/php</code></p>
+        <p>PHP wrapper API for PDFreactor (PHP include, PHP sample). To use the PHP API, include the PDFreactor.class.php file from /wrappers/php/lib.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/perl</code></p>
+        <p>Perl wrapper API for PDFreactor (Perl module, Perl sample). To use the Perl API, include the PDFreactor.pl file from /wrappers/perl/lib</p>
+        <p class="breakAfterAvoid"><code>/wrappers/python</code></p>
+        <p>Python wrapper API for PDFreactor (Python module, Python sample). To use the Python API, include the PDFreactor.py file from /wrappers/python/lib.</p>
+        <p class="breakAfterAvoid"><code>/wrappers/ruby</code></p>
+        <p>Ruby wrapper API for PDFreactor (Ruby module, Ruby sample). To use the Ruby API, include the PDFreactor.rb file from /wrappers/ruby/lib.</p>
+        <p class="breakAfterAvoid"><code>/jetty</code></p>
+        <p>Java Application server required to run the PDFreactor web service which is used by the .NET, JavaScript, PHP, Perl, Python and Ruby wrapper APIs.</p>
+        <h3 id="upgrading">Upgrading from PDFreactor 7 or earlier</h3>
+        <p>If you are upgrading from a PDFreactor integration prior to version 8, you will need to update your integration. The API of PDFreactor 8 and later is not compatible with
+        the API from previous versions. For details about how to migrate from a previous version of PDFreactor, please see our <a href="https://www.pdfreactor.com/product/doc/migration-guide.html">migration guide</a>.</p>
+        <p>If you are updating an existing copy, be careful if you have customized any files. Be sure to make a backup copy of your previous installation folder. In general you should 
+        overwrite all old files with the newer version and then manually reintroduce any changes afterwards.</p>
+        <p><b>Important:</b> Since PDFreactor 8 the Web Service requires Java 8 to run. Older Java versions are not supported for the Web Service. The PDFreactor Java Library can still be 
+        used with previous Java versions.</p>
+        <p>The legacy PDFreactor command line binaries are no longer included since PDFreactor 8 and were replaced with a new python based command line interface that uses and requires the 
+        PDFreactor Web Service. The legacy PDFreactor command line interface can still be used as before by calling <code>java -jar pdfreactor.jar</code> on the command line. The legacy
+        PDFreactor command line is no longer maintained and some newer features might not be available using it.</p>
+        <h3>Operating Systems Supported</h3>
+        <ul>
+            <li>Windows 7/8/10</li>
+            <li>Windows 2008/2012 Server</li>
+            <li>Linux</li>
+            <li>OS X</li>
+        </ul>
+        <p>The latest updates and service packs should be installed.</p>
+        <p>We have customers successfully using the product in HP/UX, Solaris, AIX and FreeBSD, but we don't officially test on those platforms.</p>
+        <h3>Java Support</h3>
+        <h4>Officially Recommended Java VM for the PDFreactor Library:</h4>
+        <ul>
+            <li>OpenJDK 12</li>
+        </ul>
+        <h4>Other Java VMs Supported by the PDFreactor Library:</h4>
+        <ul>
+            <li>OpenJDK 11</li>
+            <li>Oracle JRE 8</li>
+            <li>Oracle JRE 7</li>
+        </ul>
+        <p>The latest updates and service packs should be installed.</p>
+        <p>We have customers successfully using the product in Oracle or IBM JVMs, but we don't officially test on those platforms.</p>
+        <h4>Required Java VM for the PDFreactor Web Service:</h4>
+        <ul>
+            <li>Oracle JRE 8</li>
+        </ul>
+        <h3>Minimum Hardware Requirements</h3>
+        <ul>
+            <li>One CPU with two or more cores (2 GHz)</li>
+            <li>4 GB RAM</li>
+        </ul>
+        <p>The hardware requirements depend on the complexity and size of the processed documents.</p>
+        <h3>Support</h3>
+        <p>For information about technical support please visit <a href="https://www.pdfreactor.com/support/">www.pdfreactor.com/support</a> 
+        or contact <a href="mailto:support@realobjects.com">support@realobjects.com</a>.</p>
+        <h3>Registered Trademark</h3>
+        <p>PDFreactor is a registered trademark of RealObjects GmbH, Saarbruecken.</p>
+        <h3>Additional Important Notices and Copyrights</h3>
+        <p>Please see the NOTICE.txt file in the /license subdirectory.</p>
+        <p>Copyright (c) 2000-2019, RealObjects GmbH.
+        <br />All rights reserved.</p>
+        <p><a href="mailto:info@realobjects.com">info@realobjects.com</a>
+        <br /><a href="https://www.pdfreactor.com/">www.pdfreactor.com</a></p>
+    </body>
+</html>

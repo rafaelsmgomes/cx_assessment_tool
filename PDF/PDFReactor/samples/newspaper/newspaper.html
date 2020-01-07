@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="la">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Daily Newspaper</title>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <script type="text/javascript" language="JavaScript" src="script.js"></script>
+    </head>
+    <body onload="drawGraph()">
+        
+        <!-- Title Page Header -->
+        
+        <header class="title">
+            <hgroup>
+                <h1>The Real News</h1>
+                <h2>Demonstrating PDFreactor Capabilities</h2>
+            </hgroup>
+            <div class="date">Monday, May 14th 2012</div>
+            <div class="volume">Vol. 1</div>
+        </header>
+        
+        <!-- Overview Section (left) -->
+        
+        <section class="overview">
+            <div class="world">
+                <header>World</header>
+                
+                <h1>Nonumy eirmod</h1>
+                <p>Sed diam nonumy eirmod tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+                <p class="further"><a href="">more on page 2</a></p>
+                
+                <h1>Accusam et justo</h1>
+                <p>Diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p class="further"><a href="">more on page 2</a></p>
+            </div>
+            <div class="national">
+                <header>National</header>
+                
+                <h1>Takimata sanctus</h1>
+                <p>Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                <p class="further"><a href="">more on page 3</a></p>
+                
+                <h1>Duo dolores</h1>
+                <p>Duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <p class="further"><a href="">more on page 4</a></p>
+            </div>
+            <div class="business">
+                <header>Business</header>
+                
+                <h1>Accusam et justo</h1>
+                <p>Diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p class="further"><a href="">more on page 5</a></p>
+                
+                <h1>Nonumy eirmod</h1>
+                <p>Sed diam nonumy eirmod tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+                <p class="further"><a href="">more on page 6</a></p>
+            </div>
+            <div class="sports">
+                <header>Sports</header>
+                
+                <h1>Duo dolores</h1>
+                <p>Duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <p class="further"><a href="">more on page 7</a></p>
+                
+                <h1>Takimata sanctus</h1>
+                <p>Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                <p class="further"><a href="">more on page 7</a></p>
+            </div>
+            <div class="poll">
+                <header>Poll</header>
+                
+                <figure>
+                    <canvas id="graph"></canvas>
+                    <figcaption>Sed diam nonumy eirmod tempor Invidunt ut labore et dolore magna aliquyam erat.</figcaption>
+                </figure>
+            </div>
+            <div class="print">
+                <header>Other</header>
+                
+                <div>
+                    <barcode:barcode xmlns:barcode="http://barcode4j.krysalis.org/ns" message="Lorem Ipsum">
+                        <barcode:code128 />
+                    </barcode:barcode>
+                </div>
+                
+                <div class="grid">
+                    <div>Subscribe:</div>
+                    <div>555-0142</div>
+                    <div>Advertize:</div>
+                    <div>555-0143</div>
+                </div>
+                
+                <ol class="line">
+                    <li class="cyan-lighter">&nbsp;</li>
+                    <li class="magenta-lighter">&nbsp;</li>
+                    <li class="yellow-lighter">&nbsp;</li>
+                    <li class="black-lighter">&nbsp;</li>
+                    <li class="cyan">&nbsp;</li>
+                    <li class="magenta">&nbsp;</li>
+                    <li class="yellow">&nbsp;</li>
+                    <li class="black">&nbsp;</li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- Main Articles Section (middle) -->
+        
+        <section class="middle">
+            <article>
+                <hgroup class="topstory">
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <h2>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor Invidunt</h2>
+                </hgroup>
+                
+                <figure>
+                    <img src="whitehouse.jpg" alt="Ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
+                    <figcaption>Ut labore et dolore magna aliquyam erat, sed diam voluptua.</figcaption>
+                </figure>
+                
+                <p class="intro">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                <p>Sed diam nonumy eirmod tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+                <p>Diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Invidunt ut labore et dolore magna aliquyam erat. Sed diam voluptua.</p>
+                <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                <p>Sed diam nonumy eirmod tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+                
+                <p class="further"><a href="">more on page 3</a></p>
+            </article>
+            
+            <article>
+                <hgroup>
+                    <h1>Consetetur sadipscing</h1>
+                    <h2>Elitr sed diam nonumy eirmod tempor</h2>
+                </hgroup>
+                
+                <p>Invidunt ut labore et dolore magna aliquyam erat. Sed diam voluptua.</p>
+                <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                <p>Tempor Invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>Diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                
+                <p class="further"><a href="">more on page 3</a></p>
+            </article>
+        </section>
+        
+        <!-- Other Articles Section (right) -->
+        
+        <section class="right">
+            <article>
+                <hgroup>
+                    <h1>Tempor invidu</h1>
+                    <h2>Ut labore et dolore magna aliquyam</h2>
+                </hgroup>
+                
+                <p>Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <p>Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                <p>Tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                <p>Invidunt ut labore et dolore magna aliquyam erat. Sed diam voluptua.</p>
+                <p>Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <p>Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                <p>Tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+            </article>
+            
+            <article>
+                <hgroup>
+                    <h1>Magna Aliquam</h1>
+                    <h2>Accusam et justo duo dolores rebum</h2>
+                </hgroup>
+                
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                <p>Tempor Invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                   no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor Invidunt ut labore et.</p>
+                <p>Invidunt ut labore et dolore magna aliquyam erat. Sed diam voluptua.</p>
+                
+                <p class="further"><a href="">more on page 4</a></p>
+            </article>
+            <article class="bordered">
+                <figure class="singleColumn">
+                    <img src="capitol.jpg" alt="Lorem ipsum dolor sit amet."/>
+                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
+                </figure>
+                
+                <hgroup class="singleColumn">
+                    <h1>Sed diam voluptua</h1>
+                </hgroup>
+                
+                <p>Tempor Invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                   no sea takimata sanctus est.</p>
+                   
+                <p class="further"><a href="">more on page 5</a></p>
+            </article>
+        </section>
+        
+        <!-- Other Articles Section (bottom)  -->
+        
+        <section class="middleRight">
+            <article>
+                <hgroup>
+                    <h1>Labore et dolore magna aliquyam erat eos</h1>
+                    <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</h2>
+                </hgroup>
+                
+                <p>Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod.
+                   Tempor Invidunt ut labore et dolore magna aliquyam erat.</p>
+                <p>Invidunt ut labore et dolore magna aliquyam erat. Sed diam voluptua.
+                   Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                   Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <p>Lorem ipsum dolor sit amet. consetetur sadipscing elitr, 
+                   sed diam nonumy eirmod. Tempor Invidunt ut labore et dolore magna 
+                   aliquyam erat. Sed diam voluptua.</p>
+                
+                <p class="further"><a href="">more on page 6</a></p>
+            </article>
+        </section>
+        
+        <!-- Breaking News Footer (bottom)  -->
+        
+        <footer>
+            <span>Breaking</span>
+            <span>Lorem ipsum</span>
+            <span>Dolor sit Amet</span>
+            <span>Consectetur Sadipscing</span>
+            <span>elitr, set diam</span>
+            <span>eirmod tempor</span>
+        </footer>
+    </body>
+</html>

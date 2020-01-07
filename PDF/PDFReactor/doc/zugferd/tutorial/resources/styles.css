@@ -1,0 +1,108 @@
+@print {
+    body {
+        border: 1px solid red;
+        margin: 0 !important;
+    }
+}
+
+body {
+    margin-left: 1cm;
+    margin-right: 1cm;
+    font-family: Arimo, sans-serif;
+    font-size: 10pt;
+}
+
+table {
+    font-family: Arimo, sans-serif;
+    font-size: 10pt;
+}
+
+#buyer {
+    margin-top: 1cm;
+}
+
+#seller {
+    position: absolute;
+    right: 1cm;
+    top: 1cm;
+    text-align: right;
+    font-size: 8pt;
+    color: #7F7F7F;
+}
+
+#invoiceData {
+    margin-top: 2cm;
+}
+
+#invoiceData th {
+    background-color: #F0F0F0;
+    border: 0.75pt solid #777;
+    text-align: center;
+    font: bold 12pt Arimo, sans-serif;
+}
+
+#invoiceData table {
+    margin-left: auto;
+    padding: 0;
+    border-left: 0.75pt solid #777;
+    border-bottom: 0.75pt solid #777;
+    border-right: 0.75pt solid #777;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#invoiceData td, #invoiceData th {
+    padding: 1mm;
+    margin-right: 2cm;
+}
+
+#articles {
+    margin-top: 0.2cm;
+    font: 9pt Arimo, sans-serif;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0pt 10pt;
+    margin-bottom: 5pt;
+    border-color: grey;
+}
+
+#articles tr:nth-child(2n+1) {
+    background-color: #FAFAFA;
+}
+
+#articles tr:first-child {
+    background-color: #F0F0F0;
+    padding: 4pt;
+}
+
+#articles #subTotal {
+    background-color: #F0F0F0;
+}
+
+#articles tr:last-child {
+    background-color: #F0F0F0;
+}
+
+#zahlungsvereinbarungen h3 {
+    font-size: 100%;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 1cm;
+    margin-top: 1cm;
+}
+
+#zahlungsvereinbarungen span {
+    padding-left: 1cm;
+}
+
+#footer {
+    margin-top: 3cm;
+    text-align: center;
+    font-size: 6pt;
+    color: #7F7F7F;
+}
+
+@page{
+    margin: 4cm 2cm 2.5cm 2cm;
+}

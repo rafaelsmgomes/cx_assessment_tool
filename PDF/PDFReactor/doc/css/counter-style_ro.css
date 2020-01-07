@@ -1,0 +1,171 @@
+/*********************************************************
+ * Counter & Named Strings
+ *********************************************************/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Chapter
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Counter */
+ 
+body > section.appendix:not(.simple) {
+    counter-increment: appendix 1;
+    counter-reset: sect1 0;
+}
+
+body {
+    counter-reset: chapter 0 img 0 example 0;
+}
+
+body > section:not(.simple) {
+    counter-increment: chapter;
+    counter-reset: sect1;
+}
+
+body > section:not(.simple) > section:not(.simple)  {
+    counter-increment: sect1;
+    counter-reset: sect2;
+}
+
+body > section:not(.simple) > section:not(.simple) > section:not(.simple) {
+    counter-increment: sect2;
+    counter-reset: sect3;
+}
+
+body > section:not(.simple) > section:not(.simple) > section:not(.simple) > section:not(.simple) {
+    counter-increment: sect3;
+}
+
+/* Generated Content */
+
+body > section.appendix:not(.simple) > h1::before {
+    content: "Appendix " counter(appendix, upper-alpha) ": ";
+}
+
+body > section:not(.simple) > h1::before{
+    content: counter(chapter) ". ";
+} 
+
+body > section:not(.simple) > section:not(.simple) > h1::before {
+    content: counter(chapter) "." counter(sect1) " ";
+}  
+
+body > section:not(.simple) > section:not(.simple) > section:not(.simple) > h1::before {
+    content: counter(chapter) "." counter(sect1) "." counter(sect2) " ";
+}  
+
+body > section.appendix:not(.simple) > section:not(.simple) > h1::before {
+    content: counter(appendix, upper-alpha) "." counter(sect1) " ";
+}  
+
+body > section.appendix:not(.simple) > section:not(.simple) > section:not(.simple) > h1::before {
+    content: counter(appendix, upper-alpha) "." counter(sect1) "." counter(sect2) " ";
+}
+
+dl.numbered {
+    counter-reset: listItem;
+}
+
+dl.numbered dt {
+    counter-increment: listItem;
+}
+
+dl.numbered dt::before {
+    content: counter(listItem) ". ";
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Media Caption
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ 
+figure > figcaption {
+    counter-increment: img 1;
+}
+
+figure > figcaption::before {
+    content: "Fig. " counter(img) ": ";
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Cross References
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+a[href^="#"]::after {
+    /* "\A0" represents nbsp to avoid line break between "p." and the number */
+    content: ' (p.\A0' target-counter(-ro-attr(href url), page) ')';
+}
+
+a[href^="#css-property"]::after,
+a.code::after {
+    content: none;
+}
+
+a[href^="#"]:empty::before {
+    content: target-text(-ro-attr(href url), content);
+}
+
+a[href^="#css-property"]:empty::before {
+    white-space: nowrap;
+} 
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Examples
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.example {
+    counter-increment: example;
+}
+
+.example::before {
+    content: "Example " counter(example);
+}
+
+.example[title]::before {
+    content: "Example " counter(example)": " attr(title);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Table of Contents
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+td[role="toc_preface"] > a[href^="#"]::before {
+    content: "";
+}
+
+td[role="toc_chapter"] > a[href^="#"]::before {
+    content: target-counter(-ro-attr(href url), chapter) ". ";
+}
+
+td[role="toc_appendix"] > a[href^="#"]::before {
+    content:  target-counter(-ro-attr(href url), appendix, upper-alpha) ". ";
+}
+
+td[role="toc_sect1_appendix"] > a[href^="#"]::before {
+    content:  target-counter(-ro-attr(href url), appendix, upper-alpha) "." target-counter(-ro-attr(href url), sect1) ". ";
+}
+
+td[role="toc_sect1"] > a[href^="#"]::before {
+    content:  target-counter(-ro-attr(href url), chapter) "." target-counter(-ro-attr(href url), sect1) ". ";
+}
+
+td[role="toc_sect2"] > a[href^="#"]::before {
+    content:  target-counter(-ro-attr(href url), chapter) "." target-counter(-ro-attr(href url), sect1) "." target-counter(-ro-attr(href url), sect2) ". " ;
+}
+
+td[role="toc_sect2_appendix"] > a[href^="#"]::before {
+    content:  target-counter(-ro-attr(href url), appendix, upper-alpha) "." target-counter(-ro-attr(href url), sect1) "." target-counter(-ro-attr(href url), sect2) ". " ;
+}
+
+td[role="toc_chapter"] > a[href^="#"]::after, 
+td[role="toc_sect1"] > a[href^="#"]::after, 
+td[role="toc_sect2"] > a[href^="#"]::after,
+td[role="toc_sect3"] > a[href^="#"]::after,
+td[role="toc_preface"] > a[href^="#"]::after,
+td[role="toc_appendix"] > a[href^="#"]::after,
+td[role="toc_sect1_appendix"] > a[href^="#"]::after,
+td[role="toc_sect2_appendix"] > a[href^="#"]::after {
+    content: leader(dotted) target-counter(-ro-attr(href url), page);
+    font-size: 0.9em;
+}

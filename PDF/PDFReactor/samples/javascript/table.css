@@ -1,0 +1,70 @@
+table.styled {
+	border-collapse: separate;
+	border-spacing: 0;
+	border: none;
+	margin-top: 10pt;
+	margin-left: 0pt;
+}
+
+table.styled td {
+	border: none;
+	padding: 4pt;
+}
+
+table.styled thead td {
+	font-weight: bold;
+}
+
+table.styled thead td:first-child {
+	text-align: left;
+}
+
+table.styled thead tr td:nth-child(even) {
+	background-image: -moz-linear-gradient(90deg, palegreen, white);
+	background-image: -webkit-linear-gradient(90deg, palegreen, white);
+	background-image: -ms-linear-gradient(90deg, palegreen, white);
+	background-image: -o-linear-gradient(90deg, palegreen, white);
+	background-image: linear-gradient(0deg, palegreen, white);
+}
+
+table.styled thead tr td:not(.awesomizr-table-first-column):nth-child(odd) {
+	background-image: -moz-linear-gradient(0deg, mintcream, white);
+	background-image: -webkit-linear-gradient(0deg, mintcream, white);
+	background-image: -ms-linear-gradient(0deg, mintcream, white);
+	background-image: -o-linear-gradient(90deg, mintcream, white);
+	background-image: linear-gradient(0deg, mintcream, white);
+}
+
+table.styled tbody td {
+	vertical-align: middle;
+}
+
+table.styled tbody td:first-child {
+	border-bottom: 1pt solid darkgreen;
+}
+
+table.styled tbody td:not(:first-child) {
+	text-align: center;
+	font-size: 8pt;
+}
+
+table.styled tbody tr td:nth-child(even) {
+	background-color: palegreen;
+	border-bottom: 1pt solid darkgreen;
+}
+
+table.styled tbody tr td:nth-child(odd):not(:first-child) {
+	border-bottom: 1pt solid darkgreen;
+}
+
+table.styled td.awesomizr-table-first-column {
+	border-bottom: 1pt solid darkgreen;
+}
+
+table.styled tr td:last-child {
+	font-weight: bold;
+}
+
+table.styled tfoot td {
+	text-align: center;
+}

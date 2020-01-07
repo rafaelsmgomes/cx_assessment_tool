@@ -1,0 +1,124 @@
+@page {
+    size: letter;
+    margin: 1.5cm 1.5cm 1.4cm 1.5cm;
+}
+
+@-ro-preferences {
+    page-layout: 2 column;
+    initial-zoom: fit-page;
+}
+
+html {
+    font-size: 11pt;
+}
+
+table {
+    clear: both;
+}
+
+table td {
+    border: none;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+dfn {
+    font-style: italic;
+    text-align: center;
+    font-size: 8pt;
+}
+
+code {
+    font-size: inherit;
+}
+
+li > code:first-of-type,
+li > em:first-of-type {
+    margin-right: 0.5em;
+}
+
+#graphs {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#graphs > div {
+    width: 8.5cm;
+    height: 5.5cm;
+    float: left;
+    text-align: center;
+    margin: 2mm;
+}
+
+#graphs > div:first-child {
+    width: 18cm;
+    height: 7.5cm;
+}
+
+#graphs::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+div.flotr-legend {
+    background: whitesmoke;
+    font-size: 6pt;
+    text-align: left;
+    width: 2cm;
+}
+
+.flotr-legend-label {
+    font-size: inherit;
+}
+
+div.flotr-legend div {
+    border: none;
+}
+
+div.flotr-legend td {
+    padding: 1pt;
+}
+
+div.flotr-labels div {
+    font-size: 8pt;
+}
+
+#graphs p {
+    text-align: center;
+}
+
+table.params {
+    width: 100%;
+    break-inside: avoid;
+}
+
+table.params td {
+    border: 1pt solid black;
+}
+
+table.params tbody tr:nth-child(even) td {
+    background-color: ghostwhite;
+}
+
+table.params thead td {
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+}
+
+table.params tbody tr td:first-child,
+table.params tbody tr td:last-child {
+    font-family: 'courier new', monospace;
+}
+
+#pdfAsImagesContainer img {
+    width: 5cm;
+    border: 1px solid black;
+    margin-right: 0.5cm;
+    margin-bottom: 0.5cm;
+}

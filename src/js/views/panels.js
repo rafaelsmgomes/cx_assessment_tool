@@ -111,7 +111,7 @@ export const panels = [
 			</div>
 		<div class="btn__progress btn__progress--5" data-id='5' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--6">	
+	`<div class="panel panel--6 panel--activate">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -126,7 +126,7 @@ export const panels = [
 				'group': 'broadcast',
 				'count': false,
 			})}	
-			<button class='btn__progress btn__progress--6' data-id='6' data-line='2'>Next</button>
+			<div class='btn__progress btn__progress--6' data-id='6' data-line='2'>Next</div>
 		</div>		
 	</div>`,
 	`<div class="panel panel--7">	
@@ -507,7 +507,7 @@ export const panels = [
 				'group': 'relationship',
 				'count': true,
 			})}
-			<button class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</button>			
+			<div class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</div>			
 		</div>
 	</div>`,
 	`<div class="panel panel--28">	

@@ -5,13 +5,15 @@
     padding-top: 4.00rem; 
     position: relative;
 		@include layoutOrientation;
+		
 		@include bp($width-1){
 			width: 83.333%;		
 		}
-		@include bp($width-4){
+
+		@include bp($width-5){
 			width: 95%;
 		}
-
+		
 		.panel--41 &{
     	transform: translateX(0.50rem);
 		}

@@ -9,6 +9,7 @@
 		position: relative;
 		z-index: 2;
 		margin-top: 2.35rem;
+		padding-left: 1.25rem;
 		@include bp($width-2){
 			width: 90%;
 		}
@@ -109,6 +110,10 @@
     width: 9.75rem;
     text-align: center;
     color: $color-white-1;
+
+		.panel--9 &{
+			width: 7.80rem;
+		}
 
     @include bp(767){
     	@include bph(650){

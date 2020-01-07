@@ -17,6 +17,8 @@ const sql = require('./database/queries');
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/bin_dev`));
 app.use(express.static(`${__dirname}/PDF`));
+app.use(express.static(`${__dirname}/PDFReactor`));
+app.use(express.static(`${__dirname}`));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'html');
@@ -99,6 +101,7 @@ app.post('/api', (req,res) => {
 
     }).then((el) => {
         console.log(el);
+        console.log(ansArr);
         const results = insertAnswers(ansArr);
         return (results);
     })

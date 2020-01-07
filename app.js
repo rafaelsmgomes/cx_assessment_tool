@@ -86,7 +86,6 @@ app.post('/api', (req,res) => {
         sliders  = data.sliders;
 
     userID = Date.now();
-    console.log(typeof checkboxes[0].choseAns);
     createCompany(userArr, data)
     // createFakeCompany(userArr)
     .then(() => {
@@ -94,7 +93,7 @@ app.post('/api', (req,res) => {
         likerts.forEach(createAnswersArray);
         dials.forEach(createAnswersArray);
         vertfcs.forEach(createAnswersArray);
-        checkboxes.forEach(createAnswersArrayFromObject);
+        checkboxes.forEach(createAnswersArray);
         sliders.forEach(createAnswersArray); 
         return ('ok')
 
@@ -327,22 +326,6 @@ function createAnswersArray(el) {
         questionID = el.id;
         value = el.val;
         textAns = el.choseAns;
-
-        ansRow.push(userID, questionID, value, `${textAns}`); 
-        ansArr.push(ansRow);
-
-        res();
-    })
-};  
-function createAnswersArrayFromObject(el) { 
-    return new Promise( (res, rej) => {
-        let ansRow = [];
-
-        questionID = el.id;
-        value = el.val;
-        textAns = el.choseAns;
-        // console.log(el);
-        // textAns = [...el.choseAns];
 
         ansRow.push(userID, questionID, value, `${textAns}`); 
         ansArr.push(ansRow);

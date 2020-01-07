@@ -30,7 +30,7 @@ export default class Checkbox {
 
     assignValue(){
         const len = Number(this.textArr.length);
-        const ansLen = Number(this.choseAns.size);
+        const ansLen = Number(this.choseAns.length);
 
         this.val = (ansLen/len)*100;
     }

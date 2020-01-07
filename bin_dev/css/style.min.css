@@ -1609,7 +1609,7 @@
   @media only screen and (max-width: 1440px) {
     .body__content {
       width: 83.333%; } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 666px) {
     .body__content {
       width: 95%; } }
   .panel--41 .body__content {

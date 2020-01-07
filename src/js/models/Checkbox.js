@@ -6,19 +6,19 @@ export default class Checkbox {
         this.question = attr.question;
     	this.textArr = attr.textArr;
         this.id = null;
-    	this.choseAns = new Set();
+    	this.choseAns = [];
         this.pointVal = this.retrievePointVal()*75;        
     }
 
     addAns(answers){
         this.clearAnswers();
         for(let answer of answers){
-    	   this.choseAns.add(answer); 
-        }
+    	   this.choseAns.push(answer);
+        }        
     }    
 
     clearAnswers(){
-    	this.choseAns.clear();	
+    	this.choseAns = [];	
     }
 
     retrievePointVal(){

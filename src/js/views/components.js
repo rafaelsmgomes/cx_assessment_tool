@@ -216,10 +216,11 @@ export const createCheckbox = (attr) => {
 
     let htmltext = '';
 
-    for(let j = 0; j < textArr.length; j++){
+    for(let j = 0; j < textArr.length; j++){        
+
         htmltext += `   
             <div class="checkbox__group">
-                <input type="checkbox" class="checkbox__input" name="checkbox--${id}" id="checkbox--${id}--${j}" value=${textArr[j]}>
+                <input type="checkbox" class="checkbox__input" name="checkbox--${id}" id="checkbox--${id}--${j}" value="${textArr[j]}">
                 <label for="checkbox--${id}--${j}" class="checkbox__label">
                 <div class="checkbox__button checkbox__button--0">
                 <div class="checkbox__checkmark"></div>

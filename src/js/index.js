@@ -74,6 +74,7 @@ state.tipsScheme = tipsSchemeGroup;
 
 $(document).ready(function(){
 
+
 	/*** PRELOAD CTRL ***/
 		setTimeout(function(){
 			$('.preload').addClass('fade');	
@@ -169,54 +170,52 @@ $(document).ready(function(){
 
 	/*** Custom CSS on Btn Progress ***/
 
-	window.statete = state;
+		window.statete = state;
 
-	//Header toggle on scroll
-	css.toggleHeader();
+		//Header toggle on scroll
+		css.toggleHeader();
 
-	//Initialize Gate
-	gate.init(state);
+		//Initialize Gate
+		gate.init(state);
 
-	//stop pointerevents on panel moving
-	css.panelFix(timing);	
+		//stop pointerevents on panel moving
+		css.panelFix(timing);	
 
-	$('.btn__progress--40').click(postState);
-	async function postState() {
-		$('.footer').hide();
-		const options = {
-			method: 'POST',
-			body: JSON.stringify(window.statete),
-			headers: {
-				'Content-Type': 'application/json',
-			},
+		$('.btn__progress--40').click(postState);
+		async function postState() {
+			$('.footer').hide();
+			const options = {
+				method: 'POST',
+				body: JSON.stringify(window.statete),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+			fetch('/api', options)
+			.then((resp) => {
+				return resp.json();
+			})
+			.then(resp =>{
+				console.log(resp);
+				return fetch('/api2', { method: 'GET'} )
+			})
+			.then((response) => {
+				return response.json();	
+			})
+			.then( (el) => {
+				const myJson = el;	
+				const userId = myJson.data[0].user_id;
+				// console.log(`userID: ${userId}`);
+				$('.btn__pdf--1').attr('href',`http://dev.assessment-tools.com/cx/maturity/pdf/${userId}`);
+				css.loadLottie({
+					'cloud--1-0': cloudMain,
+					'cloud--2-0': cloud0,
+					'cloud--2-1': cloud1,
+					'cloud--2-2': cloud2,
+					'cloud--2-3': cloud3,
+				}, myJson, timing);
+			})
 		}
-		fetch('/api', options)
-		.then((resp) => {
-			return resp.json();
-		})
-		.then(resp =>{
-			console.log(resp);
-			return fetch('/api2', { method: 'GET'} )
-		})
-		.then((response) => {
-			return response.json();	
-		})
-		.then( (el) => {
-			const myJson = el;
-			const userId = myJson.data[0].user_id;
-			// console.log(`userID: ${userId}`);
-			$('.btn__pdf--1').attr('href',`http://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
-			css.loadLottie({
-				'cloud--1-0': cloudMain,
-				'cloud--2-0': cloud0,
-				'cloud--2-1': cloud1,
-				'cloud--2-2': cloud2,
-				'cloud--2-3': cloud3,
-			}, myJson, timing);
-		})
-	}
-
-
 });
 
 // ------------------------------------------------

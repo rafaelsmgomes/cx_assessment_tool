@@ -2,7 +2,19 @@ export const init = (state) => {
 	$('.gate__form').submit(function(e){
 		e.preventDefault();
 
-		console.log($('#gate__company').val().length);
+		// console.log($('#gate__company').val().length);
+
+		if(
+			$('#gate__company').val().length === 0 ||
+			$('#gate__revenue').val().length === 0 ||
+			$('#gate__country').val().length === 0 ||
+			$('#gate__company').val().length === 0 ||
+			$('#gate__employees').val().length === 0 ||
+			$('#gate__industry').val().length === 0)
+		{
+			$('.form__invalid').addClass('form__invalid--active');
+			return;
+		}
 
 		state.company = $('#gate__company').val();
 		state.revenue = $('#gate__revenue').val();

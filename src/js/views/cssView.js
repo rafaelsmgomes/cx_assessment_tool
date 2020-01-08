@@ -8,7 +8,6 @@ export const toggleHeader = () => {
   });
 };
 
-
 export const preloadImgs = (preimages) => {
 	const myimages = [];
 	for (let i=0;i<preimages.length;i++){
@@ -34,7 +33,7 @@ export const loadLottie = (obj, data, timing) => {
 
 	console.log(data);
 
-	const scoremain = ((score0+score1+score2+score3)/4)+1;
+	const scoremain = ((score0+score1+score2+score3)/4);
 
 	for(const key in obj){
 

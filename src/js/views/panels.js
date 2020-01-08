@@ -99,11 +99,11 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Is your email/ marketing automation platform currently integrated with your CRM application?
+				Is your email/marketing automation platform currently integrated with your CRM application?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
-				'question':'Is your email/ marketing automation platform currently integrated with your CRM application?',
+				'question':'Is your email/marketing automation platform currently integrated with your CRM application?',
 				'textArr': ['Yes', 'No'],
 				'group': 'broadcast',
 				'count': true,

@@ -58,7 +58,9 @@
 		}
 		&--27{
 			background: $color-red-1;
-
+			@include bp($width-5){
+				bottom: -8.5rem;
+			}
 		}
 	}
 

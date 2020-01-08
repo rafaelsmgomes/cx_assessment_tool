@@ -331,7 +331,7 @@ $width: 100%;
         }
         @include bp($width-5){
             width: 24rem;
-            margin-top: 13.7rem;
+            margin-top: 15.7rem;
             @include bph(450){
                 margin-top: 15rem;
             }
@@ -373,8 +373,8 @@ $width: 100%;
                 margin-top: 1.85rem;
             }
         }
-        @include bp($width-5){
-            display: none;
-        }
+        // @include bp($width-5){
+        //     display: none;
+        // }
     }
 }

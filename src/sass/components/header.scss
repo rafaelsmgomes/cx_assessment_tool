@@ -52,9 +52,10 @@
 	&__rectangle {
 		flex: 0 0 2rem;
 		position: relative;
-		border: solid 0.10rem black;
+		// border: solid 0.10rem black;
 		border-radius: 50.00rem;
 		transition-delay: 1s;
+		border: solid 0.1rem transparent;
 		z-index: 1000;
 		&:hover{
 			border: solid .1rem transparent;

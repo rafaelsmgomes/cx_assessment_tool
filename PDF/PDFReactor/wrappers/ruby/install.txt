@@ -1,3 +1,0 @@
-Requirements:
-
-Install Ruby 1.8

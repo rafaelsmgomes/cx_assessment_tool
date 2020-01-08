@@ -1,7 +1,0 @@
-[
-    {
-        "name": "Example Rule",
-        "action": "ALLOW",
-        "host": "**.pdfreactor.com"
-    }
-]

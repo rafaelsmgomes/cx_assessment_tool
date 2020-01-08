@@ -1,5 +1,0 @@
-The PDFreactor user manual (in PDF and HTML Format) can be found in the 
-
-	/doc subdirectory.
-	
-Please make sure to read the manual before integrating and using PDFreactor.

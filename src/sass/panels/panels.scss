@@ -11,7 +11,12 @@
     opacity: 1;
   }
   &--41{
-    overflow-y: scroll;
-    
+    overflow-y: scroll;    
+  }
+  &--6,
+  &--7{
+    @include bp($width-5){
+      overflow-y: scroll;
+    }    
   }
 }

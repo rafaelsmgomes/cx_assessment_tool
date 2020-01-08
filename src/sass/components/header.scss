@@ -18,6 +18,10 @@
     margin-right: 1.25rem;
 		font-size: 0.8rem;
 		color: $color-white-1;
+
+		@include bp($width-4){
+			margin-right: .5rem;
+		}
 		& > a {
 	    text-decoration: none;
 	    margin-top: 0.25rem;
@@ -36,6 +40,10 @@
 			flex: 0 0 8.4rem;
 			height: 2.00rem;
 			// padding-left: 3.20rem;
+
+			@include bp($width-4){
+				flex: 0 0 5.2rem;
+			}
 			&.activate{
 				padding-left: 0;
 			}

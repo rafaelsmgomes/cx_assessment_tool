@@ -133,6 +133,10 @@
   font-family: OracleReg, Arial, Helvetica, sans-serif;
   margin-top: 0.80rem; }
 
+@media only screen and (max-width: 1440px) and (max-height: 900px) {
+  .main__direction {
+    font-size: 1.19rem; } }
+
 .results__title--1 {
   font-family: OracleB, Arial, Helvetica, sans-serif;
   font-size: 2.80rem;
@@ -688,8 +692,8 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding-top: 3.25rem;
-  padding-bottom: 3.25rem;
+  padding-top: 2.675rem;
+  padding-bottom: 2.675rem;
   opacity: 0;
   transition: opacity 1s;
   position: relative; }
@@ -729,7 +733,9 @@
   height: 1.29rem;
   font-size: .7rem;
   border-width: 0.05rem;
-  border-style: solid; }
+  border-style: solid;
+  background: rgba(117, 156, 108, 0.2);
+  border-width: 0; }
 
 .gate__submit {
   -webkit-appearance: none;
@@ -738,13 +744,13 @@
   cursor: pointer;
   color: none;
   color: #fcfbfa;
-  background-color: #312D2A;
+  background-color: #759C6C;
   border: none;
   width: 5.00rem;
   height: 1.80rem;
   border-radius: 5.00rem;
   margin: 0 auto;
-  margin-top: 1.25rem; }
+  margin-top: .75rem; }
 
 .form__invalid {
   font-family: OracleReg, Arial, Helvetica, sans-serif;
@@ -758,7 +764,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  margin-bottom: 1.50rem;
+  margin-bottom: .75rem;
   display: none; }
   .form__invalid--active {
     display: block; }
@@ -1594,7 +1600,7 @@
     @media only screen and (max-width: 1440px) {
       .line__wrapper {
         width: 83.333%; } }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 666px) {
       .line__wrapper {
         width: 95%; } }
     .line__wrapper--x {
@@ -1669,7 +1675,7 @@
   @media only screen and (max-width: 1024px) {
     .footer {
       top: calc(100vh - 1.7rem); } }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 666px) {
     .footer {
       width: 95%; } }
   .footer-text {
@@ -1704,17 +1710,17 @@
   margin: 0 auto;
   left: 0;
   right: 0; }
-  .header__container.fade-in {
-    opacity: 1; }
-  .header__container.fade-up {
-    opacity: 0;
-    transform: translateY(-100%); }
   @media only screen and (max-width: 1440px) {
     .header__container {
       width: 83.333%; } }
   @media only screen and (max-width: 666px) {
     .header__container {
       width: 95%; } }
+  .header__container.fade-in {
+    opacity: 1; }
+  .header__container.fade-up {
+    opacity: 0;
+    transform: translateY(-100%); }
 
 .wrapper {
   display: flex; }
@@ -1846,7 +1852,6 @@ html {
 .pathfinder {
   position: relative;
   transition-timing-function: cubic-bezier(0.47, 0.11, 0, 1.08);
-  transform: translateY(-400vw);
   opacity: 0;
   transition: opacity 1s; }
   .pathfinder.fade-in {

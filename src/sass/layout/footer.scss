@@ -13,8 +13,9 @@
        top: calc(100vh - 1.7rem); 
     }    
 
-    @include bp($width-4){
+    @include bp($width-5){
         width: 95%;
+        top: calc(100vh - 8rem);
     }
 
 

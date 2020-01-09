@@ -1,7 +1,7 @@
 .line{
 	
 	stroke: $color-white-1;
-  stroke-width: 2;
+  stroke-width: 0.15rem;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
@@ -9,20 +9,20 @@
 
   &--x-1{
     stroke: $color-white-1;
-    stroke-width: 2;
+    stroke-width: 0.15rem;
     stroke-dasharray: 4;
     stroke-dashoffset: 8;
   }
 
-  &--1x,
-  &--2x{
-    @include bp($width-1){
-      stroke-width: 3;
-    }
-    @include bp(1075){
-      stroke-width: 4;
-    }
-  }
+  // &--1x,
+  // &--2x{
+  //   @include bp($width-1){
+  //     stroke-width: 0.15rem;
+  //   }
+  //   @include bp(1075){
+  //     stroke-width: 0.15rem;
+  //   }
+  // }
 
   &.activate{
     animation: fadewhite .5s linear;

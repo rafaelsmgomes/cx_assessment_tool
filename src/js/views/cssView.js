@@ -69,6 +69,10 @@ export const loadLottie = (obj, data, timing) => {
 	}
 }
 
+// ------------------------------------------------
+// POST AND GET REQUEST TO GENERATE DATABASE
+// ------------------------------------------------
+
 export const postState = (cloudObj,timing,state) => {
 	return function(){
 		$('.footer').hide();

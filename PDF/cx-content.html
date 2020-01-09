@@ -4,6 +4,11 @@
   <title>CX Assessment Results</title>
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <meta charset="UTF-8">
+    <script>
+        var loc= window.location.href;
+        var id=loc.split("/").pop();
+        console.log(id);
+    </script>
   </head>
   <body>
       <section id="page1">
@@ -12,7 +17,7 @@
                        <div class="logo"><img src="/assets/logo-o-mktg-cloud.png" alt="Oracle logo"></div>
              <div class="red-line"></div>
              <h1>Marketing Maturity<br> Assessment Report</h1>
-             <h2 >for <span id="company_name"><%= data.companyName %> </span></h2>
+             <h2 >for <span id="company_name"></span></h2>
              <a class="button green-button" href="#broadcast-page-1"><span>Read Report</span></a>
           </div>
       </section>
@@ -28,7 +33,7 @@
                    <div class="col-right">
                        <div class="cloud-chart" id="overall-cloud">
                             <div class="score-holder" id="score-holder">
-                                <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="total-cloud-score"><%= data.TotalScore %></span><span class="cloud-score-numerals" >/100</span></div>
+                                <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="total-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
                            </div>
                            <div class="cloud-bg" id="cloud-bg">
                            </div>
@@ -89,7 +94,7 @@ with CRM.</h5>
                    <div class="col-right">
                        <div class="cloud-chart internal-cloud" id="broadcast-cloud">
                             <div class="score-holder" id="broadcast-score-holder">
-                                 <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="broadcast-cloud-score"><%= data.BroadcastScore %></span><span class="cloud-score-numerals" >/100</span></div>
+                                 <div class="cloud-score"><span class="txt-21">Maturity<br> Score<br/></span><span class="cloud-score-numerals" id="broadcast-cloud-score">79</span><span class="cloud-score-numerals" >/100</span></div>
                            </div>
                            <div class="cloud-bg" id="broadcast-cloud-bg">
                            </div>

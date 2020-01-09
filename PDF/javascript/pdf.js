@@ -49,16 +49,16 @@ var lifecycle_7;
 var lifecycle_8;
 var lifecycle_9;
 
-/*
-var loc= window.location.href;
-console.log(loc)
-var r=loc.lastIndexOf('/');
-var id=r.substring(r + 1);
-console.log('pdf.js id: ' + id);
-*/
-var id=1578127744350;
 
-fetch('/pdfdata/' + id)
+// var loc= window.location.href;
+// console.log(loc)
+// var r=loc.lastIndexOf('/');
+// var id=loc.substring(r + 1);
+// console.log('pdf.js id: ' + id);
+
+var id = 1578127744350;
+
+fetch('/pdfdata')
     .then(response => {
     return response.json();
 })
@@ -546,67 +546,67 @@ function swapBackgrounds(el){
 }
 function spiders(){
     var ctx = document.getElementById('spiderChart').getContext('2d');
-var chart = new Chart(ctx, {
-// The type of chart we want to create
-type: 'radar',
-// The data for our dataset
-data: {
-labels: ['Broadcast', 'Responsive', 'Relationship', ['Lifecycle', 'Engagement']],
-datasets: [{
-  label: 'Component Maturity Score',
-  borderColor: 'rgb(0,0, 0)',
-  data: [BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore]
-}]
-},
-// Configuration options go here
-options: {
-scales: {
-  yAxes: [{
-      scaleLabel: {
-          display: false,
-      },
-      gridLines: {
-          display: 'false',
-          color: 'transparent',
-          zeroLineColor: '#E5DBBE',
-      },
-      ticks: {
-          display: false,
-          color: 'transparent'
-      },
-  }]
-},
-scale: {
-  ticks: {
-      min: 0,
-      max: 100,
-      stepSize: 25,
-      display: false,
-      fontColor: "#E5DBBE",
-  },
-  gridLines: {
-      lineWidth: 2,
-      color: ['#AE562C', '#FACD62', '#94AFAF', '#41817E']
-  },
-  pointLabels: {
-      display: true,
-      fontColor: '#221F1F',
-      fontFamily: 'OracleSans-Bold',
-      fontSize: '8',
-      fontStyle: 'bold'
-  }
-},
-legend: {
-  display: false
-},
-layout: {
-  padding: {
-      left: 50,
-      right: 50,
-      top: 50,
-      bottom: 50
-  }
-}
-}
-});
+    var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'radar',
+    // The data for our dataset
+    data: {
+    labels: ['Broadcast', 'Responsive', 'Relationship', ['Lifecycle', 'Engagement']],
+    datasets: [{
+    label: 'Component Maturity Score',
+    borderColor: 'rgb(0,0, 0)',
+    data: [BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore]
+    }]
+    },
+    // Configuration options go here
+    options: {
+    scales: {
+        yAxes: [{
+            scaleLabel: {
+                display: false,
+            },
+            gridLines: {
+                display: 'false',
+                color: 'transparent',
+                zeroLineColor: '#E5DBBE',
+            },
+            ticks: {
+                display: false,
+                color: 'transparent'
+            },
+        }]
+    },
+    scale: {
+        ticks: {
+            min: 0,
+            max: 100,
+            stepSize: 25,
+            display: false,
+            fontColor: "#E5DBBE",
+        },
+        gridLines: {
+            lineWidth: 2,
+            color: ['#AE562C', '#FACD62', '#94AFAF', '#41817E']
+        },
+        pointLabels: {
+            display: true,
+            fontColor: '#221F1F',
+            fontFamily: 'OracleSans-Bold',
+            fontSize: '8',
+            fontStyle: 'bold'
+        }
+    },
+    legend: {
+       display: false
+    },
+    layout: {
+        padding: {
+            left: 50,
+            right: 50,
+            top: 50,
+            bottom: 50
+        }
+    }
+    }
+    });
 }

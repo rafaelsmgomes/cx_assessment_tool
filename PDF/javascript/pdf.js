@@ -50,15 +50,15 @@ var lifecycle_8;
 var lifecycle_9;
 
 
-// var loc= window.location.href;
-// console.log(loc)
-// var r=loc.lastIndexOf('/');
-// var id=loc.substring(r + 1);
-// console.log('pdf.js id: ' + id);
+var loc= window.location.href;
+console.log(loc)
+var r=loc.lastIndexOf('/');
+var id=loc.substring(r + 1);
+console.log('pdf.js id: ' + id);
 
-var id = 1578127744350;
+// var id = 1578127744350;
 
-fetch('/pdfdata')
+fetch('http://dev.assessment-tools.com/pdfdata/'+id)
     .then(response => {
     return response.json();
 })

@@ -58,6 +58,7 @@ section {
         margin-bottom: 30px;
     border: solid 1px;
     position: relative;
+    overflow: hidden;
 }
 .section-inner{
     padding: 16px 40px 0px 32px;
@@ -473,7 +474,7 @@ a[id] {
 .reccomendation-text{
     display: inline-block;
     float: left;
-    width: Calc(100% -50px);
+    width: Calc(100% - 50px);
     width: 330px;
 }
 .recommendation_title{
@@ -522,7 +523,7 @@ height: 71px;
     margin-bottom: 0px;
 }
 .reccomendation-text{
-    width: Calc(100% -24px);
+    width: Calc(100% - 24px);
     float:left;
     display: inline-block;
 }
@@ -649,7 +650,8 @@ height: 71px;
         margin-top: 7px;
         line-height: 14px;
 }
-.bottom-image{
+
+.bottom-image, .b-image{
     background-image: url(../assets/1x/bg_green.png);
     background-position: bottom;
     background-repeat: no-repeat;
@@ -657,8 +659,8 @@ height: 71px;
     bottom:0;
     width:792px;
     height:269px;
-
 }
+
 .bottom-content{
         padding: 15px 30px
 }
@@ -766,11 +768,11 @@ height: 71px;
 /** new backgrounds**/
     
     
-#broadcast-page-3 {
+#broadcast-page-3, #broadcast-p3 {
     background-image: url(../assets/1x/img-rec-01.png);
     background-size: 792px 612px;
 }
-#broadcast-page-4 {
+#broadcast-page-4,#broadcast-p4 {
     background-image: url(../assets/1x/img-mktg-01.png);
     background-size: 792px 612px;
 }
@@ -816,13 +818,13 @@ height: 71px;
     height: 28px;
     background-color: #312D2A;
 }
-#cta-1{
+#ctaone{
     background-image: url(../assets/thumbnails/tbnail-01.png)
 }
 #cta-2{
     background-image: url(../assets/thumbnails/tbnail-02.png)
 }
-#cta-3{
+#ctathree{
     background-image: url(../assets/thumbnails/tbnail-03.png)
 }
 .cta-title{

@@ -69,6 +69,44 @@ export const loadLottie = (obj, data, timing) => {
 	}
 }
 
+export const postState = (cloudObj,timing,state) => {
+	return function(){
+		$('.footer').hide();
+		const options = {
+			method: 'POST',
+			body: JSON.stringify(state),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+		fetch('/api', options)
+		.then((resp) => {
+			return resp.json();
+		})
+		.then(resp =>{
+			console.log(resp);
+			return fetch('/api2', { method: 'GET'} )
+		})
+		.then((response) => {
+			return response.json();	
+		})
+		.then( (el) => {
+			const myJson = el;	
+			const userId = myJson.data[0].user_id;
+			// console.log(`userID: ${userId}`);
+			$('.btn__pdf--1').attr('href',`http://dev.assessment-tools.com/cx/maturity/pdf/${userId}`);
+			css.loadLottie({
+				'cloud--1-0': cloudObj.cloudMain,
+				'cloud--2-0': cloudObj.cloud0,
+				'cloud--2-1': cloudObj.cloud1,
+				'cloud--2-2': cloudObj.cloud2,
+				'cloud--2-3': cloudObj.cloud3,
+			}, myJson, timing);
+		})
+	}
+}
+
+
 function updateresultsText(score){
 	let retThis;	
 	if(score <= 24){

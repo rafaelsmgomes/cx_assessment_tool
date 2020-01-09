@@ -19,8 +19,12 @@
 		font-size: 0.8rem;
 		color: $color-white-1;
 
+	
 		@include bp($width-4){
 			margin-right: .5rem;
+		}
+		@include bp($width-5){
+			font-size: 0.60rem;
 		}
 		& > a {
 	    text-decoration: none;

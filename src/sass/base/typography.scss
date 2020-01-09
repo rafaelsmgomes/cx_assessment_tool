@@ -102,6 +102,11 @@
     height: 3.25rem;
     font-family: $font-reg;
     margin-top: 0.80rem;
+    @include bp($width-1){
+      @include bph(900){
+        font-size: 1.19rem;
+      }
+    }
 	}
 }
 

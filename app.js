@@ -58,7 +58,6 @@ var pdfReactor = new PDFReactor();
 app.get('/pdfreactor/:id', (req, res) => {
     id = req.params.id;    
     var config = {
-        // document: "http://www.pdfreactor.com/product/samples/textbook/textbook.html",
         document: `http://dev.assessment-tools.com/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
@@ -124,9 +123,6 @@ app.get('/cx/maturity/pdf/:id', (req, res) => {
 
 app.post('/api', (req,res) => {
     console.log("----------------------------------------")
-    
-    // console.log(req.body);    
-    // console.log(`res:${res}`);
 
     const data      = req.body,
         likerts     = data.likerts, 
@@ -148,28 +144,26 @@ app.post('/api', (req,res) => {
         return ('ok')
 
     }).then((el) => {
-        console.log(el);
-        console.log(ansArr);
         const results = insertAnswers(ansArr);
         return (results);
     })
     .then( (el) => {
-        console.log(el);
+        // console.log(el);
         const results = updateAnswers();
         return results
 
     })
     .then((el) => {
-        console.log(el);
+        // console.log(el);
         const results = createOverallResults();
         return results
     })
     .then(el => {
-        console.log(el)
+        // console.log(el)
         return ('done')
     })
     .then((el) => {
-        console.log(el)
+        // console.log(el)
         res.status(200).json({
             status: 'success',
             results: data.length,
@@ -177,7 +171,7 @@ app.post('/api', (req,res) => {
                 data: 'success'
             }  
         });
-
+        return ('done2');
     })
     .catch((err) => {
         console.log(err)

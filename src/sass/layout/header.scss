@@ -7,6 +7,21 @@
 	  padding-top: 0.95rem;
 	  opacity: 0;
 	  transition: opacity 1s, transform .2s;
+		width: 70rem;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		
+		@include bp($width-1){
+			width: 83.333%;				
+		} 
+
+		@include bp($width-5){
+			width: 95%;				
+		} 
+
+		// bac
+
 	  &.fade-in{
 	    opacity: 1;
 	  }		
@@ -15,13 +30,6 @@
 	  	transform: translateY(-100%);
 	  }
 
-		@include layoutOrientation;
-		@include bp($width-1){
-			width: 83.333%;	
-		}   
-		@include bp($width-5){
-			width: 95%;
-		}
 	}
 }
 

@@ -18,6 +18,14 @@
     margin-right: 1.25rem;
 		font-size: 0.8rem;
 		color: $color-white-1;
+
+	
+		@include bp($width-4){
+			margin-right: .5rem;
+		}
+		@include bp($width-5){
+			font-size: 0.60rem;
+		}
 		& > a {
 	    text-decoration: none;
 	    margin-top: 0.25rem;
@@ -36,6 +44,10 @@
 			flex: 0 0 8.4rem;
 			height: 2.00rem;
 			// padding-left: 3.20rem;
+
+			@include bp($width-4){
+				flex: 0 0 5.2rem;
+			}
 			&.activate{
 				padding-left: 0;
 			}
@@ -44,9 +56,10 @@
 	&__rectangle {
 		flex: 0 0 2rem;
 		position: relative;
-		border: solid 0.10rem black;
+		// border: solid 0.10rem black;
 		border-radius: 50.00rem;
 		transition-delay: 1s;
+		border: solid 0.1rem transparent;
 		z-index: 1000;
 		&:hover{
 			border: solid .1rem transparent;

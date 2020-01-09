@@ -71,9 +71,17 @@ const tipsSchemeGroup = new TipsScheme({
 state.colorScheme = colorSchemeGroup;
 state.tipsScheme = tipsSchemeGroup;
 
-
 $(document).ready(function(){
 
+	/*** POST REQ***/ 
+
+	state.postState = css.postState({
+		'cloudMain': cloudMain,
+		'cloud0': cloud0,
+		'cloud1': cloud1,
+		'cloud2': cloud2,
+		'cloud3': cloud3,
+	},timing,state);
 
 	/*** PRELOAD CTRL ***/
 		setTimeout(function(){
@@ -168,6 +176,7 @@ $(document).ready(function(){
 			'outputPerc': true,  
 		});
 
+
 	/*** Custom CSS on Btn Progress ***/
 
 		window.statete = state;
@@ -181,116 +190,7 @@ $(document).ready(function(){
 		//stop pointerevents on panel moving
 		css.panelFix(timing);	
 
-		$('.btn__progress--40').click(postState);
-		async function postState() {
-			$('.footer').hide();
-			const options = {
-				method: 'POST',
-				body: JSON.stringify(window.statete),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			}
-			fetch('/api', options)
-			.then((resp) => {
-				return resp.json();
-			})
-			.then(resp =>{
-				console.log(resp);
-				return fetch('/api2', { method: 'GET'} )
-			})
-			.then((response) => {
-				return response.json();	
-			})
-			.then( (el) => {
-				const myJson = el;	
-				const userId = myJson.data[0].user_id;
-				// console.log(`userID: ${userId}`);
-				$('.btn__pdf--1').attr('href',`http://dev.assessment-tools.com/cx/maturity/pdf/${userId}`);
-				css.loadLottie({
-					'cloud--1-0': cloudMain,
-					'cloud--2-0': cloud0,
-					'cloud--2-1': cloud1,
-					'cloud--2-2': cloud2,
-					'cloud--2-3': cloud3,
-				}, myJson, timing);
-			})
-		}
 });
-
-// ------------------------------------------------
-// POST AND GET REQUEST TO GENERATE DATABASE
-// ------------------------------------------------
-
-	// $('.btn__progress--40').click(postState);
-	// async function postState() {
-
-	// 	const options = {
-	// 		method: 'POST',
-	// 		body: JSON.stringify(window.statete),
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 	}
-	// 	fetch('/api', options)
-	// 	.then((resp) => {
-	// 		return resp.json();
-	// 	})
-	// 	.then(resp =>{
-	// 		console.log(resp);
-	// 		return fetch('/api2', { method: 'GET'} )
-	// 	})
-	// 	.then((response) => {
-	// 		return response.json();	
-	// 	})
-	// 	.then( (el) => {
-	// 		const myJson = el;
-
-	// 		css.loadLottie({
-	// 			'cloud--1-0': cloudMain,
-	// 			'cloud--2-0': cloud0,
-	// 			'cloud--2-1': cloud1,
-	// 			'cloud--2-2': cloud2,
-	// 			'cloud--2-3': cloud3,
-	// 		}, myJson, timing);
-	// 	})
-	// }
-
-// $('.btn__progress--40').on('click', function(){
-// async function postState() {
-
-// 	const options = {
-// 		method: 'POST',
-// 		body: JSON.stringify(window.statete),
-// 		headers: {
-// 			'Content-Type': 'application/json',
-// 		},
-// 	}
-// 	fetch('/api', options)
-// 	.then((resp) => {
-// 		return resp.json();
-// 	})
-// 	.then(resp =>{
-// 		console.log(resp);
-// 		return fetch('/api2', { method: 'GET'} )
-// 	})
-// 	.then((response) => {
-// 		return response.json();	
-// 	})
-// 	.then( (el) => {
-// 		const myJson = el;
-
-// 		css.loadLottie({
-// 			'cloud--1-0': cloudMain,
-// 			'cloud--2-0': cloud0,
-// 			'cloud--2-1': cloud1,
-// 			'cloud--2-2': cloud2,
-// 			'cloud--2-3': cloud3,
-// 		}, myJson, timing);
-// 	})
-// })
-
-
 
 // ------------------------------------------------
 // GET PDF DATA FUNCTION

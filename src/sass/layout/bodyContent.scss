@@ -17,5 +17,13 @@
 		.panel--41 &{
     	transform: translateX(0.50rem);
 		}
+
+	  .panel--6 &,
+	  .panel--7 &{
+	  	@include bp($width-5){
+	  		margin-bottom: 8.81rem;	  		
+	  		height: auto;
+	  	}
+	  }
   }
 }

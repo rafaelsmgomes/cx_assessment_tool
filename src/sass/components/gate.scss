@@ -18,8 +18,8 @@
 		background-color: #fff;
     display: flex;
     flex-direction: column;
-    padding-top: 3.25rem;
-    padding-bottom: 3.25rem;   	
+    padding-top: 2.675rem;
+    padding-bottom: 2.675rem;   	
 	  opacity: 0;
 	  transition: opacity 1s;
 	  position: relative;
@@ -61,8 +61,11 @@
 	&__input{
 		width: 15.00rem;
 		height: 1.29rem;
+		font-size: .7rem;
 		border-width: 0.05rem;
 		border-style: solid;
+		background: rgba(117, 156, 108,.2);
+    border-width: 0;
 	}
 	&__submit{
 		-webkit-appearance: none;
@@ -71,13 +74,13 @@
     cursor: pointer;
     color: none;
     color: $color-white-1;
-    background-color: $color-grey-2;
+    background-color: $color-green-1;
     border: none;
     width: 5.00rem;
     height: 1.80rem;
     border-radius: 5.00rem;
 		margin: 0 auto;
-    margin-top: 1.25rem;
+    margin-top: .75rem;
 	}
 }
 
@@ -94,7 +97,7 @@
     left: 0;
     right: 0;
     text-align: center;
-    margin-bottom: 1.50rem;
+    margin-bottom: .75rem;
 		display: none;
 		&--active{
 			display: block;

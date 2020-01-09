@@ -159,11 +159,17 @@
         line-height: 1.3;
         letter-spacing: normal;
         color: $color-white-1;
-        @include bp($width-4){
-            white-space: normal;
-        }
+        // @include bp($width-4){
+        //     white-space: normal;
+        // }
         @include bp($width-5){
             white-space: nowrap;
+        }
+
+        .panel--27 &{
+            @include bp($width-4){
+                white-space: normal;
+            }
         }
 	}
 }

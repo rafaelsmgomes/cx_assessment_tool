@@ -49,7 +49,8 @@
 	    }
 
 	    @include bp($width-5){
-	    	left: 65%;
+	    	left: 0;
+    		bottom: -2.5rem;
 	    }
 		}
 		&--6{
@@ -57,7 +58,9 @@
 		}
 		&--27{
 			background: $color-red-1;
-
+			@include bp($width-5){
+				bottom: -8.5rem;
+			}
 		}
 	}
 
@@ -98,11 +101,14 @@
 		}
 
 		& > img{
-			@include bp($width-1){
-				@include bph(900){
-					width: 62%;
-				}
-			}
+			// @include bp($width-1){
+			// 	@include bph(900){
+			// 		width: 62%;
+			// 	}
+			// }
+
+			width: 60%;
+			height: 60%;
 		}
 	}
 	&__pdf{

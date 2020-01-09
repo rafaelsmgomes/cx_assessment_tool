@@ -20,31 +20,31 @@
 		},
 		"perfect": "At this stage, it's all about continuously refining the areas we have covered in this section, specifically around leveraging marketing automation, maximizing your usage of blueprints and templates, generating batch-and-blast communications, utilizing basic channels like web and email, and integrating with your CRM to drive maximum ROI and revenue uplift. ",
 		"recommendations": [{
-            	"title": "Marketing automation",
+				"title": "Marketing automation",
 				"icon": "icon-automation",
 				"no": "Adding automation is vital to transform and streamline your sales and marketing processes. To maximize your business benefit from marketing automation, it's important to make sure you take a holistic view and transform all of your old processes, including manual processes around email and campaign management to automating lead flow.",
 				"yes": "Your organization is already taking advantage of Marketing Automation. Continue to look at your manual processes in order to continually realize efficiencies."
 			},
 			{
-                "title": "Blueprints, Templates, and More",
+				"title": "Blueprints, Templates, and More",
 				"icon": "icon-blueprints",
 				"no": "We encourage you to take advantage of your entire Marketing Automation platform. This helps save time and money and will be key to your success. Templates, campaign blueprints, webforms, and landing pages deliver results immediately in the form of improved marketing scale, efficiency, and brand experience.",
 				"yes": "Your teams are saving time because you have integrated the use of pre-built campaign blueprints and templates to standardize and scale your marketing strategy."
 			},
 			{
-                "title": "Batch-and-Blast",
+				"title": "Batch-and-Blast",
 				"icon": "icon-bnb",
 				"no": "A \"batch-and-blast\" approach is a natural place to start as you learn  the new system. After all, you have to learn how to walk before you can run. And for key communications and customer updates, \"batch-and-blast\" is a good option before you take advantage of more complex, time-intensive segmentation efforts. ",
 				"yes": "You've implemented \"batch-and-blast\" to handle customer and company wide announcements. Now it's time to consider personalization."
 			},
 			{
-                "title": "Basic Channels (Email and Web)",
+				"title": "Basic Channels (Email and Web)",
 				"icon": "icon-basic",
 				"no": "Email is still ranked as the single most effective tactic for engagement and retention (Gigaom Research). When it comes to web, 90% of searchers are undecided before starting their search (Omnicore Agency). That's why  you need to understand how to continue to maximize value from these two core channels.",
 				"yes": "Keep up the momentum! You've streamlined your email and web marketing campaigns."
 			},
 			{
-                "title": "CRM Integration",
+				"title": "CRM Integration",
 				"icon": "icon-CRM",
 				"no": "Marketing automation helps teams increase capacity, scale, and yield of any marketing effort. And when you integrate your CRM application, it amplifies these benefits further. For sales, this means better action lists of prospects, leads, and opportunities. For marketing, this translates to a more accurate view into the entire pipeline.",
 				"yes": "Based on your response on CRM integration, you should be seeing real change in the form of better sales and marketing alignment and visibility."
@@ -60,64 +60,62 @@
 		},
 		"perfect": "<p>At this stage, it's all about continuously refining the areas we have covered in this section, specifically around multi-channel marketing, adaptive campaign nurture programs, personalization, lead scoring, segmentation, behavioral re-targeting, A/B email testing, and testing and optimization for landing pages and websites to drive maximum ROI and revenue uplift.</p>  ",
 		"recommendations": [{
-              "title": "Multichannel Marketing",
+				"title": "Multichannel Marketing",
 				"icon": "icon-multichannel",
 				"no": "According to McKinsey, when using multiple channels to engage buyers, open rates increase by 84%. Gartner research indicates integrating four or more channels can improve campaign performance by 300%. And remember it's still all about the right content at the right time on the right channel.",
 				"yes": "You have realized the benefit of coordinating your marketing across multiple channels. Keep up the good work."
 			},
 			{
-                "title": "Campaign automation",
+				"title": "Campaign automation",
 				"icon": "icon-campaign-automation",
 				"no": "Automating campaigns can greatly increase efficiency. An \"always on\" nurture campaign allows you to engage prospects who have signaled their interest. It allows you to intelligently add them into an adaptive nurture campaign and keep them engaged at just the right level.",
 				"yes": "It's great to see you have taken the next step in automation - specifically to use \"always on\" nurture campaigns."
 			},
 			{
-                "title": "Adaptive Campaign Nurture Programs",
+				"title": "Adaptive Campaign Nurture Programs",
 				"icon": "icon-nurture",
 				"no": "Adaptive nurture campaigns leverage the predictive capabilities of machine learning to deliver different paths for different buyers, personalizing experiences with dynamic content. And when research indicates that 55% of the total emails sent across the globe are marked as SPAM (Inboxarmy), this is critical to ensuring your message gets received. ",
 				"yes": "You're becoming an expert at automation. Using data- driven adaptive nurture campaigns that leverage machine learning can increase your message delivery by up to 55% (Inboxarmy)."
 			},
 			{
-                "title": "Personalization",
+				"title": "Personalization",
 				"icon": "icon-personalization",
 				"no": "When you build segments based on customer intent you deliver more personalized experiences to customers and prospects.  As a result, according to McKinsey, marketers who personalize their customers' experiences can see a lift in revenue of ~15%, improve their efficiencies by 10-30%, and decrease acquisition costs by 50%.",
 				"yes": "Now we're talking - it's great to see that your company has realized personalization could increase revenue by up to 15%, improve efficiencies by 10-30%, and decrease acquisition costs by 50% (McKinsey)."
 			},
 			{
-                "title": "Adaptive Lead Scoring",
+				"title": "Adaptive Lead Scoring",
 				"icon": "icon-adaptive",
 				"no": "According to a lead scoring survey by Demand Gen Report, 41% of respondents saw improved conversion rates, 43% saw an increase in the number of marketing qualified leads, and 32% saw a rise in sales-ready leads. And organizationally, 53% of those surveyed experienced improved marketing and sales alignment with lead scoring.",
 				"yes": "You get top marks for using lead scoring!"
 			},
 			{
-                "title": "Basic Lead Scoring",
+				"title": "Basic Lead Scoring",
 				"icon": "icon-basic",
 				"no": "Integrating more of a data-driven, algorithmic lead scoring methodology takes out human bias and its resulting subjectivity. An adaptive lead scoring model combines huge amounts of historical and behavioral data with predictive modeling to instantly identify the sales leads that are most likely to convert, resulting in greater precision and outcomes.",
 				"yes": "You have joined an elite group of customers that has taken their lead scoring to the next level with data-driven adaptive lead scoring."
 			},
 			{
-                "title": "Segmentation",
-                "icon": "icon-segmentation",
-                "title": "Segmentation",
+				"title": "Segmentation",
 				"icon": "icon-segmentation",
 				"no": "According to DMA, segmented and targeted emails generate 58% of all revenue, which presents a huge opportunity for marketing teams. It allows them to move from sending a broadcast message to one that is tailored and relevant to your audiences based on behavior, personal data, or company information for improved campaign performance and ROI.",
 				"yes": "Your company understands the power of segmentation - specifically it can drive up to 58% of all revenue (DMA)."
 			},
 			{
-                "title": "Behavioral re-targeting",
-                "icon": "icon-behavioral",
+				"title": "Behavioral re-targeting",
+				"icon": "icon-behavioral",
 				"no": "In the experience economy, the customer journey is no longer linear and marketers have only micro-moments in which to engage buyers. The speed at which you can target and engage with accurate data will determine your ultimate success at buyer acquisition through close of sale. ",
 				"yes": "It's great to hear that your marketing team is looking at behaviors and micro moments to gauge user intent."
 			},
 			{
-                "title": "A/B email testing",
-                "icon": "icon-ab",
+				"title": "A/B email testing",
+				"icon": "icon-ab",
 				"no": "According to LinkedIn, 63% of companies say A/B testing is valuable for conversion rate optimization. Start by identifying one element of an email to test, e.g., focus on content elements like subject lines, headlines, or calls to action, or design elements like color choice, button design, etc., and optimize based on testing. ",
 				"yes": "You're becoming a pro! Congratulations on your successful integration of email testing."
 			},
 			{
-                 "title": "Testing and optimization for landing pages and websites",
-                "icon": "icon-testing",
+				"title": "Testing and optimization for landing pages and websites",
+				"icon": "icon-testing",
 				"no": "According to Taylor & Frances Group, it takes about 50 milliseconds (that’s 0.05 seconds) for users to form an opinion about your website and decide whether they’ll stay or leave. Website testing efforts can be worthwhile and, according to Steelhouse, when done correctly, can boost conversions by 300% or more.",
 				"yes": "You get top scores for all the work you have been doing around testing and optimizing landing pages and websites."
 			}
@@ -212,56 +210,56 @@
 		]
 	},
 	"lifecycle": {
-        "lifecycle_text": {
+		"lifecycle_text": {
 			"low": "<p>As you might already be finding, creating a connected customer profile can be a herculean task. But the investment is worth it. Today's customers expect every interaction with a brand to be consistent across marketing, sales, and service. They expect brands to know them better than they know themselves. Central to achieving this is a data-first approach that enables connected customer intelligence across marketing, sales, commerce, service and loyalty. In order to deliver this, you need to have a robust understanding of your customer no matter how or when they interact with your brand.</p><p> The ultimate goal is to reduce customer churn and maximize customer lifetime value, by delivering a relevant, consistent, and timely experience at each customer touchpoint. Focus on connecting your  data into a complete customer profile and linking this customer intelligence into a comprehensive experience.</p> ",
-			"medlow": "<p>You're on your way to delivering a unified brand experience across all customer touchpoints! Breaking down the silos is the only way to gain business insights and drive economic value from CX investments. The first step to breaking down the silos is to create a comprehensive, connected customer profile.<p></p> To drive revenue growth in the experience economy, activating that customer intelligence in each of the micro-moments your customers engage is critical. These micro-moments occur on your customers’ terms and your CX strategy must enable whoever touches your customer first. This could be on your website today, but it could be a chatbot or a hand gesture tomorrow, and you need to be ready when you customers force you to be. The point is, with this connected approach, you are better armed to deliver the kind of experiences your customers have come to expect. In the experience economy, it’s your customers who dictate how and when they engage.</p>",
+			"medlow": "<p>You're on your way to delivering a unified brand experience across all customer touchpoints! Breaking down the silos is the only way to gain business insights and drive economic value from CX investments. The first step to breaking down the silos is to create a comprehensive, connected customer profile.</p><p> To drive revenue growth in the experience economy, activating that customer intelligence in each of the micro-moments your customers engage is critical. These micro-moments occur on your customers’ terms and your CX strategy must enable whoever touches your customer first. This could be on your website today, but it could be a chatbot or a hand gesture tomorrow, and you need to be ready when you customers force you to be. The point is, with this connected approach, you are better armed to deliver the kind of experiences your customers have come to expect. In the experience economy, it’s your customers who dictate how and when they engage.</p>",
 			"medhigh": "<p>You're on your way to delivering a unified brand experience across all customer touchpoints!  You're already breaking down the silos to gain business insights and drive economic value from CX investments. To drive revenue growth in the experience economy, activating that customer intelligence in each of the micro-moments your customers engage is critical. These micro-moments occur on your customers’ terms and your CX strategy must enable whoever touches your customer first. This could be on your website today, but it could be a chatbot or a hand gesture tomorrow, and you need to be ready when your customers force you to be. </p><p>The point is, with this connected approach, you will be better armed to deliver the kind of experiences your customers have come to expect. In the experience economy, it’s your customers who dictate how and when they engage. </p>",
 			"high": "<p>Congratulations! Your company joins top performers in <strong>Lifecycle Engagement</strong>. </p><p>You're a CX leader and creating truly connected experiences through connected data and insights, which is no small feat. According to Experian, the top three challenges to building a single customer profile for each customer with the highest accuracy are inability to link different technologies (40%), poor data quality (34%), and lack of relevant technology (32%). But according to Forrester, leaders in CX marketing tend to <strong>drive five times better revenue growth</strong> and outperform CX laggards on stock price growth by <strong>29 percentage points</strong>. Hopefully you're seeing similar or better results. </p><p>Keep up the great work! </p>"
 		},
 		"recommendations": [{
-            	"title": "Unified customer profile",
+				"title": "Unified customer profile",
 				"icon": "icon-unified",
 				"no": "Connecting all your data sources allows you to build a single customer profile for each customer with the highest accuracy. A single view of your customer enables timely, relevant, and consistent experiences across every customer interaction and simplifies the integration of online, offline, and third-party data sources.",
 				"yes": "Great job! With a single view of your customer, you ensure timely, relevant, and consistent experiences across every customer interaction."
 			},
 			{
-                "title": "Advanced personalization",
+				"title": "Advanced personalization",
 				"icon": "icon-advanced-person",
 				"no": "Customers expect real-time, personalized and contextual experiences when they want them and how they want them, and for marketers to know them better than they do. But to really know them, marketers must access all customer journey data like marketing, sales, and service, to drive true personalization.",
 				"yes": "Congratulations! According to McKinsey, by providing personalized experiences, marketers experienced a ~ 15% lift in revenue, a 10-30% increase in efficiencies, and acquisition costs decreased by as much as 50%."
 			},
 			{
-                "title": "B2B commerce",
+				"title": "B2B commerce",
 				"icon": "icon-bib",
 				"no": "B2B buyers prefer an easier buying experience similar to their consumer experience. For repeat purchases and low consideration ancillary products/services, buyers don’t want to speak with a rep – they prefer to shop online when possible. Your competitors are already moving this direction and taking market share daily.",
 				"yes": "You're a smart B2B marketer who recognizes that B2B buyers demand a buying experience that more closely resembles the consumer experience. "
 			},
 			{
-                "title": "Customer loyalty",
+				"title": "Customer loyalty",
 				"icon": "icon-loyalty",
 				"no": "According to Gartner, 80% of all future profits will come from 20% of existing customers. You have a greater chance of selling to an existing customer than a new one. It can cost up to 7x more to acquire a new account than to keep one. ",
 				"yes": "According to Gartner, 80% of all future profits will come from 20% of existing customers. You understand the importance of customer retention. "
 			},
 			{
-                "title": "Service aware marketing",
+				"title": "Service aware marketing",
 				"icon": "icon-aware",
 				"no": "To the customer, the “service experience” isn't limited to their contact center interaction. It extends across every touchpoint of your brand.  Ensuring your marketing teams are automatically informed of ongoing customer concerns can help avoid unwanted \"unsubscribes\" to new offers due to their frustration in-the-moment.  ",
 				"yes": "Great work ensuring your marketing teams are armed well with automatic customer service concerns. You're not targeting customers in the heat of a bad moment."
 			},
 			{
-                "title": "Empowered service",
+				"title": "Empowered service",
 				"icon": "icon-empowered",
 				"no": "89% of brands expect to be competing mostly or completely on the basis of customer experience (Gartner). The asset of customer data is unique to your company. Giving your service reps in-the-moment insights may provide the perfect opportunity to upsell something that would suit them perfectly.",
 				"yes": "Congratulations! By empowering your service teams with data, you're in a strong position to compete on customer experience, AND drive upsell. "
 			},
 			{
-                "title": "Service aware sales",
+				"title": "Service aware sales",
 				"icon": "icon-sales",
 				"no": "Every customer wants to feel like they have been heard when they have an issue, including by their sales rep. Connecting the critical digital touchpoints across sales and service interactions will position your sales team to provide relevant interactions that will lead to better experiences.",
 				"yes": "Connecting critical digital touchpoints across sales and service interactions positions your sales team to provide relevant interactions, timed appropriately, that lead to better experiences. "
 			},
 			{
-                "title": "Measure customer lifetime value",
+				"title": "Measure customer lifetime value",
 				"icon": "icon-lifetime",
 				"no": "Customer lifetime value measures a customer's revenue over the duration of your business relationship. This insight helps to prioritize your marketing efforts and spend, while maintaining profitability. And it can help identify trends that could predict propensity to buy or if their business becomes a flight risk.",
 				"yes": "Understanding your customer across their many touchpoints with your brand creates better experiences than your competition. You're also building higher customer lifetime value, and more defensible, long-term customer relationships."

@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- You can download the PDFreactor Web Service JavaScript wrapper from: 
-            http://www.pdfreactor.com/download/get/?product=pdfreactor&type=webservice_clients&jre=false --> 
-           <script src="PDFreactor/wrappers/javascript/lib/PDFreactor.js"></script>
+        <script src="/PDFreactor/wrappers/javascript/lib/PDFreactor.js"></script>
         <script>
-            
-            
             window.onload = async function() {
-
-
                 // Create new PDFreactor instance
+                //production
+               //var pdfReactor = new PDFreactor("http://72.10.48.193:9423/service/rest");
+                
                 var pdfReactor = new PDFreactor("https://cloud.pdfreactor.com/service/rest");
+                var loc= window.location.href;
+                var id=loc.split("/").pop();
+               // var id=1578409686187;
+                
+            
                 // Create a new PDFreactor configuration object
                 var config = {
-                    // Specify the input document
-                    document: "http://oracle.assessment-tools.com/PDF/cx-content.html",
+                    document: "http://oracle.assessment-tools.com/PDF/cx_pdf_test.html",
                     addLinks: true,
                     pixelsPerInch:71,
+                    enableDebugMode:true,
                     javaScriptSettings:{
                         enabled:true
-                        
                     }
                 }
-                   
                 // Render document and save result  
                 try {
                     var result = await pdfReactor.convert(config);
@@ -34,7 +34,7 @@
                
             }
         </script>
-       
+
     </head>
     <body>
         <iframe id="result" style="width: 100%; height: 95vh"></iframe>

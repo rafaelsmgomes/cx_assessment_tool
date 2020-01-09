@@ -156,18 +156,18 @@ function getSummary(data){
         case (x < 50):
             document.getElementById('cta-title-dynamic').innerHTML="Do More with Lead Management";
             $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-spark-series-lead-management.pdf');
-            $('#cta-1').css('background-image','url(assets/thumbnails/tbnail-04.png)');
+            $('#cta-1').css('background-image','url(../assets/thumbnails/tbnail-04.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medlow;
             break;
         case (x < 74):
             document.getElementById('cta-title-dynamic').innerHTML="Go Further with Customer Experience Optimization";
             $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-ignite-guide-customer-experience-optimization.pdf');
-             $('#cta-1').css('background-image','url(assets/thumbnails/tbnail-05.png)');
+             $('#cta-1').css('background-image','url(../assets/thumbnails/tbnail-05.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medhigh;
             break;
         default:
             document.getElementById('cta-title-dynamic').innerHTML="How to Thrive in the Experience Economy";
-             $('#cta-1').css('background-image','url(assets/thumbnails/tbnail-06.png)');
+             $('#cta-1').css('background-image','url(../assets/thumbnails/tbnail-06.png)');
             $('#cta-1').prop('href', 'https://blogs.oracle.com/marketingcloud/how-to-thrive-in-the-experience-economy%e2%80%94and-how-oracle-cx-unity-is-more-than-a-cdp-v2');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.high;
             break;
@@ -297,7 +297,7 @@ function getResponsive(data){
                 appendTo='#responsive-congrads-1';
             }
             else if((ycount >= 3) &&  (ycount < 6)){
-                     swapBackgrounds($('#responsive-page-4'));
+                swapBackgrounds($('#responsive-page-4'));
                 appendTo='#responsive-congrads-2';
             }
             else if((ycount >= 6) &&  (ycount < 10)){

@@ -25,7 +25,49 @@ export const panelFix = (timing) =>{
 	});	
 }
 
-export const loadLottie = (obj, data, timing) => {
+// ------------------------------------------------
+// POST AND GET REQUEST TO GENERATE DATABASE
+// ------------------------------------------------
+
+export const postState = (cloudObj,timing,state) => {
+	return function(){
+		$('.footer').hide();
+		const options = {
+			method: 'POST',
+			body: JSON.stringify(state),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+		fetch('/api', options)
+		.then((resp) => {
+			return resp.json();
+		})
+		.then(resp =>{
+			console.log(resp);
+			return fetch('/api2', { method: 'GET'} )
+		})
+		.then((response) => {
+			return response.json();	
+		})
+		.then( (el) => {
+			const myJson = el;	
+			const userId = myJson.data[0].user_id;
+			// console.log(`userID: ${userId}`);
+			$('.btn__pdf--1').attr('href',`https://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
+			loadLottie({
+				'cloud--1-0': cloudObj.cloudMain,
+				'cloud--2-0': cloudObj.cloud0,
+				'cloud--2-1': cloudObj.cloud1,
+				'cloud--2-2': cloudObj.cloud2,
+				'cloud--2-3': cloudObj.cloud3,
+			}, myJson, timing);
+		})
+	}
+}
+
+
+function loadLottie(obj, data, timing){
 	const score0 = data.data[0].BroadcastScore+1;
 	const score1 = data.data[0].ResponsiveScore+1;
 	const score2 = data.data[0].RelationshipScore+1;
@@ -68,48 +110,6 @@ export const loadLottie = (obj, data, timing) => {
 		}, timing*2)
 	}
 }
-
-// ------------------------------------------------
-// POST AND GET REQUEST TO GENERATE DATABASE
-// ------------------------------------------------
-
-export const postState = (cloudObj,timing,state) => {
-	return function(){
-		$('.footer').hide();
-		const options = {
-			method: 'POST',
-			body: JSON.stringify(state),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		}
-		fetch('/api', options)
-		.then((resp) => {
-			return resp.json();
-		})
-		.then(resp =>{
-			console.log(resp);
-			return fetch('/api2', { method: 'GET'} )
-		})
-		.then((response) => {
-			return response.json();	
-		})
-		.then( (el) => {
-			const myJson = el;	
-			const userId = myJson.data[0].user_id;
-			// console.log(`userID: ${userId}`);
-			$('.btn__pdf--1').attr('href',`http://dev.assessment-tools.com/cx/maturity/pdf/${userId}`);
-			css.loadLottie({
-				'cloud--1-0': cloudObj.cloudMain,
-				'cloud--2-0': cloudObj.cloud0,
-				'cloud--2-1': cloudObj.cloud1,
-				'cloud--2-2': cloudObj.cloud2,
-				'cloud--2-3': cloudObj.cloud3,
-			}, myJson, timing);
-		})
-	}
-}
-
 
 function updateresultsText(score){
 	let retThis;	

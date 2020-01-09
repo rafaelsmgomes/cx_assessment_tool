@@ -51,19 +51,23 @@ var lifecycle_9;
 
 
 var loc= window.location.href;
-console.log(loc)
 var r=loc.lastIndexOf('/');
 var id=loc.substring(r + 1);
 console.log('pdf.js id: ' + id);
 
-// var id = 1578127744350;
+var link= "https://oracle.assessment-tools.com/pdfdata/" +id;
 
-fetch('http://dev.assessment-tools.com/pdfdata/'+id)
-    .then(response => {
-    return response.json();
-})
-    .then(el => {
-    var pdfData = el;
+
+    var data;
+    
+
+    var jqxhr1 = $.getJSON( link, function(data) { });
+    console.log(jqxhr1);
+    jqxhr1.fail(function(data) {
+        console.log( "error" );
+    });
+    jqxhr1.always(function(data) {
+          var pdfData = data;
 
     TotalScore=pdfData.data.TotalScore;
     BroadcastScore=pdfData.data.BroadcastScore;
@@ -115,18 +119,15 @@ fetch('http://dev.assessment-tools.com/pdfdata/'+id)
     lifecycle_7=pdfData.data.lifecycle_7;
     
 
-    document.getElementById('company_name').innerHTML=companyName;
-    console.log(TotalScore) 
-})
-.then(() => {
-    var data;
-    
-    var jqxhr = $.getJSON( "/pdf.json", function(data) { });
-    console.log(jqxhr);
-    jqxhr.fail(function(data) {
+      
+    });
+jqxhr1.done(function() { 
+      var jqxhr2 = $.getJSON( "/pdf.json", function(data) { });
+     console.log(jqxhr2);
+    jqxhr2.fail(function(data) {
         console.log( "error" );
     });
-    jqxhr.always(function(data) {
+    jqxhr2.done(function(data) {
         data=data;
         getSummary(data);
         getBroadcast(data);
@@ -134,25 +135,11 @@ fetch('http://dev.assessment-tools.com/pdfdata/'+id)
         getRelationship(data);
         getLifecycle(data);
         getConclusion(data);
+        spiders();
+        
       
-    });
-    spiders();
+    });  
 });
-
-
-    
-
-
-    
-    
-/*
-})
-    .catch(err => {
-    console.log(err)
-});
-
-
-*/
 
 //vars not from DB
 var breakpoint=99;
@@ -161,6 +148,7 @@ var breakpoint=99;
 function getSummary(data){
     data=data;
     var x=TotalScore;
+    document.getElementById('company_name').innerHTML=companyName;
     switch (true) {
         case (x < 25):
             document.getElementById('conclusion_text').innerHTML=data.conclusion.low;
@@ -309,6 +297,7 @@ function getResponsive(data){
                 appendTo='#responsive-congrads-1';
             }
             else if((ycount >= 3) &&  (ycount < 6)){
+                     swapBackgrounds($('#responsive-page-4'));
                 appendTo='#responsive-congrads-2';
             }
             else if((ycount >= 6) &&  (ycount < 10)){
@@ -544,69 +533,71 @@ function swapBackgrounds(el){
  el.css('background-image','url(../assets/strip_7.png)');
      el.css('background-size','792px 16px');
 }
+
+
 function spiders(){
     var ctx = document.getElementById('spiderChart').getContext('2d');
-    var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'radar',
-    // The data for our dataset
-    data: {
-    labels: ['Broadcast', 'Responsive', 'Relationship', ['Lifecycle', 'Engagement']],
-    datasets: [{
-    label: 'Component Maturity Score',
-    borderColor: 'rgb(0,0, 0)',
-    data: [BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore]
-    }]
-    },
-    // Configuration options go here
-    options: {
-    scales: {
-        yAxes: [{
-            scaleLabel: {
-                display: false,
-            },
-            gridLines: {
-                display: 'false',
-                color: 'transparent',
-                zeroLineColor: '#E5DBBE',
-            },
-            ticks: {
-                display: false,
-                color: 'transparent'
-            },
-        }]
-    },
-    scale: {
-        ticks: {
-            min: 0,
-            max: 100,
-            stepSize: 25,
-            display: false,
-            fontColor: "#E5DBBE",
-        },
-        gridLines: {
-            lineWidth: 2,
-            color: ['#AE562C', '#FACD62', '#94AFAF', '#41817E']
-        },
-        pointLabels: {
-            display: true,
-            fontColor: '#221F1F',
-            fontFamily: 'OracleSans-Bold',
-            fontSize: '8',
-            fontStyle: 'bold'
-        }
-    },
-    legend: {
-       display: false
-    },
-    layout: {
-        padding: {
-            left: 50,
-            right: 50,
-            top: 50,
-            bottom: 50
-        }
-    }
-    }
-    });
+var chart = new Chart(ctx, {
+// The type of chart we want to create
+type: 'radar',
+// The data for our dataset
+data: {
+labels: ['Broadcast', 'Responsive', 'Relationship', ['Lifecycle', 'Engagement']],
+datasets: [{
+  label: 'Component Maturity Score',
+  borderColor: 'rgb(0,0, 0)',
+  data: [BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore]
+}]
+},
+// Configuration options go here
+options: {
+scales: {
+  yAxes: [{
+      scaleLabel: {
+          display: false,
+      },
+      gridLines: {
+          display: 'false',
+          color: 'transparent',
+          zeroLineColor: '#E5DBBE',
+      },
+      ticks: {
+          display: false,
+          color: 'transparent'
+      },
+  }]
+},
+scale: {
+  ticks: {
+      min: 0,
+      max: 100,
+      stepSize: 25,
+      display: false,
+      fontColor: "#E5DBBE",
+  },
+  gridLines: {
+      lineWidth: 2,
+      color: ['#AE562C', '#FACD62', '#94AFAF', '#41817E']
+  },
+  pointLabels: {
+      display: true,
+      fontColor: '#221F1F',
+      fontFamily: 'OracleSans-Bold',
+      fontSize: '8',
+      fontStyle: 'bold'
+  }
+},
+legend: {
+  display: false
+},
+layout: {
+  padding: {
+      left: 50,
+      right: 50,
+      top: 50,
+      bottom: 50
+  }
 }
+}
+});
+}  

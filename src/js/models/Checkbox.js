@@ -1,6 +1,6 @@
 export default class Checkbox {
     constructor(attr) {       
-    	this.val = 25;
+    	this.val = 0;
         this.group = attr.group;
         this.count = attr.count;
         this.question = attr.question;

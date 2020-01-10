@@ -114,8 +114,8 @@
         }
 	
         @include bp($width-5){
-            height: auto;
-            flex-wrap: nowrap;
+            height: 14rem;
+            flex-wrap: wrap;
         }
 
         .panel--27 &{

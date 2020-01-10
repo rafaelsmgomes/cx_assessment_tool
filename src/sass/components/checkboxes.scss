@@ -27,6 +27,9 @@
                 margin-bottom: .75rem;
             }
         }        
+        @include bp($width-5){
+            width: 45%;
+        }
 	}
 	&__input{
 		display: none;
@@ -43,6 +46,9 @@
     cursor: pointer;
     position: relative;
     // flex: 1;
+        @include bp($width-5){
+            width: 95%;
+        }
 	}	
 
 	&__button{
@@ -114,7 +120,7 @@
         }
 	
         @include bp($width-5){
-            height: 14rem;
+            height: 15rem;
             flex-wrap: wrap;
         }
 
@@ -163,7 +169,8 @@
         //     white-space: normal;
         // }
         @include bp($width-5){
-            white-space: nowrap;
+            white-space: normal;
+            height: 1.80rem;
         }
 
         .panel--27 &{

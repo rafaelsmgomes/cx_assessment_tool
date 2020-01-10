@@ -605,7 +605,7 @@ export const panels = [
 	`<div class="panel panel--33">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?
@@ -623,7 +623,7 @@ export const panels = [
 	`<div class="panel panel--34">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?
@@ -641,7 +641,7 @@ export const panels = [
 	`<div class="panel panel--35">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?
@@ -659,7 +659,7 @@ export const panels = [
 	`<div class="panel panel--36">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do you run marketing programs targeted specifically to your loyalty program members?
@@ -677,7 +677,7 @@ export const panels = [
 	`<div class="panel panel--37">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do you have an automated way to stop or pause marketing promotions to specific customers when they are experiencing important service issues with your&nbsp;organization?
@@ -695,7 +695,7 @@ export const panels = [
 	`<div class="panel panel--38">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?
@@ -713,7 +713,7 @@ export const panels = [
 	`<div class="panel panel--39">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do your sales reps have insight into the most recent service interactions so they can be aware of any concerns prior to approaching the customer?
@@ -731,7 +731,7 @@ export const panels = [
 	`<div class="panel panel--40">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
-				Lifecycle Management
+				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
 				Do you track, measure and analyze customer lifetime&nbsp;value?

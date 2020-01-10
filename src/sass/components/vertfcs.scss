@@ -44,6 +44,16 @@
 				flex: 0 0 1.5rem;				
 			}
 		}
+
+		.panel--20 &,
+  	.panel--31 &,
+  	.panel--32 &,
+  	.panel--38 &,
+  	.panel--40 &{
+	  	@include bp($width-5){
+	  		margin-top: 1.1rem;
+	  	}
+  	}
 	}
 
 	&__button{
@@ -108,6 +118,15 @@
     // flex: 1;
 		@include bp($width-1){
   		width: 100%;
+  	}
+  	.panel--20 &,
+  	.panel--31 &,
+  	.panel--32 &,
+  	.panel--38 &,
+  	.panel--40 &{
+	  	@include bp($width-5){
+	  		align-items: inherit;
+	  	}
   	}
 	}
 	&__text{

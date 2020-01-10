@@ -16,6 +16,9 @@
 		
 		.panel--41 &{
     	transform: translateX(0.50rem);
+			@include bp($width-5){
+				transform: none;
+			}
 		}
 
 	  .panel--6 &,

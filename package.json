@@ -41,7 +41,7 @@
     "body-parser": "^1.19.0",
     "bodymovin": "^4.13.0",
     "cpr-rslider": "^1.0.0",
-    "cpr_pathpackage": "^1.1.52",
+    "cpr_pathpackage": "^1.1.58",
     "css-loader": "^3.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",

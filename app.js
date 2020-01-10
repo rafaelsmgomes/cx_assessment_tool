@@ -64,7 +64,7 @@ app.get('/cx/maturity/pdf/:id', (req, res) => {
             result = await pdfReactor.convert(config);
             // console.log(result)            
             // console.log(pdffile);
-            fs.writeFile(`./bin_dev/cxpdf.pdf`, result.document, 'base64', function(err) {
+            fs.writeFile(`./bin_dev/cxpdf${id}.pdf`, result.document, 'base64', function(err) {
                 if (err) {
                     console.log(err)
                 }
@@ -76,13 +76,13 @@ app.get('/cx/maturity/pdf/:id', (req, res) => {
     doSomething()
     .then(() => {
         setTimeout(() => {
-            fs.readFile(`./bin_dev/cxpdf.pdf`, (err, data) => {
+            fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
 
                 res
                 .contentType('application/pdf')
                 .send(data);
             })            
-        }, 3000);
+        }, 4000);
 
     })
 })

@@ -1571,22 +1571,16 @@
 
 .line {
   stroke: #fcfbfa;
-  stroke-width: 2;
+  stroke-width: 0.15rem;
   stroke-dasharray: 4;
   stroke-dashoffset: 8;
   animation: stroke 0.2s linear infinite;
   opacity: 0; }
   .line--x-1 {
     stroke: #fcfbfa;
-    stroke-width: 2;
+    stroke-width: 0.15rem;
     stroke-dasharray: 4;
     stroke-dashoffset: 8; }
-  @media only screen and (max-width: 1440px) {
-    .line--1x, .line--2x {
-      stroke-width: 3; } }
-  @media only screen and (max-width: 1075px) {
-    .line--1x, .line--2x {
-      stroke-width: 4; } }
   .line.activate {
     animation: fadewhite .5s linear;
     stroke: #fcfbfa;

@@ -67,6 +67,13 @@ app.get('/cx/maturity/pdf/:id', (req, res) => {
             fs.writeFile(`./bin_dev/cxpdf${id}.pdf`, result.document, 'base64', function(err) {
                 if (err) {
                     console.log(err)
+                } else {
+                    fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
+
+                        res
+                        .contentType('application/pdf')
+                        .send(data);
+                    })                    
                 }
             });
         } catch (err) {
@@ -74,17 +81,6 @@ app.get('/cx/maturity/pdf/:id', (req, res) => {
         }
     }
     doSomething()
-    .then(() => {
-        setTimeout(() => {
-            fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
-
-                res
-                .contentType('application/pdf')
-                .send(data);
-            })            
-        }, 4000);
-
-    })
 })
 
 

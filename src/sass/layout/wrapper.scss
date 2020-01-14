@@ -39,9 +39,6 @@
 		}
 		@include bp(1250){
 			width: 71%;
-			// @include bph(900){
-			// 	width: 34.5rem;
-			// }
 		}
 		@include bp(1175){
 			width: 75%;
@@ -51,9 +48,6 @@
 		}
 		@include bp(1070){
 			width: 80%;
-			// @include bph(900){
-			// 	width: 34.5rem;
-			// }
 		}
 	}
 }

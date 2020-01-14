@@ -3,9 +3,11 @@ const express     = require("express"),
     mysql         = require("mysql"),
     path          = require("path"),
     ejs           = require("ejs"),
+    Readable      = require("stream").Readable,
     fs            = require("fs");
 
 const app = express();
+const stream = new Readable();
 
 const sql = require('./database/queries');
 
@@ -50,37 +52,37 @@ let ansArr = []
 
 app.get('/cx/maturity/pdf/:id', (req, res) => {
     id = req.params.id;    
-    var config = {
-        document: `https://oracle.assessment-tools.com/htmlversion/${id}`,
-        // http://dev.assessment-tools.com/htmlversion/1578596480765
+    const config = {
+        // document: `https://oracle.assessment-tools.com/htmlversion/${id}`,
+        document: `http://dev.assessment-tools.com/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }
     }
 
     var result;
-    async function doSomething() {
+
+    async function printPDF() {
         try{
             result = await pdfReactor.convert(config);
-            // console.log(result)            
-            // console.log(pdffile);
+            // console.log(result)
+
             fs.writeFile(`./bin_dev/cxpdf${id}.pdf`, result.document, 'base64', function(err) {
                 if (err) {
                     console.log(err)
                 } else {
                     fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
-
                         res
                         .contentType('application/pdf')
                         .send(data);
-                    })                    
+                    })
                 }
             });
         } catch (err) {
             console.log(err)
         }
     }
-    doSomething()
+    printPDF()
 })
 
 
@@ -121,15 +123,14 @@ app.post('/api', (req,res) => {
     .then( () => {
         const results = updateAnswers();
         return results
-
     })
     .then(() => {
         const results = createOverallResults();
         return results
     })
-    .then(el => {
-        return ('done')
-    })
+    // .then(el => {
+    //     return ('done')
+    // })
     .then(() => {
         res.status(200).json({
             status: 'success',
@@ -138,13 +139,12 @@ app.post('/api', (req,res) => {
                 data: 'success'
             }  
         });
-        return ('done2');
     })
     .catch((err) => {
         console.log(err)
     });
 }); 
-
+ 
 app.get('/api2', (req, res) => {
 
     conn.query(`SELECT * FROM results WHERE user_id = ?`, userID, (err, results) => {

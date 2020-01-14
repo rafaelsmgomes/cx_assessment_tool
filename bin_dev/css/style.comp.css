@@ -413,7 +413,7 @@
       width: 95%; } }
 
 .checkbox__button {
-  border: 0.05rem solid #fcfbfa;
+  border: 0.1rem solid #fcfbfa;
   border-radius: 50%;
   display: flex;
   height: 2.65rem;

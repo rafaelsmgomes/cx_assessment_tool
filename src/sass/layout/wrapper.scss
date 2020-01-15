@@ -49,5 +49,8 @@
 		@include bp(1070){
 			width: 80%;
 		}
+		@include bp($width-5){
+			justify-content: center;
+		}
 	}
 }

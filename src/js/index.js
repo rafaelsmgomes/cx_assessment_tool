@@ -118,6 +118,7 @@ $(document).ready(function(){
 		css.preloadImgs(preimages);
 
 	/*** Dial Ctrl ***/
+	
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',
@@ -170,7 +171,6 @@ $(document).ready(function(){
 			'showOutput': true,
 			'outputPerc': true,  
 		});
-
 
 	/*** Custom CSS on Btn Progress ***/
 

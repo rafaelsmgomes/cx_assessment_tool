@@ -1806,6 +1806,9 @@
     @media only screen and (max-width: 1070px) {
       .wrapper--2 {
         width: 80%; } }
+    @media only screen and (max-width: 666px) {
+      .wrapper--2 {
+        justify-content: center; } }
 
 .panel {
   height: 100vh;

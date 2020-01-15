@@ -39,14 +39,14 @@ export const postState = (cloudObj,timing,state) => {
 				'Content-Type': 'application/json',
 			},
 		}
-		fetch('/api', options)
+		fetch('/cx/maturity/api', options)
 		.then((resp) => {
 			return resp.json();
 		})
 		.then(resp =>{
 			console.log(resp.data);
 			console.log(`/api2/${resp.data.data}`);
-			return fetch(`/api2/${resp.data.data}`, { method: 'GET'} )
+			return fetch(`/cx/maturity/api2/${resp.data.data}`, { method: 'GET'} )
 		})
 		.then((response) => {
 			return response.json();	

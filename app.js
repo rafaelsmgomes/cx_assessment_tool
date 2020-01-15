@@ -110,33 +110,17 @@ const generateData = (req,res) => {
 }
 
 const getOverallResults = (req, res) => {
-    conn.query(`SELECT * FROM results WHERE user_id = ?`, userID, (err, results) => {
-        if (err) throw err;
-        const data = results;
-        res.send({ 
-            data 
-        });
-    })
-}
-const getOverallResultsID = (req, res) => {
     let generatedID = req.params.id;
     conn.query(`SELECT * FROM results WHERE user_id = ?`, generatedID, (err, results) => {
         if (err) throw err;
         const data = results;
-        console.log(results)
-        console.log("Used API with ID")
         res.send({ 
             data 
         });
     })
 }
 
-
-// ------------------------------------------------------------
-// ROUTES
-// ------------------------------------------------------------
-
-app.get('/cx/maturity/pdf/:id', (req, res) => {
+const generatePDF = (req, res) => {
     id = req.params.id;    
     let result;
     const config = {
@@ -166,14 +150,9 @@ app.get('/cx/maturity/pdf/:id', (req, res) => {
         }
     }
     printPDF()
-})
+}
 
-app.get('/cx/maturity', renderTool);
-app.get('/htmlversion/:id', createHTMLversion);
-app.post('/api', generateData); 
-app.get('/api2', getOverallResults);
-app.get('/api2/:id', getOverallResultsID);
-app.get('/pdfdata/:id', (req, res) => {
+const sendDataToPDF = (req, res) => {
     sqlID = req.params.id;
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                 SELECT companyName, id FROM users WHERE id = ?;
@@ -236,7 +215,20 @@ app.get('/pdfdata/:id', (req, res) => {
         }
         res.json({data: pdfData});
     })    
-});    
+}
+
+// ------------------------------------------------------------
+// ROUTES
+// ------------------------------------------------------------
+const cxRouter = express.Router();
+app.use('/cx/maturity', cxRouter);
+
+cxRouter.get('/', renderTool);
+cxRouter.get('/htmlversion/:id', createHTMLversion);
+cxRouter.post('/api', generateData); 
+cxRouter.get('/api2/:id', getOverallResults);
+cxRouter.get('/pdfdata/:id', sendDataToPDF);
+cxRouter.get('/pdf/:id', generatePDF);
 
 
 

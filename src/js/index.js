@@ -25,7 +25,6 @@ const question_length = panels.length-2;
 const timing = variables.timing1;
 state.qLen = question_length;
 state.white = variables.white1;
-
 state.colorScheme = new ColorScheme(
 	{'colorSchemes':[{
 		'dialBgColor': variables.green2,
@@ -56,6 +55,8 @@ state.colorScheme = new ColorScheme(
 	'pageBreaks':[0,10,20,33,41],			
 	}
 );
+
+//copy for .header__rectangle--2 
 state.tipsScheme = new TipsScheme({
 	'divActivate': '.panel--activate',
 	'schemeObj': {

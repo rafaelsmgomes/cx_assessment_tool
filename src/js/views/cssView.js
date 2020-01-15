@@ -44,8 +44,9 @@ export const postState = (cloudObj,timing,state) => {
 			return resp.json();
 		})
 		.then(resp =>{
-			console.log(resp);
-			return fetch('/api2', { method: 'GET'} )
+			console.log(resp.data);
+			console.log(`/api2/${resp.data.data}`);
+			return fetch(`/api2/${resp.data.data}`, { method: 'GET'} )
 		})
 		.then((response) => {
 			return response.json();	

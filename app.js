@@ -39,7 +39,7 @@ const conn = mysql.createPool({
 }); 
 
 // ------------------------------------------------------------
-// DECLARING VARIABLES
+// DECLARING GLOBAL VARIABLES
 // ------------------------------------------------------------
 
 let userArr = []; 
@@ -47,54 +47,18 @@ let userID;
 let ansArr = []
 
 // ------------------------------------------------------------
-// ROUTES
+// FUNCTIONS
 // ------------------------------------------------------------
 
-app.get('/cx/maturity/pdf/:id', (req, res) => {
-    id = req.params.id;    
-    const config = {
-        // document: `https://oracle.assessment-tools.com/htmlversion/${id}`,
-        document: `http://dev.assessment-tools.com/htmlversion/${id}`,
-        addLinks: true,
-        pixelsPerInch:71,
-        javaScriptSettings:{ enabled:true }
-    }
-
-    var result;
-
-    async function printPDF() {
-        try{
-            result = await pdfReactor.convert(config);
-            // console.log(result)
-
-            fs.writeFile(`./bin_dev/cxpdf${id}.pdf`, result.document, 'base64', function(err) {
-                if (err) {
-                    console.log(err)
-                } else {
-                    fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
-                        res
-                        .contentType('application/pdf')
-                        .send(data);
-                    })
-                }
-            });
-        } catch (err) {
-            console.log(err)
-        }
-    }
-    printPDF()
-})
-
-
-app.get('/htmlversion/:id', (req, res) => {
+const createHTMLversion = (req, res) => {
     res.render( 'cx-content' );
-})
+}
 
-app.get('/cx/maturity', (req, res) => {
+const renderTool = (req, res) => {
     res.render('index'); 
-})
+}
 
-app.post('/api', (req,res) => {
+const generateData = (req,res) => {
     console.log("----------------------------------------")
 
     const data      = req.body,
@@ -136,32 +100,81 @@ app.post('/api', (req,res) => {
             status: 'success',
             results: data.length,
             data: {
-                data: 'success'
+                data: userID
             }  
         });
     })
     .catch((err) => {
         console.log(err)
     });
-}); 
- 
-app.get('/api2', (req, res) => {
+}
 
+const getOverallResults = (req, res) => {
     conn.query(`SELECT * FROM results WHERE user_id = ?`, userID, (err, results) => {
         if (err) throw err;
         const data = results;
-        // console.log(results)
-
         res.send({ 
             data 
         });
     })
+}
+const getOverallResultsID = (req, res) => {
+    let generatedID = req.params.id;
+    conn.query(`SELECT * FROM results WHERE user_id = ?`, generatedID, (err, results) => {
+        if (err) throw err;
+        const data = results;
+        console.log(results)
+        console.log("Used API with ID")
+        res.send({ 
+            data 
+        });
+    })
+}
+
+
+// ------------------------------------------------------------
+// ROUTES
+// ------------------------------------------------------------
+
+app.get('/cx/maturity/pdf/:id', (req, res) => {
+    id = req.params.id;    
+    let result;
+    const config = {
+        document: `https://oracle.assessment-tools.com/htmlversion/${id}`,
+        // document: `http://dev.assessment-tools.com/htmlversion/${id}`,
+        addLinks: true,
+        pixelsPerInch:71,
+        javaScriptSettings:{ enabled:true }
+    }
+    async function printPDF() {
+        try{
+            result = await pdfReactor.convert(config);
+
+            fs.writeFile(`./bin_dev/cxpdf${id}.pdf`, result.document, 'base64', function(err) {
+                if (err) {
+                    console.log(err)
+                } else {
+                    fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
+                        res
+                        .contentType('application/pdf')
+                        .send(data);
+                    })
+                }
+            });
+        } catch (err) {
+            console.log(err)
+        }
+    }
+    printPDF()
 })
 
+app.get('/cx/maturity', renderTool);
+app.get('/htmlversion/:id', createHTMLversion);
+app.post('/api', generateData); 
+app.get('/api2', getOverallResults);
+app.get('/api2/:id', getOverallResultsID);
 app.get('/pdfdata/:id', (req, res) => {
-
     sqlID = req.params.id;
-
     conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
                 SELECT companyName, id FROM users WHERE id = ?;
                 SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?

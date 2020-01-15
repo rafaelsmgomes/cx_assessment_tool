@@ -55,7 +55,7 @@ var r=loc.lastIndexOf('/');
 var id=loc.substring(r + 1);
 console.log('pdf.js id: ' + id);
 
-var link= "/pdfdata/" +id;
+var link= "cx/maturity/pdfdata/" +id;
 
 
     var data;

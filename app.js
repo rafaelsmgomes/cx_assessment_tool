@@ -232,6 +232,9 @@ cxRouter.get('/pdf/:id', generatePDF);
 
 
 
+// ------------------------------------------------------------
+// DATABASE FUNCTIONS
+// ------------------------------------------------------------
 function createCompany(arr, el) {
     return new Promise( (res, rej) => {
         compName = el.company;

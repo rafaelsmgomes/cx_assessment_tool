@@ -172,7 +172,7 @@ $(document).ready(function(){
 			'outputPerc': true,  
 		});
 
-	/*** Custom CSS on Btn Progress ***/
+	/*** Custom CSS ***/
 
 		window.statete = state;
 
@@ -184,5 +184,4 @@ $(document).ready(function(){
 
 		//stop pointerevents on panel moving
 		css.panelFix(timing);	
-
 });

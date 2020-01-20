@@ -51,23 +51,60 @@
 						<label for="gate__company" class="gate__label">Company name</label>
 						<input type="text" class="gate__input" id='gate__company'> 
 					</div>
-					<div class="gate__group gate__group--2">
+					<div class="gate__group gate__group--2" id='gate__rev'>
 						<label for="gate__revenue" class="gate__label">Revenue</label>
-						<input type="text" class="gate__input" id='gate__revenue'>
+						<select name="revenue" size='1' class='gate__input gate__input--1' id="gate__revenue">
+							<option value="">Select Revenue</option>
+						  <option value="< $10 Million">< $10 Million</option>
+						  <option value="$10 - $50 Million">$10 - $50 Million</option>
+						  <option value="$51 - $100 Million">$51 - $100 Million</option>
+						  <option value="$101 - $250 Million">$101 - $250 Million</option>
+						  <option value="$251 - $500 Million">$251 - $500 Million</option>
+						  <option value="$501 - $1 Billion">$501 - $1 Billion</option>
+						  <option value="$1 - $5 Billion">$1 - $5 Billion</option>
+						  <option value="$5 - $10 Billion">$5 - $10 Billion</option>
+						  <option value="> $10 Billion">> $10 Billion</option>
+						</select>
 					</div>
 					<div class="gate__group gate__group--2">
 						<label for="gate__country" class="gate__label">Country</label>
-						<input type="text" class="gate__input" id='gate__country'>
+						<select name="country" size='1' class='gate__input gate__input--1' id="gate__country">
+						</select>						
 					</div>
 					<div class="gate__group gate__group--2">
 						<label for="gate__employees" class="gate__label">Number of employees</label>
-						<input type="text" class="gate__input" id='gate__employees'>
+						<select name="employee" size='1' class='gate__input gate__input--1' id="gate__employees">
+						 	<option value="">Select Number of Employees</option>
+						  <option value="1-100">1-100</option>
+						  <option value="101-500">101-500</option>
+						  <option value="501-1000">501-1000</option>
+						  <option value="1001-10000">1001-10000</option>
+						  <option value="Over 10001">Over 10001</option>
+						</select>
 					</div>								
 					<div class="gate__group gate__group--2">
 						<label for="gate__industry" class="gate__label">Industry</label>
-						<input type="text" class="gate__input" id='gate__industry'>
+						<select name="industry" size='1' class='gate__input gate__input--1' id="gate__industry">
+							<option value="">Select Industry</option>
+						  <option value="Automotive">Automotive</option>
+						  <option value="Communications">Communications</option>
+						  <option value="Construction and Engineering">Construction and Engineering</option>
+						  <option value="Consumer Goods">Consumer Goods</option>
+						  <option value="Education and Research">Education and Research</option>
+						  <option value="Financial/Insurance Services">Financial/Insurance Services</option>
+						  <option value="Food and Beverages">Food and Beverages</option>
+						  <option value="Healthcare">Healthcare</option>
+						  <option value="High Technology">High Technology</option>
+						  <option value="Hospitality">Hospitality</option>
+						  <option value="Industrial Manufacturing">Industrial Manufacturing</option>
+						  <option value="Life Sciences">Life Sciences</option>
+						  <option value="Media and Entertainment">Media and Entertainment</option>
+						  <option value="Public Sector">Public Sector</option>
+						  <option value="Retail">Retail</option>
+						  <option value="Utilities">Utilities</option>
+						</select>
 					</div>	
-					<input type='submit' class='gate__submit' value='Start'></input>		
+					<input type='submit' class='gate__submit' value='Lets Go'></input>		
 					<div class="form__invalid">Please fill out all blank fields.</div>									
 				</form>			
 			</div>

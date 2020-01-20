@@ -14,16 +14,6 @@
     stroke-dashoffset: 8;
   }
 
-  // &--1x,
-  // &--2x{
-  //   @include bp($width-1){
-  //     stroke-width: 0.15rem;
-  //   }
-  //   @include bp(1075){
-  //     stroke-width: 0.15rem;
-  //   }
-  // }
-
   &.activate{
     animation: fadewhite .5s linear;
     stroke: $color-white-1;
@@ -48,7 +38,6 @@
 
 	&__wrapper{
     height: 100vh;
-		// display: none;
     width: 70rem;
     position: absolute;
     z-index: -100;
@@ -65,7 +54,6 @@
 
     &--x{
       height: 6.70rem;
-      // background-color: blue;
       padding: 0;
       width: 77%;
       margin-left: 6.95rem;
@@ -76,7 +64,6 @@
       background-size: 100%;
       background-repeat: no-repeat;      
       margin-top: -0.80rem;
-      // padding-left: 10.71%;
 
       @include bp($width-1){
         display: none;

@@ -249,7 +249,7 @@ a[id] {
 }
 .col-left, .col-right{
     width: 394px;
-    height: 612px;
+    height: 524px;
     float: left;
 }
 .col-left.padded{
@@ -263,7 +263,7 @@ a[id] {
 .col-right .col-inner.rec-holder {
     padding-right: 30px;
     padding-left: 30px;
-    padding-top: 115px;
+        padding-top: 101px;
 }
 
 #page3 .col-left .col-inner{
@@ -280,7 +280,7 @@ a[id] {
 .cloud-chart{
     position: absolute;
     width:100%;
-        height: 314px;
+    height: 314px;
     top:0;
 }
 .cloud-bg, .score-holder{
@@ -354,7 +354,10 @@ a[id] {
     width: 163px;
 }
 #overall-cloud{
-       background-color: rgba(117, 156, 108, 0.2); 
+       background-color: rgba(117, 156, 108, 0.1); 
+}
+#spider-col{
+    background-color: rgba(117, 156, 108, 0.1);
 }
 .spider-chart-holder{
         position: absolute;
@@ -494,7 +497,7 @@ a[id] {
     margin-right: 10px;
 }
 .top-block{
-height: 71px;
+    height: 90px;
     display: block;
     margin-bottom: 12px;
 }
@@ -504,6 +507,8 @@ height: 71px;
     line-height: 73px;
     padding-top: 15px;
     padding-left: 30px;
+        padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 .congradulations .icon{
     height: inherit;
@@ -513,7 +518,7 @@ height: 71px;
     margin-left: -10px
 }
 .reccomendation{
-    height: 91px;
+    min-height: 91px;
     margin-bottom: 20px;
    width: 350px;
 }
@@ -643,6 +648,12 @@ height: 71px;
 }
 .icon-lifetime{
     background-image: url('../assets/icons/icon-lifetime.png'); 
+}
+.icon-m-data{
+    background-image: url('../assets/icons/icon-m-data.png'); 
+}
+.icon-insight{
+    background-image: url('../assets/icons/icon-insight.png'); 
 }
 .reccomendation p{
         color:#67605B;
@@ -799,6 +810,11 @@ height: 71px;
        background-image: url(../assets/1x/img-mktg-03.png);
     background-size: 792px 612px; 
 }
+#lifecycle-page-5{
+          background-image: url(../assets/1x/img-mktg-04.png);
+    background-size: 792px 612px
+}
+
 .cta-holder{
     display: flex;
     justify-content: space-between;

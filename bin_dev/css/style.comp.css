@@ -745,6 +745,8 @@
   border-style: solid;
   background: rgba(117, 156, 108, 0.2);
   border-width: 0; }
+  .gate__input--1 {
+    cursor: pointer; }
 
 .gate__submit {
   -webkit-appearance: none;
@@ -777,6 +779,9 @@
   display: none; }
   .form__invalid--active {
     display: block; }
+
+#gate__industry {
+  max-height: 50px; }
 
 .header__logo {
   flex: 0 0 5.20rem;

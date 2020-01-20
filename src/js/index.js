@@ -127,6 +127,7 @@ $(document).ready(function(){
 			'bgColor': variables.green2,
 			'fgColor': state.white,
 			'state': state,
+			'panels': panels,
 			'percShow': false,		
 		});
 
@@ -135,7 +136,8 @@ $(document).ready(function(){
 			'height': '200%',
 			'bgColor': variables.green2,
 			'fgColor': state.white,
-			'state': state,		
+			'state': state,	
+			'panels': panels,	
 			'percShow': true,
 		});		
 
@@ -145,6 +147,7 @@ $(document).ready(function(){
 		$('.likert__form').cprLikert({
 			'vertical': false,
 			'state': state,
+			'panels': panels,
 		});
 
 	// /*** Checkbox Ctrl ***/ 
@@ -160,6 +163,7 @@ $(document).ready(function(){
 		$('.vertfc__form').cprVertfc({
 			'state': state,
 			'size': .10,
+			'panels': panels,					
 		});
 
 	/*** Slider Ctrl ***/ 
@@ -167,6 +171,7 @@ $(document).ready(function(){
 		$('.slider__form').cprSlider({
 			'state': state,
 			'size': .1,
+			'panels': panels,
 			'sideIcons': false,
 			'windowWidth': $('.panel').width(),
 			'windowHeight': $('.panel').height(),

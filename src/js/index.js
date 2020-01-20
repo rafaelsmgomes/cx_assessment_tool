@@ -21,6 +21,8 @@ import cloud2 from './lottie/small-cloud-orange.json';
 import cloud3 from './lottie/small-cloud-gray.json';
 import { ok } from 'assert';
 
+import * as country from './lib/countries';
+
 const question_length = panels.length-2;
 const timing = variables.timing1;
 state.qLen = question_length;
@@ -184,4 +186,7 @@ $(document).ready(function(){
 
 		//stop pointerevents on panel moving
 		css.panelFix(timing);	
+
+	/*** Populate country Dropdown ***/
+	country.populateCountries('gate__country');
 });

@@ -33,7 +33,6 @@
 	    margin-left: 0.40rem;
 			color: $color-white-1;
 			font-family: $font-reg;
-	    // font-family: Univers, Arial, Helvetica, sans-serif;
 		}
 	}	
 	&__wrapper{
@@ -42,9 +41,7 @@
 		position: relative;
 		&--1{
 			flex: 0 0 8.4rem;
-			height: 2.00rem;
-			// padding-left: 3.20rem;
-
+			height: 2.00rem;			
 			@include bp($width-4){
 				flex: 0 0 5.2rem;
 			}
@@ -56,7 +53,6 @@
 	&__rectangle {
 		flex: 0 0 2rem;
 		position: relative;
-		// border: solid 0.10rem black;
 		border-radius: 50.00rem;
 		transition-delay: 1s;
 		border: solid 0.1rem transparent;
@@ -69,13 +65,9 @@
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-	  cursor: pointer;			
-		// &:not(:first-of-type){
-		// 	margin-left: 1.20rem;
-		// }
+	  cursor: pointer;					
 
-		&--1{
-			// display: none;
+		&--1{			
 			margin-left: auto;			
 			&:hover{					
 			}
@@ -85,8 +77,7 @@
 			.header__container--x &{
 				margin-left: 0;
 				display: flex;
-			}		
-			// margin-left: 0;
+			}					
 		}		
 	
 		&--2{
@@ -126,15 +117,11 @@
 			&-1,
 			&-3{
 		    display: flex;
-		    align-items: center;
-		    // padding-left: 1.25rem;
+		    align-items: center;		    
 			}
 			&-2{
 				border-radius: 1rem;
-		    // padding: 0 1.25rem;
-		    // padding-top: 0.50rem;
 		    top: -.1rem;
-		    // height: 16rem;
 		    .header__rectangle--2:hover &{
 		    	padding: 0 1.25rem;
 			    padding-top: 0.50rem;
@@ -165,13 +152,11 @@
 			}
 			.header__rectangle--2:hover &{
 				width: 16rem;
-		    height: 12rem;
-		    // max-height: 12rem;
+		    height: 12rem;		    
 			}
 			.header__rectangle--activate:hover &{
 				width: 16rem;
-		    height: 5.5rem;
-		    // max-height: 12rem;
+		    height: 5.5rem;		    
 			}			
 			.header__rectangle--3:hover &{
 				width: 5.2rem;		   		    
@@ -180,7 +165,6 @@
 	}	
 	&__bar{
 		font-size: 1.4rem;
-    // transform: translateY(9%);
 	}
 }
 

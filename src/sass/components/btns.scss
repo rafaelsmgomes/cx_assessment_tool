@@ -1,13 +1,5 @@
 .btn{
 	&__progress{
-	  // cursor: pointer;
-	  // position: relative;
-	  // background: #000;
-	  // width: 500px;
-	  // height: 250px;
-	  // // width: 100%;
-	  // // display: none;
-	  // // height: 100%;
 		display: none;
 		&--1{
 			display: flex;
@@ -37,8 +29,7 @@
 	    bottom: -3.25rem;
 	 
 
-	    @include bph(900){
-	    	// left: calc(100% - 3.15rem);
+	    @include bph(900){	    	
     		bottom: 0rem;
 	    }
 
@@ -75,8 +66,7 @@
     transition: opacity $timing-2;
 		pointer-events: none;
 		opacity: 0;
-		display: flex;
-		// opacity: 1;
+		display: flex;		
 
 		&--0{
 			background-color: $color-green-1;
@@ -97,15 +87,10 @@
 			display: flex;
 		}
 		&.rotate--1{
-			transform: rotate(180deg);  //after 1
+			transform: rotate(180deg);  
 		}
 
 		& > img{
-			// @include bp($width-1){
-			// 	@include bph(900){
-			// 		width: 62%;
-			// 	}
-			// }
 
 			width: 60%;
 			height: 60%;

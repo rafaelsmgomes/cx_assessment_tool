@@ -356,7 +356,6 @@
   position: absolute;
   left: 54vw;
   padding: 0.80rem 0 0.80rem 0.80rem;
-  /* top: 100%; */
   transform: translate(0%, 0%);
   bottom: 0; }
 
@@ -1807,6 +1806,9 @@
     @media only screen and (max-width: 1070px) {
       .wrapper--2 {
         width: 80%; } }
+    @media only screen and (max-width: 666px) {
+      .wrapper--2 {
+        justify-content: center; } }
 
 .panel {
   height: 100vh;

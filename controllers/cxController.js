@@ -7,7 +7,7 @@ const pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");
 const sql = require('./../database/queries');
 
 // ------------------------------------------------------------
-// DECLARING GLOBAL VARIABLES (gonna take this out)
+// DECLARING GLOBAL VARIABLES
 // ------------------------------------------------------------
 
 let userArr = []; 
@@ -184,7 +184,7 @@ exports.sendDataToPDF = (req, res) => {
 }
 
 // ------------------------------------------------------------
-// DATABASE FUNCTIONS
+// FIRST PUSH TO DATABASE FUNCTIONS - called from generateData()
 // ------------------------------------------------------------
 
 function createCompany(arr, el) {

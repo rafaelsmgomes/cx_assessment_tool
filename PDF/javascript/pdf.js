@@ -53,7 +53,7 @@ var loc= window.location.href;
 var r=loc.lastIndexOf('/');
 var id=loc.substring(r + 1);
 
-var link= "https://oracle.assessment-tools.com/pdfdata/" +id;
+var link= "cx/maturity/pdfdata/" +id;
 
 
     var data;

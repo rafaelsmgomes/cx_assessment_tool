@@ -56,7 +56,8 @@
 	}
 
 	&__regress{
-		width: 2.00rem;
+		// width: 2.00rem;
+		width: 4.65rem;
     height: 2rem;
     border-radius: 1rem;
     border: solid 0.1rem $color-white-1;
@@ -90,10 +91,16 @@
 			transform: rotate(180deg);  
 		}
 
-		& > img{
+		// & > img{
 
-			width: 60%;
-			height: 60%;
+		// 	width: 60%;
+		// 	height: 60%;
+		// }
+
+		& > span{
+			font-family: $font-reg;
+			color: $color-white-1;
+			font-size: 0.80rem;
 		}
 	}
 	&__pdf{

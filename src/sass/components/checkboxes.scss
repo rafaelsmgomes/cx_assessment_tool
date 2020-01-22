@@ -4,18 +4,18 @@
 		display: flex;
         align-items: center;        
 
-        &:not(:first-of-type) {
-		    margin-top: .5rem;
+        &:not(:last-of-type) {
+		    margin-bottom: .5rem;
             
-            @include bph(900){
-                margin-top: 0;
-            }
+      //       @include bph(900){
+      //           margin-bottom: 0;
+      //       }
 
-		    @include bp($width-1){
-                @include bph(900){
-                    margin-top: 0;
-                }
-            }
+		    // @include bp($width-1){
+      //           @include bph(900){
+      //               margin-bottom: 0;
+      //           }
+      //       }
         }
 
         @include bph(900){
@@ -88,23 +88,28 @@
 		display: flex;
         flex-direction: column;
 
-        @include bph(950){
-            flex-wrap: wrap;
-            height: 13.5rem;
-        }
+        flex-wrap: wrap;
+        height: 13rem;
+        width: 100%;
+        justify-content: normal;
+
+        // @include bph(950){
+        //     flex-wrap: wrap;
+        //     height: 13.5rem;
+        // }
         @include bph(900){
-            height: 16.5rem;
+            height: 15.5rem;
         }
 
 
-        @include bp($width-1){
-            @include bph(900){
-                flex-wrap: wrap;
-                height: 15rem;
-                width: 100%;
-                justify-content: normal;
-            }
-        }
+        // @include bp($width-1){
+        //     @include bph(900){
+        //         flex-wrap: wrap;
+        //         height: 15rem;
+        //         width: 100%;
+        //         justify-content: normal;
+        //     }
+        // }
 
         @include bp($width-4){
             @include bph(500){

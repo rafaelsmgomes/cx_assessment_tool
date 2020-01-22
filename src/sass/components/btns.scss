@@ -5,6 +5,7 @@
 			display: flex;
 		}
 		&--6,
+		&--8,
 		&--27{
 			width: 12.00rem;
 	    height: 2.50rem;
@@ -33,11 +34,11 @@
     		bottom: 0rem;
 	    }
 
-	    @include bp($width-1){
-				@include bph(950){
-					bottom: -2rem;
-				}
-	    }
+	   //  @include bp($width-1){
+				// @include bph(950){
+				// 	bottom: -2rem;
+				// }
+	   //  }
 
 	    @include bp($width-5){
 	    	left: 0;
@@ -87,9 +88,9 @@
 			opacity: 1;
 			display: flex;
 		}
-		&.rotate--1{
-			transform: rotate(180deg);  
-		}
+		// &.rotate--1{
+		// 	transform: rotate(180deg);  
+		// }
 
 		// & > img{
 

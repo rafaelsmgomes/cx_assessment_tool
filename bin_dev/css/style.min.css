@@ -190,7 +190,7 @@
   display: none; }
   .btn__progress--1 {
     display: flex; }
-  .btn__progress--6, .btn__progress--27 {
+  .btn__progress--6, .btn__progress--8, .btn__progress--27 {
     width: 12.00rem;
     height: 2.50rem;
     border-radius: 5.00rem;
@@ -211,14 +211,10 @@
     left: auto;
     bottom: -3.25rem; }
     @media only screen and (max-height: 900px) {
-      .btn__progress--6, .btn__progress--27 {
+      .btn__progress--6, .btn__progress--8, .btn__progress--27 {
         bottom: 0rem; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 950px) {
-  .btn__progress--6, .btn__progress--27 {
-    bottom: -2rem; } }
     @media only screen and (max-width: 666px) {
-      .btn__progress--6, .btn__progress--27 {
+      .btn__progress--6, .btn__progress--8, .btn__progress--27 {
         left: 0;
         bottom: -2.5rem; } }
   .btn__progress--6 {
@@ -253,8 +249,6 @@
     pointer-events: auto;
     opacity: 1;
     display: flex; }
-  .btn__regress.rotate--1 {
-    transform: rotate(180deg); }
   .btn__regress > span {
     font-family: OracleReg, Arial, Helvetica, sans-serif;
     color: #fcfbfa;
@@ -376,15 +370,8 @@
   flex: 0 0 2.65rem;
   display: flex;
   align-items: center; }
-  .checkbox__group:not(:first-of-type) {
-    margin-top: .5rem; }
-    @media only screen and (max-height: 900px) {
-      .checkbox__group:not(:first-of-type) {
-        margin-top: 0; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 900px) {
-  .checkbox__group:not(:first-of-type) {
-    margin-top: 0; } }
+  .checkbox__group:not(:last-of-type) {
+    margin-bottom: .5rem; }
   @media only screen and (max-height: 900px) {
     .checkbox__group {
       margin-bottom: .75rem; } }
@@ -442,21 +429,14 @@
 
 .checkbox__form {
   display: flex;
-  flex-direction: column; }
-  @media only screen and (max-height: 950px) {
-    .checkbox__form {
-      flex-wrap: wrap;
-      height: 13.5rem; } }
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 13rem;
+  width: 100%;
+  justify-content: normal; }
   @media only screen and (max-height: 900px) {
     .checkbox__form {
-      height: 16.5rem; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 900px) {
-  .checkbox__form {
-    flex-wrap: wrap;
-    height: 15rem;
-    width: 100%;
-    justify-content: normal; } }
+      height: 15.5rem; } }
 
 @media only screen and (max-width: 767px) and (max-height: 500px) {
   .checkbox__form {

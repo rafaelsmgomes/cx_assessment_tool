@@ -21,12 +21,13 @@ import cloud2 from './lottie/small-cloud-orange.json';
 import cloud3 from './lottie/small-cloud-gray.json';
 import { ok } from 'assert';
 
+import * as country from './lib/countries';
+
 const question_length = panels.length-2;
 const timing = variables.timing1;
 state.qLen = question_length;
 state.white = variables.white1;
-
-const colorSchemeGroup = new ColorScheme(
+state.colorScheme = new ColorScheme(
 	{'colorSchemes':[{
 		'dialBgColor': variables.green2,
 		'btnColorClass': '--0',	
@@ -53,10 +54,12 @@ const colorSchemeGroup = new ColorScheme(
 		'background': 'background--0',		
 	},
 	],
-	'pageBreaks':[0,10,20,33,41],			
+	'pageBreaks':[0,10,20,32,40],			
 	}
 );
-const tipsSchemeGroup = new TipsScheme({
+
+//copy for .header__rectangle--2 
+state.tipsScheme = new TipsScheme({
 	'divActivate': '.panel--activate',
 	'schemeObj': {
 		'.landing__container': 'Tap on the circle in the center of your screen to advance to Question 1. Get help answering a question or navigating this tool by coming here anytime. You can always go back a question by clicking the arrow at the bottom of your screen.',
@@ -68,20 +71,16 @@ const tipsSchemeGroup = new TipsScheme({
 	} 
 });
 
-state.colorScheme = colorSchemeGroup;
-state.tipsScheme = tipsSchemeGroup;
-
 $(document).ready(function(){
 
 	/*** POST REQ***/ 
-
-	state.postState = css.postState({
-		'cloudMain': cloudMain,
-		'cloud0': cloud0,
-		'cloud1': cloud1,
-		'cloud2': cloud2,
-		'cloud3': cloud3,
-	},timing,state);
+		state.postState = css.postState({
+			'cloudMain': cloudMain,
+			'cloud0': cloud0,
+			'cloud1': cloud1,
+			'cloud2': cloud2,
+			'cloud3': cloud3,
+		},timing,state);
 
 	/*** PRELOAD CTRL ***/
 		setTimeout(function(){
@@ -104,12 +103,11 @@ $(document).ready(function(){
 			'timing': timing,
 			'spacing': 400,
 			'state': state,
-			// 'delay': 1,
 		});
 
 	/*** LOTTIE CTRL ***/
 
-		//preloader
+		//initialize preloader
 		lottie.loadAnimation({
 		  container: document.getElementById('preload__container'),
 		  renderer: 'svg',
@@ -119,16 +117,17 @@ $(document).ready(function(){
 		});
 
 		const preimages=["../assets/images/desktop/group.png","../assets/images/1x/bg-0.pn"];
-
 		css.preloadImgs(preimages);
 
 	/*** Dial Ctrl ***/
+	
 		$(".dial-tracker").cprDial({
 			'thickness': .12,
 			'height': '200%',
 			'bgColor': variables.green2,
 			'fgColor': state.white,
 			'state': state,
+			'panels': panels,
 			'percShow': false,		
 		});
 
@@ -137,7 +136,8 @@ $(document).ready(function(){
 			'height': '200%',
 			'bgColor': variables.green2,
 			'fgColor': state.white,
-			'state': state,		
+			'state': state,	
+			'panels': panels,	
 			'percShow': true,
 		});		
 
@@ -147,6 +147,7 @@ $(document).ready(function(){
 		$('.likert__form').cprLikert({
 			'vertical': false,
 			'state': state,
+			'panels': panels,
 		});
 
 	// /*** Checkbox Ctrl ***/ 
@@ -162,6 +163,7 @@ $(document).ready(function(){
 		$('.vertfc__form').cprVertfc({
 			'state': state,
 			'size': .10,
+			'panels': panels,					
 		});
 
 	/*** Slider Ctrl ***/ 
@@ -169,6 +171,7 @@ $(document).ready(function(){
 		$('.slider__form').cprSlider({
 			'state': state,
 			'size': .1,
+			'panels': panels,
 			'sideIcons': false,
 			'windowWidth': $('.panel').width(),
 			'windowHeight': $('.panel').height(),
@@ -176,8 +179,7 @@ $(document).ready(function(){
 			'outputPerc': true,  
 		});
 
-
-	/*** Custom CSS on Btn Progress ***/
+	/*** Custom CSS ***/
 
 		window.statete = state;
 
@@ -190,39 +192,6 @@ $(document).ready(function(){
 		//stop pointerevents on panel moving
 		css.panelFix(timing);	
 
+	/*** Populate country Dropdown ***/
+	country.populateCountries('gate__country');
 });
-
-// ------------------------------------------------
-// GET PDF DATA FUNCTION
-// ------------------------------------------------
-
-$('.header__rectangle--grow-2').click(getPdfData);
-async function getPdfData() {
-	fetch('/pdfdata')
-	.then(response => {
-		return response.json()
-	})
-	.then(el => {
-		const pdfData = el;
-		console.log(pdfData)
-	})
-}
-
-// function loadLottie(obj, data){
-
-// 	console.log(data);
-
-// 	for(const key in obj){
-// 		const lottieTemp = lottie.loadAnimation({
-// 		  container: document.getElementById(key),
-// 		  renderer: 'svg',
-// 		  autoplay: false,
-// 		  animationData: obj[key],
-// 		  loop: false,
-// 		});
-
-// 		setTimeout(function(){
-// 			lottieTemp.play(); 
-// 		}, timing*2)
-// 	}
-// }

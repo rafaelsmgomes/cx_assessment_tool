@@ -4,7 +4,6 @@
 	}
 	&__container{
     width: 60%;
-    // width: auto;
     height: 20.00rem;
 		position: relative;
 		z-index: 2;
@@ -91,7 +90,6 @@
     cursor: pointer;
 	}
 	&__group{
-		// flex: 0 0 10%;
 		flex: 0 0 2.65rem;
 
 		@include bp($width-4){

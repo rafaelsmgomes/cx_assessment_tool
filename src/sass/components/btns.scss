@@ -1,19 +1,12 @@
 .btn{
 	&__progress{
-	  // cursor: pointer;
-	  // position: relative;
-	  // background: #000;
-	  // width: 500px;
-	  // height: 250px;
-	  // // width: 100%;
-	  // // display: none;
-	  // // height: 100%;
 		display: none;
 		&--1{
 			display: flex;
 		}
 		&--6,
-		&--27{
+		&--8,
+		&--26{
 			width: 12.00rem;
 	    height: 2.50rem;
 	    border-radius: 5.00rem;
@@ -37,16 +30,15 @@
 	    bottom: -3.25rem;
 	 
 
-	    @include bph(900){
-	    	// left: calc(100% - 3.15rem);
+	    @include bph(900){	    	
     		bottom: 0rem;
 	    }
 
-	    @include bp($width-1){
-				@include bph(950){
-					bottom: -2rem;
-				}
-	    }
+	   //  @include bp($width-1){
+				// @include bph(950){
+				// 	bottom: -2rem;
+				// }
+	   //  }
 
 	    @include bp($width-5){
 	    	left: 0;
@@ -56,7 +48,7 @@
 		&--6{
 			background: $color-green-1;
 		}
-		&--27{
+		&--26{
 			background: $color-red-1;
 			@include bp($width-5){
 				bottom: -8.5rem;
@@ -65,7 +57,8 @@
 	}
 
 	&__regress{
-		width: 2.00rem;
+		// width: 2.00rem;
+		width: 4.65rem;
     height: 2rem;
     border-radius: 1rem;
     border: solid 0.1rem $color-white-1;
@@ -75,8 +68,7 @@
     transition: opacity $timing-2;
 		pointer-events: none;
 		opacity: 0;
-		display: flex;
-		// opacity: 1;
+		display: flex;		
 
 		&--0{
 			background-color: $color-green-1;
@@ -96,19 +88,20 @@
 			opacity: 1;
 			display: flex;
 		}
-		&.rotate--1{
-			transform: rotate(180deg);  //after 1
-		}
+		// &.rotate--1{
+		// 	transform: rotate(180deg);  
+		// }
 
-		& > img{
-			// @include bp($width-1){
-			// 	@include bph(900){
-			// 		width: 62%;
-			// 	}
-			// }
+		// & > img{
 
-			width: 60%;
-			height: 60%;
+		// 	width: 60%;
+		// 	height: 60%;
+		// }
+
+		& > span{
+			font-family: $font-reg;
+			color: $color-white-1;
+			font-size: 0.80rem;
 		}
 	}
 	&__pdf{

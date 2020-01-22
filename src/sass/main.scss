@@ -1,15 +1,11 @@
 // // v 2.1.1
-// @import 'abstracts/functions';
+
 @import 'abstracts/mixins';	
 @import 'abstracts/variables';
 
 @import 'base/animations';
-// @import 'base/base';
 @import 'base/typography';
 
-// @import 'components/arrows';
-// @import 'components/eloqua';
-// @import 'components/clouds';
 @import 'components/background';
 @import 'components/btns';  
 @import 'components/cloud';
@@ -17,36 +13,20 @@
 @import 'components/checkboxes';
 @import 'components/dials';
 @import 'components/gate';
-// @import 'components/detailed';
-// @import 'components/detscroll';
 @import 'components/header';
 @import 'components/landing';
 @import 'components/likerts';
 @import 'components/sliders';
 @import 'components/vertfcs';
 @import 'components/lines';
-// @import 'components/mobile-nav';
-// @import 'components/paginations';
 @import 'components/preload';
-// @import 'components/results';
-// @import 'components/scroller';
-// @import 'components/selections';
-// @import 'components/icon';
-
 
 @import 'layout/bodyContent';
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/wrapper';
-// @import 'layout/results';
-// @import 'layout/results';
-// @import 'pages/body';
+
 @import 'panels/panels';
-
-// @import 'vendors/bpopup';
-// @import 'vendors/video';
-
-// @import 'base/utilities';
 
 *,
 *::after,
@@ -54,7 +34,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 1px solid hotpink;
 }
 
 *:focus{
@@ -121,8 +100,6 @@ html {
 	//TEST
   position: relative;
   transition-timing-function: cubic-bezier(.47,.11,0,1.08);
-  // transition: transform 1.5s;
-  // transform: translateY(-400vw);
   opacity: 0;
   transition: opacity 1s;
   &.fade-in{

@@ -7,25 +7,12 @@ const pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");
 const sql = require('./../database/queries');
 
 // ------------------------------------------------------------
-// DECLARING GLOBAL VARIABLES (gonna take this out)
+// DECLARING GLOBAL VARIABLES
 // ------------------------------------------------------------
 
 let userArr = []; 
 let userID;
 let ansArr = []
-
-// ------------------------------------------------------------
-// SQL CONNECTION
-// ------------------------------------------------------------
-
-const conn = mysql.createPool({
-    connectionLimit: 100,
-    host: "72.10.48.193",
-    user: "oracleroot", 
-    password: "DBase_0243",
-    database: "cx_maturity",
-    multipleStatements: true 
-}); 
 
 
 // ------------------------------------------------------------
@@ -104,7 +91,6 @@ exports.generatePDF = (req, res) => {
     let result;
     const config = {
         document: `https://oracle.assessment-tools.com/htmlversion/${id}`,
-        // document: `http://dev.assessment-tools.com/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }
@@ -197,7 +183,7 @@ exports.sendDataToPDF = (req, res) => {
 }
 
 // ------------------------------------------------------------
-// DATABASE FUNCTIONS
+// FIRST PUSH TO DATABASE FUNCTIONS - called from generateData()
 // ------------------------------------------------------------
 
 function createCompany(arr, el) {

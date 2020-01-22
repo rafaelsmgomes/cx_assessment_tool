@@ -6,11 +6,13 @@
 		display: flex;
     align-items: center;
     justify-content: center;
-	  opacity: 0;
+	  // opacity: 0;
+	  display: none;
 	  transition: opacity 1s;
 	  &.fade-in{
 	  	z-index: 1000000;
-	    opacity: 1;
+	    // opacity: 1;
+	    display: block;
 	  }		
 	}
 	&__form{
@@ -66,6 +68,9 @@
 		border-style: solid;
 		background: rgba(117, 156, 108,.2);
     border-width: 0;
+		&--1{
+			cursor: pointer;
+		}
 	}
 	&__submit{
 		-webkit-appearance: none;
@@ -103,4 +108,8 @@
 			display: block;
 		}
 	}
+}
+
+#gate__industry{
+	max-height: 50px;
 }

@@ -6,7 +6,7 @@
 		}
 		&--6,
 		&--8,
-		&--27{
+		&--26{
 			width: 12.00rem;
 	    height: 2.50rem;
 	    border-radius: 5.00rem;
@@ -48,7 +48,7 @@
 		&--6{
 			background: $color-green-1;
 		}
-		&--27{
+		&--26{
 			background: $color-red-1;
 			@include bp($width-5){
 				bottom: -8.5rem;

@@ -190,7 +190,7 @@
   display: none; }
   .btn__progress--1 {
     display: flex; }
-  .btn__progress--6, .btn__progress--8, .btn__progress--27 {
+  .btn__progress--6, .btn__progress--8, .btn__progress--26 {
     width: 12.00rem;
     height: 2.50rem;
     border-radius: 5.00rem;
@@ -211,18 +211,18 @@
     left: auto;
     bottom: -3.25rem; }
     @media only screen and (max-height: 900px) {
-      .btn__progress--6, .btn__progress--8, .btn__progress--27 {
+      .btn__progress--6, .btn__progress--8, .btn__progress--26 {
         bottom: 0rem; } }
     @media only screen and (max-width: 666px) {
-      .btn__progress--6, .btn__progress--8, .btn__progress--27 {
+      .btn__progress--6, .btn__progress--8, .btn__progress--26 {
         left: 0;
         bottom: -2.5rem; } }
   .btn__progress--6 {
     background: #759C6C; }
-  .btn__progress--27 {
+  .btn__progress--26 {
     background: #AE562C; }
     @media only screen and (max-width: 666px) {
-      .btn__progress--27 {
+      .btn__progress--26 {
         bottom: -8.5rem; } }
 
 .btn__regress {

@@ -357,7 +357,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you currently use testing and optimization tools on your landing pages and website?',
-				'textArr': ['No', 'Yes'],
+				'textArr': ['Yes','No'],
 				'group': 'responsive',
 				'count': true,
 			})}

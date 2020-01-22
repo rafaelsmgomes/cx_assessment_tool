@@ -54,7 +54,7 @@ state.colorScheme = new ColorScheme(
 		'background': 'background--0',		
 	},
 	],
-	'pageBreaks':[0,10,20,33,41],			
+	'pageBreaks':[0,10,20,32,40],			
 	}
 );
 

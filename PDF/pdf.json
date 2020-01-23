@@ -40,7 +40,7 @@
 			},
                             	{
 				"title": "Targeted Communications",
-				"icon": "icon-targeted",
+				"icon": "icon-target",
 				"no": "TBD ",
 				"yes": "TBD"
 			},
@@ -166,8 +166,8 @@
 			{
 				"title": "Account based marketing",
 				"icon": "icon-marketing",
-				"no": "Powered by AI, marketers and sales benefit from a data-driven approach to identify the ripest opportunities to grow and nurture. Predictive lead scoring not only alleviates a traditionally time- and resource-intensive process, but it also takes the subjectivity out and helps build trust between marketing and sales. ",
-				"yes": "You're upping your lead scoring game by incorporating predictive. Marketers and sales are benefitting from a data-driven approach to identify the ripest opportunities to grow and nurture."
+				"no": "ABM drives more revenue than any other marketing approach. According to ITSMA, up to 45% of those who incorporate ABM see at least 2x ROI. ABM is now table stakes as it shifts the success metric towards Account Lifetime Value with its increased cross-sell and up-sell opportunities.  ",
+				"yes": "You're a superstar! According to ITSMA, as many as 45% of those who incorporate an ABM strategy are seeing at least double the ROI."
 			},
 			{
 				"title": "Machine Learning and AI",

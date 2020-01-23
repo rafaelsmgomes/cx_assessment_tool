@@ -13,6 +13,7 @@ var broadcast_2;
 var broadcast_3;
 var broadcast_4;
 var broadcast_5;
+var broadcast_6;
 
 var responsive_1;
 var responsive_2;
@@ -37,7 +38,6 @@ var relationship_9;
 var relationship_10;
 var relationship_11;
 var relationship_12;
-var relationship_13;
 
 var lifecycle_1;
 var lifecycle_2;
@@ -79,6 +79,7 @@ var link= "cx/maturity/pdfdata/" +id;
     broadcast_3=pdfData.data.broadcast_3;
     broadcast_4=pdfData.data.broadcast_4;
     broadcast_5=pdfData.data.broadcast_5;
+    broadcast_6=pdfData.data.broadcast_6;
     
     responsive_1=pdfData.data.responsive_1;
     responsive_2=pdfData.data.responsive_2;
@@ -103,7 +104,7 @@ var link= "cx/maturity/pdfdata/" +id;
     relationship_10=pdfData.data.relationship_10;
     relationship_11=pdfData.data.relationship_11;
     relationship_12=pdfData.data.relationship_12;
-    relationship_13=pdfData.data.relationship_13;
+
     
     
     lifecycle_1=pdfData.data.lifecycle_1;
@@ -505,9 +506,6 @@ function getLifecycle(data){
                                  data.lifecycle.perfect+'</div></div>' );
             }
         }
-        
-       
-   
     }
 
          if(ycount <=  7){

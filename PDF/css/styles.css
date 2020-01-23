@@ -655,6 +655,10 @@ a[id] {
 .icon-insight{
     background-image: url('../assets/icons/icon-insight.png'); 
 }
+.icon-target{
+    background-image: url('../assets/icons/icon-target.png'); 
+}
+
 .reccomendation p{
         color:#67605B;
         margin-top: 7px;

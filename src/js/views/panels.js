@@ -158,7 +158,7 @@ export const panels = [
 			<div class="main__direction">Select all that apply.</div>			
 			${comp.createCheckbox({				
 				'question':'Our marketing programs are  focused towards (click all that apply)',
-				'textArr': ['Business to Business or large considered purchases', 'Business to in the moment Consumer purchases', 'Brand Awareness', 'Business to Business to Consumer (B2B2C) purchases'],
+				'textArr': ['Business to Business or large considered purchases', 'Business to in the moment Consumer purchases', 'Brand Awareness', 'Business to Business to Consumer (B2B2C) purchases', 'All of the above'],
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -176,7 +176,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
 				'question':'What is your current unsubscribe rate?',
-				'textArr': ["We don't track unsubscribe rates",'Greater than 0.5%',"Less than 0.2%","I don't know"],
+				'textArr': ["I don't know","We don't track unsubscribe rates",'Greater than 0.5%',"Less than 0.2%"],
 				'group': 'broadcast',
 				'count': false,
 			})}	

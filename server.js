@@ -3,11 +3,8 @@ const express     = require("express"),
     mysql         = require("mysql"),
     path          = require("path"),
     ejs           = require("ejs"),
-    dotenv        = require("dotenv"),
     fs            = require("fs");
 const app = express();
-
-dotenv.config({ path: './config.env'})
 
 const sql = require('./database/queries');
 const PDFReactor = require('../PDFreactor/wrappers/nodejs/lib/PDFreactor');
@@ -47,7 +44,6 @@ const renderTool = (req, res) => {
     res.render('index'); 
 }
 const generateData = (req,res) => {
-    console.log("----------------------------------------")
     const data      = req.body,
         likerts     = data.likerts, 
         dials       = data.dials,
@@ -75,9 +71,6 @@ const generateData = (req,res) => {
         const results = createOverallResults();
         return results
     })
-    // .then(el => {
-    //     return ('done')
-    // })
     .then(() => {
         res.status(200).json({
             status: 'success',
@@ -106,7 +99,7 @@ const generatePDF = (req, res) => {
     let result;
     const config = {
         document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
-        // document: `http://dev.assessment-tools.com/htmlversion/${id}`,
+        // document: `http://dev.assessment-tools.com/cx/maturity/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }

@@ -14,6 +14,18 @@ let userArr = [];
 let userID;
 let ansArr = []
 
+// ------------------------------------------------------------
+// SQL CONNECTION
+// ------------------------------------------------------------
+
+const conn = mysql.createPool({
+    connectionLimit: 100,
+    host: "72.10.48.193",
+    user: process.env.USERNAME, 
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
+    multipleStatements: true 
+}); 
 
 // ------------------------------------------------------------
 // EXPORTED FUNCTIONS
@@ -91,6 +103,7 @@ exports.generatePDF = (req, res) => {
     let result;
     const config = {
         document: `https://oracle.assessment-tools.com/htmlversion/${id}`,
+        // document: `http://dev.assessment-tools.com/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }

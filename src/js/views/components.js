@@ -172,7 +172,7 @@ export const createLikert = (attr) => {
 
         htmltext +=  `
             <div class="likert__group">
-                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}" text='${textArr[j]}'>
+                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}" text="${textArr[j]}">
                 <label for="likert__id--${id}-${j}" class="likert__label">
                     <div class="likert__button likert__button--0">
                         <div class="likert__checkmark"></div>

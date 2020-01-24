@@ -658,6 +658,9 @@ a[id] {
 .icon-target{
     background-image: url('../assets/icons/icon-target.png'); 
 }
+.icon-congrats{
+    background-image: url('../assets/icons/icon-congrats.png'); 
+}
 
 .reccomendation p{
         color:#67605B;

@@ -46,7 +46,7 @@ var lifecycle_4;
 var lifecycle_5;
 var lifecycle_6;
 var lifecycle_7;
-var lifecycle_8;
+//var lifecycle_8;
 
 
 var loc= window.location.href;
@@ -195,8 +195,12 @@ function getBroadcast(data){
     for (i = 1; i <(data.broadcast.recommendations.length+1); i++) {
         var el="broadcast_r_"+i;
         var v="broadcast_"+i;
+        if(i==4){
+            console.log("Q4: " + window[v] )
+        }
         var appendTo;
         if( window[v]<breakpoint){
+                if(i==4){console.log("Q4: firing reccomend"  )}
             $('#broadcast-col-content').append('<div class="action-item"><span>'+data.broadcast.recommendations[i-1].title+'</span></div>');
             if(ncount < 3){
                 appendTo='#broadcast-recs-1';
@@ -217,6 +221,7 @@ function getBroadcast(data){
               } 
         }
         else{
+             if(i==4){console.log("Q4: firing condrats"  )}
              if(ycount<3){
                 appendTo='#broadcast-congrads-1';
             }
@@ -224,6 +229,7 @@ function getBroadcast(data){
                 appendTo='#broadcast-congrads-2';
                 swapBackgrounds($('#broadcast-page-4'));
             }
+             if(i==4){console.log("Q4: firing condrats. Appending to " + appendTo  )}
             $(appendTo).append('<div class="reccomendation congradulations icon '+data.broadcast.recommendations[i-1].icon+'">'+
                                  '<div class="recommendation-text">'+
                                  '<div class="recommendation_title">'+data.broadcast.recommendations[i-1].title+'</div>'+
@@ -233,7 +239,7 @@ function getBroadcast(data){
                 $('#broadcast-col-content').append('<p>You did it! Your company has mastered Broadcast Marketing.</p>');
                 document.getElementById('broadcast-rec').innerHTML="Congratulations, based on your responses to the Broadcast Marketing Maturity section, your company has mastered this level of marketing maturity.";
                 document.getElementById('broadcast-rec2').innerHTML="Based on your answers to the Broadcast Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Broadcast Marketing Maturity.";
-                 $('#broadcast-recs-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#broadcast-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
                                  '<div class="recommendation-text">'+
                                  data.broadcast.perfect+'</div></div>' );
             }
@@ -317,7 +323,7 @@ function getResponsive(data){
                 $('#responsive-col-content').append('<p>Keep up the momentum. Your company has top scores in Responsive Marketing.</p>');
                  document.getElementById('responsive-rec').innerHTML="Congratulations, based on your responses to the Responsive Marketing Maturity section, your company joins an elite group of organizations that Oracle recognizes as experts in Responsive Marketing.";
                  document.getElementById('responsive-rec2').innerHTML="Based on your answers to the Responsive Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Responsive Marketing Maturity.";
-                 $('#responsive-recs-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#responsive-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
                                  '<div class="recommendation-text">'+
                                  data.responsive.perfect+'</div></div>' );
             }
@@ -412,7 +418,7 @@ function getRelationship(data){
                  $('#relationship-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('relationship-rec').innerHTML="Congratulations, based on your responses to the Relationship Marketing Maturity section, your company is setting the pace that other organizations now follow when it comes to Relationship Marketing.";
                document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
-               $('#relationship-recs-1').append('<div class="reccomendation congradulations icon">'+
+               $('#relationship-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
                                  '<div class="recommendation-text">'+
                                  data.relationship.perfect+'</div></div>' );
             }
@@ -501,7 +507,7 @@ function getLifecycle(data){
                  $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well positioned to define disrupt new business models in your industry. ";
                  document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
-                  $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon">'+
+                  $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
                                  '<div class="recommendation-text">'+
                                  data.lifecycle.perfect+'</div></div>' );
             }

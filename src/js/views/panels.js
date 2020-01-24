@@ -772,7 +772,7 @@ export const panels = [
 	</div>`,
 
 
-	`<div class="panel panel--40">	
+	`<div class="panel panel--41">	
 		<div class="body__content">
 			<h1 class='results__title results__title--1'>Your Marketing Maturity Assessment Results</h1>
 			<div class="wrapper wrapper--1">				

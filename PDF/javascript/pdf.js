@@ -79,7 +79,7 @@ var link= "/cx/maturity/pdfdata/" +id;
     broadcast_3=pdfData.data.broadcast_3;
     broadcast_4=pdfData.data.broadcast_4;
     broadcast_5=pdfData.data.broadcast_5;
-    broadcast_6=pdfData.data.broadcast_6;
+    // broadcast_6=pdfData.data.broadcast_6;
     
     responsive_1=pdfData.data.responsive_1;
     responsive_2=pdfData.data.responsive_2;
@@ -116,7 +116,7 @@ var link= "/cx/maturity/pdfdata/" +id;
     lifecycle_5=pdfData.data.lifecycle_5;
     lifecycle_6=pdfData.data.lifecycle_6;
     lifecycle_7=pdfData.data.lifecycle_7;
-    lifecycle_8=pdfData.data.lifecycle_8;
+    // lifecycle_8=pdfData.data.lifecycle_8;
     
 
       

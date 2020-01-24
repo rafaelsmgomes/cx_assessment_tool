@@ -675,7 +675,7 @@
   transition: opacity 1s; }
   .gate__container.fade-in {
     z-index: 1000000;
-    display: block; }
+    display: flex; }
 
 .gate__form {
   width: 35.00rem;

@@ -123,22 +123,22 @@
             flex-wrap: wrap;
         }
 
-        .panel--27 &{
-            @include bph(950){
-                height: 9.5rem;
-            }
-            @include bph(900){
-                height: 13rem;
-            }
-            @include bp($width-1){
-                @include bph(900){
-                    height: 11rem;
-                }
-            }
-            @include bp($width-4){
-                height: 12rem;
-            }
-        }
+        // .panel--27 &{
+        //     @include bph(950){
+        //         height: 9.5rem;
+        //     }
+        //     @include bph(900){
+        //         height: 13rem;
+        //     }
+        //     @include bp($width-1){
+        //         @include bph(900){
+        //             height: 11rem;
+        //         }
+        //     }
+        //     @include bp($width-4){
+        //         height: 12rem;
+        //     }
+        // }
     }
 
 	&__checkmark{

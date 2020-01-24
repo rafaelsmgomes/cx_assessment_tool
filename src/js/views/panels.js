@@ -45,16 +45,16 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?
+				How would you rank your use of features that are designed to give time back to marketing teams (e.g. templates, campaign blueprints, webforms etc)?
 			</div>			
 			<div class="main__direction">Adjust the slider below to most closely align with your company.</div>					
 			${comp.createSlider1({
-				'question': 'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+				'question': 'How would you rank your use of features that are designed to give time back to marketing teams (e.g. templates, campaign blueprints, webforms etc)?',
 				'group': 'broadcast',
 				'count': true,
 				'sliderArr': [
 					{
-						'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+						'question':'How would you rank your use of features that are designed to give time back to marketing teams (e.g. templates, campaign blueprints, webforms etc)?',
 						'max':'100',
 						'min':'1',
 					},

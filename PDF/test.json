@@ -1,9 +1,9 @@
 { 
 "data":{ 
 "TotalScore":43,
-"BroadcastScore":27,
-"ResponsiveScore":30,
-"RelationshipScore":54,
+"BroadcastScore":100,
+"ResponsiveScore":100,
+"RelationshipScore":100,
 "LifecycleScore":62,
 "companyName":"test",
 "companyID":1578409686187,

@@ -13,6 +13,7 @@ var broadcast_2;
 var broadcast_3;
 var broadcast_4;
 var broadcast_5;
+var broadcast_6;
 
 var responsive_1;
 var responsive_2;
@@ -37,7 +38,6 @@ var relationship_9;
 var relationship_10;
 var relationship_11;
 var relationship_12;
-var relationship_13;
 
 var lifecycle_1;
 var lifecycle_2;
@@ -47,15 +47,13 @@ var lifecycle_5;
 var lifecycle_6;
 var lifecycle_7;
 var lifecycle_8;
-var lifecycle_9;
 
 
 var loc= window.location.href;
 var r=loc.lastIndexOf('/');
 var id=loc.substring(r + 1);
-console.log('pdf.js id: ' + id);
 
-var link= "cx/maturity/pdfdata/" +id;
+var link= "/cx/maturity/pdfdata/" +id;
 
 
     var data;
@@ -81,6 +79,7 @@ var link= "cx/maturity/pdfdata/" +id;
     broadcast_3=pdfData.data.broadcast_3;
     broadcast_4=pdfData.data.broadcast_4;
     broadcast_5=pdfData.data.broadcast_5;
+    broadcast_6=pdfData.data.broadcast_6;
     
     responsive_1=pdfData.data.responsive_1;
     responsive_2=pdfData.data.responsive_2;
@@ -105,7 +104,7 @@ var link= "cx/maturity/pdfdata/" +id;
     relationship_10=pdfData.data.relationship_10;
     relationship_11=pdfData.data.relationship_11;
     relationship_12=pdfData.data.relationship_12;
-    relationship_13=pdfData.data.relationship_13;
+
     
     
     lifecycle_1=pdfData.data.lifecycle_1;
@@ -117,13 +116,14 @@ var link= "cx/maturity/pdfdata/" +id;
     lifecycle_5=pdfData.data.lifecycle_5;
     lifecycle_6=pdfData.data.lifecycle_6;
     lifecycle_7=pdfData.data.lifecycle_7;
+    lifecycle_8=pdfData.data.lifecycle_8;
     
 
       
     });
 jqxhr1.done(function() { 
       var jqxhr2 = $.getJSON( "/pdf.json", function(data) { });
-     console.log(jqxhr2);
+     //console.log(jqxhr2);
     jqxhr2.fail(function(data) {
         console.log( "error" );
     });
@@ -142,7 +142,7 @@ jqxhr1.done(function() {
 });
 
 //vars not from DB
-var breakpoint=99;
+var breakpoint=50;
 
 
 function getSummary(data){
@@ -211,7 +211,9 @@ function getBroadcast(data){
                                  '<p>'+data.broadcast.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;
              if(ncount==data.broadcast.recommendations.length){
-                 $('#broadcast-page-4').hide();
+                 $('#broadcast-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                                 '<div class="recommendation-text">'+
+                                 data.broadcast.noexcellence+'</div></div>' );
               } 
         }
         else{
@@ -228,17 +230,17 @@ function getBroadcast(data){
                                  '<p>'+data.broadcast.recommendations[i-1].yes+'</p> </div></div>' );
             ycount++;
             if(ycount==data.broadcast.recommendations.length){
-                 $('#broadcast-page-3').hide();
                 $('#broadcast-col-content').append('<p>You did it! Your company has mastered Broadcast Marketing.</p>');
                 document.getElementById('broadcast-rec').innerHTML="Congratulations, based on your responses to the Broadcast Marketing Maturity section, your company has mastered this level of marketing maturity.";
-                 $(appendTo).append('<div class="reccomendation congradulations icon">'+
+                document.getElementById('broadcast-rec2').innerHTML="Based on your answers to the Broadcast Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Broadcast Marketing Maturity.";
+                 $('#broadcast-recs-1').append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
-                                 '<p>'+data.broadcast.perfect+'</p> </div></div>' );
+                                 data.broadcast.perfect+'</div></div>' );
             }
         }
 
     } 
-    var h= BroadcastScore * 161 /100;
+    var h= BroadcastScore * 142 /100;
     document.getElementById("broadcast-score-holder").style.height=h + 'px';
     document.getElementById("broadcast-cloud-bg").style.height=h + 'px';
     document.getElementById("broadcast-cloud-score").innerHTML=BroadcastScore;
@@ -275,10 +277,10 @@ function getResponsive(data){
                 swapBackgrounds($('#responsive-page-2'));
                 appendTo='#responsive-recs-2';
             }
-            if((ncount >= 6) &&  (ncount < 10)){
+            if((ncount >= 6) &&  (ncount < 9)){
                 appendTo='#responsive-recs-3';
             }
-             if((ncount >= 10) &&  (ncount < 13)){
+             if((ncount >=9) &&  (ncount < 13)){
                 swapBackgrounds($('#responsive-page-3'));
                 appendTo='#responsive-recs-4';
             }
@@ -289,7 +291,9 @@ function getResponsive(data){
           
             ncount++;
             if(ncount==data.responsive.recommendations.length){
-                 $('#responsive-page-4').hide();
+                 $('#responsive-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                                 '<div class="recommendation-text">'+
+                                 data.responsive.noexcellence+'</div></div>' );
             }  
         }
         else{
@@ -310,22 +314,23 @@ function getResponsive(data){
           
             ycount++;
             if(ycount==data.responsive.recommendations.length){
-                 $('#responsive-page-2').hide();
                 $('#responsive-col-content').append('<p>Keep up the momentum. Your company has top scores in Responsive Marketing.</p>');
                  document.getElementById('responsive-rec').innerHTML="Congratulations, based on your responses to the Responsive Marketing Maturity section, your company joins an elite group of organizations that Oracle recognizes as experts in Responsive Marketing.";
-                 $(appendTo).append('<div class="reccomendation congradulations icon">'+
+                 document.getElementById('responsive-rec2').innerHTML="Based on your answers to the Responsive Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Responsive Marketing Maturity.";
+                 $('#responsive-recs-1').append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
-                                 '<p>'+data.responsive.perfect+'</p> </div></div>' );
+                                 data.responsive.perfect+'</div></div>' );
             }
         }
-            if(ncount <= 6){
-               $('#responsive-page-5').hide();
-        }
-        if(ycount <= 6){
+     
+    } 
+        if(ncount <= 6){
                $('#responsive-page-3').hide();
         }
-    } 
-    var h= ResponsiveScore * 161 /100;
+        if(ycount <= 6){
+               $('#responsive-page-5').hide();
+        }
+    var h= ResponsiveScore * 142 /100;
     document.getElementById("responsive-score-holder").style.height=h + 'px';
     document.getElementById("responsive-cloud-bg").style.height=h + 'px';
     document.getElementById("responsive-cloud-score").innerHTML=ResponsiveScore;
@@ -377,7 +382,9 @@ function getRelationship(data){
                                  '<p>'+data.relationship.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;
             if(ncount==data.relationship.recommendations.length){
-                 $('#relationship-page-4').hide();
+                 $('#relationship-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                                 '<div class="recommendation-text">'+
+                                 data.relationship.noexcellence+'</div></div>' );
             } 
             
         }
@@ -402,22 +409,23 @@ function getRelationship(data){
                                  '<p>'+data.relationship.recommendations[i-1].yes+'</p> </div></div>' );
             ycount++;
            if(ycount==data.relationship.recommendations.length){
-                 $('#relationship-page-2').hide();
                  $('#relationship-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('relationship-rec').innerHTML="Congratulations, based on your responses to the Relationship Marketing Maturity section, your company is setting the pace that other organizations now follow when it comes to Relationship Marketing.";
-                 $(appendTo).append('<div class="reccomendation congradulations icon">'+
+               document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
+               $('#relationship-recs-1').append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
-                                 '<p>'+data.relationship.perfect+'</p> </div></div>' );
+                                 data.relationship.perfect+'</div></div>' );
             }
         }
-         if(ncount <= 6){
-               $('#relationship-page-5').hide();
-        }
-        if(ycount <= 6){
+  
+    } 
+           if(ncount <= 6){
                $('#relationship-page-3').hide();
         }
-    } 
-    var h= RelationshipScore * 161 /100;
+        if(ycount <= 6){
+               $('#relationship-page-5').hide();
+        }
+    var h= RelationshipScore * 142 /100;
     document.getElementById("relationship-score-holder").style.height=h + 'px';
     document.getElementById("relationship-cloud-bg").style.height=h + 'px';
     document.getElementById("relationship-cloud-score").innerHTML=RelationshipScore;
@@ -447,6 +455,7 @@ function getLifecycle(data){
         var y=data.lifecycle.recommendations[i-1].yes;
         var n=data.lifecycle.recommendations[i-1].no;
         var appendTo;
+        console.log('answer '+ v + "value is " + window[v] )
         if( window[v]<breakpoint){
             $('#lifecycle-col-content').append('<div class="action-item"><span>'+data.lifecycle.recommendations[i-1].title+'</span></div>');
             if(ncount < 3){
@@ -454,7 +463,6 @@ function getLifecycle(data){
                 swapBackgrounds($('#lifecycle-page-2'));
             }
             if((ncount >= 3) &&  (ncount < 6)){
-                
                 appendTo='#lifecycle-recs-2';
             }
             if((ncount >= 6) &&  (ncount < 10)){
@@ -467,16 +475,19 @@ function getLifecycle(data){
                                  '<p>'+data.lifecycle.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;   
             if(ncount==data.lifecycle.recommendations.length){
-                 $('#lifecycle-page-4').hide();
+                 $('#lifecycle-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                                 '<div class="recommendation-text">'+
+                                 data.lifecycle.noexcellence+'</div></div>' );
             } 
             
         }
         else{
              if(ycount<3){
-                appendTo='#lifecycle-congrads-1';
+                appendTo='#lifecycle-congrads-1';   
             }
             else if((ycount >= 3) &&  (ycount < 6)){
-                appendTo='#lifecycle-congrads-2';
+                appendTo='#lifecycle-congrads-2'
+                 
             }
             else if((ycount >= 6) &&  (ycount < 10)){
                 appendTo='#lifecycle-congrads-3';
@@ -487,22 +498,24 @@ function getLifecycle(data){
                                  '<p>'+data.lifecycle.recommendations[i-1].yes+'</p> </div></div>' );
             ycount++;
              if(ycount==data.lifecycle.recommendations.length){
-                 $('#lifecycle-page-2').hide();
                  $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
-                 document.getElementById('lifecycle-rec').innerHTML="You’re a leader and your company is well positioned to win. Congratulations on mastering Lifecycle Engagement.  ";
-                 $(appendTo).append('<div class="reccomendation congradulations icon">'+
+                 document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well positioned to define disrupt new business models in your industry. ";
+                 document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
+                  $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon">'+
                                  '<div class="recommendation-text">'+
-                                 '<p>'+data.lifecycle.perfect+'</p> </div></div>' );
+                                 data.lifecycle.perfect+'</div></div>' );
             }
         }
-        if(ncount <= 6){
+    }
+
+         if(ycount <=  7){
                $('#lifecycle-page-5').hide();
         }
-        if(ycount <= 6){
+        if(ncount <=  7){
                $('#lifecycle-page-3').hide();
         }
-    } 
-    var h= LifecycleScore * 161 /100;
+    
+    var h= LifecycleScore * 142 /100;
     document.getElementById("lifecycle-score-holder").style.height=h + 'px';
     document.getElementById("lifecycle-cloud-bg").style.height=h + 'px';
     document.getElementById("lifecycle-cloud-score").innerHTML=LifecycleScore;
@@ -524,7 +537,7 @@ function getConclusion(data){
             document.getElementById('summary_content').innerHTML=data.summary.high;
             break;
     } 
-    var h= TotalScore * 161 /100 
+    var h= TotalScore * 142 /100 
     document.getElementById("score-holder").style.height=h + 'px';
     document.getElementById("cloud-bg").style.height=h + 'px';
     document.getElementById("total-cloud-score").innerHTML=TotalScore;

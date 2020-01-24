@@ -143,10 +143,10 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What metrics do you track to show success in your marketing programs?
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
-				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation', 'None'],
+				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -179,10 +179,10 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Our marketing programs are  focused towards (click all that apply)
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'Our marketing programs are  focused towards (click all that apply)',
-				'textArr': ['Business to Business or large considered purchases', 'Business to in the moment Consumer purchases', 'Brand Awareness', 'Business to Business to Consumer (B2B2C) purchases', 'All of the above'],
+				'textArr': ['Business to Business or large considered purchases', 'Business to in the moment Consumer purchases', 'Brand Awareness', 'Business to Business to Consumer (B2B2C) purchases'],
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -524,10 +524,10 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What kinds of AI do you use in your marketing program? Check all that apply:
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
-				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other','None'],
+				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
 				'group': 'relationship',
 				'count': true,
 			})}

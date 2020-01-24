@@ -39,6 +39,30 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
 	</div>`,
+	`<div class="panel panel--2">		
+		<div class="body__content">
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?
+			</div>			
+			<div class="main__direction">Adjust the slider below to most closely align with your company.</div>					
+			${comp.createSlider1({
+				'question': 'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+				'group': 'broadcast',
+				'count': true,
+				'sliderArr': [
+					{
+						'question':'What percentage of your sales marketing effort is automated (lead flow, website, campaigns)?',
+						'max':'100',
+						'min':'1',
+					},
+				],
+			})}
+		</div>
+		<div class="btn__progress btn__progress--2" data-id='2' data-line='2'></div>
+	</div>`,	
 	`<div class="panel panel--2">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">

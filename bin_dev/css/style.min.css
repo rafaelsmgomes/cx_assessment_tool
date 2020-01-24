@@ -1338,7 +1338,7 @@
     .slider__container {
       width: 100%; } }
 
-.slider__form {
+.slider__form, .slider__form--x {
   width: 100%;
   height: 100%;
   display: flex;

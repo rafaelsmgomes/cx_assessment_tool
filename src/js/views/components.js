@@ -172,7 +172,7 @@ export const createLikert = (attr) => {
 
         htmltext +=  `
             <div class="likert__group">
-                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}" text='${textArr[j]}'>
+                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}" text="${textArr[j]}">
                 <label for="likert__id--${id}-${j}" class="likert__label">
                     <div class="likert__button likert__button--0">
                         <div class="likert__checkmark"></div>
@@ -335,6 +335,66 @@ export const createSlider = (attr) => {
     return `
         <div class="slider__container slider__container--${id}">
             <form action="#" class='slider__form slider__form--${id}' data-id='${id}'>
+                ${htmltext}
+            </form>
+        </div>
+    `;    
+
+    function addActiveClass(i){
+        if(i === 0){
+            return ' slider__content--active';
+        }else{
+            return'';
+        }
+    } 
+}
+
+export const createSlider1 = (attr) => {
+
+    const sliderArr = attr.sliderArr; 
+
+    const sliderNum = sliderArr.length;
+
+    let htmltext = '';
+    let counter = 1;
+    var slider = new Slider(attr);
+    state.sliders.push(slider);
+
+    const attrID =
+    `${state.dials.length+ 
+        state.likerts.length+
+        state.checkboxes.length+
+        state.vertfcs.length+
+        state.sliders.length-
+        1
+    }`;
+
+    slider.id = attrID;
+
+    const id = state.sliders.length - 1;
+    const sliderGroup = state.sliders[id];
+
+    for(let j = 0; j < sliderNum; j++){
+        htmltext += 
+        `
+        <div class="slider__content${addActiveClass(j)}">
+            <div class="slider__header">                                        
+                <div class="slider__title">${sliderGroup.questionSet[j]}</div>
+                <div class="slider__step">${counter}/${sliderNum}</div>
+                <div class="slider__down"></div>
+            </div>
+            <div class="slider__mid">
+                <div class="slider__description slider__description--1">${sliderGroup.minSet[j]}</div>
+                <div class="slider__description slider__description--2">${sliderGroup.maxSet[j]}</div>
+            </div>
+            <input type="range" min="1" max="100" value="5" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
+        </div>
+        `;
+        counter++;
+    }
+    return `
+        <div class="slider__container slider__container--${id}">
+            <form action="#" class='slider__form--x slider__form--${id}' data-id='${id}'>
                 ${htmltext}
             </form>
         </div>

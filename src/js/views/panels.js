@@ -39,7 +39,31 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--1" data-id='1' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--2">	
+	`<div class="panel panel--2">		
+		<div class="body__content">
+			<div class="main__subheader main__subheader--1">
+				Broadcast Marketing
+			</div>
+			<div class="main__title main__title--1">
+				How would you rank your use of features that are designed to give time back to marketing teams (e.g. templates, campaign blueprints, webforms etc)?
+			</div>			
+			<div class="main__direction">Adjust the slider below to most closely align with your company.</div>					
+			${comp.createSlider1({
+				'question': 'How would you rank your use of features that are designed to give time back to marketing teams (e.g. templates, campaign blueprints, webforms etc)?',
+				'group': 'broadcast',
+				'count': true,
+				'sliderArr': [
+					{
+						'question':'How would you rank your use of features that are designed to give time back to marketing teams (e.g. templates, campaign blueprints, webforms etc)?',
+						'max':'100',
+						'min':'1',
+					},
+				],
+			})}
+		</div>
+		<div class="btn__progress btn__progress--2" data-id='2' data-line='2'></div>
+	</div>`,	
+	`<div class="panel panel--3">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -55,9 +79,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--2" data-id='2' data-line='2'></div>
+		<div class="btn__progress btn__progress--3" data-id='3' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--3">	
+	`<div class="panel panel--4">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -73,9 +97,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--3" data-id='3' data-line='3'></div>
+		<div class="btn__progress btn__progress--4" data-id='4' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--4">	
+	`<div class="panel panel--5">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -91,9 +115,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--4" data-id='4' data-line='4'></div>
+		<div class="btn__progress btn__progress--5" data-id='5' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--5">	
+	`<div class="panel panel--6">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -109,9 +133,9 @@ export const panels = [
 				'count': true,
 			})}
 			</div>
-		<div class="btn__progress btn__progress--5" data-id='5' data-line='1'></div>
+		<div class="btn__progress btn__progress--6" data-id='6' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--6">	
+	`<div class="panel panel--7">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -119,17 +143,17 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What metrics do you track to show success in your marketing programs?
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
-				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation', 'None'],
+				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
 				'group': 'broadcast',
 				'count': false,
 			})}	
-			<div class='btn__progress btn__progress--6' data-id='6' data-line='2'>Next</div>
+			<div class='btn__progress btn__progress--7' data-id='7' data-line='3'>Next</div>
 		</div>		
 	</div>`,
-	`<div class="panel panel--7">	
+	`<div class="panel panel--8">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -145,9 +169,9 @@ export const panels = [
 				'count': false,
 			})}
 		</div>		
-		<div class="btn__progress btn__progress--7" data-id='7' data-line='3'></div>
+		<div class="btn__progress btn__progress--8" data-id='8' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--8">	
+	`<div class="panel panel--9">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -155,17 +179,17 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Our marketing programs are  focused towards (click all that apply)
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'Our marketing programs are  focused towards (click all that apply)',
 				'textArr': ['Business to Business or large considered purchases', 'Business to in the moment Consumer purchases', 'Brand Awareness', 'Business to Business to Consumer (B2B2C) purchases'],
 				'group': 'broadcast',
 				'count': false,
 			})}	
-			<div class="btn__progress btn__progress--8" data-id='8' data-line='4'>Next</div>
+			<div class="btn__progress btn__progress--9" data-id='9' data-line='1'>Next</div>
 		</div>	
 	</div>`,
-	`<div class="panel panel--9">	
+	`<div class="panel panel--10">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Broadcast Marketing
@@ -176,16 +200,16 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
 				'question':'What is your current unsubscribe rate?',
-				'textArr': ["We don't track unsubscribe rates",'Greater than 0.5%',"Less than 0.2%","I don't know"],
+				'textArr': ["I don't know","We don't track unsubscribe rates",'Greater than 0.5%',"Less than 0.2%"],
 				'group': 'broadcast',
 				'count': false,
 			})}	
 		</div>		
-		<div class="btn__progress btn__progress--9" data-id='9' data-line='1'></div>
+		<div class="btn__progress btn__progress--10" data-id='10' data-line='2'></div>
 	</div>`,
 
 
-	`<div class="panel panel--10">	
+	`<div class="panel panel--11">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -201,9 +225,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--10" data-id='10' data-line='2'></div>
+		<div class="btn__progress btn__progress--11" data-id='11' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--11">	
+	`<div class="panel panel--12">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -218,9 +242,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--11" data-id='11' data-line='3'></div>
+		<div class="btn__progress btn__progress--12" data-id='12' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--12">	
+	`<div class="panel panel--13">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -236,9 +260,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--12" data-id='12' data-line='4'></div>
+		<div class="btn__progress btn__progress--13" data-id='13' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--13">	
+	`<div class="panel panel--14">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -254,9 +278,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--13" data-id='13' data-line='1'></div>
+		<div class="btn__progress btn__progress--14" data-id='14' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--14">	
+	`<div class="panel panel--15">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -272,9 +296,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--14" data-id='14' data-line='2'></div>
+		<div class="btn__progress btn__progress--15" data-id='15' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--15">	
+	`<div class="panel panel--16">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -290,9 +314,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-	 	<div class="btn__progress btn__progress--15" data-id='15' data-line='3'></div>
+	 	<div class="btn__progress btn__progress--16" data-id='16' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--16">	
+	`<div class="panel panel--17">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -308,9 +332,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--16" data-id='16' data-line='4'></div>
+		<div class="btn__progress btn__progress--17" data-id='17' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--17">	
+	`<div class="panel panel--18">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -326,9 +350,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--17" data-id='17' data-line='1'></div>
+		<div class="btn__progress btn__progress--18" data-id='18' data-line='2'></div>
 	</div>`,					
-	`<div class="panel panel--18">	
+	`<div class="panel panel--19">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -344,9 +368,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--18" data-id='18' data-line='2'></div>
+		<div class="btn__progress btn__progress--19" data-id='19' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--19">	
+	`<div class="panel panel--20">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Responsive Marketing
@@ -362,11 +386,11 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--19" data-id='19' data-line='3'></div>
+		<div class="btn__progress btn__progress--20" data-id='20' data-line='4'></div>
 	</div>`,
 
 
-	`<div class="panel panel--20">	
+	`<div class="panel panel--21">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -382,9 +406,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--20" data-id='20' data-line='4'></div>
+		<div class="btn__progress btn__progress--21" data-id='21' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--21">	
+	`<div class="panel panel--22">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -400,9 +424,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--21" data-id='21' data-line='1'></div>
+		<div class="btn__progress btn__progress--22" data-id='22' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--22">	
+	`<div class="panel panel--23">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -418,9 +442,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--22" data-id='22' data-line='2'></div>
+		<div class="btn__progress btn__progress--23" data-id='23' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--23">	
+	`<div class="panel panel--24">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -436,9 +460,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--23" data-id='23' data-line='3'></div>
+		<div class="btn__progress btn__progress--24" data-id='24' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--24">	
+	`<div class="panel panel--25">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -454,7 +478,7 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--24" data-id='24' data-line='4'></div>
+		<div class="btn__progress btn__progress--25" data-id='25' data-line='1'></div>
 	</div>`,
 	// `<div class="panel panel--25">	
 	// 	<div class="body__content">
@@ -474,7 +498,7 @@ export const panels = [
 	// 	</div>
 	// 	<div class="btn__progress btn__progress--25" data-id='25' data-line='1'></div>
 	// </div>`,
-	`<div class="panel panel--25">	
+	`<div class="panel panel--26">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -490,9 +514,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--25" data-id='25' data-line='1'></div>
+		<div class="btn__progress btn__progress--26" data-id='26' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--26">	
+	`<div class="panel panel--27">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -500,17 +524,17 @@ export const panels = [
 			<div class="main__title main__title--1">
 				What kinds of AI do you use in your marketing program? Check all that apply:
 			</div>			
-			<div class="main__direction">Select all that apply.</div>			
+			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
-				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other','None'],
+				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
 				'group': 'relationship',
 				'count': true,
 			})}
-			<div class='btn__progress btn__progress--26' data-id='26' data-line='2'>Next</div>			
+			<div class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</div>			
 		</div>
 	</div>`,
-	`<div class="panel panel--27">	
+	`<div class="panel panel--28">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -526,9 +550,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--27" data-id='27' data-line='3'></div>
+		<div class="btn__progress btn__progress--28" data-id='28' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--28">	
+	`<div class="panel panel--29">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -544,9 +568,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--28" data-id='28' data-line='4'></div>
+		<div class="btn__progress btn__progress--29" data-id='29' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--29">	
+	`<div class="panel panel--30">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -562,9 +586,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--29" data-id='29' data-line='1'></div>
+		<div class="btn__progress btn__progress--30" data-id='30' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--30">	
+	`<div class="panel panel--31">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -580,9 +604,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--30" data-id='30' data-line='2'></div>
+		<div class="btn__progress btn__progress--31" data-id='31' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--31">	
+	`<div class="panel panel--32">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -598,11 +622,11 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--31" data-id='31' data-line='3'></div>
+		<div class="btn__progress btn__progress--32" data-id='32' data-line='4'></div>
 	</div>`,
 
 
-	`<div class="panel panel--32">	
+	`<div class="panel panel--33">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -613,14 +637,14 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?',
-				'textArr': ['Yes! We have connections for all three','We connect our marketing and sales data', 'We connect our marketing and service data','No, we are not able to connect the data between any of these systems'],
+				'textArr': ['Yes! We have data connections across all three.','We connect our marketing and sales data only.', 'We connect our marketing and service data only.','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--32" data-id='32' data-line='4'></div>
+		<div class="btn__progress btn__progress--33" data-id='33' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--33">	
+	`<div class="panel panel--34">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -631,14 +655,14 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?',
-				'textArr': ['Yes','No, we only use marketing data for personalization'],
+				'textArr': ['Yes','No'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--33" data-id='33' data-line='1'></div>
+		<div class="btn__progress btn__progress--34" data-id='34' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--34">	
+	`<div class="panel panel--35">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -654,9 +678,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--34" data-id='34' data-line='2'></div>
+		<div class="btn__progress btn__progress--35" data-id='35' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--35">	
+	`<div class="panel panel--36">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -672,9 +696,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--35" data-id='35' data-line='3'></div>
+		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--36">	
+	`<div class="panel panel--37">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -690,9 +714,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
+		<div class="btn__progress btn__progress--37" data-id='37' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--37">	
+	`<div class="panel panel--38">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -708,9 +732,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--37" data-id='37' data-line='1'></div>
+		<div class="btn__progress btn__progress--38" data-id='38' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--38">	
+	`<div class="panel panel--39">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -726,9 +750,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--38" data-id='38' data-line='2'></div>
+		<div class="btn__progress btn__progress--39" data-id='39' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--39">	
+	`<div class="panel panel--40">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -739,16 +763,16 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you track, measure and analyze customer lifetime value?',
-				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
+				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value.","Yes, we use predictive algorithms to identify next best actions based on customer churn.","Yes, we view reports to diagnose what happened in the past.","No, we don't do this"],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--39" data-id='39' data-line='5'></div>
+		<div class="btn__progress btn__progress--40" data-id='40' data-line='5'></div>
 	</div>`,
 
 
-	`<div class="panel panel--40">	
+	`<div class="panel panel--41">	
 		<div class="body__content">
 			<h1 class='results__title results__title--1'>Your Marketing Maturity Assessment Results</h1>
 			<div class="wrapper wrapper--1">				

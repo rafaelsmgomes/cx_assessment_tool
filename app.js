@@ -4,7 +4,7 @@ const express     = require("express"),
     path          = require("path"),
     ejs           = require("ejs"),
     dotenv        = require("dotenv"),
-    fs            = require("fs");
+    fs            = require("fs"); 
 const app = express();
 
 dotenv.config({ path: './config.env'})
@@ -105,8 +105,8 @@ const generatePDF = (req, res) => {
     id = req.params.id;    
     let result;
     const config = {
-        document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
-        // document: `http://dev.assessment-tools.com/htmlversion/${id}`,
+        // document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
+        document: `http://dev.assessment-tools.com/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }
@@ -137,7 +137,7 @@ const sendDataToPDF = (req, res) => {
                 SELECT companyName, id FROM users WHERE id = ?;
                 SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
                 `, [sqlID, sqlID, sqlID], (err, results, fields) => {
-                // 1577293819790
+                // 1577293819790 
         if (err) throw err; 
         var pdfData = {
             TotalScore: Math.round((results[2][0].BroadcastScore + results[2][0].ResponsiveScore + results[2][0].RelationshipScore + results[2][0].LifecycleScore)/4),
@@ -185,8 +185,7 @@ const sendDataToPDF = (req, res) => {
             lifecycle_4: results[0][35].ans_value,
             lifecycle_5: results[0][36].ans_value,
             lifecycle_6: results[0][37].ans_value,
-            lifecycle_7: results[0][38].ans_value,
-            lifecycle_8: results[0][39].ans_value
+            lifecycle_7: results[0][38].ans_value
         }
         res.json({data: pdfData});
     })    
@@ -202,7 +201,6 @@ cxRouter.post('/api', generateData);
 cxRouter.get('/api2/:id', getOverallResults);
 cxRouter.get('/pdfdata/:id', sendDataToPDF);
 cxRouter.get('/pdf/:id', generatePDF);
-
 
 
 // ------------------------------------------------------------

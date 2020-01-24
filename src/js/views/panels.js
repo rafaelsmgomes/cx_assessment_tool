@@ -637,7 +637,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?',
-				'textArr': ['Yes! We have connections for all three','We connect our marketing and sales data', 'We connect our marketing and service data','No, we are not able to connect the data between any of these systems'],
+				'textArr': ['Yes! We have data connections across all three.','We connect our marketing and sales data only.', 'We connect our marketing and service data only.','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
@@ -655,7 +655,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you leverage unified customer profiles across marketing, sales and service to provide personalized experiences for your customers?',
-				'textArr': ['Yes','No, we only use marketing data for personalization'],
+				'textArr': ['Yes','No'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
@@ -763,7 +763,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you track, measure and analyze customer lifetime value?',
-				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
+				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value.","Yes, we use predictive algorithms to identify next best actions based on customer churn.","Yes, we view reports to diagnose what happened in the past.","No, we don't do this"],
 				'group': 'Lifecycle',
 				'count': true,
 			})}

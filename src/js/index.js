@@ -54,7 +54,7 @@ state.colorScheme = new ColorScheme(
 		'background': 'background--0',		
 	},
 	],
-	'pageBreaks':[0,10,20,32,40],			
+	'pageBreaks':[0,11,21,33,41],			
 	}
 );
 
@@ -179,6 +179,17 @@ $(document).ready(function(){
 			'outputPerc': true,  
 		});
 
+		$('.slider__form--x').cprSlider({
+			'state': state,
+			'size': .1,
+			'panels': panels,
+			'sideIcons': false,
+			'windowWidth': $('.panel').width(),
+			'windowHeight': $('.panel').height(),
+			'showOutput': true,
+			'outputPerc': false,  
+		});		
+
 	/*** Custom CSS ***/
 
 		window.statete = state;
@@ -193,5 +204,5 @@ $(document).ready(function(){
 		css.panelFix(timing);	
 
 	/*** Populate country Dropdown ***/
-	country.populateCountries('gate__country');
+		country.populateCountries('gate__country');
 });

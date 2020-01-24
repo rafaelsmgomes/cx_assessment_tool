@@ -72,6 +72,9 @@ html {
   font-size: 125%; //20px    
   box-sizing: border-box; 
   touch-action: none;
+  @include bph(800){
+    font-size: 84%;
+  }
   @include bp($width-1){
     @include bph(900){
       font-size: 84%;

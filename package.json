@@ -2,7 +2,7 @@
   "name": "cpr_testdir",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "watch:sass": "node-sass ./src/sass/main.scss ./bin_dev/css/style.min.css -w",
     "compile:sass": "node-sass src/sass/main.scss ./bin_dev/css/style.comp.css",
@@ -55,7 +55,6 @@
     "path": "^0.12.7",
     "raw-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
-    "session": "^0.1.0",
     "style-loader": "^1.0.0"
   }
 }

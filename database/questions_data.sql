@@ -261,7 +261,7 @@ VALUES
         19,
         "Do you currently use testing and optimization tools on your landing pages and website? 
             a. Yes 
-            b. No,"
+            b. No",
         NULL, 
         .1, 
         "Testing and Optimization for Landing Pages and Websites: According to Taylor & Frances Group, it takes about 50 milliseconds (that’s 0.05 seconds) for users to form an opinion about your website and decide whether they’ll stay or leave. Website testing efforts can be worthwhile and, according to Steelhouse, when done correctly, can boost conversions by 300% or more.",

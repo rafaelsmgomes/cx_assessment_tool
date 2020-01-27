@@ -11,7 +11,7 @@ dotenv.config({ path: './config.env'})
 
 const sql = require('./database/queries');
 const PDFReactor = require('../PDFreactor/wrappers/nodejs/lib/PDFreactor');
-const pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");
+const pdfReactor = new PDFReactor("http://ec2-34-215-176-51.us-west-2.compute.amazonaws.com/service/rest/");
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/bin_dev`));
 app.use(express.static(`${__dirname}/PDF`));
@@ -157,15 +157,15 @@ const sendDataToPDF = (req, res) => {
             broadcast_6: results[0][5].ans_value,
     
             responsive_1: results[0][10].ans_value,
-            responsive_3: results[0][11].ans_value,
-            responsive_4: results[0][12].ans_value,
-            responsive_5: results[0][13].ans_value,
-            responsive_6: results[0][14].ans_value,
-            responsive_7: results[0][15].ans_value,
-            responsive_8: results[0][16].ans_value,
-            responsive_9: results[0][17].ans_value,
-            responsive_10: results[0][18].ans_value,
-            responsive_11: results[0][19].ans_value,
+            responsive_2: results[0][11].ans_value,
+            responsive_3: results[0][12].ans_value,
+            responsive_4: results[0][13].ans_value,
+            responsive_5: results[0][14].ans_value,
+            responsive_6: results[0][15].ans_value,
+            responsive_7: results[0][16].ans_value,
+            responsive_8: results[0][17].ans_value,
+            responsive_9: results[0][18].ans_value,
+            responsive_10: results[0][19].ans_value,
     
             relationship_1: results[0][20].ans_value,
             relationship_2: results[0][21].ans_value,

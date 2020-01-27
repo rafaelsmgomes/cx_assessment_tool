@@ -25,7 +25,6 @@ var responsive_7;
 var responsive_8;
 var responsive_9;
 var responsive_10;
-var responsive_11;
 
 
 var relationship_1;
@@ -93,7 +92,6 @@ var link= "/cx/maturity/pdfdata/" +id;
     responsive_8=pdfData.data.responsive_8;
     responsive_9=pdfData.data.responsive_9;
     responsive_10=pdfData.data.responsive_10;
-    responsive_11=pdfData.data.responsive_11;
     
     relationship_1=pdfData.data.relationship_1;
     relationship_2=pdfData.data.relationship_2;
@@ -107,8 +105,6 @@ var link= "/cx/maturity/pdfdata/" +id;
     relationship_10=pdfData.data.relationship_10;
     relationship_11=pdfData.data.relationship_11;
     relationship_12=pdfData.data.relationship_12;
-
-    
     
     lifecycle_1=pdfData.data.lifecycle_1;
     lifecycle_2=pdfData.data.lifecycle_2;
@@ -145,7 +141,7 @@ jqxhr1.done(function() {
 });
 
 //vars not from DB
-var breakpoint=50;
+var breakpoint=51;
 
 
 function getSummary(data){
@@ -162,7 +158,7 @@ function getSummary(data){
             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-04.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medlow;
             break;
-        case (x < 74):
+        case (x < 75):
             document.getElementById('cta-title-dynamic').innerHTML="Go Further with Customer Experience Optimization";
             $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-ignite-guide-customer-experience-optimization.pdf');
              $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-05.png)');
@@ -188,7 +184,7 @@ function getBroadcast(data){
         case (x < 50):
             document.getElementById('broadcast_content').innerHTML=data.broadcast.broadcast_text.medlow;
             break;
-        case (x < 74):
+        case (x < 75):
             document.getElementById('broadcast_content').innerHTML=data.broadcast.broadcast_text.medhigh;
             break;
         default:
@@ -224,7 +220,6 @@ function getBroadcast(data){
               } 
         }
         else{
-             if(i==4){console.log("Q4: firing condrats"  )}
              if(ycount<3){
                 appendTo='#broadcast-congrads-1';
             }
@@ -232,7 +227,6 @@ function getBroadcast(data){
                 appendTo='#broadcast-congrads-2';
                 swapBackgrounds($('#broadcast-page-4'));
             }
-             if(i==4){console.log("Q4: firing condrats. Appending to " + appendTo  )}
             $(appendTo).append('<div class="reccomendation congradulations icon '+data.broadcast.recommendations[i-1].icon+'">'+
                                  '<div class="recommendation-text">'+
                                  '<div class="recommendation_title">'+data.broadcast.recommendations[i-1].title+'</div>'+
@@ -266,7 +260,7 @@ function getResponsive(data){
         case (x < 50):
             document.getElementById('responsive_content').innerHTML=data.responsive.responsive_text.medlow;
             break;
-        case (x < 74):
+        case (x < 75):
             document.getElementById('responsive_content').innerHTML=data.responsive.responsive_text.medhigh;
             break;
         default:
@@ -326,7 +320,7 @@ function getResponsive(data){
                 $('#responsive-col-content').append('<p>Keep up the momentum. Your company has top scores in Responsive Marketing.</p>');
                  document.getElementById('responsive-rec').innerHTML="Congratulations, based on your responses to the Responsive Marketing Maturity section, your company joins an elite group of organizations that Oracle recognizes as experts in Responsive Marketing.";
                  document.getElementById('responsive-rec2').innerHTML="Based on your answers to the Responsive Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Responsive Marketing Maturity.";
-                 $('#responsive-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
+                 $('#responsive-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.responsive.perfect+'</div></div>' );
             }
@@ -356,7 +350,7 @@ function getRelationship(data){
         case (x < 50):
             document.getElementById('relationship_content').innerHTML=data.relationship.relationship_text.medlow;
             break;
-        case (x < 74):
+        case (x < 75):
             document.getElementById('relationship_content').innerHTML=data.relationship.relationship_text.medhigh;
             break;
         default:
@@ -421,7 +415,7 @@ function getRelationship(data){
                  $('#relationship-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('relationship-rec').innerHTML="Congratulations, based on your responses to the Relationship Marketing Maturity section, your company is setting the pace that other organizations now follow when it comes to Relationship Marketing.";
                document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
-               $('#relationship-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
+               $('#relationship-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.relationship.perfect+'</div></div>' );
             }
@@ -451,7 +445,7 @@ function getLifecycle(data){
         case (x < 50):
             document.getElementById('lifecycle_content').innerHTML=data.lifecycle.lifecycle_text.medlow;
             break;
-        case (x < 74):
+        case (x < 75):
             document.getElementById('lifecycle_content').innerHTML=data.lifecycle.lifecycle_text.medhigh;
             break;
         default:
@@ -510,17 +504,17 @@ function getLifecycle(data){
                  $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well positioned to define disrupt new business models in your industry. ";
                  document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
-                  $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
+                  $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.lifecycle.perfect+'</div></div>' );
             }
         }
     }
 
-         if(ycount <=  7){
+         if(ycount <=  8){
                $('#lifecycle-page-5').hide();
         }
-        if(ncount <=  7){
+        if(ncount <=  8){
                $('#lifecycle-page-3').hide();
         }
     
@@ -539,7 +533,7 @@ function getConclusion(data){
         case (x < 50):
             document.getElementById('summary_content').innerHTML=data.summary.medlow;
             break;
-        case (x < 74):
+        case (x < 75):
             document.getElementById('summary_content').innerHTML=data.summary.medhigh;
             break;
         default:

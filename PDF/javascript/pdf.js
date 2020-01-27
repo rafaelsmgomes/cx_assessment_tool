@@ -25,7 +25,7 @@ var responsive_7;
 var responsive_8;
 var responsive_9;
 var responsive_10;
-var responsive_11;
+//var responsive_11;
 
 
 var relationship_1;
@@ -93,7 +93,7 @@ var link= "/cx/maturity/pdfdata/" +id;
     responsive_8=pdfData.data.responsive_8;
     responsive_9=pdfData.data.responsive_9;
     responsive_10=pdfData.data.responsive_10;
-    responsive_11=pdfData.data.responsive_11;
+   // responsive_11=pdfData.data.responsive_11;
     
     relationship_1=pdfData.data.relationship_1;
     relationship_2=pdfData.data.relationship_2;

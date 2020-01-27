@@ -6,6 +6,7 @@ export default class Checkbox {
         this.question = attr.question;
     	this.textArr = attr.textArr;
         this.id = null;
+        this.custVals = attr.custVals;
     	this.choseAns = [];
         // this.pointVal = this.retrievePointVal()*75;        
     }
@@ -29,9 +30,16 @@ export default class Checkbox {
     // }
 
     assignValue(){
-        const len = Number(this.textArr.length);
-        const ansLen = Number(this.choseAns.length);
-
-        this.val = (ansLen/len)*100;
+        if(this.custVals === undefined){
+            const len = Number(this.textArr.length);
+            const ansLen = Number(this.choseAns.length);
+            this.val = (ansLen/len)*100;            
+        }else{      
+            let val = 0;        
+            for(let [i,text] of this.choseAns.entries()){
+                val += this.custVals[i];
+            }
+            this.val = val;
+        }
     }
 }

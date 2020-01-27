@@ -198,7 +198,6 @@ export const createLikert = (attr) => {
 
 export const createCheckbox = (attr) => {
     const textArr = attr.textArr;
-    const custVals = attr.custVals ? attr.custVals : false; 
     var checkbox = new Checkbox(attr); 
     state.checkboxes.push(checkbox);
     const id = state.checkboxes.length-1;
@@ -220,7 +219,7 @@ export const createCheckbox = (attr) => {
 
         htmltext += `   
             <div class="checkbox__group">
-                <input type="checkbox" class="checkbox__input" name="checkbox--${id}" id="checkbox--${id}--${j}" value="${attr.custVals ? attr.custVals[j] : textArr[j]}">
+                <input type="checkbox" class="checkbox__input" name="checkbox--${id}" id="checkbox--${id}--${j}" value="${textArr[j]}">
                 <label for="checkbox--${id}--${j}" class="checkbox__label">
                 <div class="checkbox__button checkbox__button--0">
                 <div class="checkbox__checkmark"></div>

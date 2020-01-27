@@ -241,7 +241,7 @@ export const createCheckbox = (attr) => {
 
 export const createVertfc = (attr) => {
     const textArr = attr.textArr;
-
+    const custVals = attr.custVals ? attr.custVals : false; 
     const addTo = 100/(textArr.length-1);
     let startPoint = 100;
     let htmltext = '';
@@ -267,7 +267,7 @@ export const createVertfc = (attr) => {
         htmltext += 
         `
         <div class="vertfc__group vertfc__group--${j}">
-            <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${startPoint} name="vertfc__name--${id}" text='${textArr[j]}'>
+            <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${custVals ? custVals[j] : startPoint} name="vertfc__name--${id}" text='${textArr[j]}'>
             <label for="vertfc__id--${id}-${j}" class="vertfc__label">
                 <div class="vertfc__button vertfc__button--0">
                     <div class="vertfc__checkmark"></div>

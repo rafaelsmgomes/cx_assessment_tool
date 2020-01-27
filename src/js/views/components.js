@@ -147,8 +147,8 @@ export const createDial1 = (attr) => {
 
 export const createLikert = (attr) => {
     const textArr = attr.textArr;     
-
     const addTo = 100/(textArr.length-1);
+    const custVals = attr.custVals ? attr.custVals : false; 
     let startPoint = 0;
     let htmltext = '';
     var likert = new Likert(attr); 
@@ -172,7 +172,7 @@ export const createLikert = (attr) => {
 
         htmltext +=  `
             <div class="likert__group">
-                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${startPoint} name="likert__name--${id}" text="${textArr[j]}">
+                <input type="radio" class="likert__input" id="likert__id--${id}-${j}" value=${custVals ? custVals[j] : startPoint} name="likert__name--${id}" text="${textArr[j]}">
                 <label for="likert__id--${id}-${j}" class="likert__label">
                     <div class="likert__button likert__button--0">
                         <div class="likert__checkmark"></div>
@@ -198,7 +198,6 @@ export const createLikert = (attr) => {
 
 export const createCheckbox = (attr) => {
     const textArr = attr.textArr;
-
     var checkbox = new Checkbox(attr); 
     state.checkboxes.push(checkbox);
     const id = state.checkboxes.length-1;

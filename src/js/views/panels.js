@@ -75,6 +75,7 @@ export const panels = [
 			${comp.createLikert({				
 				'question':'Do you send batch and blast style communications to wide audiences?',
 				'textArr': ['No', 'Sometimes', 'Yes'],
+				'custVals': [39,78,98],
 				'group': 'broadcast',
 				'count': true,
 			})}
@@ -147,6 +148,7 @@ export const panels = [
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
 				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
+				'custVals': [0,25,0,25,0,25,25],
 				'group': 'broadcast',
 				'count': false,
 			})}	

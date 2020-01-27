@@ -327,7 +327,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'What level of segmentation drives your campaigns?',
-				'textArr': ["Advanced segments based on profile and behavioral data",'Advanced segments based on profile and behavioral data',"Basic customer persona defined segments",'Wide audience or&nbsp;list'],
+				'textArr': ['Advanced segments based on profile and behavioral data',"Basic customer persona defined segments",'Wide audience or&nbsp;list'],
 				'group': 'responsive',
 				'count': true,
 			})}

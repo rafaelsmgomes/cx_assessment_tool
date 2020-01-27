@@ -7,7 +7,7 @@ export default class Checkbox {
     	this.textArr = attr.textArr;
         this.id = null;
     	this.choseAns = [];
-        this.pointVal = this.retrievePointVal()*75;        
+        // this.pointVal = this.retrievePointVal()*75;        
     }
 
     addAns(answers){
@@ -21,12 +21,12 @@ export default class Checkbox {
     	this.choseAns = [];	
     }
 
-    retrievePointVal(){
-        const checkbox = this.textArr;
-        const checkboxLen = checkbox.length;
-        const value = 1/checkboxLen;
-        return value;        
-    }
+    // retrievePointVal(){
+    //     const checkbox = this.textArr;
+    //     const checkboxLen = checkbox.length;
+    //     const value = 1/checkboxLen;
+    //     return value;        
+    // }
 
     assignValue(){
         const len = Number(this.textArr.length);

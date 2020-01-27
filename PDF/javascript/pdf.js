@@ -159,18 +159,18 @@ function getSummary(data){
         case (x < 50):
             document.getElementById('cta-title-dynamic').innerHTML="Do More with Lead Management";
             $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-spark-series-lead-management.pdf');
-            $('#cta-1').css('background-image','url(../assets/thumbnails/tbnail-04.png)');
+            $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-04.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medlow;
             break;
         case (x < 74):
             document.getElementById('cta-title-dynamic').innerHTML="Go Further with Customer Experience Optimization";
             $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-ignite-guide-customer-experience-optimization.pdf');
-             $('#cta-1').css('background-image','url(../assets/thumbnails/tbnail-05.png)');
+             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-05.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medhigh;
             break;
         default:
             document.getElementById('cta-title-dynamic').innerHTML="How to Thrive in the Experience Economy";
-             $('#cta-1').css('background-image','url(../assets/thumbnails/tbnail-06.png)');
+             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-06.png)');
             $('#cta-1').prop('href', 'https://blogs.oracle.com/marketingcloud/how-to-thrive-in-the-experience-economy%e2%80%94and-how-oracle-cx-unity-is-more-than-a-cdp-v2');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.high;
             break;
@@ -242,7 +242,7 @@ function getBroadcast(data){
                 $('#broadcast-col-content').append('<p>You did it! Your company has mastered Broadcast Marketing.</p>');
                 document.getElementById('broadcast-rec').innerHTML="Congratulations, based on your responses to the Broadcast Marketing Maturity section, your company has mastered this level of marketing maturity.";
                 document.getElementById('broadcast-rec2').innerHTML="Based on your answers to the Broadcast Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Broadcast Marketing Maturity.";
-                 $('#broadcast-recs-1').append('<div class="reccomendation congradulations icon congrats-icon">'+
+                 $('#broadcast-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.broadcast.perfect+'</div></div>' );
             }

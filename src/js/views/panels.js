@@ -74,8 +74,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
 				'question':'Do you send batch and blast style communications to wide audiences?',
-				'textArr': ['No', 'Sometimes', 'Yes'],
-				'custVals': [39,78,98],
+				'textArr': ['No', 'Sometimes', 'Yes'],				
 				'group': 'broadcast',
 				'count': true,
 			})}
@@ -147,8 +146,7 @@ export const panels = [
 			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
-				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
-				'custVals': [0,25,0,25,0,25,25],
+				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],			
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -638,7 +636,7 @@ export const panels = [
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
-				'question':'Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?',
+				'question':'Do you have data connections that allow you to have a view of your customer across marketing, sales, and service?',
 				'textArr': ['Yes! We have data connections across all three.','We connect our marketing and sales data only.', 'We connect our marketing and service data only.','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
@@ -675,7 +673,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?',
-				'textArr': ['Yes, our commerce site has been integrated into our overall marketing&nbsp;strategy',"Yes, but it's a separate team who runs the commerce program",'No'],
+				'textArr': ['Yes, our commerce site has been integrated into our overall marketing&nbsp;strategy','No'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
@@ -693,7 +691,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you run marketing programs targeted specifically to your loyalty program members?',
-				'textArr': ['Yes, loyalty has been integrated into our overall marketing strategy',"Yes, but it's a separate team who runs the loyalty program",'No'],
+				'textArr': ['Yes, loyalty has been integrated into our overall marketing strategy',"No, we don't"],
 				'group': 'Lifecycle',
 				'count': true,
 			})}

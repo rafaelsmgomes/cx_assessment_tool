@@ -550,6 +550,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
 				'textArr': ['Yes', "I don't know", 'No'],
+				'custVals': [100,0,0],
 				'group': 'relationship',
 				'count': true,
 			})}			

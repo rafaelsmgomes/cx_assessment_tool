@@ -74,7 +74,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
 				'question':'Do you send batch and blast style communications to wide audiences?',
-				'textArr': ['No', 'Sometimes', 'Yes'],
+				'textArr': ['No', 'Sometimes', 'Yes'],				
 				'group': 'broadcast',
 				'count': true,
 			})}
@@ -146,7 +146,7 @@ export const panels = [
 			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What metrics do you track to show success in your marketing programs?',
-				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],
+				'textArr': ['Email opens', 'Click-throughs', 'Downloads', 'Form completions', 'Subscribes/Unsubscribes', 'Web or landing page traffic', 'Event participation'],			
 				'group': 'broadcast',
 				'count': false,
 			})}	
@@ -311,6 +311,7 @@ export const panels = [
 				'question':'Does your marketing automation platform score leads based on behavioral activities and profile data?',
 				'textArr': ['Both behavioral activities and profile data','Only behavioral activities',"Only profile data","We don't use lead scoring to qualify leads"],
 				'group': 'responsive',
+				'custVals': [100,50,50,0],
 				'count': true,
 			})}
 		</div>
@@ -402,6 +403,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'How advanced are your targeting and segmentation processes?',
 				'textArr': ["We have highly specific audience filters that target buyers in real time based on changing profile and behavior data",'We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model','We create a number of filters and audiences based on profile and behavioral attributes',"We haven't had the opportunity to advance in this area"],
+				'custVals': [100, 50, 50, 0],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -456,6 +458,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you deliver a personalized account experience across channels for contacts within that organization?',
 				'textArr': ['Yes! Always!', 'Sometimes', 'Never', 'Not applicable to our business'],
+				'custVals': [100,50,0,0],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -474,6 +477,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you have an account-based marketing (ABM) program?',
 				'textArr': ["We have an ABM program and it's working beautifully", 'We are just getting started on an ABM program', 'No', 'Not applicable to our business'],
+				'custVals': [100,50,0,0],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -546,6 +550,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
 				'textArr': ['Yes', "I don't know", 'No'],
+				'custVals': [100,0,0],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -599,7 +604,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How do you measure your marketing efforts?',
-				'textArr': ["Able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)", 'Some consistent means of measuring campaigns with some deep analysis in specific areas', "Generate basic reports"],
+				'textArr': ["We are able to see marketing's contribution to sales' success across each channel and activity within sales (closed loop reporting)", 'We have some consistent means of measuring campaigns with some deep analysis in specific areas', "We generate basic reports"],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -617,7 +622,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How integrated is your marketing data?',
-				'textArr': ['We have integrated all online and offline data as well as known profiles from 3rd party data', "We have a unified customer database that automates some essential online and offline data",'We have integrated some customer data, but using and manipulating it  is a manual process','All of our marketing data is siloed'],
+				'textArr': ['We have a unified customer database that automates some essential online, offline and 3rd party data','We have integrated some customer data, but using and manipulating it  is a manual process','All of our marketing data is siloed'],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -636,7 +641,7 @@ export const panels = [
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
-				'question':'Do you have data connections that allow you to have a full 360 degree view of your customer across marketing, sales, and service?',
+				'question':'Do you have data connections that allow you to have a view of your customer across marketing, sales, and service?',
 				'textArr': ['Yes! We have data connections across all three.','We connect our marketing and sales data only.', 'We connect our marketing and service data only.','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
@@ -668,12 +673,12 @@ export const panels = [
 				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
-				Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?
+				Do you run marketing programs to drive sales on a commerce site for repeat or low-consideration purchases?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you run marketing programs to drive sales on a B2B commerce site for repeat or low-consideration purchases?',
-				'textArr': ['Yes, our commerce site has been integrated into our overall marketing&nbsp;strategy',"Yes, but it's a separate team who runs the commerce program",'No'],
+				'textArr': ['Yes, our commerce site has been integrated into our overall marketing&nbsp;strategy ',"No, we don't"],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
@@ -691,7 +696,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you run marketing programs targeted specifically to your loyalty program members?',
-				'textArr': ['Yes, loyalty has been integrated into our overall marketing strategy',"Yes, but it's a separate team who runs the loyalty program",'No'],
+				'textArr': ['Yes, loyalty has been integrated into our overall marketing strategy',"No, we don't"],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
@@ -763,7 +768,8 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you track, measure and analyze customer lifetime value?',
-				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value.","Yes, we use predictive algorithms to identify next best actions based on customer churn.","Yes, we view reports to diagnose what happened in the past.","No, we don't do this"],
+				'textArr': ["Yes, our systems are automatically improving how we engage based on customer metrics to understand customer lifetime&nbsp;value","Yes, we use predictive algorithms to identify next best actions based on customer churn","Yes, we view reports to diagnose what happened in the past","No, we don't do this"],
+				'custVals':[100,50,50,0],
 				'group': 'Lifecycle',
 				'count': true,
 			})}

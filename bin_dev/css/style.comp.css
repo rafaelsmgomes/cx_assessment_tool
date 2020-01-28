@@ -446,19 +446,6 @@
     .checkbox__form {
       height: 15rem;
       flex-wrap: wrap; } }
-  @media only screen and (max-height: 950px) {
-    .panel--27 .checkbox__form {
-      height: 9.5rem; } }
-  @media only screen and (max-height: 900px) {
-    .panel--27 .checkbox__form {
-      height: 13rem; } }
-
-@media only screen and (max-width: 1440px) and (max-height: 900px) {
-  .panel--27 .checkbox__form {
-    height: 11rem; } }
-  @media only screen and (max-width: 767px) {
-    .panel--27 .checkbox__form {
-      height: 12rem; } }
 
 .checkbox__checkmark {
   background-image: url(../assets/images/desktop/icon/icon-check-likert.svg);

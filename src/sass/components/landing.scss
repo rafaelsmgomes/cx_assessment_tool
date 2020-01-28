@@ -225,7 +225,7 @@ $width: 100%;
         }        
 
         @include bp($width-5){
-            height: auto;
+            height: 7.36rem;          
         }
     }       
     &__txt{
@@ -326,7 +326,7 @@ $width: 100%;
         }
         @include bp($width-5){
             width: 21rem;
-            margin-top: 14.7rem;
+            margin-top: 16.7rem;
             @include bph(450){
                 margin-top: 15rem;
             }
@@ -335,6 +335,7 @@ $width: 100%;
         @include bp(405){
             width: 24rem;
             margin-top: 15.7rem;
+            height: 100%;
         }        
     }
     &__img{        

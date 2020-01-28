@@ -235,7 +235,7 @@ function getBroadcast(data){
             if(ycount==data.broadcast.recommendations.length){
                 $('#broadcast-col-content').append('<p>You did it! Your company has mastered Broadcast Marketing.</p>');
                 document.getElementById('broadcast-rec').innerHTML="Congratulations, based on your responses to the Broadcast Marketing Maturity section, your company has mastered this level of marketing maturity.";
-                document.getElementById('broadcast-rec2').innerHTML="Based on your answers to the Broadcast Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Broadcast Marketing Maturity.";
+                document.getElementById('broadcast-rec2').innerHTML="Based on your answers to the Broadcast Marketing section we have curated a recommendation to help your organization continue to advance in the foundational and tactical areas needed to master Broadcast Marketing Maturity.";
                  $('#broadcast-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.broadcast.perfect+'</div></div>' );
@@ -489,7 +489,8 @@ function getLifecycle(data){
                 appendTo='#lifecycle-congrads-1';   
             }
             else if((ycount >= 3) &&  (ycount < 6)){
-                appendTo='#lifecycle-congrads-2'
+                appendTo='#lifecycle-congrads-2';
+                 swapBackgrounds($('#lifecycle-page-4'));
                  
             }
             else if((ycount >= 6) &&  (ycount < 10)){
@@ -503,7 +504,7 @@ function getLifecycle(data){
              if(ycount==data.lifecycle.recommendations.length){
                  $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well positioned to define disrupt new business models in your industry. ";
-                 document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
+                 document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization continue to advance in the foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
                   $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.lifecycle.perfect+'</div></div>' );

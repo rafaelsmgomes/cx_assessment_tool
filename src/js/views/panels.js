@@ -311,6 +311,7 @@ export const panels = [
 				'question':'Does your marketing automation platform score leads based on behavioral activities and profile data?',
 				'textArr': ['Both behavioral activities and profile data','Only behavioral activities',"Only profile data","We don't use lead scoring to qualify leads"],
 				'group': 'responsive',
+				'custVals': [100,50,50,0],
 				'count': true,
 			})}
 		</div>
@@ -549,6 +550,7 @@ export const panels = [
 			${comp.createVertfc({				
 				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
 				'textArr': ['Yes', "I don't know", 'No'],
+				'custVals': [100,0,0],
 				'group': 'relationship',
 				'count': true,
 			})}			

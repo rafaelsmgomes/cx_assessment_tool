@@ -41,9 +41,9 @@ export const createDial2 = (attr) => {
     }
 
     return `
-        <div class="dial-group dial-group--${id}" data-id='${id}'>
+        <div class="dial-group dial-group--${id}" data-id="${id}">
             <div class="dial-tracker__wrapper">
-                <input type="text" value="2" class="dial-tracker2 dial-tracker2--${id}" data-id='${id}' data-context=false>
+                <input type="text" value="2" class="dial-tracker2 dial-tracker2--${id}" data-id="${id}" data-context=false>
             </div>
             <div class="dial-clock__wrapper">
                 <div class="dial__crown"></div>
@@ -110,9 +110,9 @@ export const createDial1 = (attr) => {
     }
 
     return `
-        <div class="dial-group dial-group--${id}" data-id='${id}'>
+        <div class="dial-group dial-group--${id}" data-id="${id}">
             <div class="dial-tracker__wrapper">
-                <input type="text" value="2" class="dial-tracker dial-tracker--${id}" data-id='${id}' data-context=false>
+                <input type="text" value="2" class="dial-tracker dial-tracker--${id}" data-id="${id}" data-context=false>
             </div>
             <div class="dial-clock__wrapper">
                 <div class="dial__crown"></div>
@@ -267,7 +267,7 @@ export const createVertfc = (attr) => {
         htmltext += 
         `
         <div class="vertfc__group vertfc__group--${j}">
-            <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${custVals ? custVals[j] : startPoint} name="vertfc__name--${id}" text='${textArr[j]}'>
+            <input type="radio" class="vertfc__input" id="vertfc__id--${id}-${j}" value=${custVals ? custVals[j] : startPoint} name="vertfc__name--${id}" text="${textArr[j]}">
             <label for="vertfc__id--${id}-${j}" class="vertfc__label">
                 <div class="vertfc__button vertfc__button--0">
                     <div class="vertfc__checkmark"></div>
@@ -326,14 +326,14 @@ export const createSlider = (attr) => {
                 <div class="slider__description slider__description--1">${sliderGroup.minSet[j]}</div>
                 <div class="slider__description slider__description--2">${sliderGroup.maxSet[j]}</div>
             </div>
-            <input type="range" min="0" max="100" value="5" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
+            <input type="range" min="0" max="100" value="5" role="input-range" id="slideInput--${id}--${j}" data-group="${id}" data-self="${j}">
         </div>
         `;
         counter++;
     }
     return `
         <div class="slider__container slider__container--${id}">
-            <form action="#" class='slider__form slider__form--${id}' data-id='${id}'>
+            <form action="#" class="slider__form slider__form--${id}" data-id="${id}">
                 ${htmltext}
             </form>
         </div>
@@ -341,9 +341,9 @@ export const createSlider = (attr) => {
 
     function addActiveClass(i){
         if(i === 0){
-            return ' slider__content--active';
+            return " slider__content--active";
         }else{
-            return'';
+            return "";
         }
     } 
 }
@@ -386,14 +386,14 @@ export const createSlider1 = (attr) => {
                 <div class="slider__description slider__description--1">${sliderGroup.minSet[j]}</div>
                 <div class="slider__description slider__description--2">${sliderGroup.maxSet[j]}</div>
             </div>
-            <input type="range" min="1" max="100" value="5" role="input-range" id='slideInput--${id}--${j}' data-group='${id}' data-self='${j}'>
+            <input type="range" min="1" max="100" value="5" role="input-range" id="slideInput--${id}--${j}" data-group="${id}" data-self="${j}">
         </div>
         `;
         counter++;
     }
     return `
         <div class="slider__container slider__container--${id}">
-            <form action="#" class='slider__form--x slider__form--${id}' data-id='${id}'>
+            <form action="#" class="slider__form--x slider__form--${id}" data-id="${id}">
                 ${htmltext}
             </form>
         </div>

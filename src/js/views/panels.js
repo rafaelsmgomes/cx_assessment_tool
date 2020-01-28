@@ -311,6 +311,7 @@ export const panels = [
 				'question':'Does your marketing automation platform score leads based on behavioral activities and profile data?',
 				'textArr': ['Both behavioral activities and profile data','Only behavioral activities',"Only profile data","We don't use lead scoring to qualify leads"],
 				'group': 'responsive',
+				'custVals': [100,50,50,0],
 				'count': true,
 			})}
 		</div>

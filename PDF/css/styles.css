@@ -829,36 +829,26 @@ a[id] {
     justify-content: space-between;
 }
 .cta{
-    width: 160px;
-    height: 95px;
-    position: relative;
-    cursor: pointer;
+    width: 726px;
+    height: 140px;
+    background-color: #2C5967;
+    border-radius: 20px;
 }
-.cta-title-holder{
-    padding-top: 2px;
-    position: absolute;
-    bottom:0;
-    width: 100%;
-    height: 28px;
-    background-color: #312D2A;
+.cta p{
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 17px;
+    width: 322px;
+    float: left;
+    padding-left: 25px;
+    padding-top: 8px;
+    padding-right: 5px;
 }
-#ctaone{
-    background-image: url(../assets/thumbnails/tbnail-01.png)
-}
-#cta-2{
-    background-image: url(../assets/thumbnails/tbnail-02.png)
-}
-#cta-3{
-    background-image: url(../assets/thumbnails/tbnail-03.png)
-}
-.cta-title{
-    width: 140px;
-    margin-left: 10px;
+.cta p a{
     font-style: normal;
-    color:#ffffff;
-    font-size: 8px;
-    line-height: 12px;
-    text-align: center;
+}
+.cta p a:hover{
+    text-decoration: underline;
 }
 /**helpers**/
 .width-110{

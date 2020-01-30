@@ -153,21 +153,12 @@ function getSummary(data){
             document.getElementById('conclusion_text').innerHTML=data.conclusion.low;
             break;
         case (x < 50):
-            document.getElementById('cta-title-dynamic').innerHTML="Do More with Lead Management";
-            $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-spark-series-lead-management.pdf');
-            $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-04.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medlow;
             break;
         case (x < 75):
-            document.getElementById('cta-title-dynamic').innerHTML="Go Further with Customer Experience Optimization";
-            $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-ignite-guide-customer-experience-optimization.pdf');
-             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-05.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medhigh;
             break;
         default:
-            document.getElementById('cta-title-dynamic').innerHTML="How to Thrive in the Experience Economy";
-             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-06.png)');
-            $('#cta-1').prop('href', 'https://blogs.oracle.com/marketingcloud/how-to-thrive-in-the-experience-economy%e2%80%94and-how-oracle-cx-unity-is-more-than-a-cdp-v2');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.high;
             break;
     } 
@@ -547,7 +538,7 @@ function getConclusion(data){
     document.getElementById("total-cloud-score").innerHTML=TotalScore;
 }
 function swapBackgrounds(el){
- el.css('background-image','url(../assets/strip_7.png)');
+ el.css('background-image','url(/assets/strip_7.png)');
      el.css('background-size','792px 16px');
 }
 

@@ -101,7 +101,6 @@ p, li, td {
 }
 
 
-
 h1 {
     font-family: Georgia;
     font-weight: normal;
@@ -117,7 +116,7 @@ h3{
  font-family: "OracleSans-Light", Arial, sans-serif;
   font-size : 36px;
   line-height : 24px;
-  color : #2B6242;
+  color : #94AFAF;
   font-weight: normal;
   margin-top: 45px;
   margin-bottom: 25px;
@@ -126,14 +125,17 @@ h3.h3-para-spacing{
         margin-top: 41px;
     margin-bottom: 9px;
 }
+.broadcast h3{
+    color:#759C6C;
+}
 .responsive h3{
     color:#2C5967;
 }
 .relationship h3{
-    color: #AE562C;
+    color: #41817E;
 }
 .lifecycle h3{
-    color:#67605B;
+    color:#2B6242;
 }
 h4{
     font-family: OracleSans-Light,Arial,sans-serif;
@@ -148,17 +150,20 @@ h5{
     margin-top: 0px;
     font-size: 14px;
     line-height: 18px;
-    color : #2B6242;
+    color : #94AFAF;
     margin-bottom: 12px
+}
+.broadcast h5{
+    color:#759C6C;
 }
 .responsive h5{
     color:#2C5967;
 }
 .relationship h5{
-    color: #AE562C;
+    color: #41817E;
 }
 .lifecycle h5{
-    color:#67605B;
+    color:#2B6242;
 }
 
 a[href] { 
@@ -242,10 +247,11 @@ a[id] {
     color:#ffffff;
     width: 31%;
 }
+
 .two-col{
     width: 100%;
     display: flex;
-    height: 524px;
+
 }
 .col-left, .col-right{
     width: 394px;
@@ -296,21 +302,21 @@ a[id] {
     bottom:30px;
 }
 #overall-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-texture.png);
+    background-image: url(../assets/clouds/cloud-fog.png);
 
 }
 #broadcast-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-green.png);
+    background-image: url(../assets/clouds/cloud-ivy.png);
 
 }
 #responsive-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-blue.png);
+    background-image: url(../assets/clouds/cloud-ocean.png);
 }
 #relationship-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-brown.png);
+    background-image: url(../assets/clouds/cloud-surf.png);
 }
 #lifecycle-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-grey.png);
+      background-image: url(../assets/clouds/cloud-forest.png);
 }
 .cloud-outline{
     width: 221px;
@@ -354,10 +360,11 @@ a[id] {
     width: 163px;
 }
 #overall-cloud{
-       background-color: rgba(117, 156, 108, 0.1); 
+       background-color: rgba(148,175,175, 0.1); 
 }
 #spider-col{
-    background-color: rgba(117, 156, 108, 0.1);
+    background-color: rgba(148,175,175, 0.1);
+          height: 613px;
 }
 .spider-chart-holder{
         position: absolute;
@@ -535,14 +542,17 @@ a[id] {
     width: 321px;
     float:right;
 }
+.broadcast .reccomendations_text{
+    color:  #759C6C;
+}
 .responsive .reccomendations_text{
     color:  #2C5967;
 }
 .relationship .reccomendations_text{
-    color: #AE562C;
+    color: #41817E;
 }
 .lifecycle .reccomendations_text{
-    color: #67605B;
+    color: #2B6242;
 }
 .icon-automation{
     background-image: url('../assets/icons/icon-automation.png');
@@ -671,7 +681,7 @@ a[id] {
 }
 
 .bottom-image, .b-image{
-    background-image: url(../assets/1x/bg_green.png);
+    background-image: url(../assets/1x/bg_ivy.png);
     background-position: bottom;
     background-repeat: no-repeat;
     position: absolute;
@@ -684,13 +694,13 @@ a[id] {
         padding: 15px 30px
 }
 .responsive .bottom-image{
-       background-image: url(../assets/1x/bg-blue.png);
+       background-image: url(../assets/1x/bg-ocean.png);
 }
 .relationship .bottom-image{
-       background-image: url(../assets/1x/bg-brown.png);
+           background-image: url(../assets/1x/bg-surf.png);
 }
 .lifecycle .bottom-image{
-       background-image: url(../assets/1x/bg-grey.png);
+       background-image: url(../assets/1x/bg-forest.png);
 }
 .action_list_title{
     font-size: 14px;
@@ -768,21 +778,21 @@ a[id] {
     display: inline-block
 }
 #broadcast-col .col-title{
-    color:#2B6242;
+    color:#759C6C;
 }
 
 #responsive-col .col-title{
     color:#2C5967;
 }
 #relationship-col .col-title{
-    color:#AE562C;
+    color:#41817E;
     
 }
 #lifecycle-col{
     width: 199px;
 }
 #lifecycle-col .col-title{
-    color:#8B8580;
+    color:#2B6242;
 }
 /** new backgrounds**/
     

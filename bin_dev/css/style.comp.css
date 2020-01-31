@@ -755,7 +755,7 @@
   flex: 0 0 5.20rem;
   height: 1.60rem;
   align-self: flex-end;
-  background-image: url(../assets/images/desktop/logo-white.svg);
+  background-image: url(../assets/images/desktop/logo-white.png);
   margin-right: auto;
   z-index: 1000;
   background-size: 100%;
@@ -1074,7 +1074,7 @@
         width: 100%; } }
   @media only screen and (max-width: 666px) {
     .landing__subtitle {
-      height: auto; } }
+      height: 7.36rem; } }
 
 .landing__txt {
   color: #fcfbfa; }
@@ -1167,14 +1167,15 @@
   @media only screen and (max-width: 666px) {
     .landing__texture {
       width: 21rem;
-      margin-top: 14.7rem; } }
+      margin-top: 16.7rem; } }
   @media only screen and (max-width: 666px) and (max-height: 450px) {
     .landing__texture {
       margin-top: 15rem; } }
   @media only screen and (max-width: 405px) {
     .landing__texture {
       width: 24rem;
-      margin-top: 15.7rem; } }
+      margin-top: 15.7rem;
+      height: 100%; } }
 
 .landing__img {
   background-image: url(../assets/graphics/down.svg);

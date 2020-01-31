@@ -185,9 +185,6 @@ function getBroadcast(data){
     for (i = 1; i <(data.broadcast.recommendations.length+1); i++) {
         var el="broadcast_r_"+i;
         var v="broadcast_"+i;
-        if(i==4){
-            console.log("Q4: " + window[v] )
-        }
         var appendTo;
         if( window[v]<breakpoint){
                 if(i==4){console.log("Q4: firing reccomend"  )}

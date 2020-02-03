@@ -202,7 +202,7 @@ function getBroadcast(data){
                                  '<p>'+data.broadcast.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;
              if(ncount==data.broadcast.recommendations.length){
-                 $('#broadcast-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#broadcast-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.broadcast.noexcellence+'</div></div>' );
               } 
@@ -282,7 +282,7 @@ function getResponsive(data){
           
             ncount++;
             if(ncount==data.responsive.recommendations.length){
-                 $('#responsive-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#responsive-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.responsive.noexcellence+'</div></div>' );
             }  
@@ -373,7 +373,7 @@ function getRelationship(data){
                                  '<p>'+data.relationship.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;
             if(ncount==data.relationship.recommendations.length){
-                 $('#relationship-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#relationship-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.relationship.noexcellence+'</div></div>' );
             } 
@@ -402,7 +402,7 @@ function getRelationship(data){
            if(ycount==data.relationship.recommendations.length){
                  $('#relationship-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('relationship-rec').innerHTML="Congratulations, based on your responses to the Relationship Marketing Maturity section, your company is setting the pace that other organizations now follow when it comes to Relationship Marketing.";
-               document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
+               document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization continue to advance in the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
                $('#relationship-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.relationship.perfect+'</div></div>' );
@@ -466,7 +466,7 @@ function getLifecycle(data){
                                  '<p>'+data.lifecycle.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;   
             if(ncount==data.lifecycle.recommendations.length){
-                 $('#lifecycle-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#lifecycle-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.lifecycle.noexcellence+'</div></div>' );
             } 
@@ -499,6 +499,8 @@ function getLifecycle(data){
             }
         }
     }
+    
+    console.log('lifecycle ncount: ' + ncount)
 
          if(ycount <=  8){
                $('#lifecycle-page-5').hide();
@@ -582,7 +584,7 @@ scale: {
   },
   gridLines: {
       lineWidth: 2,
-      color: ['#AE562C', '#FACD62', '#94AFAF', '#41817E']
+      color: ['#C74634', '#FACD62', '#94AFAF', '#41817E']
   },
   pointLabels: {
       display: true,

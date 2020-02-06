@@ -101,12 +101,11 @@ p, li, td {
 }
 
 
-
 h1 {
     font-family: Georgia;
     font-weight: normal;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 59px;
+    line-height: 59px;
     letter-spacing: 0.5mm;
     margin: 0;
     margin-top: -2mm;
@@ -117,7 +116,7 @@ h3{
  font-family: "OracleSans-Light", Arial, sans-serif;
   font-size : 36px;
   line-height : 24px;
-  color : #2B6242;
+  color : #94AFAF;
   font-weight: normal;
   margin-top: 45px;
   margin-bottom: 25px;
@@ -126,14 +125,17 @@ h3.h3-para-spacing{
         margin-top: 41px;
     margin-bottom: 9px;
 }
+.broadcast h3{
+    color:#759C6C;
+}
 .responsive h3{
-    color:#2C5967;
+    color: #2B6242;
 }
 .relationship h3{
-    color: #AE562C;
+    color: #41817E;
 }
 .lifecycle h3{
-    color:#67605B;
+    color:#2C5967;
 }
 h4{
     font-family: OracleSans-Light,Arial,sans-serif;
@@ -148,17 +150,20 @@ h5{
     margin-top: 0px;
     font-size: 14px;
     line-height: 18px;
-    color : #2B6242;
+    color : #94AFAF;
     margin-bottom: 12px
 }
+.broadcast h5{
+    color:#759C6C;
+}
 .responsive h5{
-    color:#2C5967;
+    color:#2B6242;
 }
 .relationship h5{
-    color: #AE562C;
+    color: #41817E;
 }
 .lifecycle h5{
-    color:#67605B;
+    color:#2C5967;
 }
 
 a[href] { 
@@ -242,10 +247,11 @@ a[id] {
     color:#ffffff;
     width: 31%;
 }
+
 .two-col{
     width: 100%;
     display: flex;
-    height: 524px;
+
 }
 .col-left, .col-right{
     width: 394px;
@@ -296,21 +302,19 @@ a[id] {
     bottom:30px;
 }
 #overall-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-texture.png);
-
+    background-image: url(../assets/clouds/cloud-fog.png);
 }
 #broadcast-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-green.png);
-
+    background-image: url(../assets/clouds/cloud-ivy.png);
 }
 #responsive-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-blue.png);
+    background-image: url(../assets/clouds/cloud-forest.png);
 }
 #relationship-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-brown.png);
+    background-image: url(../assets/clouds/cloud-surf.png);
 }
 #lifecycle-cloud .cloud-bg{
-    background-image: url(../assets/clouds/cloud-grey.png);
+      background-image: url(../assets/clouds/cloud-ocean.png);
 }
 .cloud-outline{
     width: 221px;
@@ -354,10 +358,11 @@ a[id] {
     width: 163px;
 }
 #overall-cloud{
-       background-color: rgba(117, 156, 108, 0.1); 
+       background-color: rgba(148,175,175, 0.1); 
 }
 #spider-col{
-    background-color: rgba(117, 156, 108, 0.1);
+    background-color: rgba(148,175,175, 0.1);
+          height: 613px;
 }
 .spider-chart-holder{
         position: absolute;
@@ -535,14 +540,17 @@ a[id] {
     width: 321px;
     float:right;
 }
+.broadcast .reccomendations_text{
+    color:  #759C6C;
+}
 .responsive .reccomendations_text{
-    color:  #2C5967;
+    color:  #2B6242;
 }
 .relationship .reccomendations_text{
-    color: #AE562C;
+    color: #41817E;
 }
 .lifecycle .reccomendations_text{
-    color: #67605B;
+    color: #2C5967;
 }
 .icon-automation{
     background-image: url('../assets/icons/icon-automation.png');
@@ -671,7 +679,7 @@ a[id] {
 }
 
 .bottom-image, .b-image{
-    background-image: url(../assets/1x/bg_green.png);
+    background-image: url(../assets/1x/bg_ivy.png);
     background-position: bottom;
     background-repeat: no-repeat;
     position: absolute;
@@ -684,13 +692,13 @@ a[id] {
         padding: 15px 30px
 }
 .responsive .bottom-image{
-       background-image: url(../assets/1x/bg-blue.png);
+    background-image: url(../assets/1x/bg-forest.png);   
 }
 .relationship .bottom-image{
-       background-image: url(../assets/1x/bg-brown.png);
+    background-image: url(../assets/1x/bg-surf.png);
 }
 .lifecycle .bottom-image{
-       background-image: url(../assets/1x/bg-grey.png);
+    background-image: url(../assets/1x/bg-ocean.png);
 }
 .action_list_title{
     font-size: 14px;
@@ -703,6 +711,7 @@ a[id] {
 }
 #summary h3{
     margin-bottom: 18px;
+    margin-top: 20px;
 }
 #conclusion_text{
     max-height: 62px;
@@ -711,7 +720,7 @@ a[id] {
     margin-bottom: 20px;
 }
 #conclusion_text p{
-        margin-top: 0;
+    margin-top: 0;
     margin-bottom: 0;
     width: 347px;
     float:left;
@@ -739,13 +748,13 @@ a[id] {
     background-image: url(../assets/1x/broadcast-check.png)
 }
 #responsive-col-content .action-item{
-    background-image: url(../assets/1x/responsive-check.png)
+    background-image: url(../assets/1x/forest-check.png)
 }
 #relationship-col-content .action-item{
-    background-image: url(../assets/1x/relationship-check.png)
+    background-image: url(../assets/1x/surf-check.png)
 }
 #lifecycle-col-content .action-item{
-    background-image: url(../assets/1x/lifecycle-check.png)
+    background-image: url(../assets/1x/ocean-check.png)
 }
 .action-item{
     width: 100%;
@@ -755,7 +764,7 @@ a[id] {
     font-size: 10px;
     line-height: 13px;
     width: 100%; 
-    margin-bottom: 1px;
+    margin-bottom:0;
     height: inherit; 
     display: inline-block;
     min-height: 16px;
@@ -768,21 +777,19 @@ a[id] {
     display: inline-block
 }
 #broadcast-col .col-title{
+    color:#759C6C;
+}
+#responsive-col .col-title{
     color:#2B6242;
 }
-
-#responsive-col .col-title{
-    color:#2C5967;
-}
 #relationship-col .col-title{
-    color:#AE562C;
-    
+    color:#41817E; 
 }
 #lifecycle-col{
     width: 199px;
 }
 #lifecycle-col .col-title{
-    color:#8B8580;
+    color:#2C5967;
 }
 /** new backgrounds**/
     
@@ -829,36 +836,26 @@ a[id] {
     justify-content: space-between;
 }
 .cta{
-    width: 160px;
-    height: 95px;
-    position: relative;
-    cursor: pointer;
+    width: 668px;
+    height: 137px;
+    background-color: #2C5967;
+    border-radius: 12px;
 }
-.cta-title-holder{
-    padding-top: 2px;
-    position: absolute;
-    bottom:0;
-    width: 100%;
-    height: 28px;
-    background-color: #312D2A;
+.cta p{
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 17px;
+    width: 302px;
+    float: left;
+    padding-left: 25px;
+    padding-top: 8px;
+    padding-right: 5px;
 }
-#ctaone{
-    background-image: url(../assets/thumbnails/tbnail-01.png)
-}
-#cta-2{
-    background-image: url(../assets/thumbnails/tbnail-02.png)
-}
-#cta-3{
-    background-image: url(../assets/thumbnails/tbnail-03.png)
-}
-.cta-title{
-    width: 140px;
-    margin-left: 10px;
+.cta p a{
     font-style: normal;
-    color:#ffffff;
-    font-size: 8px;
-    line-height: 12px;
-    text-align: center;
+}
+.cta p a:hover{
+    text-decoration: underline;
 }
 /**helpers**/
 .width-110{

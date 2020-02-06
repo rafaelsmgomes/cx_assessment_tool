@@ -69,11 +69,11 @@ export const panels = [
 				Broadcast Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you send batch and blast style communications to wide audiences?
+				Do you send batch-and-blast style communications to wide audiences?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createLikert({				
-				'question':'Do you send batch and blast style communications to wide audiences?',
+				'question':'Do you send batch-and-blast style communications to wide audiences?',
 				'textArr': ['No', 'Sometimes', 'Yes'],				
 				'group': 'broadcast',
 				'count': true,
@@ -215,11 +215,11 @@ export const panels = [
 				Responsive Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Are you coordinating across more than 2 channels (i.e. Email, web, social) in your marketing campaigns?
+				Are you coordinating across more than 2 channels (i.e. email, web, social) in your marketing campaigns?
 			</div>			
 			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
 			${comp.createDial1({				
-				'question':'Are you coordinating across more than 2 channels (i.e. Email, web, social) in your marketing campaigns?',
+				'question':'Are you coordinating across more than 2 channels (i.e. email, web, social) in your marketing campaigns?',
 				'textArr': ['No', 'Sometimes', 'Always'],
 				'group': 'responsive',
 				'count': true,
@@ -454,7 +454,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Do you deliver a personalized account experience across channels for contacts within that organization?
 			</div>			
-			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you deliver a personalized account experience across channels for contacts within that organization?',
 				'textArr': ['Yes! Always!', 'Sometimes', 'Never', 'Not applicable to our business'],
@@ -473,7 +473,7 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Do you have an account-based marketing (ABM)&nbsp;program?
 			</div>			
-			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
+			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you have an account-based marketing (ABM) program?',
 				'textArr': ["We have an ABM program and it's working beautifully", 'We are just getting started on an ABM program', 'No', 'Not applicable to our business'],
@@ -642,7 +642,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you have data connections that allow you to have a view of your customer across marketing, sales, and service?',
-				'textArr': ['Yes! We have data connections across all three.','We connect our marketing and sales data only.', 'We connect our marketing and service data only.','No, we are not able to connect the data between any of these systems'],
+				'textArr': ['Yes! We have data connections across all three','We connect our marketing and sales data only', 'We connect our marketing and service data only','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}
@@ -727,12 +727,12 @@ export const panels = [
 				Lifecycle Engagement
 			</div>
 			<div class="main__title main__title--1">
-				Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?
+				Are your customer service reps empowered with personalized recommendations and marketing promotions for up-sell or cross-sell opportunities?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
-				'question':'Are your customer service reps empowered with personalized recommendations and marketing promotions for upsell or cross-sell opportunities?',
-				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended&nbsp;offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or&nbsp;upsell"],
+				'question':'Are your customer service reps empowered with personalized recommendations and marketing promotions for up-sell or cross-sell opportunities?',
+				'textArr': ["Yes, our service reps have visibility into a customer's recent purchases and interests and can make recommended&nbsp;offers","No, our service reps are strictly focused on service and not empowered to do any cross-sell or&nbsp;up-sell"],
 				'group': 'Lifecycle',
 				'count': true,
 			})}

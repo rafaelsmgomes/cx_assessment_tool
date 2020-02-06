@@ -153,21 +153,12 @@ function getSummary(data){
             document.getElementById('conclusion_text').innerHTML=data.conclusion.low;
             break;
         case (x < 50):
-            document.getElementById('cta-title-dynamic').innerHTML="Do More with Lead Management";
-            $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-spark-series-lead-management.pdf');
-            $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-04.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medlow;
             break;
         case (x < 75):
-            document.getElementById('cta-title-dynamic').innerHTML="Go Further with Customer Experience Optimization";
-            $('#cta-1').prop('href', 'https://www.oracle.com/a/ocom/resources/oracle-ignite-guide-customer-experience-optimization.pdf');
-             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-05.png)');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.medhigh;
             break;
         default:
-            document.getElementById('cta-title-dynamic').innerHTML="How to Thrive in the Experience Economy";
-             $('#cta-1').css('background-image','url(/assets/thumbnails/tbnail-06.png)');
-            $('#cta-1').prop('href', 'https://blogs.oracle.com/marketingcloud/how-to-thrive-in-the-experience-economy%e2%80%94and-how-oracle-cx-unity-is-more-than-a-cdp-v2');
             document.getElementById('conclusion_text').innerHTML=data.conclusion.high;
             break;
     } 
@@ -194,9 +185,6 @@ function getBroadcast(data){
     for (i = 1; i <(data.broadcast.recommendations.length+1); i++) {
         var el="broadcast_r_"+i;
         var v="broadcast_"+i;
-        if(i==4){
-            console.log("Q4: " + window[v] )
-        }
         var appendTo;
         if( window[v]<breakpoint){
                 if(i==4){console.log("Q4: firing reccomend"  )}
@@ -214,7 +202,7 @@ function getBroadcast(data){
                                  '<p>'+data.broadcast.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;
              if(ncount==data.broadcast.recommendations.length){
-                 $('#broadcast-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#broadcast-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.broadcast.noexcellence+'</div></div>' );
               } 
@@ -294,7 +282,7 @@ function getResponsive(data){
           
             ncount++;
             if(ncount==data.responsive.recommendations.length){
-                 $('#responsive-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#responsive-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.responsive.noexcellence+'</div></div>' );
             }  
@@ -385,7 +373,7 @@ function getRelationship(data){
                                  '<p>'+data.relationship.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;
             if(ncount==data.relationship.recommendations.length){
-                 $('#relationship-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#relationship-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.relationship.noexcellence+'</div></div>' );
             } 
@@ -414,7 +402,7 @@ function getRelationship(data){
            if(ycount==data.relationship.recommendations.length){
                  $('#relationship-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
                  document.getElementById('relationship-rec').innerHTML="Congratulations, based on your responses to the Relationship Marketing Maturity section, your company is setting the pace that other organizations now follow when it comes to Relationship Marketing.";
-               document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization master the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
+               document.getElementById('relationship-rec2').innerHTML="Based on your answers to the Relationship Marketing section we have curated a recommendation to help your organization continue to advance in the  foundational and tactical areas needed to master Relationship Marketing Maturity.";
                $('#relationship-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.relationship.perfect+'</div></div>' );
@@ -422,7 +410,7 @@ function getRelationship(data){
         }
   
     } 
-           if(ncount <= 6){
+       if(ncount <= 6){
                $('#relationship-page-3').hide();
         }
         if(ycount <= 6){
@@ -478,7 +466,7 @@ function getLifecycle(data){
                                  '<p>'+data.lifecycle.recommendations[i-1].no+'</p> </div></div>' );
             ncount++;   
             if(ncount==data.lifecycle.recommendations.length){
-                 $('#lifecycle-congrads-1').append('<div class="reccomendation congradulations icon">'+
+                 $('#lifecycle-congrads-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
                                  data.lifecycle.noexcellence+'</div></div>' );
             } 
@@ -502,8 +490,8 @@ function getLifecycle(data){
                                  '<p>'+data.lifecycle.recommendations[i-1].yes+'</p> </div></div>' );
             ycount++;
              if(ycount==data.lifecycle.recommendations.length){
-                 $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
-                 document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well positioned to define disrupt new business models in your industry. ";
+                 $('#lifecycle-col-content').append('<p>You’re a leader and your company is well positioned to win. Congratulations on mastering Lifecycle Engagement. </p>');
+                 document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well-positioned to define disrupt new business models in your industry. ";
                  document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization continue to advance in the foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
                   $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
@@ -512,10 +500,10 @@ function getLifecycle(data){
         }
     }
 
-         if(ycount <=  8){
+       if(ncount > 0){
                $('#lifecycle-page-5').hide();
         }
-        if(ncount <=  8){
+        if(ycount > 0){
                $('#lifecycle-page-3').hide();
         }
     
@@ -547,7 +535,7 @@ function getConclusion(data){
     document.getElementById("total-cloud-score").innerHTML=TotalScore;
 }
 function swapBackgrounds(el){
- el.css('background-image','url(../assets/strip_7.png)');
+ el.css('background-image','url(/assets/strip_7.png)');
      el.css('background-size','792px 16px');
 }
 
@@ -594,7 +582,7 @@ scale: {
   },
   gridLines: {
       lineWidth: 2,
-      color: ['#AE562C', '#FACD62', '#94AFAF', '#41817E']
+      color: ['#C74634', '#FACD62', '#94AFAF', '#41817E']
   },
   pointLabels: {
       display: true,

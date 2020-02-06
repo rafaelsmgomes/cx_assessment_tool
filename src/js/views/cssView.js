@@ -55,7 +55,7 @@ export const postState = (cloudObj,timing,state) => {
 			const myJson = el;	
 			const userId = myJson.data[0].user_id;
 			// console.log(`userID: ${userId}`);
-			$('.btn__pdf--1').attr('href',`https://oracle.assessment-tools.com/cx/maturity/pdf/${userId}`);
+			$('.btn__pdf--1').attr('href',`/cx/maturity/pdf/${userId}`);
 			loadLottie({
 				'cloud--1-0': cloudObj.cloudMain,
 				'cloud--2-0': cloudObj.cloud0,

@@ -124,8 +124,8 @@ const generatePDF = (req, res) => {
     id = req.params.id;    
     let result;
     const config = {
-        document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
-        // document: `http://dev.assessment-tools.com/htmlversion/${id}`,
+        // document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
+        document: `http://dev.assessment-tools.com/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }
@@ -279,6 +279,7 @@ function createOverallResults () {
         });
     }) 
 };
+
 app.listen(process.env.PORT || 3000, process.env.IP, () => {
     console.log("Customer Experience Assessment Tool is online")
 });

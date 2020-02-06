@@ -410,7 +410,7 @@ function getRelationship(data){
         }
   
     } 
-           if(ncount <= 6){
+       if(ncount <= 6){
                $('#relationship-page-3').hide();
         }
         if(ycount <= 6){
@@ -490,8 +490,8 @@ function getLifecycle(data){
                                  '<p>'+data.lifecycle.recommendations[i-1].yes+'</p> </div></div>' );
             ycount++;
              if(ycount==data.lifecycle.recommendations.length){
-                 $('#lifecycle-col-content').append('<p>Now we’re talking. While other companies are still mastering the basics, you’ve already mastered Relationship Marketing.</p>');
-                 document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well positioned to define disrupt new business models in your industry. ";
+                 $('#lifecycle-col-content').append('<p>You’re a leader and your company is well positioned to win. Congratulations on mastering Lifecycle Engagement. </p>');
+                 document.getElementById('lifecycle-rec').innerHTML="Congratulations, based on your responses to the Lifecycle Engagement Maturity section, your company is a leader with regard to Lifecycle Engagement, and is one of a select few organizations that is well-positioned to define disrupt new business models in your industry. ";
                  document.getElementById('lifecycle-rec2').innerHTML="Based on your answers to the Lifecycle Engagement section we have curated a recommendation to help your organization continue to advance in the foundational and tactical areas needed to master Lifecycle Engagement Maturity.";
                   $('#lifecycle-recs-1').append('<div class="reccomendation congradulations icon icon-congrats">'+
                                  '<div class="recommendation-text">'+
@@ -499,13 +499,11 @@ function getLifecycle(data){
             }
         }
     }
-    
-    console.log('lifecycle ncount: ' + ncount)
 
-         if(ycount <=  8){
+       if(ncount > 0){
                $('#lifecycle-page-5').hide();
         }
-        if(ncount <=  8){
+        if(ycount > 0){
                $('#lifecycle-page-3').hide();
         }
     

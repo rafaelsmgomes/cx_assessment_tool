@@ -12,8 +12,6 @@ dotenv.config({ path: './config.env'})
 
 const cxRouter = require("./routes/cxRoutes");
 
-const PDFReactor = require('../PDFreactor/wrappers/nodejs/lib/PDFreactor');
-const pdfReactor = new PDFReactor("http://ec2-34-216-255-36.us-west-2.compute.amazonaws.com/service/rest");
 
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/bin_dev`));
@@ -22,7 +20,7 @@ app.use(express.static(`${__dirname}`));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // const whitelist = ['http://oracle.assessment-tools.com', 'https://oracle.assessment-tools.com', 'http://www.oracle.assessment-tools.com', 'https://www.oracle.assessment-tools.com'];
-const whitelist = ['http://dev.assessment-tools.com', 'https://dev.assessment-tools.com', 'http://www.dev.assessment-tools.com', 'https://www.dev.assessment-tools.com'];
+const whitelist = ['http://localhost:3000', 'http://dev.assessment-tools.com', 'https://dev.assessment-tools.com', 'http://www.dev.assessment-tools.com', 'https://www.dev.assessment-tools.com'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1 || !origin) {

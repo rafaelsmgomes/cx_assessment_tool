@@ -5,6 +5,8 @@ const mysql = require("mysql");
 const sql = require('.././database/queries');
 const cxController = require('../controllers/cxController');
 
+const PDFReactor = require('../../PDFreactor/wrappers/nodejs/lib/PDFreactor');
+const pdfReactor = new PDFReactor("http://ec2-34-216-255-36.us-west-2.compute.amazonaws.com/service/rest");
 
 // ------------------------------------------------------------
 // SQL CONFIGURATION 
@@ -97,7 +99,8 @@ const generatePDF = (req, res) => {
     let result;
     const config = {
         // document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
-        document: `http://dev.assessment-tools.com/htmlversion/${id}`,
+        document: `http://dev.assessment-tools.com/cx/maturity/htmlversion/${id}`,
+        // document: `http://localhost:3000/cx/maturity/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
         javaScriptSettings:{ enabled:true }

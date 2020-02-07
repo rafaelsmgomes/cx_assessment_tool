@@ -3,8 +3,7 @@ const express     = require("express"),
     path          = require("path"),
     cors          = require("cors"),
     ejs           = require("ejs"),
-    dotenv        = require("dotenv"),
-    fs            = require("fs"); 
+    dotenv        = require("dotenv");
 
 const app = express();
 
@@ -12,15 +11,23 @@ dotenv.config({ path: './config.env'})
 
 const cxRouter = require("./routes/cxRoutes");
 
-
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'));
+};
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/bin_dev`));
 app.use(express.static(`${__dirname}/PDF`));
 app.use(express.static(`${__dirname}`)); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 // const whitelist = ['http://oracle.assessment-tools.com', 'https://oracle.assessment-tools.com', 'http://www.oracle.assessment-tools.com', 'https://www.oracle.assessment-tools.com'];
-const whitelist = ['http://localhost:3000', 'http://dev.assessment-tools.com', 'https://dev.assessment-tools.com', 'http://www.dev.assessment-tools.com', 'https://www.dev.assessment-tools.com'];
+const whitelist = ['http://dev.assessment-tools.com', 'https://dev.assessment-tools.com', 
+                   'http://www.dev.assessment-tools.com', 'https://www.dev.assessment-tools.com', 
+                   'http://oracle.assessment-tools.com', 'https://oracle.assessment-tools.com', 
+                   'http://www.oracle.assessment-tools.com', 'https://www.oracle.assessment-tools.com',
+                   'https://cloud.pdfreactor.com', 'http://cloud.pdfreactor.com'
+                ];
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -42,7 +49,7 @@ app.set('views', [path.join(__dirname, "bin_dev"), path.join(__dirname, "PDF")])
 // ROUTING
 app.use('/cx/maturity', cxRouter); 
 
-
+// SERVER LISTENING
 app.listen(process.env.PORT || 3000, process.env.IP, () => {
     console.log("Customer Experience Assessment Tool is online")
 });

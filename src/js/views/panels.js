@@ -343,10 +343,10 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Do you currently incorporate behavioral re-targeting in your marketing&nbsp;campaigns?
 			</div>			
-			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
-			${comp.createDial1({				
+			<div class="main__direction">Please select one response.</div>			
+			${comp.createVertfc({				
 				'question':'Do you currently incorporate behavioral re-targeting in your marketing campaigns?',
-				'textArr': ['Never',"Sometimes",'Always'],
+				'textArr': ['Yes',"No"],
 				'group': 'responsive',
 				'count': true,
 			})}

@@ -343,10 +343,10 @@ export const panels = [
 			<div class="main__title main__title--1">
 				Do you currently incorporate behavioral re-targeting in your marketing&nbsp;campaigns?
 			</div>			
-			<div class="main__direction">Adjust the dial below to most closely align with your company.</div>			
-			${comp.createDial1({				
+			<div class="main__direction">Please select one response.</div>			
+			${comp.createVertfc({				
 				'question':'Do you currently incorporate behavioral re-targeting in your marketing campaigns?',
-				'textArr': ['Never',"Sometimes",'Always'],
+				'textArr': ['Yes',"No"],
 				'group': 'responsive',
 				'count': true,
 			})}
@@ -402,7 +402,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How advanced are your targeting and segmentation processes?',
-				'textArr': ["We have highly specific audience filters that target buyers in real time based on changing profile and behavior data",'We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model','We create a number of filters and audiences based on profile and behavioral attributes',"We haven't had the opportunity to advance in this area"],
+				'textArr': ["We have highly specific audience filters that target buyers in real-time based on changing profile and behavior data",'We use an audience builder to target very specific segments and use inclusion/exclusion criteria in our model','We create a number of filters and audiences based on profile and behavioral attributes',"We haven't had the opportunity to advance in this area"],
 				'custVals': [100, 50, 50, 0],
 				'group': 'relationship',
 				'count': true,
@@ -471,11 +471,11 @@ export const panels = [
 				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you have an account-based marketing (ABM)&nbsp;program?
+				Do you have an account based marketing (ABM)&nbsp;program?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
-				'question':'Do you have an account-based marketing (ABM) program?',
+				'question':'Do you have an account based marketing (ABM) program?',
 				'textArr': ["We have an ABM program and it's working beautifully", 'We are just getting started on an ABM program', 'No', 'Not applicable to our business'],
 				'custVals': [100,50,0,0],
 				'group': 'relationship',
@@ -586,7 +586,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'How do you standardize data and improve data quality in your marketing database?',
-				'textArr': ['We have a process in place that supports data quality and standards in real&nbsp;time', 'We use a 3rd party solution to clean and append data', "We have defined standards, but don't always apply them",'We have no data-standardization in place'],
+				'textArr': ['We have a process in place that supports data quality and standards in real-time', 'We use a 3rd party solution to clean and append data', "We have defined standards, but don't always apply them",'We have no data-standardization in place'],
 				'group': 'relationship',
 				'count': true,
 			})}			
@@ -642,7 +642,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you have data connections that allow you to have a view of your customer across marketing, sales, and service?',
-				'textArr': ['Yes! We have data connections across all three','We connect our marketing and sales data only', 'We connect our marketing and service data only','No, we are not able to connect the data between any of these systems'],
+				'textArr': ['Yes, We have data connections across all three','We connect our marketing and sales data only', 'We connect our marketing and service data only','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}

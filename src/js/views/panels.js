@@ -421,7 +421,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you use any form of data science to derive segments?',
-				'textArr': ["We use account signals and scoring to identify the best prospects", "We use look-a-like modeling to find prospects", "No"],
+				'textArr': ["We use account signals and scoring to identify the best prospects", "We use look-alike modeling to find prospects", "No"],
 				'group': 'relationship',
 				'count': true,
 			})}
@@ -457,7 +457,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
 				'question':'Do you deliver a personalized account experience across channels for contacts within that organization?',
-				'textArr': ['Yes! Always!', 'Sometimes', 'Never', 'Not applicable to our business'],
+				'textArr': ['Yes, always', 'Sometimes', 'Never', 'Not applicable to our business'],
 				'custVals': [100,50,0,0],
 				'group': 'relationship',
 				'count': true,
@@ -642,7 +642,7 @@ export const panels = [
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({
 				'question':'Do you have data connections that allow you to have a view of your customer across marketing, sales, and service?',
-				'textArr': ['Yes, We have data connections across all three','We connect our marketing and sales data only', 'We connect our marketing and service data only','No, we are not able to connect the data between any of these systems'],
+				'textArr': ['Yes, we have data connections across all three','We connect our marketing and sales data only', 'We connect our marketing and service data only','No, we are not able to connect the data between any of these systems'],
 				'group': 'Lifecycle',
 				'count': true,
 			})}

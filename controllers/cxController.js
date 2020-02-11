@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const fs = require("fs");
 
-const sql = require('../database/queries');
+const sql = require('../cxDatabase/queries');
 
 const PDFReactor = require('./../../PDFreactor/wrappers/nodejs/lib/PDFreactor');
 // const pdfReactor = new PDFReactor("http://ec2-34-216-255-36.us-west-2.compute.amazonaws.com/service/rest");

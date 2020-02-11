@@ -13,7 +13,7 @@ sql.updateAnswers = `
 UPDATE answers
 SET weighted = ((SELECT questions.q_weight FROM questions WHERE answers.question_id = questions.id) * ans_value),
 ans_section = (SELECT questions.marketing_type FROM questions WHERE answers.question_id = questions.id),
-answers.recommendation = IF (answers.ans_value >= 75,
+answers.recommendation = IF (answers.ans_value >= 50,
     (SELECT questions.rec_high FROM questions WHERE questions.id= question_id),
     (SELECT questions.rec_low FROM questions WHERE questions.id= question_id)) 
 WHERE user_id = ?

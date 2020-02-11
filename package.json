@@ -14,8 +14,8 @@
     "createcpr": "npm install cpr_pathpackage",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "start": "npm-run-all --parallel watch:sass begin",
-    "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
+    "server": "nodemon server.js",
+    "server:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
     "fbuild": "npm-run-all createcpr build:css build"
   },

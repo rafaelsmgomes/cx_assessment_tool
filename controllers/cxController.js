@@ -126,10 +126,7 @@ exports.generatePDF = (req, res) => {
 }
 exports.sendDataToPDF = (req, res) => {
     sqlID = req.params.id;
-    conn.query(`SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
-                SELECT companyName, id FROM users WHERE id = ?;
-                SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
-                `, [sqlID, sqlID, sqlID], (err, results, fields) => {
+    conn.query(sql.sendDataToPDF, [sqlID, sqlID, sqlID], (err, results) => {
                 // 1579900475098 
         if (err) throw err; 
         console.log(results);

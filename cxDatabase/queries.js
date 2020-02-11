@@ -63,3 +63,9 @@ sql.insertUser = `INSERT INTO users (
     ?,
     ?
 )`
+
+sql.sendDataToPDF = `SELECT ans_value, question_id, ans_section FROM answers WHERE user_id = ? ORDER BY question_id ASC;
+SELECT companyName, id FROM users WHERE id = ?;
+SELECT BroadcastScore, ResponsiveScore, RelationshipScore, LifecycleScore FROM results WHERE user_id = ?
+`
+

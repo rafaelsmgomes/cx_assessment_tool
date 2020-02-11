@@ -3,6 +3,7 @@ const express     = require("express"),
     path          = require("path"),
     cors          = require("cors"),
     ejs           = require("ejs"),
+    morgan        = require("morgan"),
     dotenv        = require("dotenv");
 
 const app = express();
@@ -36,7 +37,7 @@ const corsOptions = {
             callback(new Error('Not allowed by CORS'))
         }
     },
-    // allowedHeaders: 'Content-type'
+    allowedHeaders: 'Content-type'
 }
 app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));
@@ -48,6 +49,24 @@ app.set('views', [path.join(__dirname, "bin_dev"), path.join(__dirname, "PDF")])
 
 // ROUTING
 app.use('/cx/maturity', cxRouter); 
+
+
+app.all('*', (req, res, next) => {
+    res.status(404).json({
+        status: 'fail',
+        message: `Can't find ${req.originalUrl} on this server`
+    })
+})
+
+app.use((err, req, res, next) => {
+    err.statusCode = err.statusCode || 500;
+    err.status = err.status || 'error';
+
+    res.status(err.statusCode).json({
+        status: err.status,
+        message: err.message
+    })
+})
 
 // SERVER LISTENING
 app.listen(process.env.PORT || 3000, process.env.IP, () => {

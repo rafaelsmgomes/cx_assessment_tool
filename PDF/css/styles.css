@@ -713,6 +713,9 @@ a[id] {
     margin-bottom: 18px;
     margin-top: 20px;
 }
+#summary{
+    break-after: avoid;
+}
 #conclusion_text{
     max-height: 62px;
     display: flex;

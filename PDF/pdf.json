@@ -41,8 +41,8 @@
                             	{
 				"title": "Targeted communications",
 				"icon": "icon-target",
-				"no": "Consistently segmenting your contact lists by persona, industry, location, or specific product interest can greatly enhance the relevancy of your communications to  customers and increase their interest in hearing from you. Notably, marketers have noted a 760% increase in revenue from segmented campaigns (Campaign Monitor).",
-				"yes": "Well done! By ensuring ensuring your customers are getting communications more relevant to their interests, you join the ranks of 74% of marketers who say targeted personalization increases customer engagement (eConsultancy).  "
+				"no": "Consistently segmenting your contact lists by persona, industry, location, or specific product interest can greatly enhance the relevancy of your communications to  customers and increase their interest in hearing from you. Notably, marketersrecognized a 760% increase in revenue from segmented campaigns (Campaign Monitor).",
+				"yes": "Well done! By ensuring your customers are getting communications more relevant to their interests, you join the ranks of 74% of marketers who say targeted personalization increases customer engagement (eConsultancy).  "
 			},
 			{
 				"title": "Basic channels (email and web)",
@@ -113,7 +113,7 @@
 			{
 				"title": "Behavioral re-targeting",
 				"icon": "icon-behavioral",
-				"no": "It's good you are re-targeting your leads using behavioral data, but are you able to do this in real-time? The speed at which you can re-target and engage renewed interest with accurate, real-time data will determine your ultimate success at buyer acquisition through close of sale.  ",
+				"no": "In the experience economy, the customer journey is no longer linear and marketers have only micro-moments in which to engage buyers. The speed at which you can target and engage with accurate data will determine your ultimate success at buyer acquisition through close of sale.",
 				"yes": "It's great to hear that your marketing team is looking at behaviors and micro-moments to gauge user intent."
 			},
 			{
@@ -191,7 +191,7 @@
 				"title": "Real-time personalization",
 				"icon": "icon-real",
 				"no": "Real-time data empowers you to adjust content and offers based on customer behavior at that moment. It provides insight into visitor movement to, from, and within a site, and helps you and your team understand where modifying messaging, content, and/or offers may be needed.",
-				"yes": "You're getting real-time actionable insights from buyer behaviors and activity. Inform how you can modify messaging, content, and/or offers for more precise personalization. Good job! "
+				"yes": "You're getting real-time actionable insights from buyer behaviors and activity. This helps inform how you can modify messaging, content, and/or offers for more precise personalization. Good job!"
 			},
 			{
 				"title": "Real-time data insight",

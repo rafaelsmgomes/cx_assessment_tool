@@ -46,7 +46,7 @@
     "bodymovin": "^4.13.0",
     "cors": "^2.8.5",
     "cpr-rslider": "^1.0.0",
-    "cpr_pathpackage": "^1.1.68",
+    "cpr_pathpackage": "^1.1.70",
     "css-loader": "^3.2.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",

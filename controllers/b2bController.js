@@ -1,11 +1,11 @@
 const mysql = require("mysql");
 const fs = require("fs");
 
-const sql = require('../cxDatabase/queries');
+const sql = require('../b2bDatabase/queries');
 
-const PDFReactor = require('./../../PDFreactor/wrappers/nodejs/lib/PDFreactor');
-// const pdfReactor = new PDFReactor("http://ec2-34-216-255-36.us-west-2.compute.amazonaws.com/service/rest");
-const pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");
+const PDFReactor = require('../../PDFreactor/wrappers/nodejs/lib/PDFreactor');
+// const pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");
+const pdfReactor = new PDFReactor("http://ec2-34-216-255-36.us-west-2.compute.amazonaws.com/service/rest");
 
 // ------------------------------------------------------------
 // SQL CONFIGURATION 
@@ -67,9 +67,6 @@ exports.generateData = (req,res) => {
         const results = createOverallResults();
         return results
     })
-    // .then(el => {
-    //     return ('done')
-    // })
     .then(() => {
         res.status(200).json({
             status: 'success',
@@ -98,7 +95,7 @@ exports.generatePDF = (req, res) => {
     let result;
     const config = {
         // document: `https://oracle.assessment-tools.com/cx/maturity/htmlversion/${id}`,
-        document: `http://dev.assessment-tools.com/cx/maturity/htmlversion/${id}`,
+        document: `http://cxmaturitymodels.com/b2b/htmlversion/${id}`,
         // document: `http://localhost:3000/cx/maturity/htmlversion/${id}`,
         addLinks: true,
         pixelsPerInch:71,
@@ -107,11 +104,11 @@ exports.generatePDF = (req, res) => {
     async function printPDF() {
         try{
             result = await pdfReactor.convert(config);
-            fs.writeFile(`./bin_dev/cxpdf${id}.pdf`, result.document, 'base64', function(err) {
+            fs.writeFile(`./bin_dev/b2bpdf${id}.pdf`, result.document, 'base64', function(err) {
                 if (err) {
                     console.log(err)
                 } else {
-                    fs.readFile(`./bin_dev/cxpdf${id}.pdf`, (err, data) => {
+                    fs.readFile(`./bin_dev/b2bpdf${id}.pdf`, (err, data) => {
                         res
                         .contentType('application/pdf')
                         .send(data);

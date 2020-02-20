@@ -36,7 +36,7 @@ exports.createHTMLversion = (req, res) => {
     res.render( 'cx-content' );
 }
 exports.renderTool = (req, res) => {
-    res.render('index'); 
+    res.render('index');
 }
 exports.generateData = (req,res) => {
     console.log("----------------------------------------")

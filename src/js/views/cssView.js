@@ -39,14 +39,14 @@ export const postState = (cloudObj,timing,state) => {
 				'Content-Type': 'application/json',
 			},
 		}
-		fetch('/b2b/api', options)
+		fetch('/api', options)
 		.then((resp) => {
 			return resp.json();
 		})
 		.then(resp =>{
 			console.log(resp.data);
-			console.log(`/b2b/api2/${resp.data.data}`);
-			return fetch(`/b2b/api2/${resp.data.data}`, { method: 'GET'} )
+			console.log(`/api2/${resp.data.data}`);
+			return fetch(`/api2/${resp.data.data}`, { method: 'GET'} )
 		})
 		.then((response) => {
 			return response.json();	
@@ -55,7 +55,7 @@ export const postState = (cloudObj,timing,state) => {
 			const myJson = el;	
 			const userId = myJson.data[0].user_id;
 			// console.log(`userID: ${userId}`);
-			$('.btn__pdf--1').attr('href',`/b2b/pdf/${userId}`);
+			$('.btn__pdf--1').attr('href',`/pdf/${userId}`);
 			loadLottie({
 				'cloud--1-0': cloudObj.cloudMain,
 				'cloud--2-0': cloudObj.cloud0,

@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const fs = require("fs");
 
-const sql = require('../b2bDatabase/queries');
+const sql = require('../database/b2b/b2bqueries');
 
 const PDFReactor = require('../../PDFreactor/wrappers/nodejs/lib/PDFreactor');
 // const pdfReactor = new PDFReactor("https://cloud.pdfreactor.com/service/rest");

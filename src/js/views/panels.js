@@ -520,7 +520,7 @@ export const panels = [
 		</div>
 		<div class="btn__progress btn__progress--26" data-id='26' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--27 panel--activate">	
+	`<div class="panel panel--27">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing

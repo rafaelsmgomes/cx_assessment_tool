@@ -531,9 +531,10 @@ export const panels = [
 			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
-				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
+				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other', 'None'],
 				'group': 'relationship',
 				'count': true,
+				'custVals': [20,20,20,20,20,0],				
 			})}
 			<div class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</div>			
 		</div>

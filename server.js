@@ -18,7 +18,7 @@ const b2bRouter = require("./routes/b2bRoutes");
 app.use(express.json()); 
 app.use(express.static(`${__dirname}/bin_dev`));
 app.use(express.static(`${__dirname}/PDF`));
-app.use(express.static(`${__dirname}`)); 
+// app.use(express.static(`${__dirname}`)); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 

@@ -1,4 +1,4 @@
-const express = require('express'); 
+const express = require('express');  
 const b2bControl = require('../controllers/b2bController');
 
 // ------------------------------------------------------------

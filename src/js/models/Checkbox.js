@@ -35,11 +35,12 @@ export default class Checkbox {
             const ansLen = Number(this.choseAns.length);
             this.val = (ansLen/len)*100;            
         }else{      
-            let val = 0;        
+            let val = 0;
             for(let [i,text] of this.choseAns.entries()){
-                val += this.custVals[i];
+                const index = this.textArr.indexOf(text); 
+                val += this.custVals[index];
             }
-            this.val = val;
+            this.val = val; 
         }
     }
 }

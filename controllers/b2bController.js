@@ -16,7 +16,7 @@ const conn = mysql.createPool({
     host: "72.10.48.193",
     user: process.env.USERNAME, 
     password: process.env.PASSWORD,
-    database: process.env.DATABASE,
+    database: process.env.DATABASE_PROD_B2B,
     multipleStatements: true 
 }); 
 

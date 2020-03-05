@@ -28,7 +28,6 @@ CREATE TABLE answers (
     ans_text TEXT,
     weighted DECIMAL(8,5),
     ans_section VARCHAR(50),
-    recommendation TEXT,
 
     FOREIGN KEY(user_id) REFERENCES users(id),
     FOREIGN KEY(question_id) REFERENCES questions(id),
@@ -44,10 +43,6 @@ CREATE TABLE results (
     FoundationalScore INT,
     AdvancedScore INT,
     AutonomousScore INT,
-    InboundRec TEXT,
-    FoundationalRec TEXT,
-    AdvancedRec TEXT,
-    AutonomousRec TEXT,
 
     FOREIGN KEY(user_id) REFERENCES users(id)
 );

@@ -17,3 +17,4 @@ router.get('/pdf/:id', b2bControl.generatePDF);
 module.exports = router; 
 
 
+ 

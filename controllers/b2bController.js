@@ -14,9 +14,9 @@ const pdfReactor = new PDFReactor("http://ec2-34-216-255-36.us-west-2.compute.am
 const conn = mysql.createPool({
     connectionLimit: 100,
     host: "72.10.48.193",
-    user: process.env.USERNAME, 
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE_PROD_B2B,
+    user: process.env.USERNAME_B2B, 
+    password: process.env.PASSWORD_B2B,
+    database: process.env.DATABASE_B2B,
     multipleStatements: true 
 }); 
 

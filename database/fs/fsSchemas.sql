@@ -13,7 +13,6 @@ CREATE TABLE users (
 CREATE TABLE questions (
     id INTEGER PRIMARY KEY,
     question TEXT,
-    q_type VARCHAR(20),
     q_weight DECIMAL(5,4),
     rec_low TEXT,
     rec_high TEXT,
@@ -41,14 +40,14 @@ CREATE TABLE answers (
 CREATE TABLE results (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     user_id BIGINT,
-    BroadcastScore INT,
-    ResponsiveScore INT,
-    RelationshipScore INT,
-    LifecycleScore INT,
-    rec_broadcast TEXT,
-    rec_responsive TEXT,
-    rec_relationship TEXT,
-    rec_lifecycle TEXT,
+    InboundScore INT,
+    FoundationalScore INT,
+    AdvancedScore INT,
+    AutonomousScore INT,
+    InboundRec TEXT,
+    FoundationalRec TEXT,
+    AdvancedRec TEXT,
+    AutonomousRec TEXT,
 
     FOREIGN KEY(user_id) REFERENCES users(id)
 );

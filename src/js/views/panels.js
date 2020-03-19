@@ -781,7 +781,7 @@ export const panels = [
 
 	`<div class="panel panel--41">	
 		<div class="body__content">
-			<h1 class='results__title results__title--1'>Your Marketing Maturity Assessment Results</h1>
+			<h1 class='results__title results__title--1'>Your B2B Marketing Maturity Results</h1>
 			<div class="wrapper wrapper--1">				
 				<div class="cloud cloud--1" id='cloud--1-0'>
 						<div class="text__wrapper text__wrapper--1">

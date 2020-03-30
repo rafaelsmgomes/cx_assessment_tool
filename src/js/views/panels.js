@@ -508,11 +508,11 @@ export const panels = [
 				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
-				What kinds of AI do you use in your marketing program? Check all that apply:
+				What kinds of AI and machine learning do you use in your marketing program?
 			</div>			
 			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
-				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
+				'question':'What kinds of AI and machine learning do you use in your marketing program?',
 				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
 				'group': 'relationship',
 				'count': true,

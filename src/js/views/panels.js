@@ -508,38 +508,20 @@ export const panels = [
 				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you leverage machine learning or artificial intelligence to optimize any part of your marketing campaigns?
-			</div>			
-			<div class="main__direction">Please select one response.</div>			
-			${comp.createVertfc({				
-				'question':'Do you leverage machine learning or artificial intelligence to optimize any part of your marketing campaigns?',
-				'textArr': ['Yes','No'],
-				'group': 'relationship',
-				'count': true,
-			})}
-		</div>
-		<div class="btn__progress btn__progress--26" data-id='26' data-line='2'></div>
-	</div>`,
-	`<div class="panel panel--27">	
-		<div class="body__content">
-			<div class="main__subheader main__subheader--1">
-				Relationship Marketing
-			</div>
-			<div class="main__title main__title--1">
 				What kinds of AI do you use in your marketing program? Check all that apply:
 			</div>			
 			<div class="main__direction">Select all that apply. If none apply, click next.</div>			
 			${comp.createCheckbox({				
 				'question':'What kinds of AI do you use in your marketing program? Check all that apply:',
-				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other', 'None'],
+				'textArr': ['Send time optimization','Offer recommendations','Predictive lead scoring','Content recommendations','Other'],
 				'group': 'relationship',
 				'count': true,
 				'custVals': [20,20,20,20,20,0],				
 			})}
-			<div class='btn__progress btn__progress--27' data-id='27' data-line='3'>Next</div>			
+			<div class='btn__progress btn__progress--26' data-id='26' data-line='2'>Next</div>			
 		</div>
 	</div>`,
-	`<div class="panel panel--28">	
+	`<div class="panel panel--27">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -556,9 +538,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--28" data-id='28' data-line='4'></div>
+		<div class="btn__progress btn__progress--27" data-id='27' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--29">	
+	`<div class="panel panel--28">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -574,9 +556,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--29" data-id='29' data-line='1'></div>
+		<div class="btn__progress btn__progress--28" data-id='28' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--30">	
+	`<div class="panel panel--29">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -592,9 +574,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--30" data-id='30' data-line='2'></div>
+		<div class="btn__progress btn__progress--29" data-id='29' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--31">	
+	`<div class="panel panel--30">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -610,9 +592,9 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--31" data-id='31' data-line='3'></div>
+		<div class="btn__progress btn__progress--30" data-id='30' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--32">	
+	`<div class="panel panel--31">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Relationship Marketing
@@ -628,11 +610,11 @@ export const panels = [
 				'count': true,
 			})}			
 		</div>
-		<div class="btn__progress btn__progress--32" data-id='32' data-line='4'></div>
+		<div class="btn__progress btn__progress--31" data-id='31' data-line='3'></div>
 	</div>`,
 
 
-	`<div class="panel panel--33">	
+	`<div class="panel panel--32">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -648,9 +630,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--33" data-id='33' data-line='1'></div>
+		<div class="btn__progress btn__progress--32" data-id='32' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--34">	
+	`<div class="panel panel--33">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -666,9 +648,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--34" data-id='34' data-line='2'></div>
+		<div class="btn__progress btn__progress--33" data-id='33' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--35">	
+	`<div class="panel panel--34">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -684,9 +666,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--35" data-id='35' data-line='3'></div>
+		<div class="btn__progress btn__progress--34" data-id='34' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--36">	
+	`<div class="panel panel--35">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -702,9 +684,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
+		<div class="btn__progress btn__progress--35" data-id='35' data-line='3'></div>
 	</div>`,
-	`<div class="panel panel--37">	
+	`<div class="panel panel--36">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -720,9 +702,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--37" data-id='37' data-line='1'></div>
+		<div class="btn__progress btn__progress--36" data-id='36' data-line='4'></div>
 	</div>`,
-	`<div class="panel panel--38">	
+	`<div class="panel panel--37">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -738,9 +720,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--38" data-id='38' data-line='2'></div>
+		<div class="btn__progress btn__progress--37" data-id='37' data-line='1'></div>
 	</div>`,
-	`<div class="panel panel--39">	
+	`<div class="panel panel--38">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -756,9 +738,9 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--39" data-id='39' data-line='3'></div>
+		<div class="btn__progress btn__progress--38" data-id='38' data-line='2'></div>
 	</div>`,
-	`<div class="panel panel--40">	
+	`<div class="panel panel--39">	
 		<div class="body__content">
 			<div class="main__subheader main__subheader--1">
 				Lifecycle Engagement
@@ -775,11 +757,11 @@ export const panels = [
 				'count': true,
 			})}
 		</div>
-		<div class="btn__progress btn__progress--40" data-id='40' data-line='5'></div>
+		<div class="btn__progress btn__progress--39" data-id='39' data-line='5'></div>
 	</div>`,
 
 
-	`<div class="panel panel--41">	
+	`<div class="panel panel--40">	
 		<div class="body__content">
 			<h1 class='results__title results__title--1'>Your B2B Marketing Maturity Results</h1>
 			<div class="wrapper wrapper--1">				

@@ -264,6 +264,9 @@ export const createVertfc = (attr) => {
     const id = state.vertfcs.length-1;
 
     for (let j = 0; j < textArr.length; j++) {
+
+        startPoint < 0 ? startPoint = 0 : null;
+        
         htmltext += 
         `
         <div class="vertfc__group vertfc__group--${j}">

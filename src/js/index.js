@@ -11,6 +11,8 @@ import TipsScheme from './views/tipsView';
 
 import {state} from './state';
 
+import {unitTest} from './lib/unitTest';
+
 import variables from './../sass/abstracts/variables.scss';
 
 import loadLoop from './lottie/loading-loop.json';

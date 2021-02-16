@@ -11,6 +11,8 @@ import TipsScheme from './views/tipsView';
 
 import {state} from './state';
 
+import {unitTest} from './lib/unitTest';
+
 import variables from './../sass/abstracts/variables.scss';
 
 import loadLoop from './lottie/loading-loop.json';
@@ -116,7 +118,11 @@ $(document).ready(function(){
 		  loop: true,
 		});
 
-		const preimages=["../assets/images/desktop/group.png","../assets/images/1x/bg-0.pn"];
+		const preimages=["../toolsassets/images/desktop/group.png"
+		,"../toolsassets/images/1x/bg-0.png"
+		,"../toolsassets/images/1x/bg-1.png"
+		,"../toolsassets/images/1x/bg-2.png"
+		,"../toolsassets/images/1x/bg-3.png"];
 		css.preloadImgs(preimages);
 
 	/*** Dial Ctrl ***/

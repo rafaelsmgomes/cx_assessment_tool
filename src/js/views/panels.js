@@ -527,11 +527,11 @@ export const panels = [
 				Relationship Marketing
 			</div>
 			<div class="main__title main__title--1">
-				Do you send emails to buyers optimized based on when they are most likely open?
+				Do you send emails to buyers optimized based on when they are most likely to open?
 			</div>			
 			<div class="main__direction">Please select one response.</div>			
 			${comp.createVertfc({				
-				'question':'Do you send emails to buyers optimized based on when they are most likely open?',
+				'question':'Do you send emails to buyers optimized based on when they are most likely to open?',
 				'textArr': ['Yes', "I don't know", 'No'],
 				'custVals': [100,0,0],
 				'group': 'relationship',
